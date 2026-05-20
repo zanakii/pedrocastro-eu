@@ -48,17 +48,14 @@ variables → Actions* for the workflow.
 
 ## Newsletter (beehiiv)
 
-The signup is an iframe embed. Set these env vars (at build time) to wire it up:
+The signup uses beehiiv's v3 Subscribe Form script loader. The form ID is
+hardcoded in `src/components/NewsletterSignup.astro` — to swap forms, just
+edit the `data-beehiiv-form` attribute (it's not a secret; beehiiv form IDs
+end up in the page HTML regardless).
 
-```
-PUBLIC_BEEHIIV_PUBLICATION_ID=pub_xxxxxxxx
-PUBLIC_BEEHIIV_URL=https://newsletter.pedrocastro.eu
-```
-
-- The publication ID is in your beehiiv embed snippet (the path segment after
-  `embeds.beehiiv.com/`).
-- Configure `newsletter.pedrocastro.eu` as a custom domain inside beehiiv
-  (Settings → Custom Domain) and add the CNAME they give you to your DNS.
+The archive lives at `newsletter.pedrocastro.eu`, configured as a Custom
+Web Domain in beehiiv settings with a corresponding CNAME in the Cloudflare
+DNS zone (DNS-only / gray cloud — beehiiv handles its own TLS).
 
 ## Deploy (Cloudflare Pages via GitHub Actions)
 
@@ -101,5 +98,4 @@ scripts/
 
 - [ ] Replace the placeholder bio + location in `src/pages/index.astro`.
 - [ ] Fill in real external links (GitHub, etc.) in the same file.
-- [ ] Set `PUBLIC_BEEHIIV_PUBLICATION_ID` once the beehiiv embed is created.
 - [ ] Replace `public/favicon.svg` with something not-Astro-default.

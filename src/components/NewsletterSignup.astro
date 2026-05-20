@@ -1,27 +1,18 @@
 ---
-const beehiivPublicationId = import.meta.env.PUBLIC_BEEHIIV_PUBLICATION_ID;
-const beehiivUrl = import.meta.env.PUBLIC_BEEHIIV_URL ?? 'https://newsletter.pedrocastro.eu';
+const archiveUrl = 'https://newsletter.pedrocastro.eu';
 ---
 
 <div class="signup">
-  {beehiivPublicationId ? (
-    <iframe
-      src={`https://embeds.beehiiv.com/${beehiivPublicationId}?slim=true`}
-      data-test-id="beehiiv-embed"
-      height="52"
-      frameborder="0"
-      scrolling="no"
-      style="margin: 0; border-radius: 0; background-color: transparent;"
-      title="Subscribe to the newsletter"
-    ></iframe>
-  ) : (
-    <p class="muted small">
-      Newsletter embed not configured yet. Set <code>PUBLIC_BEEHIIV_PUBLICATION_ID</code>{' '}
-      to enable the inline form, or just link out below.
-    </p>
-  )}
-  <p class="small muted">
-    Read the archive at <a href={beehiivUrl}>{beehiivUrl.replace(/^https?:\/\//, '')}</a>.
+  <div class="form-slot">
+    <script
+      is:inline
+      async
+      src="https://subscribe-forms.beehiiv.com/v3/loader.js"
+      data-beehiiv-form="196a3230-ed52-41ca-928a-9dffced2b000"
+    ></script>
+  </div>
+  <p class="small muted archive">
+    Read the archive at <a href={archiveUrl}>{archiveUrl.replace(/^https?:\/\//, '')}</a>.
   </p>
 </div>
 
@@ -32,12 +23,6 @@ const beehiivUrl = import.meta.env.PUBLIC_BEEHIIV_URL ?? 'https://newsletter.ped
     padding: 1rem 1.25rem;
     background: color-mix(in srgb, var(--bg) 80%, var(--fg) 4%);
   }
-  iframe { width: 100%; display: block; }
-  code {
-    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
-    font-size: 0.85em;
-    padding: 0.05em 0.3em;
-    background: var(--rule);
-    border-radius: 3px;
-  }
+  .form-slot { min-height: 3rem; }
+  .archive { margin-top: 0.75rem; margin-bottom: 0; }
 </style>
