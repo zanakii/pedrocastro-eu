@@ -1,0 +1,46 @@
+---
+interface Props {
+  label: string;
+  title: string;
+  subtitle?: string;
+  href?: string;
+  meta?: string;
+}
+const { label, title, subtitle, href, meta } = Astro.props;
+---
+
+<div class="now">
+  <span class="label">{label}</span>
+  <div class="body">
+    {href ? (
+      <a href={href} rel="noopener">{title}</a>
+    ) : (
+      <span class="title">{title}</span>
+    )}
+    {subtitle && <div class="subtitle muted">{subtitle}</div>}
+    {meta && <div class="meta muted small">{meta}</div>}
+  </div>
+</div>
+
+<style>
+  .now {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    gap: 1rem;
+    align-items: baseline;
+    padding: 0.6rem 0;
+  }
+  .label {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+  }
+  .title { font-weight: 500; }
+  .subtitle { font-style: italic; }
+  .meta { margin-top: 0.15rem; }
+  @media (max-width: 30rem) {
+    .now { grid-template-columns: 1fr; gap: 0.15rem; }
+  }
+</style>

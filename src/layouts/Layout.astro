@@ -1,0 +1,101 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Pedro Castro',
+  description = 'Personal site of Pedro Castro.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main>
+      <slot />
+    </main>
+    <style is:global>
+      :root {
+        --bg: #faf8f4;
+        --fg: #1a1a1a;
+        --muted: #6b6b6b;
+        --accent: #b54a2c;
+        --rule: #e6e1d8;
+        --max-w: 38rem;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #14130f;
+          --fg: #ece8e0;
+          --muted: #9a958b;
+          --accent: #e07a55;
+          --rule: #2a2823;
+        }
+      }
+      * { box-sizing: border-box; }
+      html { font-size: 17px; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: ui-serif, Georgia, 'Iowan Old Style', 'Apple Garamond', serif;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+      main {
+        max-width: var(--max-w);
+        margin: 0 auto;
+        padding: 4rem 1.5rem 6rem;
+      }
+      h1, h2, h3 { font-weight: 600; letter-spacing: -0.01em; }
+      h1 { font-size: 1.75rem; margin: 0 0 0.5rem; }
+      h2 {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--muted);
+        margin: 2.5rem 0 0.75rem;
+        font-family: ui-sans-serif, system-ui, sans-serif;
+        font-weight: 500;
+      }
+      p { margin: 0 0 0.9rem; }
+      a {
+        color: var(--fg);
+        text-decoration: underline;
+        text-decoration-color: var(--rule);
+        text-underline-offset: 3px;
+        text-decoration-thickness: 1px;
+      }
+      a:hover { text-decoration-color: var(--accent); color: var(--accent); }
+      hr {
+        border: 0;
+        border-top: 1px solid var(--rule);
+        margin: 2rem 0;
+      }
+      .muted { color: var(--muted); }
+      .small { font-size: 0.85rem; }
+      footer {
+        margin-top: 4rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--rule);
+        font-size: 0.8rem;
+        color: var(--muted);
+        font-family: ui-sans-serif, system-ui, sans-serif;
+      }
+    </style>
+  </body>
+</html>

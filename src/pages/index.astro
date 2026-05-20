@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NowCard from '../components/NowCard.astro';
+import NewsletterSignup from '../components/NewsletterSignup.astro';
+import { getNow, formatRelative } from '../lib/now';
+
+const now = getNow();
+
+const listeningTitle = now.listening.track ?? '—';
+const listeningSubtitle = [now.listening.artist, now.listening.album]
+  .filter(Boolean)
+  .join(' · ');
+const listeningMeta = now.listening.nowPlaying
+  ? 'now playing'
+  : formatRelative(now.listening.playedAt) ?? null;
+
+const readingTitle = now.reading.title ?? '—';
+const readingSubtitle = now.reading.author ?? undefined;
+const readingMeta = formatRelative(now.reading.startedAt) ?? null;
+
+const lastUpdated = formatRelative(now.updatedAt);
+---
+
+<Layout
+  title="Pedro Castro"
+  description="Pedro Castro — personal site, newsletter, and what I'm reading and listening to."
+>
+  <header>
+    <h1>Pedro Castro</h1>
+    <p class="muted">
+      {/* TODO: replace with your own one-liner */}
+      Based in <span>—</span>. I write a newsletter, read books, and sometimes
+      remember to listen to music with intention.
+    </p>
+    <p class="small muted links">
+      <a href="mailto:hello@pedrocastro.eu">email</a> ·
+      <a href="https://newsletter.pedrocastro.eu">newsletter</a> ·
+      {/* TODO: add real links */}
+      <a href="#">github</a> ·
+      <a href="#">elsewhere</a>
+    </p>
+  </header>
+
+  <section>
+    <h2>Now</h2>
+    <NowCard
+      label="Reading"
+      title={readingTitle}
+      subtitle={readingSubtitle}
+      href={now.reading.url ?? undefined}
+      meta={readingMeta ? `started ${readingMeta}` : undefined}
+    />
+    <NowCard
+      label="Listening"
+      title={listeningTitle}
+      subtitle={listeningSubtitle || undefined}
+      href={now.listening.url ?? undefined}
+      meta={listeningMeta ?? undefined}
+    />
+  </section>
+
+  <section>
+    <h2>Newsletter</h2>
+    <NewsletterSignup />
+  </section>
+
+  <footer>
+    <p>
+      © {new Date().getFullYear()} Pedro Castro ·
+      {lastUpdated ? ` Now updated ${lastUpdated}` : ' Now data not yet populated'}
+    </p>
+  </footer>
+</Layout>
+
+<style>
+  header { margin-bottom: 1rem; }
+  .links a { margin-right: 0.25rem; }
+</style>
