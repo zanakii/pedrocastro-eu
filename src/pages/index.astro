@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import NowCard from '../components/NowCard.astro';
-import NewsletterSignup from '../components/NewsletterSignup.astro';
 import { getNow, formatRelative } from '../lib/now';
 
 const now = getNow();
@@ -57,11 +56,6 @@ const lastUpdated = formatRelative(now.updatedAt);
       href={now.listening.url ?? undefined}
       meta={listeningMeta ?? undefined}
     />
-  </section>
-
-  <section>
-    <h2>Newsletter</h2>
-    <NewsletterSignup />
   </section>
 
   <footer>
