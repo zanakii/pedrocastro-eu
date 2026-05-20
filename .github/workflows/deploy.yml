@@ -1,0 +1,59 @@
+name: Build and deploy
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # Every 4 hours; refreshes now data then deploys.
+    - cron: '17 */4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Refresh now data
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        env:
+          LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
+          LASTFM_USERNAME: ${{ secrets.LASTFM_USERNAME }}
+          GOODREADS_USER_ID: ${{ secrets.GOODREADS_USER_ID }}
+        run: node scripts/fetch-now.mjs
+
+      - name: Commit refreshed data if changed
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          git config user.name "now-bot"
+          git config user.email "now-bot@users.noreply.github.com"
+          if ! git diff --quiet src/data/now.json; then
+            git add src/data/now.json
+            git commit -m "chore(now): refresh listening/reading data"
+            git push
+          else
+            echo "No changes to now.json."
+          fi
+
+      - run: npm run build
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=pedrocastro-eu --branch=main
