@@ -23,4 +23,9 @@ export CLOUDFLARE_API_TOKEN="${CF_DEPLOY_TOKEN:?CF_DEPLOY_TOKEN is not set}"
 npx --yes wrangler pages project create "$PROJECT_NAME" \
   --production-branch="$PRODUCTION_BRANCH" 2>/dev/null || true
 
-npx --yes wrangler pages deploy dist --project-name="$PROJECT_NAME"
+# --branch tells Pages which environment to deploy to. CF_PAGES_BRANCH is
+# injected by the build runtime and matches the git branch being built —
+# pushes to main go to production, branches/PRs go to preview URLs.
+npx --yes wrangler pages deploy dist \
+  --project-name="$PROJECT_NAME" \
+  --branch="${CF_PAGES_BRANCH:-$PRODUCTION_BRANCH}"
