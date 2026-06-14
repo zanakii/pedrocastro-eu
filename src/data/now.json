@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-06-13T21:38:27.587Z",
+  "updatedAt": "2026-06-14T05:08:11.329Z",
   "listening": {
     "track": "u + me = <3",
     "artist": "Olivia Rodrigo",
     "album": "you seem pretty sad for a girl so in love",
     "url": "https://www.last.fm/music/Olivia+Rodrigo/_/u+%252B+me+=+%3C3",
-    "playedAt": null,
-    "nowPlaying": true
+    "playedAt": "2026-06-13T21:36:00.000Z",
+    "nowPlaying": false
   },
   "reading": {
     "title": "A Leste do Paraíso",
