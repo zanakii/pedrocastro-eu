@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-06-16T05:33:50.948Z",
+  "updatedAt": "2026-06-16T13:04:18.760Z",
   "listening": {
-    "track": "u + me = <3",
-    "artist": "Olivia Rodrigo",
-    "album": "you seem pretty sad for a girl so in love",
-    "url": "https://www.last.fm/music/Olivia+Rodrigo/_/u+%252B+me+=+%3C3",
-    "playedAt": "2026-06-13T21:36:00.000Z",
-    "nowPlaying": false
+    "track": "So Easy (To Fall In Love)",
+    "artist": "Olivia Dean",
+    "album": "The Art of Loving",
+    "url": "https://www.last.fm/music/Olivia+Dean/_/So+Easy+(To+Fall+In+Love)",
+    "playedAt": null,
+    "nowPlaying": true
   },
   "reading": {
-    "title": "Material World: A Substantial Story of Our Past and Future",
-    "author": "Ed Conway",
-    "url": "https://www.goodreads.com/review/show/8684800211",
-    "startedAt": "2026-06-14T08:59:20.000Z"
+    "title": "Lost Lambs",
+    "author": "Madeline Cash",
+    "url": "https://www.goodreads.com/review/show/8499900512",
+    "startedAt": "2026-06-16T07:14:40.000Z"
   }
 }
