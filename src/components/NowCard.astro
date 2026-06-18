@@ -5,20 +5,33 @@ interface Props {
   subtitle?: string;
   href?: string;
   meta?: string;
+  image?: string;
 }
-const { label, title, subtitle, href, meta } = Astro.props;
+const { label, title, subtitle, href, meta, image } = Astro.props;
 ---
 
 <div class="now">
   <span class="label">{label}</span>
-  <div class="body">
-    {href ? (
-      <a href={href} rel="noopener">{title}</a>
-    ) : (
-      <span class="title">{title}</span>
+  <div class="row">
+    {image && (
+      <img
+        class="thumb"
+        src={image}
+        alt={`${label}: ${title}`}
+        loading="lazy"
+        decoding="async"
+        referrerpolicy="no-referrer"
+      />
     )}
-    {subtitle && <div class="subtitle muted">{subtitle}</div>}
-    {meta && <div class="meta muted small">{meta}</div>}
+    <div class="body">
+      {href ? (
+        <a href={href} rel="noopener">{title}</a>
+      ) : (
+        <span class="title">{title}</span>
+      )}
+      {subtitle && <div class="subtitle muted">{subtitle}</div>}
+      {meta && <div class="meta muted small">{meta}</div>}
+    </div>
   </div>
 </div>
 
@@ -37,6 +50,21 @@ const { label, title, subtitle, href, meta } = Astro.props;
     letter-spacing: 0.12em;
     color: var(--muted);
   }
+  .row {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+  .thumb {
+    height: 3.5rem;
+    width: auto;
+    max-width: 3.5rem;
+    object-fit: cover;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.18);
+    flex: none;
+  }
+  .body { min-width: 0; }
   .title { font-weight: 500; }
   .subtitle { font-style: italic; }
   .meta { margin-top: 0.15rem; }

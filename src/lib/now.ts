@@ -5,6 +5,7 @@ export interface ListeningNow {
   artist: string | null;
   album: string | null;
   url: string | null;
+  image: string | null;
   playedAt: string | null;
   nowPlaying: boolean;
 }
@@ -13,6 +14,7 @@ export interface ReadingNow {
   title: string | null;
   author: string | null;
   url: string | null;
+  cover: string | null;
   startedAt: string | null;
 }
 
@@ -22,6 +24,7 @@ export interface WatchingNow {
   rating: number | null;
   rewatch: boolean;
   url: string | null;
+  poster: string | null;
   watchedAt: string | null;
 }
 

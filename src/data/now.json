@@ -5,6 +5,7 @@
     "artist": "Olivia Dean",
     "album": "The Art of Loving",
     "url": "https://www.last.fm/music/Olivia+Dean/_/Let+Alone+The+One+You+Love",
+    "image": null,
     "playedAt": "2026-06-16T13:06:52.000Z",
     "nowPlaying": false
   },
@@ -12,6 +13,7 @@
     "title": "Lost Lambs",
     "author": "Madeline Cash",
     "url": "https://www.goodreads.com/review/show/8499900512",
+    "cover": null,
     "startedAt": "2026-06-16T07:14:40.000Z"
   },
   "watching": {
@@ -20,6 +22,7 @@
     "rating": null,
     "rewatch": false,
     "url": null,
+    "poster": null,
     "watchedAt": null
   }
 }

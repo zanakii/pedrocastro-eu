@@ -54,9 +54,25 @@ async function fetchListening() {
     artist: track.artist?.['#text'] ?? null,
     album: track.album?.['#text'] || null,
     url: track.url ?? null,
+    image: pickLastfmImage(track.image),
     playedAt,
     nowPlaying,
   };
+}
+
+// Last.fm returns an array of {'#text': url, size}. Prefer the largest, and
+// drop the generic "no art" star placeholder so the card stays imageless
+// rather than showing a meaningless grey star.
+const LASTFM_PLACEHOLDER = '2a96cbd8b46e442fc41c2b86b821562f';
+function pickLastfmImage(images) {
+  if (!Array.isArray(images)) return null;
+  for (const size of ['extralarge', 'large', 'medium', 'small']) {
+    const found = images.find((i) => i.size === size && i['#text']);
+    if (found) {
+      return found['#text'].includes(LASTFM_PLACEHOLDER) ? null : found['#text'];
+    }
+  }
+  return null;
 }
 
 // Pulls a single <item>...</item> field, with or without a CDATA wrapper.
@@ -101,11 +117,16 @@ async function fetchReading() {
     toIso(rssField(item, 'user_date_started')) ??
     toIso(rssField(item, 'user_date_added')) ??
     toIso(rssField(item, 'pubDate'));
+  const cover =
+    rssField(item, 'book_large_image_url') ??
+    rssField(item, 'book_medium_image_url') ??
+    rssField(item, 'book_small_image_url');
   if (!title) return null;
   return {
     title,
     author: author || null,
     url: link ? link.split('?')[0] : null,
+    cover: cover || null,
     startedAt,
   };
 }
@@ -141,12 +162,15 @@ async function fetchWatching() {
 
     const ratingRaw = rssField(item, 'letterboxd:memberRating');
     const rating = ratingRaw != null ? Number(ratingRaw) : null;
+    // The poster is only available as an <img> inside the description HTML.
+    const poster = rssField(item, 'description')?.match(/<img[^>]+src="([^"]+)"/)?.[1];
     best = {
       title: rssField(item, 'letterboxd:filmTitle'),
       year: rssField(item, 'letterboxd:filmYear'),
       rating: Number.isFinite(rating) ? rating : null,
       rewatch: rssField(item, 'letterboxd:rewatch') === 'Yes',
       url: rssField(item, 'link'),
+      poster: poster || null,
       watchedAt,
     };
   }
@@ -174,13 +198,13 @@ const watching = await safe('watching', fetchWatching, previous?.watching ?? nul
 const next = {
   updatedAt: new Date().toISOString(),
   listening: listening ?? {
-    track: null, artist: null, album: null, url: null, playedAt: null, nowPlaying: false,
+    track: null, artist: null, album: null, url: null, image: null, playedAt: null, nowPlaying: false,
   },
   reading: reading ?? {
-    title: null, author: null, url: null, startedAt: null,
+    title: null, author: null, url: null, cover: null, startedAt: null,
   },
   watching: watching ?? {
-    title: null, year: null, rating: null, rewatch: false, url: null, watchedAt: null,
+    title: null, year: null, rating: null, rewatch: false, url: null, poster: null, watchedAt: null,
   },
 };
 
