@@ -34,6 +34,7 @@ jobs:
           LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
           LASTFM_USERNAME: ${{ secrets.LASTFM_USERNAME }}
           GOODREADS_USER_ID: ${{ secrets.GOODREADS_USER_ID }}
+          LETTERBOXD_USERNAME: ${{ secrets.LETTERBOXD_USERNAME }}
         run: node scripts/fetch-now.mjs
 
       - name: Commit refreshed data if changed

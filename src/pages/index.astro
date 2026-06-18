@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import NowCard from '../components/NowCard.astro';
-import { getNow, formatRelative } from '../lib/now';
+import { getNow, formatRelative, formatStars } from '../lib/now';
 
 const now = getNow();
 
@@ -16,6 +16,18 @@ const listeningMeta = now.listening.nowPlaying
 const readingTitle = now.reading.title ?? '—';
 const readingSubtitle = now.reading.author ?? undefined;
 const readingMeta = formatRelative(now.reading.startedAt) ?? null;
+
+const watchingTitle = now.watching.title
+  ? now.watching.year
+    ? `${now.watching.title} (${now.watching.year})`
+    : now.watching.title
+  : '—';
+const watchingStars = formatStars(now.watching.rating);
+const watchingSubtitle = [watchingStars, now.watching.rewatch ? 'rewatch' : null]
+  .filter(Boolean)
+  .join(' · ');
+const watchingRelative = formatRelative(now.watching.watchedAt);
+const watchingMeta = watchingRelative ? `watched ${watchingRelative}` : null;
 
 const lastUpdated = formatRelative(now.updatedAt);
 ---
@@ -79,6 +91,13 @@ const lastUpdated = formatRelative(now.updatedAt);
       subtitle={readingSubtitle}
       href={now.reading.url ?? undefined}
       meta={readingMeta ? `started ${readingMeta}` : undefined}
+    />
+    <NowCard
+      label="Watching"
+      title={watchingTitle}
+      subtitle={watchingSubtitle || undefined}
+      href={now.watching.url ?? undefined}
+      meta={watchingMeta ?? undefined}
     />
     <NowCard
       label="Listening"
