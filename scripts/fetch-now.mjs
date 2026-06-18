@@ -5,9 +5,10 @@
 // value rather than blanking the site.
 //
 // Required env (set as repo secrets in CI, or in a local .env for testing):
-//   LASTFM_API_KEY    - https://www.last.fm/api/account/create
-//   LASTFM_USERNAME   - your Last.fm handle
-//   GOODREADS_USER_ID - numeric portion of your goodreads.com/user/show/<id> URL
+//   LASTFM_API_KEY      - https://www.last.fm/api/account/create
+//   LASTFM_USERNAME     - your Last.fm handle
+//   GOODREADS_USER_ID   - numeric portion of your goodreads.com/user/show/<id> URL
+//   LETTERBOXD_USERNAME - your letterboxd.com/<username> handle
 //
 // Any missing key just disables that source.
 
@@ -109,6 +110,51 @@ async function fetchReading() {
   };
 }
 
+// The Letterboxd RSS feed mixes diary entries, reviews and list activity, and
+// is ordered by when each entry was *logged* — not when the film was watched.
+// We want the film with the latest watchedDate, so a film logged today but
+// watched years ago doesn't trump one actually watched more recently.
+async function fetchWatching() {
+  const user = process.env.LETTERBOXD_USERNAME;
+  if (!user) {
+    console.warn('[now] Letterboxd env missing; skipping watching');
+    return null;
+  }
+  const url = `https://letterboxd.com/${user}/rss/`;
+  const res = await fetch(url, {
+    headers: { 'user-agent': 'pedrocastro.eu/1.0 (+https://pedrocastro.eu)' },
+  });
+  if (!res.ok) throw new Error(`Letterboxd ${res.status}`);
+  const xml = await res.text();
+
+  let best = null;
+  const itemRe = /<item>([\s\S]*?)<\/item>/g;
+  let match;
+  while ((match = itemRe.exec(xml)) !== null) {
+    const item = match[1];
+    const watchedDate = rssField(item, 'letterboxd:watchedDate');
+    // Only diary entries carry a watchedDate; reviews/list edits don't.
+    if (!watchedDate) continue;
+    const watchedAt = toIso(watchedDate);
+    if (!watchedAt) continue;
+    if (best && watchedAt <= best.watchedAt) continue;
+
+    const ratingRaw = rssField(item, 'letterboxd:memberRating');
+    const rating = ratingRaw != null ? Number(ratingRaw) : null;
+    best = {
+      title: rssField(item, 'letterboxd:filmTitle'),
+      year: rssField(item, 'letterboxd:filmYear'),
+      rating: Number.isFinite(rating) ? rating : null,
+      rewatch: rssField(item, 'letterboxd:rewatch') === 'Yes',
+      url: rssField(item, 'link'),
+      watchedAt,
+    };
+  }
+
+  if (!best?.title) return null;
+  return best;
+}
+
 async function safe(label, fn, fallback) {
   try {
     const value = await fn();
@@ -123,6 +169,7 @@ const previous = await readPrevious();
 
 const listening = await safe('listening', fetchListening, previous?.listening ?? null);
 const reading = await safe('reading', fetchReading, previous?.reading ?? null);
+const watching = await safe('watching', fetchWatching, previous?.watching ?? null);
 
 const next = {
   updatedAt: new Date().toISOString(),
@@ -131,6 +178,9 @@ const next = {
   },
   reading: reading ?? {
     title: null, author: null, url: null, startedAt: null,
+  },
+  watching: watching ?? {
+    title: null, year: null, rating: null, rewatch: false, url: null, watchedAt: null,
   },
 };
 

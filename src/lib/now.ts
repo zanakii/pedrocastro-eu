@@ -16,14 +16,33 @@ export interface ReadingNow {
   startedAt: string | null;
 }
 
+export interface WatchingNow {
+  title: string | null;
+  year: string | null;
+  rating: number | null;
+  rewatch: boolean;
+  url: string | null;
+  watchedAt: string | null;
+}
+
 export interface Now {
   updatedAt: string | null;
   listening: ListeningNow;
   reading: ReadingNow;
+  watching: WatchingNow;
 }
 
 export function getNow(): Now {
   return nowData as Now;
+}
+
+// Letterboxd ratings are 0.5–5.0 in half-star steps. Render as filled/half
+// stars, e.g. 3.5 -> "★★★½". Returns null when there's no rating.
+export function formatStars(rating: number | null): string | null {
+  if (rating == null || !Number.isFinite(rating) || rating <= 0) return null;
+  const full = Math.floor(rating);
+  const half = rating - full >= 0.5;
+  return '★'.repeat(full) + (half ? '½' : '');
 }
 
 export function formatRelative(iso: string | null): string | null {
