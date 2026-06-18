@@ -12,14 +12,16 @@ const { label, title, subtitle, href, meta, image } = Astro.props;
 
 <article class="now">
   {image && (
-    <img
-      class="thumb"
-      src={image}
-      alt={`${label}: ${title}`}
-      loading="lazy"
-      decoding="async"
-      referrerpolicy="no-referrer"
-    />
+    <div class="thumb-box">
+      <img
+        class="thumb"
+        src={image}
+        alt={`${label}: ${title}`}
+        loading="lazy"
+        decoding="async"
+        referrerpolicy="no-referrer"
+      />
+    </div>
   )}
   <div class="body">
     <span class="label">{label}</span>
@@ -52,15 +54,24 @@ const { label, title, subtitle, href, meta, image } = Astro.props;
     background: var(--surface-hover);
     transform: translateY(-1px);
   }
+  .thumb-box {
+    flex: none;
+    width: 3.5rem;
+    height: 4.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .thumb {
-    height: 3.75rem;
-    width: 3.75rem;
-    object-fit: cover;
-    border-radius: 8px;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 6px;
     box-shadow: 0 2px 10px rgb(0 0 0 / 0.35);
     outline: 1px solid var(--rule-strong);
     outline-offset: -1px;
-    flex: none;
   }
   .body { min-width: 0; }
   .label {
