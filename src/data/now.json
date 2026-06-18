@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-06-18T15:52:57.324Z",
+  "updatedAt": "2026-06-18T18:36:00.185Z",
   "listening": {
     "track": "Let Alone The One You Love",
     "artist": "Olivia Dean",
     "album": "The Art of Loving",
     "url": "https://www.last.fm/music/Olivia+Dean/_/Let+Alone+The+One+You+Love",
-    "image": null,
+    "image": "https://lastfm.freetls.fastly.net/i/u/300x300/e9aedce534c4c0cf22f18483bed6620e.jpg",
     "playedAt": "2026-06-16T13:06:52.000Z",
     "nowPlaying": false
   },
@@ -13,16 +13,16 @@
     "title": "Lost Lambs",
     "author": "Madeline Cash",
     "url": "https://www.goodreads.com/review/show/8499900512",
-    "cover": null,
+    "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1767858948l/246288258._SY475_.jpg",
     "startedAt": "2026-06-16T07:14:40.000Z"
   },
   "watching": {
-    "title": null,
-    "year": null,
-    "rating": null,
+    "title": "The Devil Wears Prada 2",
+    "year": "2026",
+    "rating": 2,
     "rewatch": false,
-    "url": null,
-    "poster": null,
-    "watchedAt": null
+    "url": "https://letterboxd.com/zanakii/film/the-devil-wears-prada-2/",
+    "poster": "https://a.ltrbxd.com/resized/film-poster/1/1/9/5/5/8/6/1195586-the-devil-wears-prada-2-0-600-0-900-crop.jpg?v=0d955add69",
+    "watchedAt": "2026-05-09T00:00:00.000Z"
   }
 }
