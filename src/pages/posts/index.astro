@@ -1,0 +1,56 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getSortedPosts, postPath, formatDate } from '../../lib/posts';
+
+const posts = await getSortedPosts();
+---
+
+<Layout
+  title="Posts — Pedro Castro"
+  description="Writing by Pedro Castro."
+>
+  <header>
+    <h1>Posts</h1>
+  </header>
+
+  <section>
+    {posts.length === 0 ? (
+      <p class="muted">Nothing here yet.</p>
+    ) : (
+      <ul class="post-list">
+        {posts.map((post) => (
+          <li>
+            <a class="post-title" href={postPath(post)}>{post.data.title}</a>
+            <p class="post-meta small muted">
+              {formatDate(post.data.pubDate)} · {post.data.description}
+            </p>
+          </li>
+        ))}
+      </ul>
+    )}
+  </section>
+</Layout>
+
+<style>
+  header { margin-bottom: 1rem; }
+  .post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .post-title {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: var(--fg);
+  }
+  .post-title:hover {
+    color: var(--accent-bright);
+  }
+  .post-meta {
+    margin: 0.25rem 0 0;
+  }
+</style>

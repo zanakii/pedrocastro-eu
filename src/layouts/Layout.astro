@@ -8,6 +8,12 @@ const {
   title = 'Pedro Castro',
   description = 'Personal site of Pedro Castro.',
 } = Astro.props;
+
+const path = Astro.url.pathname;
+const nav = [
+  { label: 'Home', href: '/', active: path === '/' },
+  { label: 'Posts', href: '/posts/', active: path === '/posts/' || path.startsWith('/posts/') },
+];
 ---
 
 <!doctype html>
@@ -22,6 +28,7 @@ const {
     <meta property="og:type" content="website" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
+    <link rel="alternate" type="application/rss+xml" title="Pedro Castro" href="/rss.xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,6 +38,15 @@ const {
     <title>{title}</title>
   </head>
   <body>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Primary">
+        {nav.map((item) => (
+          <a href={item.href} aria-current={item.active ? 'page' : undefined}>
+            {item.label}
+          </a>
+        ))}
+      </nav>
+    </header>
     <main>
       <slot />
     </main>
@@ -69,10 +85,43 @@ const {
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
       }
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        /* --bg at ~74% so the green-tint radial behind shows through the blur */
+        background: rgba(13, 15, 14, 0.74);
+        backdrop-filter: blur(12px) saturate(135%);
+        -webkit-backdrop-filter: blur(12px) saturate(135%);
+        border-bottom: 1px solid var(--rule);
+      }
+      .site-nav {
+        max-width: var(--max-w);
+        margin: 0 auto;
+        padding: 0.55rem 1.5rem;
+        display: flex;
+        gap: 1.4rem;
+        font-size: 0.82rem;
+        letter-spacing: 0.01em;
+      }
+      .site-nav a {
+        color: var(--muted);
+        text-decoration: none;
+        padding: 0.15rem 0;
+        border-bottom: 1px solid transparent;
+        transition: color 140ms ease, border-color 140ms ease;
+      }
+      .site-nav a:hover {
+        color: var(--fg);
+      }
+      .site-nav a[aria-current='page'] {
+        color: var(--fg);
+        border-bottom-color: var(--accent);
+      }
       main {
         max-width: var(--max-w);
         margin: 0 auto;
-        padding: 5rem 1.5rem 6rem;
+        padding: 2.5rem 1.5rem 6rem;
       }
       h1, h2, h3 { font-weight: 500; letter-spacing: -0.015em; }
       h1 {

@@ -2,16 +2,15 @@
 
 Personal site. Astro static build, deployed to Cloudflare Pages.
 
-Today the site is a single page with a *Now* section (auto-refreshed) plus a
-beehiiv newsletter on `newsletter.pedrocastro.eu`. We're growing it into a
-Harper-style personal hub — **Posts + RSS**, a **Media** log, **Links**, and
-**Photos** — all kept static and build-time, no server or database. beehiiv is
-being retired in favour of self-hosted posts + RSS.
+A *Now* section (auto-refreshed) and a **Posts** section with an RSS feed.
+We're growing it into a Harper-style personal hub — Posts + RSS (done), plus a
+**Media** log, **Links**, and **Photos** — all kept static and build-time, no
+server or database. The old beehiiv newsletter has been removed from the site in
+favour of self-hosted posts + RSS.
 
 > **Direction & rationale:** see [docs/decisions.md](docs/decisions.md) for the
 > decisions behind this (why drop beehiiv, how each section is sourced, build
-> order). The sections below document what exists **today**; pieces marked
-> _(legacy)_ are on their way out.
+> order) and [docs/specs/](docs/specs/) for per-feature specs.
 
 ## Local dev
 
@@ -56,22 +55,34 @@ variables → Actions* for the workflow.
 > GET. Scrobble Spotify → Last.fm and you keep all your listening history
 > centralised anyway.
 
-## Newsletter (beehiiv) — _legacy, being retired_
+## Posts
 
-> This is slated for removal. Posts + RSS on this domain will become the
-> canonical home for written content (see [docs/decisions.md](docs/decisions.md)).
-> A replacement email-send path is a separate, later decision. Until posts ship,
-> beehiiv stays as documented below.
+Posts are Markdown files in `src/content/posts/`, surfaced as a `posts`
+[content collection](src/content.config.ts). Each post is a `.md` file with
+`title`, `description`, and `pubDate` frontmatter (plus optional `updatedDate`
+and `draft`). Publishing is `git push`.
 
+- Index at `/posts/`; each post at `/posts/YYYY/MM/DD/<slug>/` (date segments
+  derived from `pubDate`).
+- RSS feed at `/rss.xml` via `@astrojs/rss`.
+- `draft: true` posts show in `npm run dev` and are excluded from the production
+  build.
+- Shared list/sort/URL logic lives in `src/lib/posts.ts` so the index and feed
+  never disagree.
 
-The signup uses beehiiv's v3 Subscribe Form script loader. The form ID is
-hardcoded in `src/components/NewsletterSignup.astro` — to swap forms, just
-edit the `data-beehiiv-form` attribute (it's not a secret; beehiiv form IDs
-end up in the page HTML regardless).
+See [docs/specs/_archive/posts-and-rss.md](docs/specs/_archive/posts-and-rss.md)
+for the full design and rationale.
 
-The archive lives at `newsletter.pedrocastro.eu`, configured as a Custom
-Web Domain in beehiiv settings with a corresponding CNAME in the Cloudflare
-DNS zone (DNS-only / gray cloud — beehiiv handles its own TLS).
+## Newsletter (beehiiv) — _removed_
+
+The beehiiv newsletter has been removed from the site: the signup component and
+all links to `newsletter.pedrocastro.eu` are gone. An email-send replacement
+(Buttondown / Listmonk / RSS-to-email) is a separate, later decision.
+
+> **Manual teardown still needed (outside this repo):** delete the
+> `newsletter.pedrocastro.eu` CNAME in the Cloudflare DNS zone, and remove the
+> Custom Web Domain + form in the beehiiv dashboard. Until then the subdomain
+> may still resolve even though nothing here links to it.
 
 ## Deploy (Cloudflare Pages via GitHub Actions)
 
@@ -97,17 +108,24 @@ Attach the custom domain in the Pages project once via *Custom domains*.
 
 ```
 src/
-  data/now.json           # ground truth for the Now section
-  lib/now.ts              # typed loader + relative-time helper
-  layouts/Layout.astro    # base shell + global styles
+  data/now.json              # ground truth for the Now section
+  content.config.ts          # posts content collection (schema + loader)
+  content/posts/*.md         # the posts themselves
+  lib/
+    now.ts                   # typed Now loader + relative-time helper
+    posts.ts                 # posts list/sort/draft filter + URL + date helpers
+  layouts/Layout.astro       # base shell, sticky header nav, global styles
   components/
-    NowCard.astro         # label + title + subtitle row
-    NewsletterSignup.astro
-  pages/index.astro       # the page
+    NowCard.astro            # label + title + subtitle row
+  pages/
+    index.astro              # homepage (bio + Now)
+    posts/index.astro        # posts listing
+    posts/[...slug].astro    # dated per-post page
+    rss.xml.ts               # RSS feed
 scripts/
-  fetch-now.mjs           # Last.fm + Goodreads RSS fetch
+  fetch-now.mjs              # Last.fm + Goodreads RSS fetch
 .github/workflows/
-  deploy.yml              # push + cron + manual; builds and deploys
+  deploy.yml                 # push + cron + manual; builds and deploys
 ```
 
 ## TODO before launch
@@ -121,8 +139,7 @@ scripts/
 Build order and rationale live in [docs/decisions.md](docs/decisions.md).
 In short:
 
-1. **Posts + RSS** — Astro content collections + `@astrojs/rss`. Backbone;
-   unblocks retiring beehiiv.
+1. ~~**Posts + RSS** — Astro content collections + `@astrojs/rss`.~~ ✅ Done.
 2. **Media log** — extend `fetch-now.mjs` from a current-item snapshot into an
    append-style history of music / books / films.
 3. **Links** — curated feed sourced automatically from Raindrop via the cron.

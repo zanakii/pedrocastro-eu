@@ -1,0 +1,113 @@
+---
+import { render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { getSortedPosts, postPath, formatDate, type Post } from '../../lib/posts';
+
+export async function getStaticPaths() {
+  const posts = await getSortedPosts();
+  return posts.map((post) => {
+    const d = post.data.pubDate;
+    const yyyy = d.getUTCFullYear();
+    const mm = String(d.getUTCMonth() + 1).padStart(2, '0');
+    const dd = String(d.getUTCDate()).padStart(2, '0');
+    // Catch-all param flattens the multi-segment dated path.
+    return { params: { slug: `${yyyy}/${mm}/${dd}/${post.id}` }, props: { post } };
+  });
+}
+
+interface Props {
+  post: Post;
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const { title, description, pubDate, updatedDate } = post.data;
+---
+
+<Layout title={`${title} — Pedro Castro`} description={description}>
+  <article class="prose">
+    <h1>{title}</h1>
+    <p class="dateline muted small">
+      {formatDate(pubDate)}
+      {updatedDate ? ` · updated ${formatDate(updatedDate)}` : ''}
+    </p>
+    <Content />
+  </article>
+
+  <p class="back small">
+    <a href="/posts/">← All posts</a>
+  </p>
+</Layout>
+
+<style>
+  .dateline {
+    margin-top: -0.35rem;
+    margin-bottom: 2rem;
+  }
+  .back {
+    margin-top: 3rem;
+  }
+
+  /* Post body. The global h2 is a tiny uppercase section *label*; inside an
+     article we want real headings, so scope these under .prose to override. */
+  .prose :global(h2) {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: -0.01em;
+    color: var(--fg);
+    margin: 2.4rem 0 0.8rem;
+  }
+  .prose :global(h2::after) {
+    content: none;
+  }
+  .prose :global(h3) {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--fg);
+    margin: 2rem 0 0.6rem;
+  }
+  .prose :global(ul),
+  .prose :global(ol) {
+    color: var(--fg-dim);
+    padding-left: 1.25rem;
+    margin: 0 0 0.9rem;
+  }
+  .prose :global(li) {
+    margin: 0.3rem 0;
+  }
+  .prose :global(blockquote) {
+    margin: 1.2rem 0;
+    padding-left: 1rem;
+    border-left: 2px solid var(--rule-strong);
+    color: var(--muted);
+  }
+  .prose :global(code) {
+    font-size: 0.9em;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 5px;
+    padding: 0.1rem 0.35rem;
+  }
+  .prose :global(pre) {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 9px;
+    padding: 1rem;
+    overflow-x: auto;
+    margin: 1.2rem 0;
+  }
+  .prose :global(pre code) {
+    background: none;
+    border: 0;
+    padding: 0;
+  }
+  .prose :global(img) {
+    max-width: 100%;
+    height: auto;
+    border-radius: 9px;
+  }
+</style>
