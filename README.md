@@ -150,9 +150,10 @@ scripts/
 
 ## TODO before launch
 
-- [ ] Replace the placeholder bio + location in `src/pages/index.astro`.
-- [ ] Fill in real external links (GitHub, etc.) in the same file.
+- [x] Replace the placeholder bio + location in `src/pages/index.astro`.
+- [x] Fill in real external links (GitHub, LinkedIn) in the same file.
 - [ ] Replace `public/favicon.svg` with something not-Astro-default.
+- [ ] Write a real first post (the two seed posts are `draft: true`).
 
 ## Roadmap
 

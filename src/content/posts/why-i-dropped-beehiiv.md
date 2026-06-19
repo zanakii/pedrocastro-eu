@@ -2,6 +2,7 @@
 title: Why I dropped beehiiv
 description: Owning my words on my own domain.
 pubDate: 2026-06-19
+draft: true
 ---
 
 I started the newsletter on beehiiv because it was the fastest way to get
