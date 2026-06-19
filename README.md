@@ -152,7 +152,7 @@ scripts/
 
 - [x] Replace the placeholder bio + location in `src/pages/index.astro`.
 - [x] Fill in real external links (GitHub, LinkedIn) in the same file.
-- [ ] Replace `public/favicon.svg` with something not-Astro-default.
+- [x] Replace `public/favicon.svg` with something not-Astro-default (PC monogram in Fraunces).
 - [ ] Write a real first post (the two seed posts are `draft: true`).
 
 ## Roadmap
