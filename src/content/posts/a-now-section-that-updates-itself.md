@@ -2,6 +2,7 @@
 title: A Now section that updates itself
 description: Last.fm, Goodreads, and a cron job.
 pubDate: 2026-06-02
+draft: true
 ---
 
 The *Now* section on the homepage shows what I'm currently listening to,
