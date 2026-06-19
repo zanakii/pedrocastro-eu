@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import NowCard from '../../components/NowCard.astro';
+import { getMediaTimeline } from '../../lib/media';
+
+const timeline = getMediaTimeline();
+---
+
+<Layout
+  title="Media — Pedro Castro"
+  description="A running timeline of what Pedro Castro is listening to, reading, and watching."
+>
+  <header>
+    <h1>Media</h1>
+    <p class="muted bio">Everything before <a href="/">now</a> — recent music, books, and films.</p>
+  </header>
+
+  <section>
+    {timeline.length === 0 ? (
+      <p class="muted">Nothing here yet — the timeline fills as the feeds refresh.</p>
+    ) : (
+      <div class="timeline">
+        {timeline.map((item) => (
+          <NowCard
+            label={item.kind}
+            title={item.title}
+            subtitle={item.subtitle}
+            href={item.href}
+            meta={item.meta}
+            image={item.image}
+          />
+        ))}
+      </div>
+    )}
+  </section>
+</Layout>
+
+<style>
+  header { margin-bottom: 1.5rem; }
+  .bio { max-width: 32rem; }
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+</style>
