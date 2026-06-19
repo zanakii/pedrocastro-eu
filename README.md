@@ -1,7 +1,17 @@
 # pedrocastro.eu
 
-Personal site. Astro static build, deployed to Cloudflare Pages, with a
-beehiiv newsletter on `newsletter.pedrocastro.eu`.
+Personal site. Astro static build, deployed to Cloudflare Pages.
+
+Today the site is a single page with a *Now* section (auto-refreshed) plus a
+beehiiv newsletter on `newsletter.pedrocastro.eu`. We're growing it into a
+Harper-style personal hub — **Posts + RSS**, a **Media** log, **Links**, and
+**Photos** — all kept static and build-time, no server or database. beehiiv is
+being retired in favour of self-hosted posts + RSS.
+
+> **Direction & rationale:** see [docs/decisions.md](docs/decisions.md) for the
+> decisions behind this (why drop beehiiv, how each section is sourced, build
+> order). The sections below document what exists **today**; pieces marked
+> _(legacy)_ are on their way out.
 
 ## Local dev
 
@@ -46,7 +56,13 @@ variables → Actions* for the workflow.
 > GET. Scrobble Spotify → Last.fm and you keep all your listening history
 > centralised anyway.
 
-## Newsletter (beehiiv)
+## Newsletter (beehiiv) — _legacy, being retired_
+
+> This is slated for removal. Posts + RSS on this domain will become the
+> canonical home for written content (see [docs/decisions.md](docs/decisions.md)).
+> A replacement email-send path is a separate, later decision. Until posts ship,
+> beehiiv stays as documented below.
+
 
 The signup uses beehiiv's v3 Subscribe Form script loader. The form ID is
 hardcoded in `src/components/NewsletterSignup.astro` — to swap forms, just
@@ -99,3 +115,16 @@ scripts/
 - [ ] Replace the placeholder bio + location in `src/pages/index.astro`.
 - [ ] Fill in real external links (GitHub, etc.) in the same file.
 - [ ] Replace `public/favicon.svg` with something not-Astro-default.
+
+## Roadmap
+
+Build order and rationale live in [docs/decisions.md](docs/decisions.md).
+In short:
+
+1. **Posts + RSS** — Astro content collections + `@astrojs/rss`. Backbone;
+   unblocks retiring beehiiv.
+2. **Media log** — extend `fetch-now.mjs` from a current-item snapshot into an
+   append-style history of music / books / films.
+3. **Links** — curated feed sourced automatically from Raindrop via the cron.
+4. **Photos** — gallery; storage backend TBD, chosen to keep **uploading easy**
+   (not git-committed full-size images).
