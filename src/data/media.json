@@ -1,6 +1,24 @@
 {
-  "updatedAt": "2026-06-21T17:52:34.327Z",
+  "updatedAt": "2026-06-21T21:42:33.427Z",
   "music": [
+    {
+      "track": "Starburster",
+      "artist": "Fontaines D.C.",
+      "album": "Romance",
+      "url": "https://www.last.fm/music/Fontaines%20D.C./_/Starburster",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4f4ae1fdc6b81d93c41c0054d596ccf0.png",
+      "playedAt": "2026-06-21T18:10:03.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Romance",
+      "artist": "Fontaines D.C.",
+      "album": "Romance",
+      "url": "https://www.last.fm/music/Fontaines%20D.C./_/Romance",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4f4ae1fdc6b81d93c41c0054d596ccf0.png",
+      "playedAt": "2026-06-21T18:07:28.000Z",
+      "nowPlaying": false
+    },
     {
       "track": "Let Alone The One You Love",
       "artist": "Olivia Dean",
@@ -161,24 +179,6 @@
       "url": "https://www.last.fm/music/ROSAL%C3%8DA/_/Reliquia",
       "image": "https://lastfm.freetls.fastly.net/i/u/300x300/0e6bf07983158660ec4e00cae318ba83.jpg",
       "playedAt": "2026-06-11T10:48:47.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Força",
-      "artist": "Nelly Furtado",
-      "album": "Folklore",
-      "url": "https://www.last.fm/music/Nelly%20Furtado/_/For%C3%A7a",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/37119a5e774e1bebb0c49003bfae775a.png",
-      "playedAt": "2026-06-11T08:16:37.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Clint Eastwood",
-      "artist": "Gorillaz",
-      "album": "Gorillaz",
-      "url": "https://www.last.fm/music/Gorillaz/_/Clint%20Eastwood",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/86fc45f14a789e9fee32a99ea9036d3d.png",
-      "playedAt": "2026-06-11T08:11:28.000Z",
       "nowPlaying": false
     }
   ],
