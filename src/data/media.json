@@ -1,6 +1,87 @@
 {
-  "updatedAt": "2026-06-22T13:44:08.875Z",
+  "updatedAt": "2026-06-22T19:47:10.998Z",
   "music": [
+    {
+      "track": "LEVANTE-SE UMA ESCOLA",
+      "artist": "A garota não",
+      "album": "Ferry Gold",
+      "url": "https://www.last.fm/music/A%20garota%20n%C3%A3o/_/LEVANTE-SE%20UMA%20ESCOLA",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/b67e787df911f1aaea0ccd9c596af74e.jpg",
+      "playedAt": "2026-06-22T15:06:03.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Não te dês à tristeza",
+      "artist": "A garota não",
+      "album": "Ferry Gold",
+      "url": "https://www.last.fm/music/A%20garota%20n%C3%A3o/_/N%C3%A3o%20te%20de%CC%82s%20a%CC%80%20tristeza",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/b67e787df911f1aaea0ccd9c596af74e.jpg",
+      "playedAt": "2026-06-22T14:39:00.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Os sapatos da minha mãe",
+      "artist": "A garota não",
+      "album": "Ferry Gold",
+      "url": "https://www.last.fm/music/A%20garota%20n%C3%A3o/_/Os%20sapatos%20da%20minha%20ma%CC%83e",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/b67e787df911f1aaea0ccd9c596af74e.jpg",
+      "playedAt": "2026-06-22T14:37:55.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "FERRY GOLD",
+      "artist": "A garota não",
+      "album": "Ferry Gold",
+      "url": "https://www.last.fm/music/A%20garota%20n%C3%A3o/_/FERRY%20GOLD",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/b67e787df911f1aaea0ccd9c596af74e.jpg",
+      "playedAt": "2026-06-22T14:34:26.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "No love (os lugares que inventámos)",
+      "artist": "A garota não",
+      "album": "Ferry Gold",
+      "url": "https://www.last.fm/music/A%20garota%20n%C3%A3o/_/No%20love%20(os%20lugares%20que%20invent%C3%A1mos)",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/b67e787df911f1aaea0ccd9c596af74e.jpg",
+      "playedAt": "2026-06-22T14:29:42.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "NO TRAIN A CURTIR COLTRANE",
+      "artist": "A garota não",
+      "album": "Ferry Gold",
+      "url": "https://www.last.fm/music/A%20garota%20n%C3%A3o/_/NO%20TRAIN%20A%20CURTIR%20COLTRANE",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/b67e787df911f1aaea0ccd9c596af74e.jpg",
+      "playedAt": "2026-06-22T14:25:55.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "AURORA",
+      "artist": "A garota não",
+      "album": "Ferry Gold",
+      "url": "https://www.last.fm/music/A%20garota%20n%C3%A3o/_/AURORA",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/b67e787df911f1aaea0ccd9c596af74e.jpg",
+      "playedAt": "2026-06-22T14:21:28.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Este país não é para mães",
+      "artist": "A garota não",
+      "album": "Ferry Gold",
+      "url": "https://www.last.fm/music/A%20garota%20n%C3%A3o/_/Este%20pa%C3%ADs%20na%CC%83o%20e%CC%81%20para%20ma%CC%83es",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/b67e787df911f1aaea0ccd9c596af74e.jpg",
+      "playedAt": "2026-06-22T14:04:12.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "A Casa De Bernarda Alba",
+      "artist": "A garota não",
+      "album": "Ferry Gold",
+      "url": "https://www.last.fm/music/A%20garota%20n%C3%A3o/_/A%20Casa%20De%20Bernarda%20Alba",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/b67e787df911f1aaea0ccd9c596af74e.jpg",
+      "playedAt": "2026-06-22T13:58:32.000Z",
+      "nowPlaying": false
+    },
     {
       "track": "Starburster",
       "artist": "Fontaines D.C.",
@@ -98,87 +179,6 @@
       "url": "https://www.last.fm/music/Parcels/_/Tobeloved",
       "image": "https://lastfm.freetls.fastly.net/i/u/300x300/13d5b2fde5aede205dd81123c1f4dcd9.png",
       "playedAt": "2026-06-16T11:15:48.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "u + me = <3",
-      "artist": "Olivia Rodrigo",
-      "album": "you seem pretty sad for a girl so in love",
-      "url": "https://www.last.fm/music/Olivia%20Rodrigo/_/u%20%252B%20me%20=%20%3C3",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/06ccc3cc0cfe1e4ca42a26ac00d97a7b.jpg",
-      "playedAt": "2026-06-13T21:36:00.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "maggots for brains",
-      "artist": "Olivia Rodrigo",
-      "album": "you seem pretty sad for a girl so in love",
-      "url": "https://www.last.fm/music/Olivia%20Rodrigo/_/maggots%20for%20brains",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/06ccc3cc0cfe1e4ca42a26ac00d97a7b.jpg",
-      "playedAt": "2026-06-13T21:32:00.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "honeybee",
-      "artist": "Olivia Rodrigo",
-      "album": "you seem pretty sad for a girl so in love",
-      "url": "https://www.last.fm/music/Olivia%20Rodrigo/_/honeybee",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/06ccc3cc0cfe1e4ca42a26ac00d97a7b.jpg",
-      "playedAt": "2026-06-13T21:28:17.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "stupid song",
-      "artist": "Olivia Rodrigo",
-      "album": "you seem pretty sad for a girl so in love",
-      "url": "https://www.last.fm/music/Olivia%20Rodrigo/_/stupid%20song",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/06ccc3cc0cfe1e4ca42a26ac00d97a7b.jpg",
-      "playedAt": "2026-06-13T21:24:45.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Sauvignon Blanc",
-      "artist": "ROSALÍA",
-      "album": "LUX",
-      "url": "https://www.last.fm/music/ROSAL%C3%8DA/_/Sauvignon%20Blanc",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/0e6bf07983158660ec4e00cae318ba83.jpg",
-      "playedAt": "2026-06-11T11:03:25.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "La Perla",
-      "artist": "ROSALÍA",
-      "album": "LUX",
-      "url": "https://www.last.fm/music/ROSAL%C3%8DA/_/La%20Perla",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/0e6bf07983158660ec4e00cae318ba83.jpg",
-      "playedAt": "2026-06-11T11:00:10.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Berghain (feat. Björk & Yves Tumor)",
-      "artist": "ROSALÍA",
-      "album": "LUX",
-      "url": "https://www.last.fm/music/ROSAL%C3%8DA/_/Berghain%20(feat.%20Bj%C3%B6rk%20&%20Yves%20Tumor)",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/0e6bf07983158660ec4e00cae318ba83.jpg",
-      "playedAt": "2026-06-11T10:57:11.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Mio Cristo Piange Diamanti",
-      "artist": "ROSALÍA",
-      "album": "LUX",
-      "url": "https://www.last.fm/music/ROSAL%C3%8DA/_/Mio%20Cristo%20Piange%20Diamanti",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/0e6bf07983158660ec4e00cae318ba83.jpg",
-      "playedAt": "2026-06-11T10:52:41.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Reliquia",
-      "artist": "ROSALÍA",
-      "album": "LUX",
-      "url": "https://www.last.fm/music/ROSAL%C3%8DA/_/Reliquia",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/0e6bf07983158660ec4e00cae318ba83.jpg",
-      "playedAt": "2026-06-11T10:48:47.000Z",
       "nowPlaying": false
     }
   ],
