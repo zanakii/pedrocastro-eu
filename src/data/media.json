@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-24T18:08:05.877Z",
+  "updatedAt": "2026-06-24T21:45:43.996Z",
   "music": [
     {
       "track": "LEVANTE-SE UMA ESCOLA",
@@ -184,6 +184,13 @@
   ],
   "books": [
     {
+      "title": "Lost Lambs",
+      "author": "Madeline Cash",
+      "url": "https://www.goodreads.com/book/show/246288258",
+      "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1767858948l/246288258._SY475_.jpg",
+      "readAt": "2026-06-24T00:00:00.000Z"
+    },
+    {
       "title": "Contra o Progresso",
       "author": "Slavoj Žižek",
       "url": "https://www.goodreads.com/book/show/241412474",
@@ -315,13 +322,6 @@
       "url": "https://www.goodreads.com/book/show/95867411",
       "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1675346317l/95867411._SY475_.jpg",
       "readAt": "2024-02-19T00:00:00.000Z"
-    },
-    {
-      "title": "Se Esta Rua Falasse",
-      "author": "James Baldwin",
-      "url": "https://www.goodreads.com/book/show/41735049",
-      "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1541157725l/41735049._SY475_.jpg",
-      "readAt": "2024-01-19T00:00:00.000Z"
     }
   ],
   "films": [
