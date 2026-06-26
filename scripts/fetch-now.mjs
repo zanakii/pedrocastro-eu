@@ -12,6 +12,9 @@
 //   LASTFM_USERNAME     - your Last.fm handle
 //   GOODREADS_USER_ID   - numeric portion of your goodreads.com/user/show/<id> URL
 //   LETTERBOXD_USERNAME - your letterboxd.com/<username> handle
+//   TRAKT_CLIENT_ID     - Trakt API app client id (https://trakt.tv/oauth/applications)
+//   TRAKT_USERNAME      - your trakt.tv slug; profile history must be public
+//   TMDB_API_KEY        - themoviedb.org API key, for series poster art (optional)
 //
 // Any missing key just disables that source.
 
@@ -24,7 +27,24 @@ const DATA_DIR = resolve(__dirname, '..', 'src', 'data');
 const NOW_PATH = resolve(DATA_DIR, 'now.json');
 const MEDIA_PATH = resolve(DATA_DIR, 'media.json');
 
-const MEDIA_LIMIT = 20; // items kept per type in the timeline
+const MEDIA_LIMIT = 5; // items kept per type in the timeline
+const MEDIA_MAX_AGE_MONTHS = 3; // older items are dropped from the timeline
+
+// The cutoff date: calendar months back from today, so "3 months ago" tracks
+// the calendar (Mar 28 stays in-window on Jun 26) rather than a fixed 90 days.
+function windowStart() {
+  const d = new Date();
+  d.setMonth(d.getMonth() - MEDIA_MAX_AGE_MONTHS);
+  return d.getTime();
+}
+
+// True when `iso` is a real date within the window. Undated items (null) are
+// out — except now-playing music, handled separately at its call site.
+function withinWindow(iso) {
+  if (!iso) return false;
+  const t = new Date(iso).getTime();
+  return Number.isFinite(t) && t >= windowStart();
+}
 
 async function readJson(path) {
   try {
@@ -107,7 +127,9 @@ async function fetchMusicList() {
   const json = await res.json();
   const tracks = json?.recenttracks?.track;
   if (!Array.isArray(tracks) || tracks.length === 0) return null;
-  return dedupeConsecutive(tracks.map(normalizeTrack)).slice(0, MEDIA_LIMIT);
+  // Return the full deduped list; the ~3-month window and per-type cap are
+  // enforced centrally in clampMedia so every write obeys them.
+  return dedupeConsecutive(tracks.map(normalizeTrack));
 }
 
 // ---------------------------------------------------------------------------
@@ -202,7 +224,9 @@ async function fetchBooksList() {
     })
     .filter(Boolean)
     .sort((a, b) => (b.readAt ?? '').localeCompare(a.readAt ?? ''));
-  return books.length ? books.slice(0, MEDIA_LIMIT) : null;
+  // Return null only when the shelf itself came back empty (a failed fetch
+  // keeps the previous data); window + cap are enforced centrally.
+  return books.length ? books : null;
 }
 
 // ---------------------------------------------------------------------------
@@ -255,12 +279,118 @@ async function fetchFilmsList() {
     });
   }
   films.sort((a, b) => b.watchedAt.localeCompare(a.watchedAt));
-  return films.length ? films.slice(0, MEDIA_LIMIT) : null;
+  // As with books: null means "keep previous data"; window + cap are central.
+  return films.length ? films : null;
+}
+
+// ---------------------------------------------------------------------------
+// Trakt — watched TV episodes (mirror your TV Time history here)
+// ---------------------------------------------------------------------------
+
+function normalizeEpisode(entry) {
+  const show = entry.show;
+  const ep = entry.episode;
+  if (!show?.title) return null;
+  const slug = show.ids?.slug;
+  return {
+    show: show.title,
+    year: show.year ?? null,
+    season: ep?.season ?? null,
+    number: ep?.number ?? null,
+    episode: ep?.title ?? null,
+    // Trakt's history is canonical; link to the show page. Poster art comes from
+    // a separate TMDB lookup keyed by this id (see withPosters).
+    url: slug ? `https://trakt.tv/shows/${slug}` : null,
+    tmdb: show.ids?.tmdb ?? null,
+    image: null,
+    watchedAt: entry.watched_at ? new Date(entry.watched_at).toISOString() : null,
+  };
+}
+
+// History is newest-first; collapse a binge (consecutive episodes of the same
+// show) into a single row so one evening doesn't fill the timeline.
+function dedupeConsecutiveShows(eps) {
+  const out = [];
+  for (const e of eps) {
+    const prev = out[out.length - 1];
+    if (prev && prev.show === e.show) continue;
+    out.push(e);
+  }
+  return out;
+}
+
+async function fetchSeriesList() {
+  const clientId = process.env.TRAKT_CLIENT_ID;
+  const user = process.env.TRAKT_USERNAME;
+  if (!clientId || !user) {
+    console.warn('[feeds] Trakt env missing; skipping series');
+    return null;
+  }
+  const url = `https://api.trakt.tv/users/${encodeURIComponent(user)}/history/episodes?limit=40`;
+  const res = await fetch(url, {
+    headers: {
+      'trakt-api-version': '2',
+      'trakt-api-key': clientId,
+      'content-type': 'application/json',
+    },
+  });
+  if (!res.ok) throw new Error(`Trakt ${res.status}`);
+  const json = await res.json();
+  if (!Array.isArray(json) || json.length === 0) return null;
+  const eps = dedupeConsecutiveShows(json.map(normalizeEpisode).filter(Boolean));
+  return eps.length ? eps : null;
+}
+
+// Trakt returns no artwork, so resolve a poster from TMDB by the show's tmdb id.
+// w342 is a good balance for the ~3.5rem card thumb.
+async function fetchTmdbPoster(tmdbId) {
+  const key = process.env.TMDB_API_KEY;
+  if (!key || !tmdbId) return null;
+  const res = await fetch(`https://api.themoviedb.org/3/tv/${tmdbId}?api_key=${key}`);
+  if (!res.ok) throw new Error(`TMDB ${res.status}`);
+  const json = await res.json();
+  return json.poster_path ? `https://image.tmdb.org/t/p/w342${json.poster_path}` : null;
+}
+
+// Add posters to the (already clamped) series list. Reuse posters from the
+// previous snapshot by tmdb id, so we hit TMDB only for newly surfaced shows
+// and a TMDB outage or rate limit can't blank art we already had.
+async function withPosters(series, prevSeries) {
+  const cache = new Map();
+  for (const p of prevSeries ?? []) {
+    if (p.tmdb && p.image) cache.set(p.tmdb, p.image);
+  }
+  for (const s of series) {
+    if (s.image) continue;
+    if (s.tmdb && cache.has(s.tmdb)) {
+      s.image = cache.get(s.tmdb);
+      continue;
+    }
+    try {
+      s.image = await fetchTmdbPoster(s.tmdb);
+    } catch (err) {
+      console.error('[feeds] TMDB poster failed:', err.message);
+      s.image = (s.tmdb && cache.get(s.tmdb)) ?? null;
+    }
+  }
+  return series;
 }
 
 // ---------------------------------------------------------------------------
 // Orchestration
 // ---------------------------------------------------------------------------
+
+// The single point of truth for the timeline rules: at most MEDIA_LIMIT items
+// per type, none older than MEDIA_MAX_AGE_MS. Applied to the final lists right
+// before writing, so it holds whether the data was freshly fetched or carried
+// over from the previous snapshot on a failed fetch. Now-playing music has no
+// timestamp yet, so it's kept regardless of the window.
+function clampMedia(list, dateKey, { keepNowPlaying = false } = {}) {
+  if (!Array.isArray(list)) return [];
+  return list
+    .filter((item) => (keepNowPlaying && item.nowPlaying) || withinWindow(item[dateKey]))
+    .slice(0, MEDIA_LIMIT);
+}
 
 async function safe(label, fn, fallback) {
   try {
@@ -279,6 +409,15 @@ const musicList = await safe('music', fetchMusicList, prevMedia?.music ?? null);
 const reading = await safe('reading', fetchReading, prevNow?.reading ?? null);
 const booksList = await safe('books', fetchBooksList, prevMedia?.books ?? null);
 const filmsList = await safe('films', fetchFilmsList, prevMedia?.films ?? null);
+const seriesList = await safe('series', fetchSeriesList, prevMedia?.series ?? null);
+
+// Posters are resolved after clamping so TMDB is queried only for the handful
+// of shows that actually make the timeline.
+const series = await safe(
+  'posters',
+  () => withPosters(clampMedia(seriesList, 'watchedAt'), prevMedia?.series),
+  clampMedia(seriesList, 'watchedAt'),
+);
 
 const updatedAt = new Date().toISOString();
 
@@ -299,9 +438,10 @@ const now = {
 
 const media = {
   updatedAt,
-  music: musicList ?? [],
-  books: booksList ?? [],
-  films: filmsList ?? [],
+  music: clampMedia(musicList, 'playedAt', { keepNowPlaying: true }),
+  books: clampMedia(booksList, 'readAt'),
+  films: clampMedia(filmsList, 'watchedAt'),
+  series,
 };
 
 await writeFile(NOW_PATH, JSON.stringify(now, null, 2) + '\n');
