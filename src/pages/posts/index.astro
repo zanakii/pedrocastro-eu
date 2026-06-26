@@ -11,6 +11,9 @@ const posts = await getSortedPosts();
 >
   <header>
     <h1>Posts</h1>
+    <p class="subscribe small muted">
+      Follow along — <a href="/rss.xml">subscribe via RSS</a>. Every post, in full, in your reader.
+    </p>
   </header>
 
   <section>
@@ -33,6 +36,7 @@ const posts = await getSortedPosts();
 
 <style>
   header { margin-bottom: 1rem; }
+  .subscribe { margin: 0.4rem 0 0; }
   .post-list {
     list-style: none;
     padding: 0;
