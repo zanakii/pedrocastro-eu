@@ -13,4 +13,20 @@ const posts = defineCollection({
   }),
 });
 
-export const collections = { posts };
+// Flashes: a browse-only photolog (no RSS, by decision), kept entirely separate
+// from posts. Each entry is one image plus light metadata. The image is a path
+// under /uploads served straight from public/, so it's a plain string here
+// rather than an astro:content image().
+const flashes = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/flashes' }),
+  schema: z.object({
+    image: z.string(), // e.g. /uploads/lisbon-rooftops.jpg
+    alt: z.string().default(''), // accessibility / fallback caption
+    date: z.coerce.date(),
+    caption: z.string().optional(),
+    location: z.string().optional(),
+    draft: z.boolean().default(false),
+  }),
+});
+
+export const collections = { posts, flashes };

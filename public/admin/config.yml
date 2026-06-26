@@ -1,0 +1,56 @@
+# Sveltia CMS configuration.
+# Edits commit straight to this GitHub repo; the OAuth handshake goes through the
+# sveltia-cms-auth Worker named in `backend.base_url`.
+backend:
+  name: github
+  repo: zanakii/pedrocastro-eu
+  branch: main
+  # The deployed sveltia-cms-auth Worker origin (no trailing slash). Set this to
+  # your Worker URL once it's live, e.g. https://sveltia-cms-auth.<acct>.workers.dev
+  base_url: https://CHANGE-ME.workers.dev
+
+# Uploaded images land in public/uploads and are referenced by their served path.
+media_folder: public/uploads
+public_folder: /uploads
+
+# A friendlier default commit message than the per-action defaults.
+slug:
+  encoding: ascii
+  clean_accents: true
+
+collections:
+  - name: posts
+    label: Posts
+    label_singular: Post
+    folder: src/content/posts
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    summary: "{{title}} — {{pubDate}}"
+    sortable_fields: [pubDate, title]
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: string, hint: "One-liner shown on the index, in meta tags, and in the RSS feed." }
+      - { name: pubDate, label: Published, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+      - { name: updatedDate, label: Updated, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true, required: false }
+      - { name: draft, label: Draft, widget: boolean, default: true, hint: "Drafts are hidden in production until unchecked." }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: flashes
+    label: Flashes
+    label_singular: Flash
+    folder: src/content/flashes
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{caption}} {{location}} — {{date}}"
+    sortable_fields: [date]
+    fields:
+      - { name: image, label: Photo, widget: image }
+      - { name: alt, label: Alt text, widget: string, hint: "Describe the image for screen readers." }
+      - { name: date, label: Date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+      - { name: caption, label: Caption, widget: string, required: false }
+      - { name: location, label: Location, widget: string, required: false }
+      - { name: draft, label: Draft, widget: boolean, default: false }
