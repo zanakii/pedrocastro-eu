@@ -29,14 +29,27 @@ export interface FilmItem {
   watchedAt: string | null;
 }
 
+export interface SeriesItem {
+  show: string | null;
+  year: number | null;
+  season: number | null;
+  number: number | null;
+  episode: string | null;
+  url: string | null;
+  tmdb: number | null;
+  image: string | null;
+  watchedAt: string | null;
+}
+
 export interface Media {
   updatedAt: string | null;
   music: MusicItem[];
   books: BookItem[];
   films: FilmItem[];
+  series: SeriesItem[];
 }
 
-export type MediaKind = 'Music' | 'Book' | 'Film';
+export type MediaKind = 'Music' | 'Book' | 'Film' | 'Series';
 
 /** Normalised row for the timeline — maps directly onto <NowCard>. */
 export interface TimelineItem {
@@ -112,6 +125,22 @@ export function getMediaTimeline(): TimelineItem[] {
       image: f.poster ?? undefined,
       meta: rel ? `watched ${rel}` : undefined,
       sortAt: ms(f.watchedAt),
+    });
+  }
+
+  // `series` is optional on older data snapshots that predate the Trakt feed.
+  for (const s of media.series ?? []) {
+    if (!s.show) continue;
+    const rel = formatRelative(s.watchedAt);
+    const ep = s.season && s.number ? `S${s.season}E${s.number}` : null;
+    items.push({
+      kind: 'Series',
+      title: s.year ? `${s.show} (${s.year})` : s.show,
+      subtitle: joinDot([ep, s.episode]),
+      href: s.url ?? undefined,
+      image: s.image ?? undefined,
+      meta: rel ? `watched ${rel}` : undefined,
+      sortAt: ms(s.watchedAt),
     });
   }
 
