@@ -1,6 +1,60 @@
 {
-  "updatedAt": "2026-06-25T21:53:15.915Z",
+  "updatedAt": "2026-06-26T04:40:08.255Z",
   "music": [
+    {
+      "track": "Motorcycle Boy",
+      "artist": "Fontaines D.C.",
+      "album": "Romance",
+      "url": "https://www.last.fm/music/Fontaines%20D.C./_/Motorcycle%20Boy",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4f4ae1fdc6b81d93c41c0054d596ccf0.png",
+      "playedAt": "2026-06-25T22:32:52.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Bug",
+      "artist": "Fontaines D.C.",
+      "album": "Romance",
+      "url": "https://www.last.fm/music/Fontaines%20D.C./_/Bug",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4f4ae1fdc6b81d93c41c0054d596ccf0.png",
+      "playedAt": "2026-06-25T22:29:50.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "In The Modern World",
+      "artist": "Fontaines D.C.",
+      "album": "Romance",
+      "url": "https://www.last.fm/music/Fontaines%20D.C./_/In%20The%20Modern%20World",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4f4ae1fdc6b81d93c41c0054d596ccf0.png",
+      "playedAt": "2026-06-25T22:25:23.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Desire",
+      "artist": "Fontaines D.C.",
+      "album": "Romance",
+      "url": "https://www.last.fm/music/Fontaines%20D.C./_/Desire",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4f4ae1fdc6b81d93c41c0054d596ccf0.png",
+      "playedAt": "2026-06-25T22:21:44.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Here's The Thing",
+      "artist": "Fontaines D.C.",
+      "album": "Romance",
+      "url": "https://www.last.fm/music/Fontaines%20D.C./_/Here%27s%20The%20Thing",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4f4ae1fdc6b81d93c41c0054d596ccf0.png",
+      "playedAt": "2026-06-25T22:19:00.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Starburster",
+      "artist": "Fontaines D.C.",
+      "album": "Romance",
+      "url": "https://www.last.fm/music/Fontaines%20D.C./_/Starburster",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4f4ae1fdc6b81d93c41c0054d596ccf0.png",
+      "playedAt": "2026-06-25T22:18:11.000Z",
+      "nowPlaying": false
+    },
     {
       "track": "LEVANTE-SE UMA ESCOLA",
       "artist": "A garota não",
@@ -125,60 +179,6 @@
       "url": "https://www.last.fm/music/Olivia%20Dean/_/Close%20Up",
       "image": "https://lastfm.freetls.fastly.net/i/u/300x300/e9aedce534c4c0cf22f18483bed6620e.jpg",
       "playedAt": "2026-06-16T13:00:48.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Lady Lady",
-      "artist": "Olivia Dean",
-      "album": "The Art of Loving",
-      "url": "https://www.last.fm/music/Olivia%20Dean/_/Lady%20Lady",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/e9aedce534c4c0cf22f18483bed6620e.jpg",
-      "playedAt": "2026-06-16T12:57:19.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Nice To Each Other",
-      "artist": "Olivia Dean",
-      "album": "The Art of Loving",
-      "url": "https://www.last.fm/music/Olivia%20Dean/_/Nice%20To%20Each%20Other",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/e9aedce534c4c0cf22f18483bed6620e.jpg",
-      "playedAt": "2026-06-16T12:53:50.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "The Art of Loving (Intro)",
-      "artist": "Olivia Dean",
-      "album": "The Art of Loving",
-      "url": "https://www.last.fm/music/Olivia%20Dean/_/The%20Art%20of%20Loving%20(Intro)",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/e9aedce534c4c0cf22f18483bed6620e.jpg",
-      "playedAt": "2026-06-16T12:53:09.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Safeandsound",
-      "artist": "Parcels",
-      "album": "Loved",
-      "url": "https://www.last.fm/music/Parcels/_/Safeandsound",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/13d5b2fde5aede205dd81123c1f4dcd9.png",
-      "playedAt": "2026-06-16T11:23:57.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Ifyoucall",
-      "artist": "Parcels",
-      "album": "Loved",
-      "url": "https://www.last.fm/music/Parcels/_/Ifyoucall",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/13d5b2fde5aede205dd81123c1f4dcd9.png",
-      "playedAt": "2026-06-16T11:19:56.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Tobeloved",
-      "artist": "Parcels",
-      "album": "Loved",
-      "url": "https://www.last.fm/music/Parcels/_/Tobeloved",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/13d5b2fde5aede205dd81123c1f4dcd9.png",
-      "playedAt": "2026-06-16T11:15:48.000Z",
       "nowPlaying": false
     }
   ],
