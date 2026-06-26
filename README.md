@@ -128,24 +128,29 @@ Attach the custom domain in the Pages project once via *Custom domains*.
 src/
   data/
     now.json                 # latest item per type (the Now section)
-    media.json               # ~20 per type (the Media timeline)
-  content.config.ts          # posts content collection (schema + loader)
+    media.json               # up to 5 per type within 3 months (the Before timeline)
+  content.config.ts          # posts + flashes content collections (schema + loader)
   content/posts/*.md         # the posts themselves
+  content/flashes/*.md       # the photolog entries (one per image)
   lib/
     now.ts                   # typed Now loader + relative-time + stars helpers
     posts.ts                 # posts list/sort/draft filter + URL + date helpers
-    media.ts                 # media loader + merged reverse-chron timeline
+    media.ts                 # timeline loader + merged reverse-chron stream
   layouts/Layout.astro       # base shell, sticky header nav, global styles
   components/
-    NowCard.astro            # label + title + subtitle row (reused by Media)
+    NowCard.astro            # label + title + subtitle row (reused by Before)
   pages/
-    index.astro              # homepage (bio + Now + "Before →")
+    index.astro              # homepage (bio + Now + Flashes preview + "Before →")
     posts/index.astro        # posts listing
     posts/[...slug].astro    # dated per-post page
-    media/index.astro        # the Media timeline
+    flashes/index.astro      # the photolog gallery
+    before/index.astro       # the Before timeline (was /media/; not in nav)
     rss.xml.ts               # RSS feed
+public/
+  admin/                     # Sveltia CMS (index.html + config.yml)
+  uploads/                   # CMS-uploaded images
 scripts/
-  fetch-now.mjs              # Last.fm + Goodreads + Letterboxd fetch → now + media
+  fetch-now.mjs              # Last.fm + Goodreads + Letterboxd + Trakt → now + media
 .github/workflows/
   deploy.yml                 # push + cron + manual; builds and deploys
 ```
@@ -164,6 +169,5 @@ In short:
 
 1. ~~**Posts + RSS** — Astro content collections + `@astrojs/rss`.~~ ✅ Done.
 2. ~~**Media log** — music / books / films timeline from the cron feeds.~~ ✅ Done.
-3. **Links** — curated feed sourced automatically from Raindrop via the cron.
-4. **Photos** — gallery; storage backend TBD, chosen to keep **uploading easy**
-   (not git-committed full-size images).
+3. ~~**Photos** — a browse-only *Flashes* gallery, edited via Sveltia CMS.~~ ✅ Done.
+4. **Links** — curated feed sourced automatically from Raindrop via the cron.
