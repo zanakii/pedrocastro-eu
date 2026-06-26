@@ -2,7 +2,7 @@
 // Fetches recent listening (Last.fm), reading (Goodreads) and watching
 // (Letterboxd) and writes two files:
 //   src/data/now.json   - the single latest item per type (the *Now* section)
-//   src/data/media.json - the most recent ~20 per type (the /media/ timeline)
+//   src/data/media.json - up to 5 per type within 3 months (the /before/ timeline)
 //
 // Designed to be run by a scheduled GitHub Action; on per-source failure it
 // preserves the previous value rather than blanking the site.

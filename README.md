@@ -23,12 +23,14 @@ npm run preview  # serve the built site
 
 ## Now + Media data (listening / reading / watching)
 
-`scripts/fetch-now.mjs` pulls recent listening (Last.fm), reading (Goodreads)
-and watching (Letterboxd) and writes two files:
+`scripts/fetch-now.mjs` pulls recent listening (Last.fm), reading (Goodreads),
+watching films (Letterboxd) and watching series (Trakt, with TMDB posters) and
+writes two files:
 
 - `src/data/now.json` — the single latest item per type (the *Now* section).
-- `src/data/media.json` — the most recent ~20 per type (the `/media/` timeline,
-  merged into one reverse-chronological stream by `src/lib/media.ts`).
+- `src/data/media.json` — up to 5 per type within the last 3 months (the
+  `/before/` timeline, merged into one reverse-chronological stream by
+  `src/lib/media.ts`).
 
 It runs every 4 hours inside the
 [Build and deploy workflow](.github/workflows/deploy.yml) — the workflow commits

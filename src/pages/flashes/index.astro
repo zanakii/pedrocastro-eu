@@ -1,0 +1,77 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import { formatDate } from '../../lib/posts';
+
+// Drafts show in dev, hide in prod — same rule as posts.
+const flashes = (
+  await getCollection('flashes', (f) =>
+    import.meta.env.PROD ? !f.data.draft : true,
+  )
+).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<Layout
+  title="Flashes — Pedro Castro"
+  description="A photolog by Pedro Castro — moments, in passing."
+>
+  <header>
+    <h1>Flashes</h1>
+    <p class="muted bio">Moments, in passing.</p>
+  </header>
+
+  <section>
+    {flashes.length === 0 ? (
+      <p class="muted">Nothing here yet.</p>
+    ) : (
+      <div class="grid">
+        {flashes.map((f) => (
+          <figure class="flash">
+            <img
+              src={f.data.image}
+              alt={f.data.alt}
+              loading="lazy"
+              decoding="async"
+            />
+            {(f.data.caption || f.data.location) && (
+              <figcaption class="small muted">
+                {f.data.caption}
+                {f.data.caption && f.data.location ? ' · ' : ''}
+                {f.data.location}
+              </figcaption>
+            )}
+            <time class="small muted" datetime={f.data.date.toISOString()}>
+              {formatDate(f.data.date)}
+            </time>
+          </figure>
+        ))}
+      </div>
+    )}
+  </section>
+</Layout>
+
+<style>
+  header { margin-bottom: 1.5rem; }
+  .bio { max-width: 32rem; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+    gap: 1.1rem;
+  }
+  .flash {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .flash img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--rule);
+    background: var(--surface);
+    display: block;
+  }
+  figcaption { margin-top: 0.1rem; }
+  time { color: var(--muted); }
+</style>
