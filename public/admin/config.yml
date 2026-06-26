@@ -5,9 +5,8 @@ backend:
   name: github
   repo: zanakii/pedrocastro-eu
   branch: main
-  # The deployed sveltia-cms-auth Worker origin (no trailing slash). Set this to
-  # your Worker URL once it's live, e.g. https://sveltia-cms-auth.<acct>.workers.dev
-  base_url: https://CHANGE-ME.workers.dev
+  # The deployed sveltia-cms-auth Worker origin (no trailing slash).
+  base_url: https://sveltia-cms-auth.cloudflare-upwind694.workers.dev
 
 # Uploaded images land in public/uploads and are referenced by their served path.
 media_folder: public/uploads
