@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T21:19:45.730Z",
+  "updatedAt": "2026-06-28T04:51:07.199Z",
   "music": [
     {
       "track": "Motorcycle Boy",
@@ -93,15 +93,6 @@
       "url": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "poster": "https://a.ltrbxd.com/resized/film-poster/1/1/9/5/5/8/6/1195586-the-devil-wears-prada-2-0-600-0-900-crop.jpg?v=0d955add69",
       "watchedAt": "2026-05-09T00:00:00.000Z"
-    },
-    {
-      "title": "We Live in Time",
-      "year": "2024",
-      "rating": 4,
-      "rewatch": true,
-      "url": "https://letterboxd.com/film/we-live-in-time/",
-      "poster": "https://a.ltrbxd.com/resized/film-poster/9/9/1/7/8/6/991786-we-live-in-time-0-600-0-900-crop.jpg?v=14245ba118",
-      "watchedAt": "2026-03-28T00:00:00.000Z"
     }
   ],
   "series": []
