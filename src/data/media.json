@@ -1,6 +1,42 @@
 {
-  "updatedAt": "2026-07-02T21:32:30.395Z",
+  "updatedAt": "2026-07-03T04:08:56.014Z",
   "music": [
+    {
+      "track": "Porcelana",
+      "artist": "ROSALÍA",
+      "album": "LUX",
+      "url": "https://www.last.fm/music/ROSAL%C3%8DA/_/Porcelana",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/0e6bf07983158660ec4e00cae318ba83.jpg",
+      "playedAt": "2026-07-02T22:41:15.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Divinize",
+      "artist": "ROSALÍA",
+      "album": "LUX",
+      "url": "https://www.last.fm/music/ROSAL%C3%8DA/_/Divinize",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/0e6bf07983158660ec4e00cae318ba83.jpg",
+      "playedAt": "2026-07-02T22:41:03.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Reliquia",
+      "artist": "ROSALÍA",
+      "album": "LUX",
+      "url": "https://www.last.fm/music/ROSAL%C3%8DA/_/Reliquia",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/0e6bf07983158660ec4e00cae318ba83.jpg",
+      "playedAt": "2026-07-02T22:27:29.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Sexo, Violencia y Llantas",
+      "artist": "ROSALÍA",
+      "album": "LUX",
+      "url": "https://www.last.fm/music/ROSAL%C3%8DA/_/Sexo,%20Violencia%20y%20Llantas",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/0e6bf07983158660ec4e00cae318ba83.jpg",
+      "playedAt": "2026-07-02T22:25:07.000Z",
+      "nowPlaying": false
+    },
     {
       "track": "Getaway Car",
       "artist": "Taylor Swift",
@@ -8,42 +44,6 @@
       "url": "https://www.last.fm/music/Taylor%20Swift/_/Getaway%20Car",
       "image": "https://lastfm.freetls.fastly.net/i/u/300x300/dddb96a470fecc69d281f45c81a44d2a.jpg",
       "playedAt": "2026-06-30T08:07:54.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Makeba",
-      "artist": "Jain",
-      "album": "Zanaka",
-      "url": "https://www.last.fm/music/Jain/_/Makeba",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/9d0fb21c06830c51e27ac36a340343c6.jpg",
-      "playedAt": "2026-06-30T08:03:44.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "LLYLM",
-      "artist": "ROSALÍA",
-      "album": "LLYLM",
-      "url": "https://www.last.fm/music/ROSAL%C3%8DA/_/LLYLM",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/b7181c804144027a4566af105e1015f8.jpg",
-      "playedAt": "2026-06-30T08:00:49.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "I Knew You Were Trouble (Taylor's Version)",
-      "artist": "Taylor Swift",
-      "album": "Red (Taylor's Version)",
-      "url": "https://www.last.fm/music/Taylor%20Swift/_/I%20Knew%20You%20Were%20Trouble%20(Taylor%27s%20Version)",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/a758908e6e86dcecbb199c4b19acb799.jpg",
-      "playedAt": "2026-06-30T07:57:09.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Welcome to the Black Parade",
-      "artist": "My Chemical Romance",
-      "album": "The Black Parade",
-      "url": "https://www.last.fm/music/My%20Chemical%20Romance/_/Welcome%20to%20the%20Black%20Parade",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/7675defb2787ce67cd030081eb8ff77c.png",
-      "playedAt": "2026-06-30T07:51:58.000Z",
       "nowPlaying": false
     }
   ],
