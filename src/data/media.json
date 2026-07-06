@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T12:15:25.909Z",
+  "updatedAt": "2026-07-06T15:54:59.982Z",
   "music": [
     {
       "track": "Sprawl II (Mountains Beyond Mountains)",
@@ -49,6 +49,13 @@
   ],
   "books": [
     {
+      "title": "Amêndoas",
+      "author": "Sohn Won-Pyung",
+      "url": "https://www.goodreads.com/book/show/211948994",
+      "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1713738383l/211948994._SX318_.jpg",
+      "readAt": "2026-07-06T00:00:00.000Z"
+    },
+    {
       "title": "Lost Lambs",
       "author": "Madeline Cash",
       "url": "https://www.goodreads.com/book/show/246288258",
@@ -75,13 +82,6 @@
       "url": "https://www.goodreads.com/book/show/58256542",
       "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1646458875l/58256542._SY475_.jpg",
       "readAt": "2026-05-10T00:00:00.000Z"
-    },
-    {
-      "title": "Homenagem à Catalunha",
-      "author": "George Orwell",
-      "url": "https://www.goodreads.com/book/show/45995228",
-      "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1558568597l/45995228._SY475_.jpg",
-      "readAt": "2026-04-22T00:00:00.000Z"
     }
   ],
   "films": [
