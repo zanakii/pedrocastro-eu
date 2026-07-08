@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Colophon — Pedro Castro"
+  description="How this site is built, where the Now data comes from, and how it handles your privacy."
+>
+  <article class="prose">
+    <header>
+      <h1>Colophon</h1>
+      <p class="muted lede">
+        A quick note on how this site is put together, where its data comes from,
+        and how it treats you while you're here.
+      </p>
+    </header>
+
+    <h2>How it's built</h2>
+    <p>
+      The site is an <a href="https://astro.build">Astro</a> static build — pages
+      are rendered to plain HTML at build time and served as flat files, so there's
+      no framework running in your browser and very little JavaScript on the page.
+      Posts are just Markdown files. Everything is hosted on
+      <a href="https://pages.cloudflare.com">Cloudflare Pages</a>.
+    </p>
+    <p>
+      A few small niceties ride along: an <a href="/rss.xml">RSS feed</a> with every
+      post in full, a sitemap, structured data for search engines, a per-post
+      Open Graph card so links look right when shared, and native view transitions
+      between pages.
+    </p>
+
+    <h2>The Now section</h2>
+    <p>
+      The <a href="/">Now</a> section on the homepage updates itself. Every four hours
+      a scheduled GitHub Actions job pulls what I've recently been listening to
+      (<a href="https://www.last.fm">Last.fm</a>), reading
+      (<a href="https://www.goodreads.com">Goodreads</a>), and watching — films from
+      <a href="https://letterboxd.com">Letterboxd</a> and series from
+      <a href="https://trakt.tv">Trakt</a>, with poster art from
+      <a href="https://www.themoviedb.org">TMDB</a> — then rebuilds and redeploys the
+      site. I wrote more about that in
+      <a href="/posts/2026/06/02/a-now-section-that-updates-itself/">a post</a>.
+    </p>
+
+    <h2>Type &amp; colour</h2>
+    <p>
+      Headings are set in <a href="https://fonts.google.com/specimen/Fraunces">Fraunces</a>
+      and the rest in <a href="https://fonts.google.com/specimen/Inter">Inter</a>. The
+      palette is a green-tinted near-black by default, with a warm-paper light mode;
+      the toggle in the header follows your system preference until you tell it
+      otherwise, and all motion backs off if you've asked your device to reduce it.
+    </p>
+
+    <h2>Privacy</h2>
+    <p>
+      There are no cookies, no advertising, and no cross-site trackers. Visitor
+      numbers come from
+      <a href="https://www.cloudflare.com/web-analytics/">Cloudflare Web Analytics</a>,
+      which is privacy-friendly and cookieless — it counts page views without
+      profiling you or setting anything on your device, which is also why you won't
+      see a consent banner. That's the whole of it.
+    </p>
+
+    <h2>Source</h2>
+    <p>
+      The code is on <a href="https://github.com/zanakii" rel="me">GitHub</a>. If
+      something here is broken or just interesting, say hello —
+      <a href="mailto:hello@pedrocastro.eu">hello@pedrocastro.eu</a>.
+    </p>
+  </article>
+</Layout>
+
+<style>
+  header {
+    margin-bottom: 1rem;
+  }
+  .lede {
+    max-width: 34rem;
+  }
+  /* Real, readable headings inside the article — the global h2 is a tiny
+     uppercase section label, so re-style it here the way posts do. */
+  .prose :global(h2) {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: -0.01em;
+    color: var(--fg);
+    margin: 2.4rem 0 0.8rem;
+  }
+  .prose :global(h2::after) {
+    content: none;
+  }
+</style>
