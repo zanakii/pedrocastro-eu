@@ -182,31 +182,32 @@ Build order and rationale live in [docs/decisions.md](docs/decisions.md).
 8. ~~**Analytics** — Cloudflare Web Analytics beacon (cookieless, no consent banner),
    production-only so dev browsing doesn't count.~~ ✅
 
-**Planned**, in build order. Rationale: global polish first (cheap, and every
-later page inherits it; analytics early so it measures everything that follows),
-then the Markdown identity pages (highest personality-per-hour), then the more
-involved content/sharing work, and the one dynamic feature last.
+**Planned.** Foundational polish is done; what's left is reordered to do the
+low-effort, no-input work first and park anything that needs writing, personal
+data, or a product decision until the end.
 
-_Identity pages — mostly Markdown:_
+_Do next — little or no input needed:_
 
-9. **/about** — the longer story + contact (homepage only has a one-line bio).
-10. **/now** — a standalone status page (distinct from the auto-fed *Now* section);
+9. **Per-post OG images** — generated share cards (`astro-og` / Satori). Purely
+   technical; first up.
+10. **/colophon** — how the site is built, plus the privacy stance stated plainly:
+    privacy-friendly, **cookieless** analytics (per #8), not "no analytics."
+    Drafted from the repo; light edit pass only.
+
+_Needs input — the personal / content-heavy pages:_
+
+11. **/about** — the longer story + contact (homepage only has a one-line bio).
+12. **/now** — a standalone status page (distinct from the auto-fed *Now* section);
     list it on nownownow.com.
-11. **/uses** — hardware / software / config.
-12. **/colophon** — how the site is built, and the "no tracking" stance stated
-    plainly (leans on the analytics choice in #8).
+13. **/uses** — hardware / software / config.
+14. **Notes / digital garden** — a short, evergreen link-with-commentary stream,
+    separate from the dated Posts. Open task first: nail the Notes-vs-Posts framing
+    so Notes reads as genuine, not a second blog.
 
-_Content & sharing:_
-
-13. **Links** — curated feed sourced automatically from Raindrop via the cron.
-14. **Per-post OG images** — generated share cards (`astro-og` / Satori).
-15. **Notes / digital garden** — a short, evergreen link-with-commentary stream,
-    separate from the dated Posts.
-
-_Community:_
-
-16. **Guestbook** — privacy-friendly visitor messages (the only item needing any
-    dynamic handling).
-
-> **Considered and dropped:** Webmentions / IndieWeb POSSE backfeed — there's no
-> social syndication to backfeed from, so the payoff doesn't apply here.
+> **Dropped:** _Links (curated Raindrop feed)_ — no Raindrop account, and Notes
+> already covers hand-picked "link + commentary." _Webmentions / IndieWeb POSSE
+> backfeed_ — no social syndication to backfeed from.
+>
+> **Parked:** _Guestbook_ — privacy-friendly visitor messages; the only feature
+> needing dynamic handling (storage + form + spam defense). Skipped for now; if
+> revived, the clean fit is a Cloudflare Worker + D1 + Turnstile.
