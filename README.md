@@ -174,6 +174,8 @@ Build order and rationale live in [docs/decisions.md](docs/decisions.md).
 4. ~~**Now** — homepage Now section with Binging/Seen cards, ordered chronologically.~~ ✅
 5. ~~**Dark-mode toggle** + `prefers-reduced-motion` support — light/dark palettes with
    a header toggle, system-preference default, no-flash resolution, persisted choice.~~ ✅
+6. ~~**View Transitions** — Astro's native `<ClientRouter />` for cross-page morphing;
+   theme toggle rebound via document delegation so it survives body swaps.~~ ✅
 
 **Planned**, in build order. Rationale: global polish first (cheap, and every
 later page inherits it; analytics early so it measures everything that follows),
@@ -182,8 +184,6 @@ involved content/sharing work, and the one dynamic feature last.
 
 _Foundational polish — global, cheap, inherited everywhere:_
 
-6. **View Transitions** — Astro's native page morphing (the good kind of delight,
-   not scroll-hijacking).
 7. **SEO baseline** — `sitemap.xml` (`@astrojs/sitemap`), JSON-LD for posts, and a
    discoverable `<link rel="alternate">` for the RSS feed.
 8. **Analytics** — Cloudflare Web Analytics (cookieless, no consent banner; native

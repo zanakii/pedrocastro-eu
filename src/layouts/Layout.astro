@@ -1,4 +1,6 @@
 ---
+import { ClientRouter } from 'astro:transitions';
+
 interface Props {
   title?: string;
   description?: string;
@@ -40,6 +42,7 @@ const nav = [
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="alternate" type="application/rss+xml" title="Pedro Castro" href="/rss.xml" />
+    <ClientRouter />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -73,8 +76,10 @@ const nav = [
       </nav>
     </header>
     <script>
-      const btn = document.querySelector('.theme-toggle');
-      btn?.addEventListener('click', () => {
+      // Delegated on document so the handler survives ClientRouter body swaps.
+      document.addEventListener('click', (e) => {
+        if (!(e.target instanceof Element)) return;
+        if (!e.target.closest('.theme-toggle')) return;
         const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
         document.documentElement.dataset.theme = next;
         localStorage.setItem('theme', next);
