@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-08T10:46:55.600Z",
+  "updatedAt": "2026-07-08T10:55:45.191Z",
   "music": [
     {
       "track": "Sprawl II (Mountains Beyond Mountains)",
@@ -95,5 +95,28 @@
       "watchedAt": "2026-05-09T00:00:00.000Z"
     }
   ],
-  "series": []
+  "series": [
+    {
+      "show": "The Americans",
+      "year": 2013,
+      "season": 4,
+      "number": 9,
+      "episode": "The Day After",
+      "url": "https://trakt.tv/shows/the-americans-2013",
+      "tmdb": 46533,
+      "image": "https://image.tmdb.org/t/p/w342/w1UBlxEXhbKe8sp0fxFZh7MqTce.jpg",
+      "watchedAt": "2026-07-05T10:30:00.000Z"
+    },
+    {
+      "show": "Hacks",
+      "year": 2021,
+      "season": 3,
+      "number": 3,
+      "episode": "The Roast of Deborah Vance",
+      "url": "https://trakt.tv/shows/hacks-2021",
+      "tmdb": 124101,
+      "image": "https://image.tmdb.org/t/p/w342/ca5XiEFgyGsI38QT3wEKa1QVGX.jpg",
+      "watchedAt": "2026-06-06T08:53:00.000Z"
+    }
+  ]
 }
