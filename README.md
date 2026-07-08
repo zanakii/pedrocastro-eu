@@ -165,9 +165,49 @@ scripts/
 ## Roadmap
 
 Build order and rationale live in [docs/decisions.md](docs/decisions.md).
-In short:
 
-1. ~~**Posts + RSS** — Astro content collections + `@astrojs/rss`.~~ ✅ Done.
-2. ~~**Media log** — music / books / films timeline from the cron feeds.~~ ✅ Done.
-3. ~~**Photos** — a browse-only *Flashes* gallery, edited via Sveltia CMS.~~ ✅ Done.
-4. **Links** — curated feed sourced automatically from Raindrop via the cron.
+**Done:**
+
+1. ~~**Posts + RSS** — Astro content collections + `@astrojs/rss`.~~ ✅
+2. ~~**Media log** — music / books / films / series timeline from the cron feeds.~~ ✅
+3. ~~**Photos** — a browse-only *Flashes* gallery, edited via Sveltia CMS.~~ ✅
+4. ~~**Now** — homepage Now section with Binging/Seen cards, ordered chronologically.~~ ✅
+
+**Planned**, in build order. Rationale: global polish first (cheap, and every
+later page inherits it; analytics early so it measures everything that follows),
+then the Markdown identity pages (highest personality-per-hour), then the more
+involved content/sharing work, and the one dynamic feature last.
+
+_Foundational polish — global, cheap, inherited everywhere:_
+
+5. **Dark-mode toggle** + `prefers-reduced-motion` support.
+6. **View Transitions** — Astro's native page morphing (the good kind of delight,
+   not scroll-hijacking).
+7. **SEO baseline** — `sitemap.xml` (`@astrojs/sitemap`), JSON-LD for posts, and a
+   discoverable `<link rel="alternate">` for the RSS feed.
+8. **Analytics** — Cloudflare Web Analytics (cookieless, no consent banner; native
+   to the host).
+
+_Identity pages — mostly Markdown:_
+
+9. **/about** — the longer story + contact (homepage only has a one-line bio).
+10. **/now** — a standalone status page (distinct from the auto-fed *Now* section);
+    list it on nownownow.com.
+11. **/uses** — hardware / software / config.
+12. **/colophon** — how the site is built, and the "no tracking" stance stated
+    plainly (leans on the analytics choice in #8).
+
+_Content & sharing:_
+
+13. **Links** — curated feed sourced automatically from Raindrop via the cron.
+14. **Per-post OG images** — generated share cards (`astro-og` / Satori).
+15. **Notes / digital garden** — a short, evergreen link-with-commentary stream,
+    separate from the dated Posts.
+
+_Community:_
+
+16. **Guestbook** — privacy-friendly visitor messages (the only item needing any
+    dynamic handling).
+
+> **Considered and dropped:** Webmentions / IndieWeb POSSE backfeed — there's no
+> social syndication to backfeed from, so the payoff doesn't apply here.
