@@ -172,6 +172,8 @@ Build order and rationale live in [docs/decisions.md](docs/decisions.md).
 2. ~~**Media log** — music / books / films / series timeline from the cron feeds.~~ ✅
 3. ~~**Photos** — a browse-only *Flashes* gallery, edited via Sveltia CMS.~~ ✅
 4. ~~**Now** — homepage Now section with Binging/Seen cards, ordered chronologically.~~ ✅
+5. ~~**Dark-mode toggle** + `prefers-reduced-motion` support — light/dark palettes with
+   a header toggle, system-preference default, no-flash resolution, persisted choice.~~ ✅
 
 **Planned**, in build order. Rationale: global polish first (cheap, and every
 later page inherits it; analytics early so it measures everything that follows),
@@ -180,7 +182,6 @@ involved content/sharing work, and the one dynamic feature last.
 
 _Foundational polish — global, cheap, inherited everywhere:_
 
-5. **Dark-mode toggle** + `prefers-reduced-motion` support.
 6. **View Transitions** — Astro's native page morphing (the good kind of delight,
    not scroll-hijacking).
 7. **SEO baseline** — `sitemap.xml` (`@astrojs/sitemap`), JSON-LD for posts, and a
