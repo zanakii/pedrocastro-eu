@@ -179,18 +179,13 @@ Build order and rationale live in [docs/decisions.md](docs/decisions.md).
 7. ~~**SEO baseline** — `@astrojs/sitemap` (+ `robots.txt`), `BlogPosting` JSON-LD on
    posts, self-referential `<link rel="canonical">` + `og:url`, discoverable RSS
    `<link rel="alternate">`.~~ ✅
+8. ~~**Analytics** — Cloudflare Web Analytics beacon (cookieless, no consent banner),
+   production-only so dev browsing doesn't count.~~ ✅
 
 **Planned**, in build order. Rationale: global polish first (cheap, and every
 later page inherits it; analytics early so it measures everything that follows),
 then the Markdown identity pages (highest personality-per-hour), then the more
 involved content/sharing work, and the one dynamic feature last.
-
-_Foundational polish — global, cheap, inherited everywhere:_
-
-7. **SEO baseline** — `sitemap.xml` (`@astrojs/sitemap`), JSON-LD for posts, and a
-   discoverable `<link rel="alternate">` for the RSS feed.
-8. **Analytics** — Cloudflare Web Analytics (cookieless, no consent banner; native
-   to the host).
 
 _Identity pages — mostly Markdown:_
 
