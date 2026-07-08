@@ -26,6 +26,7 @@ const { Content } = await render(post);
 const { title, description, pubDate, updatedDate } = post.data;
 
 const postUrl = new URL(postPath(post), SITE).href;
+const ogImage = `/og/posts/${post.id}.png`;
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
@@ -40,7 +41,7 @@ const jsonLd = {
 };
 ---
 
-<Layout title={`${title} — Pedro Castro`} description={description}>
+<Layout title={`${title} — Pedro Castro`} description={description} image={ogImage}>
   <script
     slot="head"
     type="application/ld+json"
