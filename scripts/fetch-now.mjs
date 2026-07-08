@@ -442,6 +442,10 @@ const now = {
     prevNow?.watching ?? {
       title: null, year: null, rating: null, rewatch: false, url: null, poster: null, watchedAt: null,
     },
+  series: series[0] ??
+    prevNow?.series ?? {
+      show: null, year: null, season: null, number: null, episode: null, url: null, image: null, watchedAt: null,
+    },
 };
 
 const media = {

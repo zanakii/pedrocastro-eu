@@ -28,15 +28,34 @@ export interface WatchingNow {
   watchedAt: string | null;
 }
 
+export interface SeriesNow {
+  show: string | null;
+  year: string | number | null;
+  season: number | null;
+  number: number | null;
+  episode: string | null;
+  url: string | null;
+  image: string | null;
+  watchedAt: string | null;
+}
+
 export interface Now {
   updatedAt: string | null;
   listening: ListeningNow;
   reading: ReadingNow;
   watching: WatchingNow;
+  series: SeriesNow;
 }
 
 export function getNow(): Now {
-  return nowData as Now;
+  const data = nowData as Now;
+  // `series` is optional on older snapshots that predate the Trakt-in-Now feed.
+  return {
+    ...data,
+    series: data.series ?? {
+      show: null, year: null, season: null, number: null, episode: null, url: null, image: null, watchedAt: null,
+    },
+  };
 }
 
 // Letterboxd ratings are 0.5–5.0 in half-star steps. Render as filled/half

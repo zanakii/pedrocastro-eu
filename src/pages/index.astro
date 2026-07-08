@@ -15,29 +15,80 @@ const flashes = (
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
   .slice(0, 5);
 
-const listeningTitle = now.listening.track ?? '—';
-const listeningSubtitle = [now.listening.artist, now.listening.album]
-  .filter(Boolean)
-  .join(' · ');
-const listeningMeta = now.listening.nowPlaying
-  ? 'now playing'
-  : formatRelative(now.listening.playedAt) ?? null;
+// Each Now card carries a `sortAt` (ms) so the section reads chronologically —
+// the most recent activity of each kind, ordered newest-first regardless of
+// which medium it is. A now-playing track counts as happening right now.
+const ms = (iso: string | null): number => {
+  if (!iso) return 0;
+  const t = new Date(iso).getTime();
+  return Number.isNaN(t) ? 0 : t;
+};
 
-const readingTitle = now.reading.title ?? '—';
-const readingSubtitle = now.reading.author ?? undefined;
-const readingMeta = formatRelative(now.reading.startedAt) ?? null;
+const withYear = (title: string | null, year: string | number | null) =>
+  title ? (year ? `${title} (${year})` : title) : '—';
 
-const watchingTitle = now.watching.title
-  ? now.watching.year
-    ? `${now.watching.title} (${now.watching.year})`
-    : now.watching.title
-  : '—';
-const watchingStars = formatStars(now.watching.rating);
-const watchingSubtitle = [watchingStars, now.watching.rewatch ? 'rewatch' : null]
-  .filter(Boolean)
-  .join(' · ');
-const watchingRelative = formatRelative(now.watching.watchedAt);
-const watchingMeta = watchingRelative ? `watched ${watchingRelative}` : null;
+const seriesEp =
+  now.series.season && now.series.number
+    ? `S${now.series.season}E${now.series.number}`
+    : null;
+
+const cards = [
+  {
+    label: 'Reading',
+    title: now.reading.title ?? '—',
+    subtitle: now.reading.author ?? undefined,
+    href: now.reading.url ?? undefined,
+    meta: formatRelative(now.reading.startedAt)
+      ? `started ${formatRelative(now.reading.startedAt)}`
+      : undefined,
+    image: now.reading.cover ?? undefined,
+    present: Boolean(now.reading.title),
+    sortAt: ms(now.reading.startedAt),
+  },
+  {
+    label: 'Binging',
+    title: withYear(now.series.show, now.series.year),
+    subtitle: [seriesEp, now.series.episode].filter(Boolean).join(' · ') || undefined,
+    href: now.series.url ?? undefined,
+    meta: formatRelative(now.series.watchedAt)
+      ? `watched ${formatRelative(now.series.watchedAt)}`
+      : undefined,
+    image: now.series.image ?? undefined,
+    present: Boolean(now.series.show),
+    sortAt: ms(now.series.watchedAt),
+  },
+  {
+    label: 'Seen',
+    title: withYear(now.watching.title, now.watching.year),
+    subtitle:
+      [formatStars(now.watching.rating), now.watching.rewatch ? 'rewatch' : null]
+        .filter(Boolean)
+        .join(' · ') || undefined,
+    href: now.watching.url ?? undefined,
+    meta: formatRelative(now.watching.watchedAt)
+      ? `watched ${formatRelative(now.watching.watchedAt)}`
+      : undefined,
+    image: now.watching.poster ?? undefined,
+    present: Boolean(now.watching.title),
+    sortAt: ms(now.watching.watchedAt),
+  },
+  {
+    label: 'Listening',
+    title: now.listening.track ?? '—',
+    subtitle:
+      [now.listening.artist, now.listening.album].filter(Boolean).join(' · ') || undefined,
+    href: now.listening.url ?? undefined,
+    meta: now.listening.nowPlaying
+      ? 'now playing'
+      : formatRelative(now.listening.playedAt) ?? undefined,
+    image: now.listening.image ?? undefined,
+    present: Boolean(now.listening.track),
+    // A now-playing track is happening right now, so it sorts to the top.
+    sortAt: now.listening.nowPlaying ? Date.now() : ms(now.listening.playedAt),
+  },
+]
+  .filter((c) => c.present)
+  .sort((a, b) => b.sortAt - a.sortAt);
 
 const lastUpdated = formatRelative(now.updatedAt);
 ---
@@ -83,30 +134,16 @@ const lastUpdated = formatRelative(now.updatedAt);
   <section>
     <h2>Now</h2>
     <div class="now-list">
-    <NowCard
-      label="Reading"
-      title={readingTitle}
-      subtitle={readingSubtitle}
-      href={now.reading.url ?? undefined}
-      meta={readingMeta ? `started ${readingMeta}` : undefined}
-      image={now.reading.cover ?? undefined}
-    />
-    <NowCard
-      label="Watching"
-      title={watchingTitle}
-      subtitle={watchingSubtitle || undefined}
-      href={now.watching.url ?? undefined}
-      meta={watchingMeta ?? undefined}
-      image={now.watching.poster ?? undefined}
-    />
-    <NowCard
-      label="Listening"
-      title={listeningTitle}
-      subtitle={listeningSubtitle || undefined}
-      href={now.listening.url ?? undefined}
-      meta={listeningMeta ?? undefined}
-      image={now.listening.image ?? undefined}
-    />
+    {cards.map((c) => (
+      <NowCard
+        label={c.label}
+        title={c.title}
+        subtitle={c.subtitle}
+        href={c.href}
+        meta={c.meta}
+        image={c.image}
+      />
+    ))}
     </div>
     <p class="before">
       <a href="/before/">Before →</a>
