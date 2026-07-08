@@ -4,15 +4,20 @@ import { ClientRouter } from 'astro:transitions';
 interface Props {
   title?: string;
   description?: string;
+  /** Site-relative or absolute OG image (e.g. a per-post card). */
+  image?: string;
 }
 
 const {
   title = 'Pedro Castro',
   description = 'Personal site of Pedro Castro.',
+  image,
 } = Astro.props;
 
 // Absolute, self-referential canonical for the current page.
 const canonical = new URL(Astro.url.pathname, Astro.site);
+// Resolve OG image to an absolute URL when a page supplies one.
+const ogImage = image ? new URL(image, Astro.site) : undefined;
 
 const path = Astro.url.pathname;
 const nav = [
@@ -34,6 +39,15 @@ const nav = [
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
+    {ogImage && (
+      <>
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={ogImage} />
+      </>
+    )}
     <script is:inline>
       // Resolve theme before paint to avoid a flash of the wrong palette.
       (() => {
