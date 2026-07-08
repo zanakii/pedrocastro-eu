@@ -307,13 +307,17 @@ function normalizeEpisode(entry) {
   };
 }
 
-// History is newest-first; collapse a binge (consecutive episodes of the same
-// show) into a single row so one evening doesn't fill the timeline.
-function dedupeConsecutiveShows(eps) {
+// History is newest-first. Reduce to one row per distinct show, keeping the
+// most-recent episode seen for it — so the timeline reads as the last N shows
+// watched (each with its latest episode as detail), never the same show twice.
+// Collapsing only consecutive runs isn't enough: interleaved viewing (show A,
+// show B, show A, …) would otherwise fill the 5 slots with duplicates.
+function dedupeToDistinctShows(eps) {
+  const seen = new Set();
   const out = [];
   for (const e of eps) {
-    const prev = out[out.length - 1];
-    if (prev && prev.show === e.show) continue;
+    if (seen.has(e.show)) continue;
+    seen.add(e.show);
     out.push(e);
   }
   return out;
@@ -332,12 +336,16 @@ async function fetchSeriesList() {
       'trakt-api-version': '2',
       'trakt-api-key': clientId,
       'content-type': 'application/json',
+      // Trakt sits behind Cloudflare, which 403s requests with no User-Agent.
+      // Node's fetch (undici) sends none by default, so CI got 403 while curl
+      // (which auto-sends one) worked — set an explicit UA so both match.
+      'user-agent': 'pedrocastro-eu-feeds/1.0 (+https://pedrocastro.eu)',
     },
   });
   if (!res.ok) throw new Error(`Trakt ${res.status}`);
   const json = await res.json();
   if (!Array.isArray(json) || json.length === 0) return null;
-  const eps = dedupeConsecutiveShows(json.map(normalizeEpisode).filter(Boolean));
+  const eps = dedupeToDistinctShows(json.map(normalizeEpisode).filter(Boolean));
   return eps.length ? eps : null;
 }
 
