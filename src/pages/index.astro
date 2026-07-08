@@ -178,7 +178,8 @@ const lastUpdated = formatRelative(now.updatedAt);
   <footer>
     <p>
       © {new Date().getFullYear()} Pedro Castro ·
-      {lastUpdated ? ` Now updated ${lastUpdated}` : ' Now data not yet populated'}
+      {lastUpdated ? `Now updated ${lastUpdated} · ` : 'Now data not yet populated · '}
+      <a href="/colophon/">Colophon</a>
     </p>
   </footer>
 </Layout>
