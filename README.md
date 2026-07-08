@@ -176,6 +176,9 @@ Build order and rationale live in [docs/decisions.md](docs/decisions.md).
    a header toggle, system-preference default, no-flash resolution, persisted choice.~~ ✅
 6. ~~**View Transitions** — Astro's native `<ClientRouter />` for cross-page morphing;
    theme toggle rebound via document delegation so it survives body swaps.~~ ✅
+7. ~~**SEO baseline** — `@astrojs/sitemap` (+ `robots.txt`), `BlogPosting` JSON-LD on
+   posts, self-referential `<link rel="canonical">` + `og:url`, discoverable RSS
+   `<link rel="alternate">`.~~ ✅
 
 **Planned**, in build order. Rationale: global polish first (cheap, and every
 later page inherits it; analytics early so it measures everything that follows),

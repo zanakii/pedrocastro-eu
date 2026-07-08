@@ -3,6 +3,8 @@ import { render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import { getSortedPosts, postPath, formatDate, type Post } from '../../lib/posts';
 
+const SITE = 'https://pedrocastro.eu';
+
 export async function getStaticPaths() {
   const posts = await getSortedPosts();
   return posts.map((post) => {
@@ -22,9 +24,29 @@ interface Props {
 const { post } = Astro.props;
 const { Content } = await render(post);
 const { title, description, pubDate, updatedDate } = post.data;
+
+const postUrl = new URL(postPath(post), SITE).href;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description,
+  datePublished: pubDate.toISOString(),
+  ...(updatedDate && { dateModified: updatedDate.toISOString() }),
+  author: { '@type': 'Person', name: 'Pedro Castro', url: SITE },
+  publisher: { '@type': 'Person', name: 'Pedro Castro', url: SITE },
+  mainEntityOfPage: postUrl,
+  url: postUrl,
+};
 ---
 
 <Layout title={`${title} — Pedro Castro`} description={description}>
+  <script
+    slot="head"
+    type="application/ld+json"
+    is:inline
+    set:html={JSON.stringify(jsonLd)}
+  />
   <article class="prose">
     <h1>{title}</h1>
     <p class="dateline muted small">

@@ -11,6 +11,9 @@ const {
   description = 'Personal site of Pedro Castro.',
 } = Astro.props;
 
+// Absolute, self-referential canonical for the current page.
+const canonical = new URL(Astro.url.pathname, Astro.site);
+
 const path = Astro.url.pathname;
 const nav = [
   { label: 'Home', href: '/', active: path === '/' },
@@ -26,9 +29,11 @@ const nav = [
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
     <script is:inline>
       // Resolve theme before paint to avoid a flash of the wrong palette.
       (() => {
@@ -42,7 +47,9 @@ const nav = [
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="alternate" type="application/rss+xml" title="Pedro Castro" href="/rss.xml" />
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
     <ClientRouter />
+    <slot name="head" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
