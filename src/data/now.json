@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-08T10:55:45.191Z",
+  "updatedAt": "2026-07-08T11:08:25.185Z",
   "listening": {
     "track": "Sprawl II (Mountains Beyond Mountains)",
     "artist": "Arcade Fire",
@@ -24,5 +24,16 @@
     "url": "https://letterboxd.com/film/the-devil-wears-prada-2/",
     "poster": "https://a.ltrbxd.com/resized/film-poster/1/1/9/5/5/8/6/1195586-the-devil-wears-prada-2-0-600-0-900-crop.jpg?v=0d955add69",
     "watchedAt": "2026-05-09T00:00:00.000Z"
+  },
+  "series": {
+    "show": "The Americans",
+    "year": 2013,
+    "season": 4,
+    "number": 9,
+    "episode": "The Day After",
+    "url": "https://trakt.tv/shows/the-americans-2013",
+    "tmdb": 46533,
+    "image": "https://image.tmdb.org/t/p/w342/w1UBlxEXhbKe8sp0fxFZh7MqTce.jpg",
+    "watchedAt": "2026-07-05T10:30:00.000Z"
   }
 }
