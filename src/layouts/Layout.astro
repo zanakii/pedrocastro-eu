@@ -57,6 +57,17 @@ const nav = [
       rel="stylesheet"
     />
     <title>{title}</title>
+    {/* Cloudflare Web Analytics — cookieless, no consent banner. Production only,
+        so local dev browsing doesn't pollute the numbers. The token is public
+        (it ships in the HTML), not a secret. */}
+    {import.meta.env.PROD && (
+      <script
+        is:inline
+        defer
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"token": "0d689ab8953c4fc78ce6b843c080e341"}'
+      />
+    )}
   </head>
   <body>
     <header class="site-header">
