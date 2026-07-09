@@ -1,49 +1,49 @@
 {
-  "updatedAt": "2026-07-09T11:29:10.106Z",
+  "updatedAt": "2026-07-09T15:33:44.748Z",
   "music": [
     {
-      "track": "Sprawl II (Mountains Beyond Mountains)",
+      "track": "Hallucinate",
+      "artist": "Dua Lipa",
+      "album": "Future Nostalgia",
+      "url": "https://www.last.fm/music/Dua%20Lipa/_/Hallucinate",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/7017c94ef74a476838e751b0cee1f014.png",
+      "playedAt": "2026-07-09T13:45:34.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "The Narcissist",
+      "artist": "Blur",
+      "album": "The Ballad of Darren",
+      "url": "https://www.last.fm/music/Blur/_/The%20Narcissist",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/98c65ca79f7f9a865b26978f9bf68b3c.jpg",
+      "playedAt": "2026-07-09T13:32:01.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Rebellion (Lies)",
       "artist": "Arcade Fire",
-      "album": "The Suburbs (Deluxe)",
-      "url": "https://www.last.fm/music/Arcade%20Fire/_/Sprawl%20II%20(Mountains%20Beyond%20Mountains)",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/75f2439a1fe9cfd221bc6e2af5018ddc.jpg",
-      "playedAt": "2026-07-06T10:14:57.000Z",
+      "album": "Funeral",
+      "url": "https://www.last.fm/music/Arcade%20Fire/_/Rebellion%20(Lies)",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/3278464e10e38a8119da1d9455681654.jpg",
+      "playedAt": "2026-07-09T13:31:51.000Z",
       "nowPlaying": false
     },
     {
-      "track": "Danielle (Smile On My Face)",
-      "artist": "Fred again..",
-      "album": "Actual Life 3 (January 1 - September 9 2022)",
-      "url": "https://www.last.fm/music/Fred%20again../_/Danielle%20(Smile%20On%20My%20Face)",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/95458e99e834eee83bf469b5fc283289.jpg",
-      "playedAt": "2026-07-06T10:11:36.000Z",
+      "track": "The Steps",
+      "artist": "HAIM",
+      "album": "Women in Music Pt. III (Expanded Edition)",
+      "url": "https://www.last.fm/music/HAIM/_/The%20Steps",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2e179b90c05dda777c44bc4f61fa73dc.jpg",
+      "playedAt": "2026-07-09T13:21:49.000Z",
       "nowPlaying": false
     },
     {
-      "track": "Seve",
-      "artist": "Tez Cadey",
-      "album": "Seve",
-      "url": "https://www.last.fm/music/Tez%20Cadey/_/Seve",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/eaaecbb1b98e43f6c313fdb14b89f1ac.jpg",
-      "playedAt": "2026-07-06T10:08:05.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Seve (Radio Edit)",
-      "artist": "Tez Cadey",
-      "album": "Seve (Radio Edit)",
-      "url": "https://www.last.fm/music/Tez%20Cadey/_/Seve%20(Radio%20Edit)",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/922882c7bc3c5efb4a0a073bece5d043.jpg",
-      "playedAt": "2026-07-06T10:08:05.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "My Lady of Mercy",
-      "artist": "The Last Dinner Party",
-      "album": "Prelude to Ecstasy",
-      "url": "https://www.last.fm/music/The%20Last%20Dinner%20Party/_/My%20Lady%20of%20Mercy",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/dcf1265ac1c0752aa8511468cdfede8a.jpg",
-      "playedAt": "2026-07-06T10:05:10.000Z",
+      "track": "Busy Earnin'",
+      "artist": "Jungle",
+      "album": "Jungle",
+      "url": "https://www.last.fm/music/Jungle/_/Busy%20Earnin%27",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/be96a997b4e645bec5da9807c1409759.png",
+      "playedAt": "2026-07-09T13:18:47.000Z",
       "nowPlaying": false
     }
   ],
