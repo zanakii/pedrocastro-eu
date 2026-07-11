@@ -1,13 +1,40 @@
 {
-  "updatedAt": "2026-07-11T06:26:39.011Z",
+  "updatedAt": "2026-07-11T09:48:30.083Z",
   "music": [
+    {
+      "track": "Chelsea Dagger",
+      "artist": "The Fratellis",
+      "album": "Costello Music",
+      "url": "https://www.last.fm/music/The%20Fratellis/_/Chelsea%20Dagger",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/8ea4dad3c3614770bca41a29c2e53b3d.png",
+      "playedAt": null,
+      "nowPlaying": true
+    },
+    {
+      "track": "Gift Horse",
+      "artist": "IDLES",
+      "album": "TANGK",
+      "url": "https://www.last.fm/music/IDLES/_/Gift%20Horse",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/de7a2f010aac09f197aa8b342159c0f0.jpg",
+      "playedAt": "2026-07-11T09:41:56.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Do I Wanna Know?",
+      "artist": "Arctic Monkeys",
+      "album": "AM",
+      "url": "https://www.last.fm/music/Arctic%20Monkeys/_/Do%20I%20Wanna%20Know%3F",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/f579e414e20f40969185e41182d72472.png",
+      "playedAt": "2026-07-11T09:37:23.000Z",
+      "nowPlaying": false
+    },
     {
       "track": "The Steps",
       "artist": "HAIM",
       "album": "The Steps",
       "url": "https://www.last.fm/music/HAIM/_/The%20Steps",
       "image": "https://lastfm.freetls.fastly.net/i/u/300x300/05e911b41dc11a35bf232b26b8ee40fa.jpg",
-      "playedAt": "2026-07-11T01:10:42.000Z",
+      "playedAt": "2026-07-11T09:36:40.000Z",
       "nowPlaying": false
     },
     {
@@ -17,33 +44,6 @@
       "url": "https://www.last.fm/music/Rage%20Against%20the%20Machine/_/Killing%20in%20the%20Name",
       "image": "https://lastfm.freetls.fastly.net/i/u/300x300/6bb98be573004e32ce2026300b1dd5f2.png",
       "playedAt": "2026-07-11T01:05:28.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Killing In The Name (Remastered)",
-      "artist": "Rage Against the Machine",
-      "album": "Rage Against The Machine - XX (20th Anniversary Special Edition)",
-      "url": "https://www.last.fm/music/%20noredirect/Rage%20Against%20the%20Machine/_/Killing%20In%20The%20Name%20(Remastered)",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/6bb98be573004e32ce2026300b1dd5f2.png",
-      "playedAt": "2026-07-11T01:05:27.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Perfume",
-      "artist": "The Dare",
-      "album": "What's Wrong With New York?",
-      "url": "https://www.last.fm/music/The%20Dare/_/Perfume",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/7d8d89b992e4d4a5556cb00cfc7c3ac8.jpg",
-      "playedAt": "2026-07-11T01:05:26.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Gamesofluck",
-      "artist": "Parcels",
-      "album": "Gamesofluck",
-      "url": "https://www.last.fm/music/Parcels/_/Gamesofluck",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/1d7038fab482890c256b41dfbaa4d40c.jpg",
-      "playedAt": "2026-07-11T01:03:10.000Z",
       "nowPlaying": false
     }
   ],

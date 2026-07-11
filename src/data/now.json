@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-07-11T06:26:39.011Z",
+  "updatedAt": "2026-07-11T09:48:30.083Z",
   "listening": {
-    "track": "The Steps",
-    "artist": "HAIM",
-    "album": "The Steps",
-    "url": "https://www.last.fm/music/HAIM/_/The%20Steps",
-    "image": "https://lastfm.freetls.fastly.net/i/u/300x300/05e911b41dc11a35bf232b26b8ee40fa.jpg",
-    "playedAt": "2026-07-11T01:10:42.000Z",
-    "nowPlaying": false
+    "track": "Chelsea Dagger",
+    "artist": "The Fratellis",
+    "album": "Costello Music",
+    "url": "https://www.last.fm/music/The%20Fratellis/_/Chelsea%20Dagger",
+    "image": "https://lastfm.freetls.fastly.net/i/u/300x300/8ea4dad3c3614770bca41a29c2e53b3d.png",
+    "playedAt": null,
+    "nowPlaying": true
   },
   "reading": {
     "title": "Wuthering Heights",
