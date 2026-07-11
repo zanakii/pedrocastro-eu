@@ -1,49 +1,49 @@
 {
-  "updatedAt": "2026-07-10T21:20:08.540Z",
+  "updatedAt": "2026-07-11T03:42:49.883Z",
   "music": [
+    {
+      "track": "The Steps",
+      "artist": "HAIM",
+      "album": "The Steps",
+      "url": "https://www.last.fm/music/HAIM/_/The%20Steps",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/05e911b41dc11a35bf232b26b8ee40fa.jpg",
+      "playedAt": "2026-07-11T01:10:42.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Killing in the Name",
+      "artist": "Rage Against the Machine",
+      "album": "Rage Against The Machine - XX (20th Anniversary Special Edition)",
+      "url": "https://www.last.fm/music/Rage%20Against%20the%20Machine/_/Killing%20in%20the%20Name",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/6bb98be573004e32ce2026300b1dd5f2.png",
+      "playedAt": "2026-07-11T01:05:28.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Killing In The Name (Remastered)",
+      "artist": "Rage Against the Machine",
+      "album": "Rage Against The Machine - XX (20th Anniversary Special Edition)",
+      "url": "https://www.last.fm/music/%20noredirect/Rage%20Against%20the%20Machine/_/Killing%20In%20The%20Name%20(Remastered)",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/6bb98be573004e32ce2026300b1dd5f2.png",
+      "playedAt": "2026-07-11T01:05:27.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Perfume",
+      "artist": "The Dare",
+      "album": "What's Wrong With New York?",
+      "url": "https://www.last.fm/music/The%20Dare/_/Perfume",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/7d8d89b992e4d4a5556cb00cfc7c3ac8.jpg",
+      "playedAt": "2026-07-11T01:05:26.000Z",
+      "nowPlaying": false
+    },
     {
       "track": "Gamesofluck",
       "artist": "Parcels",
       "album": "Gamesofluck",
       "url": "https://www.last.fm/music/Parcels/_/Gamesofluck",
       "image": "https://lastfm.freetls.fastly.net/i/u/300x300/1d7038fab482890c256b41dfbaa4d40c.jpg",
-      "playedAt": "2026-07-09T22:29:33.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Wake Up",
-      "artist": "Arcade Fire",
-      "album": "Funeral",
-      "url": "https://www.last.fm/music/Arcade%20Fire/_/Wake%20Up",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/3278464e10e38a8119da1d9455681654.jpg",
-      "playedAt": "2026-07-09T22:23:57.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Not Like Us",
-      "artist": "Kendrick Lamar",
-      "album": "Not Like Us",
-      "url": "https://www.last.fm/music/Kendrick%20Lamar/_/Not%20Like%20Us",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/ad04999220beed1745aa499653cd84bd.jpg",
-      "playedAt": "2026-07-09T22:19:23.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Hallucinate",
-      "artist": "Dua Lipa",
-      "album": "Future Nostalgia",
-      "url": "https://www.last.fm/music/Dua%20Lipa/_/Hallucinate",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/7017c94ef74a476838e751b0cee1f014.png",
-      "playedAt": "2026-07-09T13:45:34.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "The Narcissist",
-      "artist": "Blur",
-      "album": "The Ballad of Darren",
-      "url": "https://www.last.fm/music/Blur/_/The%20Narcissist",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/98c65ca79f7f9a865b26978f9bf68b3c.jpg",
-      "playedAt": "2026-07-09T13:32:01.000Z",
+      "playedAt": "2026-07-11T01:03:10.000Z",
       "nowPlaying": false
     }
   ],
