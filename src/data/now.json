@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-07-11T09:48:30.083Z",
+  "updatedAt": "2026-07-11T13:54:48.852Z",
   "listening": {
-    "track": "Chelsea Dagger",
-    "artist": "The Fratellis",
-    "album": "Costello Music",
-    "url": "https://www.last.fm/music/The%20Fratellis/_/Chelsea%20Dagger",
-    "image": "https://lastfm.freetls.fastly.net/i/u/300x300/8ea4dad3c3614770bca41a29c2e53b3d.png",
-    "playedAt": null,
-    "nowPlaying": true
+    "track": "Supercut",
+    "artist": "Lorde",
+    "album": "Melodrama",
+    "url": "https://www.last.fm/music/Lorde/_/Supercut",
+    "image": "https://lastfm.freetls.fastly.net/i/u/300x300/fdef4c7536c03d0a5a6689e4b1fa9b42.jpg",
+    "playedAt": "2026-07-11T11:26:37.000Z",
+    "nowPlaying": false
   },
   "reading": {
     "title": "Wuthering Heights",

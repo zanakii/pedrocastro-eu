@@ -1,49 +1,49 @@
 {
-  "updatedAt": "2026-07-11T09:48:30.083Z",
+  "updatedAt": "2026-07-11T13:54:48.852Z",
   "music": [
     {
-      "track": "Chelsea Dagger",
-      "artist": "The Fratellis",
-      "album": "Costello Music",
-      "url": "https://www.last.fm/music/The%20Fratellis/_/Chelsea%20Dagger",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/8ea4dad3c3614770bca41a29c2e53b3d.png",
-      "playedAt": null,
-      "nowPlaying": true
-    },
-    {
-      "track": "Gift Horse",
-      "artist": "IDLES",
-      "album": "TANGK",
-      "url": "https://www.last.fm/music/IDLES/_/Gift%20Horse",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/de7a2f010aac09f197aa8b342159c0f0.jpg",
-      "playedAt": "2026-07-11T09:41:56.000Z",
+      "track": "Supercut",
+      "artist": "Lorde",
+      "album": "Melodrama",
+      "url": "https://www.last.fm/music/Lorde/_/Supercut",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/fdef4c7536c03d0a5a6689e4b1fa9b42.jpg",
+      "playedAt": "2026-07-11T11:26:37.000Z",
       "nowPlaying": false
     },
     {
-      "track": "Do I Wanna Know?",
-      "artist": "Arctic Monkeys",
-      "album": "AM",
-      "url": "https://www.last.fm/music/Arctic%20Monkeys/_/Do%20I%20Wanna%20Know%3F",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/f579e414e20f40969185e41182d72472.png",
-      "playedAt": "2026-07-11T09:37:23.000Z",
+      "track": "TEXAS HOLD 'EM",
+      "artist": "Beyoncé",
+      "album": "TEXAS HOLD 'EM",
+      "url": "https://www.last.fm/music/Beyonc%C3%A9/_/TEXAS%20HOLD%20%27EM",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/ae68e02c034e3a889d995d591b59b46a.jpg",
+      "playedAt": "2026-07-11T11:21:29.000Z",
       "nowPlaying": false
     },
     {
-      "track": "The Steps",
-      "artist": "HAIM",
-      "album": "The Steps",
-      "url": "https://www.last.fm/music/HAIM/_/The%20Steps",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/05e911b41dc11a35bf232b26b8ee40fa.jpg",
-      "playedAt": "2026-07-11T09:36:40.000Z",
+      "track": "Notion",
+      "artist": "Tash Sultana",
+      "album": "Notion",
+      "url": "https://www.last.fm/music/Tash%20Sultana/_/Notion",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/870536cbb82b2141f9c31b00bbc55660.jpg",
+      "playedAt": "2026-07-11T11:19:08.000Z",
       "nowPlaying": false
     },
     {
-      "track": "Killing in the Name",
-      "artist": "Rage Against the Machine",
-      "album": "Rage Against The Machine - XX (20th Anniversary Special Edition)",
-      "url": "https://www.last.fm/music/Rage%20Against%20the%20Machine/_/Killing%20in%20the%20Name",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/6bb98be573004e32ce2026300b1dd5f2.png",
-      "playedAt": "2026-07-11T01:05:28.000Z",
+      "track": "Wildest Dreams (Taylor's Version)",
+      "artist": "Taylor Swift",
+      "album": "Wildest Dreams (Taylor's Version)",
+      "url": "https://www.last.fm/music/Taylor%20Swift/_/Wildest%20Dreams%20(Taylor%27s%20Version)",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/23b25b0848522ddb677cb8011288a713.jpg",
+      "playedAt": "2026-07-11T09:57:35.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Mr. Brightside",
+      "artist": "The Killers",
+      "album": "Hot Fuss",
+      "url": "https://www.last.fm/music/The%20Killers/_/Mr.%20Brightside",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/fae9c99bbb6ae827b508a97328551912.jpg",
+      "playedAt": "2026-07-11T09:53:52.000Z",
       "nowPlaying": false
     }
   ],
