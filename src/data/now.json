@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-12T13:55:57.450Z",
+  "updatedAt": "2026-07-12T17:17:43.238Z",
   "listening": {
     "track": "Agitations tropicales",
     "artist": "L'Impératrice",
@@ -26,14 +26,14 @@
     "watchedAt": "2026-05-09T00:00:00.000Z"
   },
   "series": {
-    "show": "The Bear",
-    "year": 2022,
+    "show": "The Americans",
+    "year": 2013,
     "season": 5,
-    "number": 3,
-    "episode": "Mint",
-    "url": "https://trakt.tv/shows/the-bear",
-    "tmdb": 136315,
-    "image": "https://image.tmdb.org/t/p/w342/eKfVzzEazSIjJMrw9ADa2x8ksLz.jpg",
-    "watchedAt": "2026-07-12T13:14:00.000Z"
+    "number": 4,
+    "episode": "What's the Matter with Kansas?",
+    "url": "https://trakt.tv/shows/the-americans-2013",
+    "tmdb": 46533,
+    "image": "https://image.tmdb.org/t/p/w342/w1UBlxEXhbKe8sp0fxFZh7MqTce.jpg",
+    "watchedAt": "2026-07-12T14:37:00.000Z"
   }
 }
