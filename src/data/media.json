@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-12T10:03:04.908Z",
+  "updatedAt": "2026-07-12T13:55:57.450Z",
   "music": [
     {
       "track": "Agitations tropicales",
@@ -96,6 +96,17 @@
     }
   ],
   "series": [
+    {
+      "show": "The Bear",
+      "year": 2022,
+      "season": 5,
+      "number": 3,
+      "episode": "Mint",
+      "url": "https://trakt.tv/shows/the-bear",
+      "tmdb": 136315,
+      "image": "https://image.tmdb.org/t/p/w342/eKfVzzEazSIjJMrw9ADa2x8ksLz.jpg",
+      "watchedAt": "2026-07-12T13:14:00.000Z"
+    },
     {
       "show": "The Americans",
       "year": 2013,
