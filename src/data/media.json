@@ -1,14 +1,32 @@
 {
-  "updatedAt": "2026-07-11T21:06:49.474Z",
+  "updatedAt": "2026-07-12T03:57:17.652Z",
   "music": [
+    {
+      "track": "Agitations tropicales",
+      "artist": "L'Impératrice",
+      "album": "Odyssée - EP",
+      "url": "https://www.last.fm/music/L%27Imp%C3%A9ratrice/_/Agitations%20tropicales",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/86a0e32c23426fcc6945d81f4b9ccf48.jpg",
+      "playedAt": "2026-07-11T21:12:20.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "When You're Gone",
+      "artist": "The Cranberries",
+      "album": "To the Faithful Departed",
+      "url": "https://www.last.fm/music/The%20Cranberries/_/When%20You%27re%20Gone",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/0cc6c9beed44f068fd164bc006560700.jpg",
+      "playedAt": "2026-07-11T21:07:24.000Z",
+      "nowPlaying": false
+    },
     {
       "track": "The Boy With the Arab Strap",
       "artist": "Belle and Sebastian",
       "album": "The Boy with the Arab Strap",
       "url": "https://www.last.fm/music/Belle%20and%20Sebastian/_/The%20Boy%20With%20the%20Arab%20Strap",
       "image": "https://lastfm.freetls.fastly.net/i/u/300x300/aab0eebb902f45cba272f78cf0a46d55.jpg",
-      "playedAt": null,
-      "nowPlaying": true
+      "playedAt": "2026-07-11T21:02:10.000Z",
+      "nowPlaying": false
     },
     {
       "track": "Your Song",
@@ -26,24 +44,6 @@
       "url": "https://www.last.fm/music/boygenius/_/Not%20Strong%20Enough",
       "image": "https://lastfm.freetls.fastly.net/i/u/300x300/89c636f738d3ad861f23b483ba5a36c6.jpg",
       "playedAt": "2026-07-11T20:54:10.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Streets of Philadelphia",
-      "artist": "Bruce Springsteen",
-      "album": "Greatest Hits",
-      "url": "https://www.last.fm/music/Bruce%20Springsteen/_/Streets%20of%20Philadelphia",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/ffc5bab894a19819787f61c71fed5187.jpg",
-      "playedAt": "2026-07-11T20:50:53.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Streets Of Philadelphia (Single Edit)",
-      "artist": "Bruce Springsteen",
-      "album": "Greatest Hits",
-      "url": "https://www.last.fm/music/Bruce%20Springsteen/_/Streets%20Of%20Philadelphia%20(Single%20Edit)",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/ffc5bab894a19819787f61c71fed5187.jpg",
-      "playedAt": "2026-07-11T20:50:53.000Z",
       "nowPlaying": false
     }
   ],
