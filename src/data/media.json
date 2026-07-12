@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-12T17:17:43.238Z",
+  "updatedAt": "2026-07-12T21:06:51.366Z",
   "music": [
     {
       "track": "Agitations tropicales",
@@ -100,34 +100,34 @@
       "show": "The Americans",
       "year": 2013,
       "season": 5,
-      "number": 4,
-      "episode": "What's the Matter with Kansas?",
+      "number": 5,
+      "episode": "Lotus 1-2-3",
       "url": "https://trakt.tv/shows/the-americans-2013",
       "tmdb": 46533,
       "image": "https://image.tmdb.org/t/p/w342/w1UBlxEXhbKe8sp0fxFZh7MqTce.jpg",
-      "watchedAt": "2026-07-12T14:37:00.000Z"
+      "watchedAt": "2026-07-12T20:24:00.000Z"
     },
     {
       "show": "The Bear",
       "year": 2022,
       "season": 5,
-      "number": 3,
-      "episode": "Mint",
+      "number": 4,
+      "episode": "Ribs",
       "url": "https://trakt.tv/shows/the-bear",
       "tmdb": 136315,
       "image": "https://image.tmdb.org/t/p/w342/eKfVzzEazSIjJMrw9ADa2x8ksLz.jpg",
-      "watchedAt": "2026-07-12T13:14:00.000Z"
+      "watchedAt": "2026-07-12T18:25:00.000Z"
     },
     {
       "show": "Hacks",
       "year": 2021,
       "season": 3,
-      "number": 5,
-      "episode": "One Day",
+      "number": 6,
+      "episode": "Par for the Course",
       "url": "https://trakt.tv/shows/hacks-2021",
       "tmdb": 124101,
       "image": "https://image.tmdb.org/t/p/w342/ca5XiEFgyGsI38QT3wEKa1QVGX.jpg",
-      "watchedAt": "2026-07-08T20:31:00.000Z"
+      "watchedAt": "2026-07-12T17:20:00.000Z"
     }
   ]
 }
