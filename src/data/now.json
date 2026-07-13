@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-07-13T11:28:39.299Z",
+  "updatedAt": "2026-07-13T15:11:25.106Z",
   "listening": {
-    "track": "Jungle",
-    "artist": "Tash Sultana",
-    "album": "Notion",
-    "url": "https://www.last.fm/music/Tash%20Sultana/_/Jungle",
-    "image": "https://lastfm.freetls.fastly.net/i/u/300x300/870536cbb82b2141f9c31b00bbc55660.jpg",
-    "playedAt": "2026-07-13T07:45:59.000Z",
+    "track": "Better",
+    "artist": "Baby Rose",
+    "album": "YEARNALISM",
+    "url": "https://www.last.fm/music/Baby%20Rose/_/Better",
+    "image": "https://lastfm.freetls.fastly.net/i/u/300x300/99a8ca99e1e757a1ad430220f9541e88.png",
+    "playedAt": "2026-07-13T13:52:08.000Z",
     "nowPlaying": false
   },
   "reading": {
@@ -26,14 +26,14 @@
     "watchedAt": "2026-05-09T00:00:00.000Z"
   },
   "series": {
-    "show": "The Americans",
-    "year": 2013,
-    "season": 5,
-    "number": 6,
-    "episode": "Crossbreed",
-    "url": "https://trakt.tv/shows/the-americans-2013",
-    "tmdb": 46533,
-    "image": "https://image.tmdb.org/t/p/w342/w1UBlxEXhbKe8sp0fxFZh7MqTce.jpg",
-    "watchedAt": "2026-07-12T21:45:00.000Z"
+    "show": "Hacks",
+    "year": 2021,
+    "season": 3,
+    "number": 7,
+    "episode": "The Deborah Vance Christmas Spectacular",
+    "url": "https://trakt.tv/shows/hacks-2021",
+    "tmdb": 124101,
+    "image": "https://image.tmdb.org/t/p/w342/ca5XiEFgyGsI38QT3wEKa1QVGX.jpg",
+    "watchedAt": "2026-07-13T12:49:00.000Z"
   }
 }

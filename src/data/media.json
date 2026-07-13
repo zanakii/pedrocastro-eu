@@ -1,49 +1,49 @@
 {
-  "updatedAt": "2026-07-13T11:28:39.299Z",
+  "updatedAt": "2026-07-13T15:11:25.106Z",
   "music": [
     {
-      "track": "Jungle",
-      "artist": "Tash Sultana",
-      "album": "Notion",
-      "url": "https://www.last.fm/music/Tash%20Sultana/_/Jungle",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/870536cbb82b2141f9c31b00bbc55660.jpg",
-      "playedAt": "2026-07-13T07:45:59.000Z",
+      "track": "Better",
+      "artist": "Baby Rose",
+      "album": "YEARNALISM",
+      "url": "https://www.last.fm/music/Baby%20Rose/_/Better",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/99a8ca99e1e757a1ad430220f9541e88.png",
+      "playedAt": "2026-07-13T13:52:08.000Z",
       "nowPlaying": false
     },
     {
-      "track": "Ain't It the Life",
-      "artist": "Foo Fighters",
-      "album": "There Is Nothing Left to Lose",
-      "url": "https://www.last.fm/music/Foo%20Fighters/_/Ain%27t%20It%20the%20Life",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/5f47acfda92b4ff488a52aee4b80da3f.png",
-      "playedAt": "2026-07-13T07:41:44.000Z",
+      "track": "Let Me Go",
+      "artist": "Baby Rose",
+      "album": "YEARNALISM",
+      "url": "https://www.last.fm/music/Baby%20Rose/_/Let%20Me%20Go",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/99a8ca99e1e757a1ad430220f9541e88.png",
+      "playedAt": "2026-07-13T13:48:59.000Z",
       "nowPlaying": false
     },
     {
-      "track": "Riot Van",
-      "artist": "Arctic Monkeys",
-      "album": "Whatever People Say I Am, That's What I'm Not",
-      "url": "https://www.last.fm/music/Arctic%20Monkeys/_/Riot%20Van",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/5e1480805bdf29da606e0de2ac07b205.jpg",
-      "playedAt": "2026-07-13T07:39:29.000Z",
+      "track": "Dressed In Metal",
+      "artist": "Baby Rose",
+      "album": "YEARNALISM",
+      "url": "https://www.last.fm/music/Baby%20Rose/_/Dressed%20In%20Metal",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/99a8ca99e1e757a1ad430220f9541e88.png",
+      "playedAt": "2026-07-13T13:46:09.000Z",
       "nowPlaying": false
     },
     {
-      "track": "Sculptures of Anything Goes",
-      "artist": "Arctic Monkeys",
-      "album": "The Car",
-      "url": "https://www.last.fm/music/Arctic%20Monkeys/_/Sculptures%20of%20Anything%20Goes",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/69c2e238f63d5aa2d62181d5b74f34a0.jpg",
-      "playedAt": "2026-07-13T07:35:30.000Z",
+      "track": "Is This Love",
+      "artist": "Baby Rose",
+      "album": "YEARNALISM",
+      "url": "https://www.last.fm/music/Baby%20Rose/_/Is%20This%20Love",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/99a8ca99e1e757a1ad430220f9541e88.png",
+      "playedAt": "2026-07-13T13:42:52.000Z",
       "nowPlaying": false
     },
     {
-      "track": "Teenage Fantasy",
-      "artist": "Jorja Smith",
-      "album": "Lost & Found",
-      "url": "https://www.last.fm/music/Jorja%20Smith/_/Teenage%20Fantasy",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/a404f79bef105b7ab5c6f004821925a9.png",
-      "playedAt": "2026-07-13T07:31:43.000Z",
+      "track": "But, Nvm",
+      "artist": "Baby Rose",
+      "album": "YEARNALISM",
+      "url": "https://www.last.fm/music/Baby%20Rose/_/But,%20Nvm",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/99a8ca99e1e757a1ad430220f9541e88.png",
+      "playedAt": "2026-07-13T13:39:44.000Z",
       "nowPlaying": false
     }
   ],
@@ -97,6 +97,28 @@
   ],
   "series": [
     {
+      "show": "Hacks",
+      "year": 2021,
+      "season": 3,
+      "number": 7,
+      "episode": "The Deborah Vance Christmas Spectacular",
+      "url": "https://trakt.tv/shows/hacks-2021",
+      "tmdb": 124101,
+      "image": "https://image.tmdb.org/t/p/w342/ca5XiEFgyGsI38QT3wEKa1QVGX.jpg",
+      "watchedAt": "2026-07-13T12:49:00.000Z"
+    },
+    {
+      "show": "The Bear",
+      "year": 2022,
+      "season": 5,
+      "number": 5,
+      "episode": "Raspberries",
+      "url": "https://trakt.tv/shows/the-bear",
+      "tmdb": 136315,
+      "image": "https://image.tmdb.org/t/p/w342/eKfVzzEazSIjJMrw9ADa2x8ksLz.jpg",
+      "watchedAt": "2026-07-13T12:23:00.000Z"
+    },
+    {
       "show": "The Americans",
       "year": 2013,
       "season": 5,
@@ -106,28 +128,6 @@
       "tmdb": 46533,
       "image": "https://image.tmdb.org/t/p/w342/w1UBlxEXhbKe8sp0fxFZh7MqTce.jpg",
       "watchedAt": "2026-07-12T21:45:00.000Z"
-    },
-    {
-      "show": "The Bear",
-      "year": 2022,
-      "season": 5,
-      "number": 4,
-      "episode": "Ribs",
-      "url": "https://trakt.tv/shows/the-bear",
-      "tmdb": 136315,
-      "image": "https://image.tmdb.org/t/p/w342/eKfVzzEazSIjJMrw9ADa2x8ksLz.jpg",
-      "watchedAt": "2026-07-12T18:25:00.000Z"
-    },
-    {
-      "show": "Hacks",
-      "year": 2021,
-      "season": 3,
-      "number": 6,
-      "episode": "Par for the Course",
-      "url": "https://trakt.tv/shows/hacks-2021",
-      "tmdb": 124101,
-      "image": "https://image.tmdb.org/t/p/w342/ca5XiEFgyGsI38QT3wEKa1QVGX.jpg",
-      "watchedAt": "2026-07-12T17:20:00.000Z"
     }
   ]
 }
