@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-07-12T21:06:51.366Z",
+  "updatedAt": "2026-07-13T03:59:49.913Z",
   "listening": {
-    "track": "Agitations tropicales",
-    "artist": "L'Impératrice",
-    "album": "Odyssée - EP",
-    "url": "https://www.last.fm/music/L%27Imp%C3%A9ratrice/_/Agitations%20tropicales",
-    "image": "https://lastfm.freetls.fastly.net/i/u/300x300/86a0e32c23426fcc6945d81f4b9ccf48.jpg",
-    "playedAt": "2026-07-11T21:12:20.000Z",
+    "track": "But Daddy I Love Him",
+    "artist": "Taylor Swift",
+    "album": "THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY",
+    "url": "https://www.last.fm/music/Taylor%20Swift/_/But%20Daddy%20I%20Love%20Him",
+    "image": "https://lastfm.freetls.fastly.net/i/u/300x300/3e9934e3815f2949acc34415d8931aea.jpg",
+    "playedAt": "2026-07-12T22:20:45.000Z",
     "nowPlaying": false
   },
   "reading": {
@@ -29,11 +29,11 @@
     "show": "The Americans",
     "year": 2013,
     "season": 5,
-    "number": 5,
-    "episode": "Lotus 1-2-3",
+    "number": 6,
+    "episode": "Crossbreed",
     "url": "https://trakt.tv/shows/the-americans-2013",
     "tmdb": 46533,
     "image": "https://image.tmdb.org/t/p/w342/w1UBlxEXhbKe8sp0fxFZh7MqTce.jpg",
-    "watchedAt": "2026-07-12T20:24:00.000Z"
+    "watchedAt": "2026-07-12T21:45:00.000Z"
   }
 }
