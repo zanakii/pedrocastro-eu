@@ -1,14 +1,41 @@
 {
-  "updatedAt": "2026-07-13T07:37:26.719Z",
+  "updatedAt": "2026-07-13T11:28:39.299Z",
   "music": [
+    {
+      "track": "Jungle",
+      "artist": "Tash Sultana",
+      "album": "Notion",
+      "url": "https://www.last.fm/music/Tash%20Sultana/_/Jungle",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/870536cbb82b2141f9c31b00bbc55660.jpg",
+      "playedAt": "2026-07-13T07:45:59.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Ain't It the Life",
+      "artist": "Foo Fighters",
+      "album": "There Is Nothing Left to Lose",
+      "url": "https://www.last.fm/music/Foo%20Fighters/_/Ain%27t%20It%20the%20Life",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/5f47acfda92b4ff488a52aee4b80da3f.png",
+      "playedAt": "2026-07-13T07:41:44.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Riot Van",
+      "artist": "Arctic Monkeys",
+      "album": "Whatever People Say I Am, That's What I'm Not",
+      "url": "https://www.last.fm/music/Arctic%20Monkeys/_/Riot%20Van",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/5e1480805bdf29da606e0de2ac07b205.jpg",
+      "playedAt": "2026-07-13T07:39:29.000Z",
+      "nowPlaying": false
+    },
     {
       "track": "Sculptures of Anything Goes",
       "artist": "Arctic Monkeys",
       "album": "The Car",
       "url": "https://www.last.fm/music/Arctic%20Monkeys/_/Sculptures%20of%20Anything%20Goes",
       "image": "https://lastfm.freetls.fastly.net/i/u/300x300/69c2e238f63d5aa2d62181d5b74f34a0.jpg",
-      "playedAt": null,
-      "nowPlaying": true
+      "playedAt": "2026-07-13T07:35:30.000Z",
+      "nowPlaying": false
     },
     {
       "track": "Teenage Fantasy",
@@ -17,33 +44,6 @@
       "url": "https://www.last.fm/music/Jorja%20Smith/_/Teenage%20Fantasy",
       "image": "https://lastfm.freetls.fastly.net/i/u/300x300/a404f79bef105b7ab5c6f004821925a9.png",
       "playedAt": "2026-07-13T07:31:43.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Goodbye Kiss",
-      "artist": "Kasabian",
-      "album": "Velociraptor!",
-      "url": "https://www.last.fm/music/Kasabian/_/Goodbye%20Kiss",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/1cf7248460facf7a4367ce49d24c9409.png",
-      "playedAt": "2026-07-13T07:27:39.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Heavenly",
-      "artist": "Cigarettes After Sex",
-      "album": "Cry",
-      "url": "https://www.last.fm/music/Cigarettes%20After%20Sex/_/Heavenly",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/7f3eebc25ed0d0560adeb5c4d40007f9.jpg",
-      "playedAt": "2026-07-13T07:22:52.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "But Daddy I Love Him",
-      "artist": "Taylor Swift",
-      "album": "THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY",
-      "url": "https://www.last.fm/music/Taylor%20Swift/_/But%20Daddy%20I%20Love%20Him",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/3e9934e3815f2949acc34415d8931aea.jpg",
-      "playedAt": "2026-07-12T22:20:45.000Z",
       "nowPlaying": false
     }
   ],

@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-07-13T07:37:26.719Z",
+  "updatedAt": "2026-07-13T11:28:39.299Z",
   "listening": {
-    "track": "Sculptures of Anything Goes",
-    "artist": "Arctic Monkeys",
-    "album": "The Car",
-    "url": "https://www.last.fm/music/Arctic%20Monkeys/_/Sculptures%20of%20Anything%20Goes",
-    "image": "https://lastfm.freetls.fastly.net/i/u/300x300/69c2e238f63d5aa2d62181d5b74f34a0.jpg",
-    "playedAt": null,
-    "nowPlaying": true
+    "track": "Jungle",
+    "artist": "Tash Sultana",
+    "album": "Notion",
+    "url": "https://www.last.fm/music/Tash%20Sultana/_/Jungle",
+    "image": "https://lastfm.freetls.fastly.net/i/u/300x300/870536cbb82b2141f9c31b00bbc55660.jpg",
+    "playedAt": "2026-07-13T07:45:59.000Z",
+    "nowPlaying": false
   },
   "reading": {
     "title": "Wuthering Heights",
