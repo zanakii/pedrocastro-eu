@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-07-13T03:59:49.913Z",
+  "updatedAt": "2026-07-13T07:37:26.719Z",
   "listening": {
-    "track": "But Daddy I Love Him",
-    "artist": "Taylor Swift",
-    "album": "THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY",
-    "url": "https://www.last.fm/music/Taylor%20Swift/_/But%20Daddy%20I%20Love%20Him",
-    "image": "https://lastfm.freetls.fastly.net/i/u/300x300/3e9934e3815f2949acc34415d8931aea.jpg",
-    "playedAt": "2026-07-12T22:20:45.000Z",
-    "nowPlaying": false
+    "track": "Sculptures of Anything Goes",
+    "artist": "Arctic Monkeys",
+    "album": "The Car",
+    "url": "https://www.last.fm/music/Arctic%20Monkeys/_/Sculptures%20of%20Anything%20Goes",
+    "image": "https://lastfm.freetls.fastly.net/i/u/300x300/69c2e238f63d5aa2d62181d5b74f34a0.jpg",
+    "playedAt": null,
+    "nowPlaying": true
   },
   "reading": {
     "title": "Wuthering Heights",

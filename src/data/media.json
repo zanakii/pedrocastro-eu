@@ -1,6 +1,42 @@
 {
-  "updatedAt": "2026-07-13T03:59:49.913Z",
+  "updatedAt": "2026-07-13T07:37:26.719Z",
   "music": [
+    {
+      "track": "Sculptures of Anything Goes",
+      "artist": "Arctic Monkeys",
+      "album": "The Car",
+      "url": "https://www.last.fm/music/Arctic%20Monkeys/_/Sculptures%20of%20Anything%20Goes",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/69c2e238f63d5aa2d62181d5b74f34a0.jpg",
+      "playedAt": null,
+      "nowPlaying": true
+    },
+    {
+      "track": "Teenage Fantasy",
+      "artist": "Jorja Smith",
+      "album": "Lost & Found",
+      "url": "https://www.last.fm/music/Jorja%20Smith/_/Teenage%20Fantasy",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/a404f79bef105b7ab5c6f004821925a9.png",
+      "playedAt": "2026-07-13T07:31:43.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Goodbye Kiss",
+      "artist": "Kasabian",
+      "album": "Velociraptor!",
+      "url": "https://www.last.fm/music/Kasabian/_/Goodbye%20Kiss",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/1cf7248460facf7a4367ce49d24c9409.png",
+      "playedAt": "2026-07-13T07:27:39.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Heavenly",
+      "artist": "Cigarettes After Sex",
+      "album": "Cry",
+      "url": "https://www.last.fm/music/Cigarettes%20After%20Sex/_/Heavenly",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/7f3eebc25ed0d0560adeb5c4d40007f9.jpg",
+      "playedAt": "2026-07-13T07:22:52.000Z",
+      "nowPlaying": false
+    },
     {
       "track": "But Daddy I Love Him",
       "artist": "Taylor Swift",
@@ -8,42 +44,6 @@
       "url": "https://www.last.fm/music/Taylor%20Swift/_/But%20Daddy%20I%20Love%20Him",
       "image": "https://lastfm.freetls.fastly.net/i/u/300x300/3e9934e3815f2949acc34415d8931aea.jpg",
       "playedAt": "2026-07-12T22:20:45.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "U (Man Like)",
-      "artist": "Bon Iver",
-      "album": "i,i",
-      "url": "https://www.last.fm/music/Bon%20Iver/_/U%20(Man%20Like)",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/75742b5f137e73e3157dd2499455ed7a.jpg",
-      "playedAt": "2026-07-12T22:18:19.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "I Can Change",
-      "artist": "Ezra Furman",
-      "album": "Sex Education Original Soundtrack",
-      "url": "https://www.last.fm/music/Ezra%20Furman/_/I%20Can%20Change",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/08bbf7991b66fea97e656e0ec043c030.jpg",
-      "playedAt": "2026-07-12T22:13:37.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Break My Heart",
-      "artist": "Dua Lipa",
-      "album": "Future Nostalgia (The Moonlight Edition - Explicit)",
-      "url": "https://www.last.fm/music/Dua%20Lipa/_/Break%20My%20Heart",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/e80816d860bf5455e665a7974f9b2b91.jpg",
-      "playedAt": "2026-07-12T21:59:17.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Four Out of Five",
-      "artist": "Arctic Monkeys",
-      "album": "Tranquility Base Hotel + Casino",
-      "url": "https://www.last.fm/music/Arctic%20Monkeys/_/Four%20Out%20of%20Five",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/6b9b7db3259575dc62e89048e7e0690b.jpg",
-      "playedAt": "2026-07-12T21:53:33.000Z",
       "nowPlaying": false
     }
   ],
