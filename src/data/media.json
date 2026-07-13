@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-13T18:07:48.839Z",
+  "updatedAt": "2026-07-13T21:12:54.547Z",
   "music": [
     {
       "track": "Better",
@@ -97,6 +97,17 @@
   ],
   "series": [
     {
+      "show": "The Americans",
+      "year": 2013,
+      "season": 5,
+      "number": 7,
+      "episode": "The Committee on Human Rights",
+      "url": "https://trakt.tv/shows/the-americans-2013",
+      "tmdb": 46533,
+      "image": "https://image.tmdb.org/t/p/w342/w1UBlxEXhbKe8sp0fxFZh7MqTce.jpg",
+      "watchedAt": "2026-07-13T20:33:00.000Z"
+    },
+    {
       "show": "Hacks",
       "year": 2021,
       "season": 3,
@@ -117,17 +128,6 @@
       "tmdb": 136315,
       "image": "https://image.tmdb.org/t/p/w342/eKfVzzEazSIjJMrw9ADa2x8ksLz.jpg",
       "watchedAt": "2026-07-13T12:23:00.000Z"
-    },
-    {
-      "show": "The Americans",
-      "year": 2013,
-      "season": 5,
-      "number": 6,
-      "episode": "Crossbreed",
-      "url": "https://trakt.tv/shows/the-americans-2013",
-      "tmdb": 46533,
-      "image": "https://image.tmdb.org/t/p/w342/w1UBlxEXhbKe8sp0fxFZh7MqTce.jpg",
-      "watchedAt": "2026-07-12T21:45:00.000Z"
     }
   ]
 }
