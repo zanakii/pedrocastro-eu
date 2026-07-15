@@ -1,13 +1,22 @@
 {
-  "updatedAt": "2026-07-15T14:10:00.541Z",
+  "updatedAt": "2026-07-15T17:38:58.667Z",
   "music": [
+    {
+      "track": "Leaning Against the Wall",
+      "artist": "Wolf Alice",
+      "album": "The Clearing",
+      "url": "https://www.last.fm/music/Wolf%20Alice/_/Leaning%20Against%20the%20Wall",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/8f9ccbef722a20491cf19630d0fdafcf.jpg",
+      "playedAt": "2026-07-15T16:22:26.000Z",
+      "nowPlaying": false
+    },
     {
       "track": "Just Two Girls",
       "artist": "Wolf Alice",
       "album": "The Clearing",
       "url": "https://www.last.fm/music/Wolf%20Alice/_/Just%20Two%20Girls",
       "image": "https://lastfm.freetls.fastly.net/i/u/300x300/8f9ccbef722a20491cf19630d0fdafcf.jpg",
-      "playedAt": "2026-07-14T14:47:07.000Z",
+      "playedAt": "2026-07-15T16:18:05.000Z",
       "nowPlaying": false
     },
     {
@@ -16,7 +25,7 @@
       "album": "The Clearing",
       "url": "https://www.last.fm/music/Wolf%20Alice/_/Bloom%20Baby%20Bloom",
       "image": "https://lastfm.freetls.fastly.net/i/u/300x300/8f9ccbef722a20491cf19630d0fdafcf.jpg",
-      "playedAt": "2026-07-14T14:43:20.000Z",
+      "playedAt": "2026-07-15T16:14:17.000Z",
       "nowPlaying": false
     },
     {
@@ -25,25 +34,16 @@
       "album": "The Clearing",
       "url": "https://www.last.fm/music/Wolf%20Alice/_/Thorns",
       "image": "https://lastfm.freetls.fastly.net/i/u/300x300/8f9ccbef722a20491cf19630d0fdafcf.jpg",
-      "playedAt": "2026-07-14T14:40:06.000Z",
+      "playedAt": "2026-07-15T16:11:03.000Z",
       "nowPlaying": false
     },
     {
-      "track": "Better",
-      "artist": "Baby Rose",
-      "album": "YEARNALISM",
-      "url": "https://www.last.fm/music/Baby%20Rose/_/Better",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/99a8ca99e1e757a1ad430220f9541e88.png",
-      "playedAt": "2026-07-13T13:52:08.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Let Me Go",
-      "artist": "Baby Rose",
-      "album": "YEARNALISM",
-      "url": "https://www.last.fm/music/Baby%20Rose/_/Let%20Me%20Go",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/99a8ca99e1e757a1ad430220f9541e88.png",
-      "playedAt": "2026-07-13T13:48:59.000Z",
+      "track": "Just Two Girls",
+      "artist": "Wolf Alice",
+      "album": "The Clearing",
+      "url": "https://www.last.fm/music/Wolf%20Alice/_/Just%20Two%20Girls",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/8f9ccbef722a20491cf19630d0fdafcf.jpg",
+      "playedAt": "2026-07-14T14:47:07.000Z",
       "nowPlaying": false
     }
   ],
