@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-07-16T17:40:29.339Z",
+  "updatedAt": "2026-07-16T21:16:16.432Z",
   "music": [
+    {
+      "track": "Heavenward",
+      "artist": "Wolf Alice",
+      "album": "Visions of a Life",
+      "url": "https://www.last.fm/music/Wolf%20Alice/_/Heavenward",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4e88a61ed66713cdb3f973706d71f0e1.jpg",
+      "playedAt": "2026-07-16T18:53:23.000Z",
+      "nowPlaying": false
+    },
     {
       "track": "Midnight Song",
       "artist": "Wolf Alice",
@@ -35,15 +44,6 @@
       "url": "https://www.last.fm/music/Wolf%20Alice/_/Play%20It%20Out",
       "image": "https://lastfm.freetls.fastly.net/i/u/300x300/8f9ccbef722a20491cf19630d0fdafcf.jpg",
       "playedAt": "2026-07-15T18:13:22.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Passenger Seat",
-      "artist": "Wolf Alice",
-      "album": "The Clearing",
-      "url": "https://www.last.fm/music/Wolf%20Alice/_/Passenger%20Seat",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/8f9ccbef722a20491cf19630d0fdafcf.jpg",
-      "playedAt": "2026-07-15T18:10:29.000Z",
       "nowPlaying": false
     }
   ],
