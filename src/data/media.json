@@ -1,6 +1,33 @@
 {
-  "updatedAt": "2026-07-17T10:11:43.871Z",
+  "updatedAt": "2026-07-17T14:03:27.526Z",
   "music": [
+    {
+      "track": "Go Your Own Way",
+      "artist": "Fleetwood Mac",
+      "album": "Rumours",
+      "url": "https://www.last.fm/music/Fleetwood%20Mac/_/Go%20Your%20Own%20Way",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/349d64820e124b77cb5275ab03042693.png",
+      "playedAt": "2026-07-17T10:18:27.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Don't Stop",
+      "artist": "Fleetwood Mac",
+      "album": "Rumours",
+      "url": "https://www.last.fm/music/Fleetwood%20Mac/_/Don%27t%20Stop",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/349d64820e124b77cb5275ab03042693.png",
+      "playedAt": "2026-07-17T10:15:13.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Never Going Back Again",
+      "artist": "Fleetwood Mac",
+      "album": "Rumours",
+      "url": "https://www.last.fm/music/Fleetwood%20Mac/_/Never%20Going%20Back%20Again",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/349d64820e124b77cb5275ab03042693.png",
+      "playedAt": "2026-07-17T10:13:09.000Z",
+      "nowPlaying": false
+    },
     {
       "track": "Dreams",
       "artist": "Fleetwood Mac",
@@ -17,33 +44,6 @@
       "url": "https://www.last.fm/music/Fleetwood%20Mac/_/Second%20Hand%20News",
       "image": "https://lastfm.freetls.fastly.net/i/u/300x300/349d64820e124b77cb5275ab03042693.png",
       "playedAt": "2026-07-17T10:06:04.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Planet Hunter",
-      "artist": "Wolf Alice",
-      "album": "Visions of a Life",
-      "url": "https://www.last.fm/music/Wolf%20Alice/_/Planet%20Hunter",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4e88a61ed66713cdb3f973706d71f0e1.jpg",
-      "playedAt": "2026-07-17T07:56:51.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Don’t Delete the Kisses",
-      "artist": "Wolf Alice",
-      "album": "Visions of a Life",
-      "url": "https://www.last.fm/music/Wolf%20Alice/_/Don%E2%80%99t%20Delete%20the%20Kisses",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4e88a61ed66713cdb3f973706d71f0e1.jpg",
-      "playedAt": "2026-07-17T07:52:15.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Beautifully Unconventional",
-      "artist": "Wolf Alice",
-      "album": "Visions of a Life",
-      "url": "https://www.last.fm/music/Wolf%20Alice/_/Beautifully%20Unconventional",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4e88a61ed66713cdb3f973706d71f0e1.jpg",
-      "playedAt": "2026-07-17T07:50:02.000Z",
       "nowPlaying": false
     }
   ],
