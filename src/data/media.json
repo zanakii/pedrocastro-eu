@@ -1,49 +1,49 @@
 {
-  "updatedAt": "2026-07-17T06:27:24.587Z",
+  "updatedAt": "2026-07-17T10:11:43.871Z",
   "music": [
     {
-      "track": "Heavenward",
+      "track": "Dreams",
+      "artist": "Fleetwood Mac",
+      "album": "Rumours",
+      "url": "https://www.last.fm/music/Fleetwood%20Mac/_/Dreams",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/349d64820e124b77cb5275ab03042693.png",
+      "playedAt": "2026-07-17T10:08:50.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Second Hand News",
+      "artist": "Fleetwood Mac",
+      "album": "Rumours",
+      "url": "https://www.last.fm/music/Fleetwood%20Mac/_/Second%20Hand%20News",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/349d64820e124b77cb5275ab03042693.png",
+      "playedAt": "2026-07-17T10:06:04.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Planet Hunter",
       "artist": "Wolf Alice",
       "album": "Visions of a Life",
-      "url": "https://www.last.fm/music/Wolf%20Alice/_/Heavenward",
+      "url": "https://www.last.fm/music/Wolf%20Alice/_/Planet%20Hunter",
       "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4e88a61ed66713cdb3f973706d71f0e1.jpg",
-      "playedAt": "2026-07-16T18:53:23.000Z",
+      "playedAt": "2026-07-17T07:56:51.000Z",
       "nowPlaying": false
     },
     {
-      "track": "Midnight Song",
+      "track": "Don’t Delete the Kisses",
       "artist": "Wolf Alice",
-      "album": "The Clearing",
-      "url": "https://www.last.fm/music/Wolf%20Alice/_/Midnight%20Song",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/8f9ccbef722a20491cf19630d0fdafcf.jpg",
-      "playedAt": "2026-07-15T18:24:33.000Z",
+      "album": "Visions of a Life",
+      "url": "https://www.last.fm/music/Wolf%20Alice/_/Don%E2%80%99t%20Delete%20the%20Kisses",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4e88a61ed66713cdb3f973706d71f0e1.jpg",
+      "playedAt": "2026-07-17T07:52:15.000Z",
       "nowPlaying": false
     },
     {
-      "track": "Safe In The World",
+      "track": "Beautifully Unconventional",
       "artist": "Wolf Alice",
-      "album": "The Clearing",
-      "url": "https://www.last.fm/music/Wolf%20Alice/_/Safe%20In%20The%20World",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/8f9ccbef722a20491cf19630d0fdafcf.jpg",
-      "playedAt": "2026-07-15T18:21:01.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Bread Butter Tea Sugar",
-      "artist": "Wolf Alice",
-      "album": "The Clearing",
-      "url": "https://www.last.fm/music/Wolf%20Alice/_/Bread%20Butter%20Tea%20Sugar",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/8f9ccbef722a20491cf19630d0fdafcf.jpg",
-      "playedAt": "2026-07-15T18:17:33.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Play It Out",
-      "artist": "Wolf Alice",
-      "album": "The Clearing",
-      "url": "https://www.last.fm/music/Wolf%20Alice/_/Play%20It%20Out",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/8f9ccbef722a20491cf19630d0fdafcf.jpg",
-      "playedAt": "2026-07-15T18:13:22.000Z",
+      "album": "Visions of a Life",
+      "url": "https://www.last.fm/music/Wolf%20Alice/_/Beautifully%20Unconventional",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4e88a61ed66713cdb3f973706d71f0e1.jpg",
+      "playedAt": "2026-07-17T07:50:02.000Z",
       "nowPlaying": false
     }
   ],
