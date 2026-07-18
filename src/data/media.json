@@ -1,14 +1,23 @@
 {
-  "updatedAt": "2026-07-18T09:44:51.559Z",
+  "updatedAt": "2026-07-18T13:49:10.352Z",
   "music": [
+    {
+      "track": "Mews",
+      "artist": "Gracie Abrams",
+      "album": "Daughter from Hell",
+      "url": "https://www.last.fm/music/Gracie%20Abrams/_/Mews",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/879bcbdd4d0c516898169e817eb6a5a4.png",
+      "playedAt": "2026-07-18T09:47:01.000Z",
+      "nowPlaying": false
+    },
     {
       "track": "bRoKe My hEArT",
       "artist": "Gracie Abrams",
       "album": "Daughter from Hell",
       "url": "https://www.last.fm/music/Gracie%20Abrams/_/bRoKe%20My%20hEArT",
       "image": "https://lastfm.freetls.fastly.net/i/u/300x300/879bcbdd4d0c516898169e817eb6a5a4.png",
-      "playedAt": null,
-      "nowPlaying": true
+      "playedAt": "2026-07-18T09:43:22.000Z",
+      "nowPlaying": false
     },
     {
       "track": "Sober",
@@ -35,15 +44,6 @@
       "url": "https://www.last.fm/music/Gracie%20Abrams/_/Good%20Reason",
       "image": "https://lastfm.freetls.fastly.net/i/u/300x300/879bcbdd4d0c516898169e817eb6a5a4.png",
       "playedAt": "2026-07-18T09:32:19.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Look At My Life",
-      "artist": "Gracie Abrams",
-      "album": "Daughter from Hell",
-      "url": "https://www.last.fm/music/Gracie%20Abrams/_/Look%20At%20My%20Life",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/879bcbdd4d0c516898169e817eb6a5a4.png",
-      "playedAt": "2026-07-18T09:29:08.000Z",
       "nowPlaying": false
     }
   ],
