@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-18T13:49:10.352Z",
+  "updatedAt": "2026-07-18T17:14:17.662Z",
   "listening": {
     "track": "Mews",
     "artist": "Gracie Abrams",
@@ -26,14 +26,14 @@
     "watchedAt": "2026-05-09T00:00:00.000Z"
   },
   "series": {
-    "show": "Hacks",
-    "year": 2021,
-    "season": 3,
-    "number": 8,
-    "episode": "Yes, And",
-    "url": "https://trakt.tv/shows/hacks-2021",
-    "tmdb": 124101,
-    "image": "https://image.tmdb.org/t/p/w342/ca5XiEFgyGsI38QT3wEKa1QVGX.jpg",
-    "watchedAt": "2026-07-13T22:06:00.000Z"
+    "show": "The Bear",
+    "year": 2022,
+    "season": 5,
+    "number": 7,
+    "episode": "Caramel",
+    "url": "https://trakt.tv/shows/the-bear",
+    "tmdb": 136315,
+    "image": "https://image.tmdb.org/t/p/w342/eKfVzzEazSIjJMrw9ADa2x8ksLz.jpg",
+    "watchedAt": "2026-07-18T16:16:00.000Z"
   }
 }

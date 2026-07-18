@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-18T13:49:10.352Z",
+  "updatedAt": "2026-07-18T17:14:17.662Z",
   "music": [
     {
       "track": "Mews",
@@ -97,37 +97,37 @@
   ],
   "series": [
     {
+      "show": "The Bear",
+      "year": 2022,
+      "season": 5,
+      "number": 7,
+      "episode": "Caramel",
+      "url": "https://trakt.tv/shows/the-bear",
+      "tmdb": 136315,
+      "image": "https://image.tmdb.org/t/p/w342/eKfVzzEazSIjJMrw9ADa2x8ksLz.jpg",
+      "watchedAt": "2026-07-18T16:16:00.000Z"
+    },
+    {
       "show": "Hacks",
       "year": 2021,
       "season": 3,
-      "number": 8,
-      "episode": "Yes, And",
+      "number": 9,
+      "episode": "Bulletproof",
       "url": "https://trakt.tv/shows/hacks-2021",
       "tmdb": 124101,
       "image": "https://image.tmdb.org/t/p/w342/ca5XiEFgyGsI38QT3wEKa1QVGX.jpg",
-      "watchedAt": "2026-07-13T22:06:00.000Z"
+      "watchedAt": "2026-07-18T15:38:00.000Z"
     },
     {
       "show": "The Americans",
       "year": 2013,
       "season": 5,
-      "number": 7,
-      "episode": "The Committee on Human Rights",
+      "number": 8,
+      "episode": "Immersion",
       "url": "https://trakt.tv/shows/the-americans-2013",
       "tmdb": 46533,
       "image": "https://image.tmdb.org/t/p/w342/w1UBlxEXhbKe8sp0fxFZh7MqTce.jpg",
-      "watchedAt": "2026-07-13T20:33:00.000Z"
-    },
-    {
-      "show": "The Bear",
-      "year": 2022,
-      "season": 5,
-      "number": 5,
-      "episode": "Raspberries",
-      "url": "https://trakt.tv/shows/the-bear",
-      "tmdb": 136315,
-      "image": "https://image.tmdb.org/t/p/w342/eKfVzzEazSIjJMrw9ADa2x8ksLz.jpg",
-      "watchedAt": "2026-07-13T12:23:00.000Z"
+      "watchedAt": "2026-07-18T14:36:00.000Z"
     }
   ]
 }
