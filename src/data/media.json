@@ -1,6 +1,33 @@
 {
-  "updatedAt": "2026-07-17T21:08:03.481Z",
+  "updatedAt": "2026-07-18T03:32:00.095Z",
   "music": [
+    {
+      "track": "The Knife",
+      "artist": "Gracie Abrams",
+      "album": "Daughter from Hell",
+      "url": "https://www.last.fm/music/Gracie%20Abrams/_/The%20Knife",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/879bcbdd4d0c516898169e817eb6a5a4.png",
+      "playedAt": "2026-07-17T23:37:06.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Death Wish",
+      "artist": "Gracie Abrams",
+      "album": "Daughter from Hell",
+      "url": "https://www.last.fm/music/Gracie%20Abrams/_/Death%20Wish",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/879bcbdd4d0c516898169e817eb6a5a4.png",
+      "playedAt": "2026-07-17T23:33:31.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Hit the Wall",
+      "artist": "Gracie Abrams",
+      "album": "Daughter from Hell",
+      "url": "https://www.last.fm/music/Gracie%20Abrams/_/Hit%20the%20Wall",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/879bcbdd4d0c516898169e817eb6a5a4.png",
+      "playedAt": "2026-07-17T23:30:17.000Z",
+      "nowPlaying": false
+    },
     {
       "track": "I Don't Want to Know",
       "artist": "Fleetwood Mac",
@@ -17,33 +44,6 @@
       "url": "https://www.last.fm/music/Fleetwood%20Mac/_/You%20Make%20Loving%20Fun",
       "image": "https://lastfm.freetls.fastly.net/i/u/300x300/349d64820e124b77cb5275ab03042693.png",
       "playedAt": "2026-07-17T15:29:08.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "The Chain",
-      "artist": "Fleetwood Mac",
-      "album": "Rumours",
-      "url": "https://www.last.fm/music/Fleetwood%20Mac/_/The%20Chain",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/349d64820e124b77cb5275ab03042693.png",
-      "playedAt": "2026-07-17T15:24:39.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Songbird",
-      "artist": "Fleetwood Mac",
-      "album": "Rumours",
-      "url": "https://www.last.fm/music/Fleetwood%20Mac/_/Songbird",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/349d64820e124b77cb5275ab03042693.png",
-      "playedAt": "2026-07-17T15:21:16.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Go Your Own Way",
-      "artist": "Fleetwood Mac",
-      "album": "Rumours",
-      "url": "https://www.last.fm/music/Fleetwood%20Mac/_/Go%20Your%20Own%20Way",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/349d64820e124b77cb5275ab03042693.png",
-      "playedAt": "2026-07-17T10:18:27.000Z",
       "nowPlaying": false
     }
   ],
