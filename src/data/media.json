@@ -1,49 +1,49 @@
 {
-  "updatedAt": "2026-07-18T06:18:12.248Z",
+  "updatedAt": "2026-07-18T09:44:51.559Z",
   "music": [
     {
-      "track": "The Knife",
+      "track": "bRoKe My hEArT",
       "artist": "Gracie Abrams",
       "album": "Daughter from Hell",
-      "url": "https://www.last.fm/music/Gracie%20Abrams/_/The%20Knife",
+      "url": "https://www.last.fm/music/Gracie%20Abrams/_/bRoKe%20My%20hEArT",
       "image": "https://lastfm.freetls.fastly.net/i/u/300x300/879bcbdd4d0c516898169e817eb6a5a4.png",
-      "playedAt": "2026-07-17T23:37:06.000Z",
-      "nowPlaying": false
+      "playedAt": null,
+      "nowPlaying": true
     },
     {
-      "track": "Death Wish",
+      "track": "Sober",
       "artist": "Gracie Abrams",
       "album": "Daughter from Hell",
-      "url": "https://www.last.fm/music/Gracie%20Abrams/_/Death%20Wish",
+      "url": "https://www.last.fm/music/Gracie%20Abrams/_/Sober",
       "image": "https://lastfm.freetls.fastly.net/i/u/300x300/879bcbdd4d0c516898169e817eb6a5a4.png",
-      "playedAt": "2026-07-17T23:33:31.000Z",
+      "playedAt": "2026-07-18T09:40:30.000Z",
       "nowPlaying": false
     },
     {
-      "track": "Hit the Wall",
+      "track": "Men Like You",
       "artist": "Gracie Abrams",
       "album": "Daughter from Hell",
-      "url": "https://www.last.fm/music/Gracie%20Abrams/_/Hit%20the%20Wall",
+      "url": "https://www.last.fm/music/Gracie%20Abrams/_/Men%20Like%20You",
       "image": "https://lastfm.freetls.fastly.net/i/u/300x300/879bcbdd4d0c516898169e817eb6a5a4.png",
-      "playedAt": "2026-07-17T23:30:17.000Z",
+      "playedAt": "2026-07-18T09:36:27.000Z",
       "nowPlaying": false
     },
     {
-      "track": "I Don't Want to Know",
-      "artist": "Fleetwood Mac",
-      "album": "Rumours",
-      "url": "https://www.last.fm/music/Fleetwood%20Mac/_/I%20Don%27t%20Want%20to%20Know",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/349d64820e124b77cb5275ab03042693.png",
-      "playedAt": "2026-07-17T15:32:43.000Z",
+      "track": "Good Reason",
+      "artist": "Gracie Abrams",
+      "album": "Daughter from Hell",
+      "url": "https://www.last.fm/music/Gracie%20Abrams/_/Good%20Reason",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/879bcbdd4d0c516898169e817eb6a5a4.png",
+      "playedAt": "2026-07-18T09:32:19.000Z",
       "nowPlaying": false
     },
     {
-      "track": "You Make Loving Fun",
-      "artist": "Fleetwood Mac",
-      "album": "Rumours",
-      "url": "https://www.last.fm/music/Fleetwood%20Mac/_/You%20Make%20Loving%20Fun",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/349d64820e124b77cb5275ab03042693.png",
-      "playedAt": "2026-07-17T15:29:08.000Z",
+      "track": "Look At My Life",
+      "artist": "Gracie Abrams",
+      "album": "Daughter from Hell",
+      "url": "https://www.last.fm/music/Gracie%20Abrams/_/Look%20At%20My%20Life",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/879bcbdd4d0c516898169e817eb6a5a4.png",
+      "playedAt": "2026-07-18T09:29:08.000Z",
       "nowPlaying": false
     }
   ],

@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-07-18T06:18:12.248Z",
+  "updatedAt": "2026-07-18T09:44:51.559Z",
   "listening": {
-    "track": "The Knife",
+    "track": "bRoKe My hEArT",
     "artist": "Gracie Abrams",
     "album": "Daughter from Hell",
-    "url": "https://www.last.fm/music/Gracie%20Abrams/_/The%20Knife",
+    "url": "https://www.last.fm/music/Gracie%20Abrams/_/bRoKe%20My%20hEArT",
     "image": "https://lastfm.freetls.fastly.net/i/u/300x300/879bcbdd4d0c516898169e817eb6a5a4.png",
-    "playedAt": "2026-07-17T23:37:06.000Z",
-    "nowPlaying": false
+    "playedAt": null,
+    "nowPlaying": true
   },
   "reading": {
     "title": "Wuthering Heights",
