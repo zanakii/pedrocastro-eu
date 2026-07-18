@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-18T17:14:17.662Z",
+  "updatedAt": "2026-07-18T21:06:43.978Z",
   "music": [
     {
       "track": "Mews",
@@ -100,12 +100,23 @@
       "show": "The Bear",
       "year": 2022,
       "season": 5,
-      "number": 7,
-      "episode": "Caramel",
+      "number": 8,
+      "episode": "The Original Beef of Chicagoland",
       "url": "https://trakt.tv/shows/the-bear",
       "tmdb": 136315,
       "image": "https://image.tmdb.org/t/p/w342/eKfVzzEazSIjJMrw9ADa2x8ksLz.jpg",
-      "watchedAt": "2026-07-18T16:16:00.000Z"
+      "watchedAt": "2026-07-18T20:45:00.000Z"
+    },
+    {
+      "show": "The Americans",
+      "year": 2013,
+      "season": 5,
+      "number": 9,
+      "episode": "IHOP",
+      "url": "https://trakt.tv/shows/the-americans-2013",
+      "tmdb": 46533,
+      "image": "https://image.tmdb.org/t/p/w342/w1UBlxEXhbKe8sp0fxFZh7MqTce.jpg",
+      "watchedAt": "2026-07-18T19:42:00.000Z"
     },
     {
       "show": "Hacks",
@@ -117,17 +128,6 @@
       "tmdb": 124101,
       "image": "https://image.tmdb.org/t/p/w342/ca5XiEFgyGsI38QT3wEKa1QVGX.jpg",
       "watchedAt": "2026-07-18T15:38:00.000Z"
-    },
-    {
-      "show": "The Americans",
-      "year": 2013,
-      "season": 5,
-      "number": 8,
-      "episode": "Immersion",
-      "url": "https://trakt.tv/shows/the-americans-2013",
-      "tmdb": 46533,
-      "image": "https://image.tmdb.org/t/p/w342/w1UBlxEXhbKe8sp0fxFZh7MqTce.jpg",
-      "watchedAt": "2026-07-18T14:36:00.000Z"
     }
   ]
 }

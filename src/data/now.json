@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-18T17:14:17.662Z",
+  "updatedAt": "2026-07-18T21:06:43.978Z",
   "listening": {
     "track": "Mews",
     "artist": "Gracie Abrams",
@@ -29,11 +29,11 @@
     "show": "The Bear",
     "year": 2022,
     "season": 5,
-    "number": 7,
-    "episode": "Caramel",
+    "number": 8,
+    "episode": "The Original Beef of Chicagoland",
     "url": "https://trakt.tv/shows/the-bear",
     "tmdb": 136315,
     "image": "https://image.tmdb.org/t/p/w342/eKfVzzEazSIjJMrw9ADa2x8ksLz.jpg",
-    "watchedAt": "2026-07-18T16:16:00.000Z"
+    "watchedAt": "2026-07-18T20:45:00.000Z"
   }
 }
