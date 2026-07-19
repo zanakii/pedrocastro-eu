@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-19T13:53:30.786Z",
+  "updatedAt": "2026-07-19T17:15:54.495Z",
   "listening": {
     "track": "Dialectos da Ternura",
     "artist": "Da Weasel",
@@ -26,14 +26,14 @@
     "watchedAt": "2026-05-09T00:00:00.000Z"
   },
   "series": {
-    "show": "The Bear",
-    "year": 2022,
-    "season": 5,
-    "number": 8,
-    "episode": "The Original Beef of Chicagoland",
-    "url": "https://trakt.tv/shows/the-bear",
-    "tmdb": 136315,
-    "image": "https://image.tmdb.org/t/p/w342/eKfVzzEazSIjJMrw9ADa2x8ksLz.jpg",
-    "watchedAt": "2026-07-18T20:45:00.000Z"
+    "show": "Hacks",
+    "year": 2021,
+    "season": 4,
+    "number": 2,
+    "episode": "Cover Girls",
+    "url": "https://trakt.tv/shows/hacks-2021",
+    "tmdb": 124101,
+    "image": "https://image.tmdb.org/t/p/w342/ca5XiEFgyGsI38QT3wEKa1QVGX.jpg",
+    "watchedAt": "2026-07-19T16:41:00.000Z"
   }
 }
