@@ -1,49 +1,49 @@
 {
-  "updatedAt": "2026-07-19T10:02:02.270Z",
+  "updatedAt": "2026-07-19T13:53:30.786Z",
   "music": [
     {
-      "track": "Truth Begins (Album Version)",
-      "artist": "Dirty Pretty Things",
-      "album": "Romance at Short Notice",
-      "url": "https://www.last.fm/music/Dirty%20Pretty%20Things/_/Truth%20Begins%20(Album%20Version)",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/184ba9b44cc648798095f8b4d1ddf4fa.png",
-      "playedAt": null,
-      "nowPlaying": true
-    },
-    {
-      "track": "Happiness LTD.",
-      "artist": "Hot Hot Heat",
-      "album": "Happiness LTD. (DMD Album + PDF)",
-      "url": "https://www.last.fm/music/Hot%20Hot%20Heat/_/Happiness%20LTD.",
-      "image": null,
-      "playedAt": "2026-07-19T09:58:24.000Z",
+      "track": "Dialectos da Ternura",
+      "artist": "Da Weasel",
+      "album": "Amor, Escárnio E Maldizer",
+      "url": "https://www.last.fm/music/Da%20Weasel/_/Dialectos%20da%20Ternura",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/a4c82fa706e5e4c103b6478bbdc25213.jpg",
+      "playedAt": "2026-07-19T10:42:23.000Z",
       "nowPlaying": false
     },
     {
-      "track": "Happiness LTD. (Album Version)",
-      "artist": "Hot Hot Heat",
-      "album": "Happiness LTD. (DMD Album + PDF) (PDF)",
-      "url": "https://www.last.fm/music/Hot%20Hot%20Heat/_/Happiness%20LTD.%20(Album%20Version)",
-      "image": null,
-      "playedAt": "2026-07-19T08:39:12.000Z",
+      "track": "Põe a Mão No Ar",
+      "artist": "Mundo Secreto",
+      "album": "EP Digital",
+      "url": "https://www.last.fm/music/Mundo%20Secreto/_/P%C3%B5e%20a%20M%C3%A3o%20No%20Ar",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/f06c2568dbbcef698a6f234b7cf5484f.jpg",
+      "playedAt": "2026-07-19T10:38:53.000Z",
       "nowPlaying": false
     },
     {
-      "track": "Happiness LTD.",
-      "artist": "Hot Hot Heat",
-      "album": "Happiness LTD. (DMD Album + PDF)",
-      "url": "https://www.last.fm/music/Hot%20Hot%20Heat/_/Happiness%20LTD.",
+      "track": "Põe A Mão No Ar",
+      "artist": "Francisco Ribeiro",
+      "album": "EP Digital",
+      "url": "https://www.last.fm/music/Francisco%20Ribeiro/_/P%C3%B5e%20A%20M%C3%A3o%20No%20Ar",
       "image": null,
-      "playedAt": "2026-07-19T08:39:11.000Z",
+      "playedAt": "2026-07-19T10:38:53.000Z",
       "nowPlaying": false
     },
     {
-      "track": "Don’t Delete the Kisses",
-      "artist": "Wolf Alice",
-      "album": "Visions of a Life",
-      "url": "https://www.last.fm/music/Wolf%20Alice/_/Don%E2%80%99t%20Delete%20the%20Kisses",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4e88a61ed66713cdb3f973706d71f0e1.jpg",
-      "playedAt": "2026-07-19T08:34:36.000Z",
+      "track": "Pára-me Agora",
+      "artist": "Ornatos Violeta",
+      "album": "Inéditos/Raridades",
+      "url": "https://www.last.fm/music/Ornatos%20Violeta/_/P%C3%A1ra-me%20Agora",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/3b13859441c04ad0af6007d55c335d1b.jpg",
+      "playedAt": "2026-07-19T10:36:04.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Miúda do café",
+      "artist": "Amor Electro",
+      "album": "#4",
+      "url": "https://www.last.fm/music/Amor%20Electro/_/Mi%C3%BAda%20do%20caf%C3%A9",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/ab676b069f0ae86c3e18e62d282deb07.jpg",
+      "playedAt": "2026-07-19T10:31:22.000Z",
       "nowPlaying": false
     }
   ],
