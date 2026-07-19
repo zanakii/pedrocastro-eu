@@ -1,6 +1,42 @@
 {
-  "updatedAt": "2026-07-19T03:54:42.193Z",
+  "updatedAt": "2026-07-19T06:43:44.543Z",
   "music": [
+    {
+      "track": "Close Up",
+      "artist": "Olivia Dean",
+      "album": "The Art of Loving",
+      "url": "https://www.last.fm/music/Olivia%20Dean/_/Close%20Up",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/e9aedce534c4c0cf22f18483bed6620e.jpg",
+      "playedAt": "2026-07-19T06:29:22.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Lady Lady",
+      "artist": "Olivia Dean",
+      "album": "The Art of Loving",
+      "url": "https://www.last.fm/music/Olivia%20Dean/_/Lady%20Lady",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/e9aedce534c4c0cf22f18483bed6620e.jpg",
+      "playedAt": "2026-07-19T06:25:53.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "Nice To Each Other",
+      "artist": "Olivia Dean",
+      "album": "The Art of Loving",
+      "url": "https://www.last.fm/music/Olivia%20Dean/_/Nice%20To%20Each%20Other",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/e9aedce534c4c0cf22f18483bed6620e.jpg",
+      "playedAt": "2026-07-19T06:22:24.000Z",
+      "nowPlaying": false
+    },
+    {
+      "track": "The Art of Loving (Intro)",
+      "artist": "Olivia Dean",
+      "album": "The Art of Loving",
+      "url": "https://www.last.fm/music/Olivia%20Dean/_/The%20Art%20of%20Loving%20(Intro)",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/e9aedce534c4c0cf22f18483bed6620e.jpg",
+      "playedAt": "2026-07-19T06:21:43.000Z",
+      "nowPlaying": false
+    },
     {
       "track": "Mews",
       "artist": "Gracie Abrams",
@@ -8,42 +44,6 @@
       "url": "https://www.last.fm/music/Gracie%20Abrams/_/Mews",
       "image": "https://lastfm.freetls.fastly.net/i/u/300x300/879bcbdd4d0c516898169e817eb6a5a4.png",
       "playedAt": "2026-07-18T09:47:01.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "bRoKe My hEArT",
-      "artist": "Gracie Abrams",
-      "album": "Daughter from Hell",
-      "url": "https://www.last.fm/music/Gracie%20Abrams/_/bRoKe%20My%20hEArT",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/879bcbdd4d0c516898169e817eb6a5a4.png",
-      "playedAt": "2026-07-18T09:43:22.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Sober",
-      "artist": "Gracie Abrams",
-      "album": "Daughter from Hell",
-      "url": "https://www.last.fm/music/Gracie%20Abrams/_/Sober",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/879bcbdd4d0c516898169e817eb6a5a4.png",
-      "playedAt": "2026-07-18T09:40:30.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Men Like You",
-      "artist": "Gracie Abrams",
-      "album": "Daughter from Hell",
-      "url": "https://www.last.fm/music/Gracie%20Abrams/_/Men%20Like%20You",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/879bcbdd4d0c516898169e817eb6a5a4.png",
-      "playedAt": "2026-07-18T09:36:27.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Good Reason",
-      "artist": "Gracie Abrams",
-      "album": "Daughter from Hell",
-      "url": "https://www.last.fm/music/Gracie%20Abrams/_/Good%20Reason",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/879bcbdd4d0c516898169e817eb6a5a4.png",
-      "playedAt": "2026-07-18T09:32:19.000Z",
       "nowPlaying": false
     }
   ],
