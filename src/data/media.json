@@ -1,49 +1,49 @@
 {
-  "updatedAt": "2026-07-19T06:43:44.543Z",
+  "updatedAt": "2026-07-19T10:02:02.270Z",
   "music": [
     {
-      "track": "Close Up",
-      "artist": "Olivia Dean",
-      "album": "The Art of Loving",
-      "url": "https://www.last.fm/music/Olivia%20Dean/_/Close%20Up",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/e9aedce534c4c0cf22f18483bed6620e.jpg",
-      "playedAt": "2026-07-19T06:29:22.000Z",
+      "track": "Truth Begins (Album Version)",
+      "artist": "Dirty Pretty Things",
+      "album": "Romance at Short Notice",
+      "url": "https://www.last.fm/music/Dirty%20Pretty%20Things/_/Truth%20Begins%20(Album%20Version)",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/184ba9b44cc648798095f8b4d1ddf4fa.png",
+      "playedAt": null,
+      "nowPlaying": true
+    },
+    {
+      "track": "Happiness LTD.",
+      "artist": "Hot Hot Heat",
+      "album": "Happiness LTD. (DMD Album + PDF)",
+      "url": "https://www.last.fm/music/Hot%20Hot%20Heat/_/Happiness%20LTD.",
+      "image": null,
+      "playedAt": "2026-07-19T09:58:24.000Z",
       "nowPlaying": false
     },
     {
-      "track": "Lady Lady",
-      "artist": "Olivia Dean",
-      "album": "The Art of Loving",
-      "url": "https://www.last.fm/music/Olivia%20Dean/_/Lady%20Lady",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/e9aedce534c4c0cf22f18483bed6620e.jpg",
-      "playedAt": "2026-07-19T06:25:53.000Z",
+      "track": "Happiness LTD. (Album Version)",
+      "artist": "Hot Hot Heat",
+      "album": "Happiness LTD. (DMD Album + PDF) (PDF)",
+      "url": "https://www.last.fm/music/Hot%20Hot%20Heat/_/Happiness%20LTD.%20(Album%20Version)",
+      "image": null,
+      "playedAt": "2026-07-19T08:39:12.000Z",
       "nowPlaying": false
     },
     {
-      "track": "Nice To Each Other",
-      "artist": "Olivia Dean",
-      "album": "The Art of Loving",
-      "url": "https://www.last.fm/music/Olivia%20Dean/_/Nice%20To%20Each%20Other",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/e9aedce534c4c0cf22f18483bed6620e.jpg",
-      "playedAt": "2026-07-19T06:22:24.000Z",
+      "track": "Happiness LTD.",
+      "artist": "Hot Hot Heat",
+      "album": "Happiness LTD. (DMD Album + PDF)",
+      "url": "https://www.last.fm/music/Hot%20Hot%20Heat/_/Happiness%20LTD.",
+      "image": null,
+      "playedAt": "2026-07-19T08:39:11.000Z",
       "nowPlaying": false
     },
     {
-      "track": "The Art of Loving (Intro)",
-      "artist": "Olivia Dean",
-      "album": "The Art of Loving",
-      "url": "https://www.last.fm/music/Olivia%20Dean/_/The%20Art%20of%20Loving%20(Intro)",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/e9aedce534c4c0cf22f18483bed6620e.jpg",
-      "playedAt": "2026-07-19T06:21:43.000Z",
-      "nowPlaying": false
-    },
-    {
-      "track": "Mews",
-      "artist": "Gracie Abrams",
-      "album": "Daughter from Hell",
-      "url": "https://www.last.fm/music/Gracie%20Abrams/_/Mews",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/879bcbdd4d0c516898169e817eb6a5a4.png",
-      "playedAt": "2026-07-18T09:47:01.000Z",
+      "track": "Don’t Delete the Kisses",
+      "artist": "Wolf Alice",
+      "album": "Visions of a Life",
+      "url": "https://www.last.fm/music/Wolf%20Alice/_/Don%E2%80%99t%20Delete%20the%20Kisses",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4e88a61ed66713cdb3f973706d71f0e1.jpg",
+      "playedAt": "2026-07-19T08:34:36.000Z",
       "nowPlaying": false
     }
   ],

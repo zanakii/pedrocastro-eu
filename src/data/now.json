@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-07-19T06:43:44.543Z",
+  "updatedAt": "2026-07-19T10:02:02.270Z",
   "listening": {
-    "track": "Close Up",
-    "artist": "Olivia Dean",
-    "album": "The Art of Loving",
-    "url": "https://www.last.fm/music/Olivia%20Dean/_/Close%20Up",
-    "image": "https://lastfm.freetls.fastly.net/i/u/300x300/e9aedce534c4c0cf22f18483bed6620e.jpg",
-    "playedAt": "2026-07-19T06:29:22.000Z",
-    "nowPlaying": false
+    "track": "Truth Begins (Album Version)",
+    "artist": "Dirty Pretty Things",
+    "album": "Romance at Short Notice",
+    "url": "https://www.last.fm/music/Dirty%20Pretty%20Things/_/Truth%20Begins%20(Album%20Version)",
+    "image": "https://lastfm.freetls.fastly.net/i/u/300x300/184ba9b44cc648798095f8b4d1ddf4fa.png",
+    "playedAt": null,
+    "nowPlaying": true
   },
   "reading": {
     "title": "Wuthering Heights",
