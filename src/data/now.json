@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-20T18:19:24.767Z",
+  "updatedAt": "2026-07-20T21:32:34.355Z",
   "listening": {
     "track": "the cure",
     "artist": "Olivia Rodrigo",
@@ -26,14 +26,14 @@
     "watchedAt": "2026-05-09T00:00:00.000Z"
   },
   "series": {
-    "show": "Hacks",
-    "year": 2021,
-    "season": 4,
-    "number": 2,
-    "episode": "Cover Girls",
-    "url": "https://trakt.tv/shows/hacks-2021",
-    "tmdb": 124101,
-    "image": "https://image.tmdb.org/t/p/w342/ca5XiEFgyGsI38QT3wEKa1QVGX.jpg",
-    "watchedAt": "2026-07-19T16:41:00.000Z"
+    "show": "The Americans",
+    "year": 2013,
+    "season": 5,
+    "number": 11,
+    "episode": "Dyatkovo",
+    "url": "https://trakt.tv/shows/the-americans-2013",
+    "tmdb": 46533,
+    "image": "https://image.tmdb.org/t/p/w342/w1UBlxEXhbKe8sp0fxFZh7MqTce.jpg",
+    "watchedAt": "2026-07-20T20:58:00.000Z"
   }
 }
