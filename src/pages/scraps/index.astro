@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Scrap from '../../components/Scrap.astro';
+import { getSortedScraps } from '../../lib/scraps';
+
+const scraps = await getSortedScraps();
+---
+
+<Layout
+  title="Scraps — Pedro Castro"
+  description="Short thoughts and passing notes by Pedro Castro."
+>
+  <Fragment slot="head">
+    <link rel="alternate" type="application/rss+xml" title="Pedro Castro — Scraps" href="/scraps.xml" />
+  </Fragment>
+
+  <header>
+    <h1>Scraps</h1>
+    <p class="subscribe small muted">
+      Short thoughts and passing notes — <a href="/scraps.xml">subscribe via RSS</a>.
+    </p>
+  </header>
+
+  <section>
+    {scraps.length === 0 ? (
+      <p class="muted">Nothing here yet.</p>
+    ) : (
+      <div class="scrap-thread">
+        {scraps.map((s) => <Scrap entry={s} />)}
+      </div>
+    )}
+  </section>
+</Layout>
+
+<style>
+  header { margin-bottom: 1.5rem; }
+  .subscribe { margin: 0.4rem 0 0; }
+  .scrap-thread {
+    --thread-pad: 1.35rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.9rem;
+    border-left: 1px solid var(--rule);
+    padding-left: var(--thread-pad);
+  }
+</style>

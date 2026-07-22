@@ -53,3 +53,18 @@ collections:
       - { name: caption, label: Caption, widget: string, required: false }
       - { name: location, label: Location, widget: string, required: false }
       - { name: draft, label: Draft, widget: boolean, default: false }
+
+  - name: scraps
+    label: Scraps
+    label_singular: Scrap
+    folder: src/content/scraps
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}{{minute}}"
+    summary: "{{body}} — {{date}}"
+    sortable_fields: [date]
+    fields:
+      - { name: date, label: Date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+      - { name: draft, label: Draft, widget: boolean, default: false }
+      - { name: body, label: Body, widget: markdown, hint: "A short thought. Text and inline links only — no title." }
