@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-22T10:34:10.624Z",
+  "updatedAt": "2026-07-22T14:22:12.309Z",
   "music": [
     {
       "track": "the cure",
@@ -100,12 +100,12 @@
       "show": "The Americans",
       "year": 2013,
       "season": 5,
-      "number": 11,
-      "episode": "Dyatkovo",
+      "number": 12,
+      "episode": "The World Council of Churches",
       "url": "https://trakt.tv/shows/the-americans-2013",
       "tmdb": 46533,
       "image": "https://image.tmdb.org/t/p/w342/w1UBlxEXhbKe8sp0fxFZh7MqTce.jpg",
-      "watchedAt": "2026-07-20T20:58:00.000Z"
+      "watchedAt": "2026-07-22T13:25:00.000Z"
     },
     {
       "show": "Hacks",
