@@ -1,10 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import NowCard from '../components/NowCard.astro';
+import Scrap from '../components/Scrap.astro';
 import { getCollection } from 'astro:content';
 import { getNow, formatRelative, formatStars } from '../lib/now';
+import { getSortedScraps } from '../lib/scraps';
 
 const now = getNow();
+
+// The three most recent scraps, as a homepage window into /scraps/.
+const scraps = (await getSortedScraps()).slice(0, 3);
 
 // The five most recent flashes, as a homepage preview into /flashes/.
 const flashes = (
@@ -159,6 +164,18 @@ const lastUpdated = formatRelative(now.updatedAt);
     </p>
   </section>
 
+  {scraps.length > 0 && (
+    <section>
+      <h2>Scraps</h2>
+      <div class="scrap-thread">
+        {scraps.map((s) => <Scrap entry={s} />)}
+      </div>
+      <p class="before">
+        <a href="/scraps/">More scraps →</a>
+      </p>
+    </section>
+  )}
+
   {flashes.length > 0 && (
     <section>
       <h2>Flashes</h2>
@@ -199,6 +216,14 @@ const lastUpdated = formatRelative(now.updatedAt);
     margin-top: 0.9rem;
     font-size: 0.85rem;
     color: var(--muted);
+  }
+  .scrap-thread {
+    --thread-pad: 1.35rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.9rem;
+    border-left: 1px solid var(--rule);
+    padding-left: var(--thread-pad);
   }
   .flash-strip {
     display: grid;
