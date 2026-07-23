@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// A now page (nownownow.com convention): what I'm focused on at this point in
+// life. Hand-written — distinct from the auto-fed Now *section* on the homepage.
+// Bump `lastUpdated` whenever you rewrite the copy.
+const lastUpdated = '23 July 2026';
+---
+
+<Layout
+  title="Now — Pedro Castro"
+  description="What I'm focused on at this point in my life."
+>
+  <article class="prose">
+    <header>
+      <h1>Now</h1>
+      <p class="muted lede">
+        I'm living in Lisbon, at a crossroads between the comfortable life I've
+        been blessed with and the life I inevitably wish I had.
+      </p>
+    </header>
+
+    <p>
+      My focus at the moment is exploring technology and AI, building side
+      projects, and redesigning my Higher Education engagements to capture this
+      newly unlocked potential. I've gone from playing Counter-Strike and
+      Cities: Skylines to building with
+      <a href="https://claude.com/claude-code">Claude Code</a> in my spare time,
+      trying to get better and better at capturing signals and translating them
+      into products, features, or ideas worth chasing. Lately I've been thinking
+      about how a generalist like me can find more purpose in the day to day.
+    </p>
+
+    <p>
+      Offline, I've been sticking to running and indoor cycling, and I'm
+      preparing for a couple of 8K/10K runs in September and October.
+    </p>
+
+    <p>
+      Relationships-wise — and to my grandma's despair — there really is nothing
+      to note. The apps don't suit me, so I'm honestly living my best single
+      life, regardless of any
+      <a href="https://www.gutenberg.org/files/1342/1342-h/1342-h.htm">truth
+      universally acknowledged</a>.
+    </p>
+
+    <p class="now-note">
+      This is a <a href="https://nownownow.com/about">now page</a>, inspired by
+      <a href="https://nownownow.com">nownownow.com</a> — last updated {lastUpdated}.
+      You can also see what I'm currently vibing to on
+      <a href="/">the homepage</a>.
+    </p>
+  </article>
+</Layout>
+
+<style>
+  header { margin-bottom: 1rem; }
+  .lede { max-width: 34rem; }
+  .now-note {
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+</style>

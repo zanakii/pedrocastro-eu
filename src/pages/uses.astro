@@ -1,0 +1,168 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// A /uses page: the gear, software and tools I actually reach for.
+// Each group is a card; each row is `label — value`. Edit the values (the
+// text after the em dash), drop any row or whole card you don't want, and
+// add rows freely. Blank values render as a muted placeholder.
+const groups = [
+  {
+    emoji: '🖥️',
+    name: 'Computer & Phone',
+    items: [
+      { label: 'Laptop', value: 'Legion 5' },
+      { label: 'Phone', value: 'Pixel 10 Pro XL' },
+      { label: 'OS', value: 'Windows 11' },
+      { label: 'Wearable', value: 'Pixel Watch 4' },
+    ],
+  },
+  {
+    emoji: '⌨️',
+    name: 'Desk & Peripherals',
+    items: [
+      { label: 'Monitor', value: 'Lenovo G27C-10' },
+      { label: 'Keyboard', value: 'Logitech G213 Prodigy' },
+      { label: 'Mouse', value: 'Logitech G502X' },
+      { label: 'Desk', value: 'Idasen Standing Desk' },
+      { label: 'Chair', value: 'Secretlab TITAN Evo' },
+      { label: 'Headphones', value: 'Sony WH-1000X M3' },
+      { label: 'Mic', value: 'Razer Seiren X' },
+      { label: 'Webcam', value: 'Logitech C920' },
+    ],
+  },
+  {
+    emoji: '🧑‍💻',
+    name: 'Editor & Terminal',
+    items: [
+      { label: 'Editor', value: 'VSCode' },
+      { label: 'Theme', value: 'Default Dark' },
+      { label: 'Font', value: 'Consolas' },
+      { label: 'Terminal', value: 'PowerShell' },
+    ],
+  },
+  {
+    emoji: '🧰',
+    name: 'Everyday Software',
+    items: [
+      { label: 'Browser', value: 'Mozilla Firefox' },
+      { label: 'Notes', value: 'Obsidian' },
+      { label: 'Passwords', value: 'Proton Pass' },
+      { label: 'Email', value: 'Proton Mail' },
+      { label: 'Calendar', value: 'Proton Calendar' },
+    ],
+  },
+];
+---
+
+<Layout
+  title="Uses — Pedro Castro"
+  description="The hardware, software and tools I use day to day."
+>
+  <article>
+    <header>
+      <h1>Uses</h1>
+      <p class="muted lede">
+        The gear, software and tools I actually reach for. A living list —
+        inspired by <a href="https://uses.tech">uses.tech</a>.
+      </p>
+    </header>
+
+    <div class="grid">
+      {groups.map((group) => (
+        <section class="card">
+          <h2>
+            <span class="emoji" aria-hidden="true">{group.emoji}</span>
+            {group.name}
+          </h2>
+          <ul>
+            {group.items.map((item) => (
+              <li>
+                <span class="name">{item.label}</span>
+                {item.value
+                  ? <span class="value">{item.value}</span>
+                  : <span class="value placeholder">…</span>}
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  </article>
+</Layout>
+
+<style>
+  header { margin-bottom: 1.75rem; }
+  .lede { max-width: 34rem; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.9rem;
+  }
+  @media (max-width: 34rem) {
+    .grid { grid-template-columns: 1fr; }
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 1.1rem 1.2rem 1.25rem;
+    transition: border-color 140ms ease;
+  }
+  .card:hover { border-color: var(--rule-strong); }
+
+  /* The global h2 is a tiny uppercase section label; re-style it here as a
+     real card heading with an emoji tile. */
+  .card :global(h2),
+  .card h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: -0.01em;
+    color: var(--fg);
+    margin: 0 0 0.85rem;
+  }
+  .card h2::after { content: none; }
+  .card .emoji {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.85rem;
+    height: 1.85rem;
+    font-size: 1rem;
+    line-height: 1;
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    background: var(--bg);
+  }
+
+  .card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .card li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.75rem;
+    padding: 0.4rem 0;
+    font-size: 0.9rem;
+    border-top: 1px solid var(--rule);
+  }
+  .card li:first-child { border-top: 0; }
+  .card .name {
+    color: var(--muted);
+    flex-shrink: 0;
+  }
+  .card .value {
+    color: var(--fg-dim);
+    text-align: right;
+  }
+  .card .value.placeholder { color: var(--rule-strong); }
+</style>
