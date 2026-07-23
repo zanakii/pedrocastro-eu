@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-23T14:32:08.395Z",
+  "updatedAt": "2026-07-23T17:45:36.245Z",
   "music": [
     {
       "track": "the cure",
@@ -97,6 +97,28 @@
   ],
   "series": [
     {
+      "show": "Hacks",
+      "year": 2021,
+      "season": 4,
+      "number": 5,
+      "episode": "Clickable Face",
+      "url": "https://trakt.tv/shows/hacks-2021",
+      "tmdb": 124101,
+      "image": "https://image.tmdb.org/t/p/w342/ca5XiEFgyGsI38QT3wEKa1QVGX.jpg",
+      "watchedAt": "2026-07-23T17:26:00.000Z"
+    },
+    {
+      "show": "House of the Dragon",
+      "year": 2022,
+      "season": 3,
+      "number": 1,
+      "episode": "Salt and Sea, Fire and Blood",
+      "url": "https://trakt.tv/shows/house-of-the-dragon",
+      "tmdb": 94997,
+      "image": "https://image.tmdb.org/t/p/w342/7V0Ebks0GgpKvQ7QbLAIdX5dos4.jpg",
+      "watchedAt": "2026-07-23T14:34:00.000Z"
+    },
+    {
       "show": "The Americans",
       "year": 2013,
       "season": 5,
@@ -106,17 +128,6 @@
       "tmdb": 46533,
       "image": "https://image.tmdb.org/t/p/w342/w1UBlxEXhbKe8sp0fxFZh7MqTce.jpg",
       "watchedAt": "2026-07-23T13:25:00.000Z"
-    },
-    {
-      "show": "Hacks",
-      "year": 2021,
-      "season": 4,
-      "number": 4,
-      "episode": "I Love LA",
-      "url": "https://trakt.tv/shows/hacks-2021",
-      "tmdb": 124101,
-      "image": "https://image.tmdb.org/t/p/w342/ca5XiEFgyGsI38QT3wEKa1QVGX.jpg",
-      "watchedAt": "2026-07-20T20:34:00.000Z"
     },
     {
       "show": "The Bear",
