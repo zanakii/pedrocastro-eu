@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-24T10:28:35.726Z",
+  "updatedAt": "2026-07-24T14:12:50.860Z",
   "music": [
     {
       "track": "the cure",
@@ -100,34 +100,34 @@
       "show": "Hacks",
       "year": 2021,
       "season": 4,
-      "number": 5,
-      "episode": "Clickable Face",
+      "number": 6,
+      "episode": "Mrs. Table",
       "url": "https://trakt.tv/shows/hacks-2021",
       "tmdb": 124101,
       "image": "https://image.tmdb.org/t/p/w342/ca5XiEFgyGsI38QT3wEKa1QVGX.jpg",
-      "watchedAt": "2026-07-23T17:26:00.000Z"
+      "watchedAt": "2026-07-24T13:22:00.000Z"
+    },
+    {
+      "show": "The Americans",
+      "year": 2013,
+      "season": 6,
+      "number": 1,
+      "episode": "Dead Hand",
+      "url": "https://trakt.tv/shows/the-americans-2013",
+      "tmdb": 46533,
+      "image": "https://image.tmdb.org/t/p/w342/w1UBlxEXhbKe8sp0fxFZh7MqTce.jpg",
+      "watchedAt": "2026-07-24T13:21:00.000Z"
     },
     {
       "show": "House of the Dragon",
       "year": 2022,
       "season": 3,
-      "number": 1,
-      "episode": "Salt and Sea, Fire and Blood",
+      "number": 2,
+      "episode": "Queen's Landing",
       "url": "https://trakt.tv/shows/house-of-the-dragon",
       "tmdb": 94997,
       "image": "https://image.tmdb.org/t/p/w342/7V0Ebks0GgpKvQ7QbLAIdX5dos4.jpg",
-      "watchedAt": "2026-07-23T14:34:00.000Z"
-    },
-    {
-      "show": "The Americans",
-      "year": 2013,
-      "season": 5,
-      "number": 13,
-      "episode": "The Soviet Division",
-      "url": "https://trakt.tv/shows/the-americans-2013",
-      "tmdb": 46533,
-      "image": "https://image.tmdb.org/t/p/w342/w1UBlxEXhbKe8sp0fxFZh7MqTce.jpg",
-      "watchedAt": "2026-07-23T13:25:00.000Z"
+      "watchedAt": "2026-07-24T11:31:00.000Z"
     },
     {
       "show": "The Bear",
