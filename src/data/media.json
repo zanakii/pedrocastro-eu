@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-25T17:15:17.944Z",
+  "updatedAt": "2026-07-25T21:08:42.926Z",
   "music": [
     {
       "track": "the cure",
@@ -106,6 +106,17 @@
   ],
   "series": [
     {
+      "show": "House of the Dragon",
+      "year": 2022,
+      "season": 3,
+      "number": 4,
+      "episode": "Tumbleton",
+      "url": "https://trakt.tv/shows/house-of-the-dragon",
+      "tmdb": 94997,
+      "image": "https://image.tmdb.org/t/p/w342/7V0Ebks0GgpKvQ7QbLAIdX5dos4.jpg",
+      "watchedAt": "2026-07-25T20:58:00.000Z"
+    },
+    {
       "show": "The Americans",
       "year": 2013,
       "season": 6,
@@ -126,17 +137,6 @@
       "tmdb": 124101,
       "image": "https://image.tmdb.org/t/p/w342/ca5XiEFgyGsI38QT3wEKa1QVGX.jpg",
       "watchedAt": "2026-07-24T20:09:00.000Z"
-    },
-    {
-      "show": "House of the Dragon",
-      "year": 2022,
-      "season": 3,
-      "number": 3,
-      "episode": "Rhaenyra Triumphant",
-      "url": "https://trakt.tv/shows/house-of-the-dragon",
-      "tmdb": 94997,
-      "image": "https://image.tmdb.org/t/p/w342/7V0Ebks0GgpKvQ7QbLAIdX5dos4.jpg",
-      "watchedAt": "2026-07-24T14:36:00.000Z"
     },
     {
       "show": "The Bear",
