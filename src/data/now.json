@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-24T21:20:52.249Z",
+  "updatedAt": "2026-07-25T03:37:14.639Z",
   "listening": {
     "track": "the cure",
     "artist": "Olivia Rodrigo",
@@ -17,13 +17,13 @@
     "startedAt": "2026-07-06T18:00:29.000Z"
   },
   "watching": {
-    "title": "The Devil Wears Prada 2",
+    "title": "The Odyssey",
     "year": "2026",
-    "rating": 2,
+    "rating": 3,
     "rewatch": false,
-    "url": "https://letterboxd.com/film/the-devil-wears-prada-2/",
-    "poster": "https://a.ltrbxd.com/resized/film-poster/1/1/9/5/5/8/6/1195586-the-devil-wears-prada-2-0-600-0-900-crop.jpg?v=0d955add69",
-    "watchedAt": "2026-05-09T00:00:00.000Z"
+    "url": "https://letterboxd.com/film/the-odyssey-2026/",
+    "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/5/5/3/9/4/1255394-the-odyssey-2026-0-600-0-900-crop.jpg?v=1eed046d0c",
+    "watchedAt": "2026-07-25T00:00:00.000Z"
   },
   "series": {
     "show": "Hacks",
