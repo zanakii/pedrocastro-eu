@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-26T17:15:34.270Z",
+  "updatedAt": "2026-07-26T21:11:27.190Z",
   "music": [
     {
       "track": "the cure",
@@ -106,6 +106,17 @@
   ],
   "series": [
     {
+      "show": "The Americans",
+      "year": 2013,
+      "season": 6,
+      "number": 3,
+      "episode": "Urban Transport Planning",
+      "url": "https://trakt.tv/shows/the-americans-2013",
+      "tmdb": 46533,
+      "image": "https://image.tmdb.org/t/p/w342/w1UBlxEXhbKe8sp0fxFZh7MqTce.jpg",
+      "watchedAt": "2026-07-26T20:43:00.000Z"
+    },
+    {
       "show": "House of the Dragon",
       "year": 2022,
       "season": 3,
@@ -115,17 +126,6 @@
       "tmdb": 94997,
       "image": "https://image.tmdb.org/t/p/w342/7V0Ebks0GgpKvQ7QbLAIdX5dos4.jpg",
       "watchedAt": "2026-07-25T20:58:00.000Z"
-    },
-    {
-      "show": "The Americans",
-      "year": 2013,
-      "season": 6,
-      "number": 2,
-      "episode": "Tchaikovsky",
-      "url": "https://trakt.tv/shows/the-americans-2013",
-      "tmdb": 46533,
-      "image": "https://image.tmdb.org/t/p/w342/w1UBlxEXhbKe8sp0fxFZh7MqTce.jpg",
-      "watchedAt": "2026-07-25T12:48:00.000Z"
     },
     {
       "show": "Hacks",
