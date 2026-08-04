@@ -36,7 +36,7 @@ export interface Media {
   films: FilmItem[];
 }
 
-export type MediaKind = 'Music' | 'Book' | 'Film';
+export type MediaKind = 'Music' | 'Book' | 'Movie';
 
 /** Normalised row for the timeline — maps directly onto <NowCard>. */
 export interface TimelineItem {
@@ -105,7 +105,7 @@ export function getMediaTimeline(): TimelineItem[] {
     if (!f.title) continue;
     const rel = formatRelative(f.watchedAt);
     items.push({
-      kind: 'Film',
+      kind: 'Movie',
       title: f.year ? `${f.title} (${f.year})` : f.title,
       subtitle: joinDot([formatStars(f.rating), f.rewatch ? 'rewatch' : null]),
       href: f.url ?? undefined,
