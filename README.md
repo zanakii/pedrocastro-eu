@@ -23,9 +23,8 @@ npm run preview  # serve the built site
 
 ## Now + Media data (listening / reading / watching)
 
-`scripts/fetch-now.mjs` pulls recent listening (Last.fm), reading (Goodreads),
-watching films (Letterboxd) and watching series (Trakt, with TMDB posters) and
-writes two files:
+`scripts/fetch-now.mjs` pulls recent listening (Last.fm), reading (Goodreads)
+and watching films (Letterboxd) and writes two files:
 
 - `src/data/now.json` — the single latest item per type (the *Now* section).
 - `src/data/media.json` — up to 5 per type within the last 3 months (the
@@ -150,7 +149,7 @@ public/
   admin/                     # Sveltia CMS (index.html + config.yml)
   uploads/                   # CMS-uploaded images
 scripts/
-  fetch-now.mjs              # Last.fm + Goodreads + Letterboxd + Trakt → now + media
+  fetch-now.mjs              # Last.fm + Goodreads + Letterboxd → now + media
 .github/workflows/
   deploy.yml                 # push + cron + manual; builds and deploys
 ```

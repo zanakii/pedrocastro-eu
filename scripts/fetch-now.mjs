@@ -12,9 +12,6 @@
 //   LASTFM_USERNAME     - your Last.fm handle
 //   GOODREADS_USER_ID   - numeric portion of your goodreads.com/user/show/<id> URL
 //   LETTERBOXD_USERNAME - your letterboxd.com/<username> handle
-//   TRAKT_CLIENT_ID     - Trakt API app client id (https://trakt.tv/oauth/applications)
-//   TRAKT_USERNAME      - your trakt.tv slug; profile history must be public
-//   TMDB_API_KEY        - themoviedb.org API key, for series poster art (optional)
 //
 // Any missing key just disables that source.
 
@@ -284,107 +281,6 @@ async function fetchFilmsList() {
 }
 
 // ---------------------------------------------------------------------------
-// Trakt — watched TV episodes (mirror your TV Time history here)
-// ---------------------------------------------------------------------------
-
-function normalizeEpisode(entry) {
-  const show = entry.show;
-  const ep = entry.episode;
-  if (!show?.title) return null;
-  const slug = show.ids?.slug;
-  return {
-    show: show.title,
-    year: show.year ?? null,
-    season: ep?.season ?? null,
-    number: ep?.number ?? null,
-    episode: ep?.title ?? null,
-    // Trakt's history is canonical; link to the show page. Poster art comes from
-    // a separate TMDB lookup keyed by this id (see withPosters).
-    url: slug ? `https://trakt.tv/shows/${slug}` : null,
-    tmdb: show.ids?.tmdb ?? null,
-    image: null,
-    watchedAt: entry.watched_at ? new Date(entry.watched_at).toISOString() : null,
-  };
-}
-
-// History is newest-first. Reduce to one row per distinct show, keeping the
-// most-recent episode seen for it — so the timeline reads as the last N shows
-// watched (each with its latest episode as detail), never the same show twice.
-// Collapsing only consecutive runs isn't enough: interleaved viewing (show A,
-// show B, show A, …) would otherwise fill the 5 slots with duplicates.
-function dedupeToDistinctShows(eps) {
-  const seen = new Set();
-  const out = [];
-  for (const e of eps) {
-    if (seen.has(e.show)) continue;
-    seen.add(e.show);
-    out.push(e);
-  }
-  return out;
-}
-
-async function fetchSeriesList() {
-  const clientId = process.env.TRAKT_CLIENT_ID;
-  const user = process.env.TRAKT_USERNAME;
-  if (!clientId || !user) {
-    console.warn('[feeds] Trakt env missing; skipping series');
-    return null;
-  }
-  const url = `https://api.trakt.tv/users/${encodeURIComponent(user)}/history/episodes?limit=40`;
-  const res = await fetch(url, {
-    headers: {
-      'trakt-api-version': '2',
-      'trakt-api-key': clientId,
-      'content-type': 'application/json',
-      // Trakt sits behind Cloudflare, which 403s requests with no User-Agent.
-      // Node's fetch (undici) sends none by default, so CI got 403 while curl
-      // (which auto-sends one) worked — set an explicit UA so both match.
-      'user-agent': 'pedrocastro-eu-feeds/1.0 (+https://pedrocastro.eu)',
-    },
-  });
-  if (!res.ok) throw new Error(`Trakt ${res.status}`);
-  const json = await res.json();
-  if (!Array.isArray(json) || json.length === 0) return null;
-  const eps = dedupeToDistinctShows(json.map(normalizeEpisode).filter(Boolean));
-  return eps.length ? eps : null;
-}
-
-// Trakt returns no artwork, so resolve a poster from TMDB by the show's tmdb id.
-// w342 is a good balance for the ~3.5rem card thumb.
-async function fetchTmdbPoster(tmdbId) {
-  const key = process.env.TMDB_API_KEY;
-  if (!key || !tmdbId) return null;
-  const res = await fetch(`https://api.themoviedb.org/3/tv/${tmdbId}?api_key=${key}`);
-  if (!res.ok) throw new Error(`TMDB ${res.status}`);
-  const json = await res.json();
-  return json.poster_path ? `https://image.tmdb.org/t/p/w342${json.poster_path}` : null;
-}
-
-// Add posters to the (already clamped) series list. Reuse posters from the
-// previous snapshot by tmdb id, so we hit TMDB only for newly surfaced shows
-// and a TMDB outage or rate limit can't blank art we already had.
-async function withPosters(series, prevSeries) {
-  const cache = new Map();
-  for (const p of prevSeries ?? []) {
-    if (p.tmdb && p.image) cache.set(p.tmdb, p.image);
-  }
-  for (const s of series) {
-    if (s.image) continue;
-    if (s.tmdb && cache.has(s.tmdb)) {
-      s.image = cache.get(s.tmdb);
-      continue;
-    }
-    try {
-      s.image = await fetchTmdbPoster(s.tmdb);
-    } catch (err) {
-      console.error('[feeds] TMDB poster failed:', err.message);
-      s.image = (s.tmdb && cache.get(s.tmdb)) ?? null;
-    }
-  }
-  return series;
-}
-
-// ---------------------------------------------------------------------------
 // Orchestration
 // ---------------------------------------------------------------------------
 
@@ -417,15 +313,6 @@ const musicList = await safe('music', fetchMusicList, prevMedia?.music ?? null);
 const reading = await safe('reading', fetchReading, prevNow?.reading ?? null);
 const booksList = await safe('books', fetchBooksList, prevMedia?.books ?? null);
 const filmsList = await safe('films', fetchFilmsList, prevMedia?.films ?? null);
-const seriesList = await safe('series', fetchSeriesList, prevMedia?.series ?? null);
-
-// Posters are resolved after clamping so TMDB is queried only for the handful
-// of shows that actually make the timeline.
-const series = await safe(
-  'posters',
-  () => withPosters(clampMedia(seriesList, 'watchedAt'), prevMedia?.series),
-  clampMedia(seriesList, 'watchedAt'),
-);
 
 const updatedAt = new Date().toISOString();
 
@@ -442,10 +329,6 @@ const now = {
     prevNow?.watching ?? {
       title: null, year: null, rating: null, rewatch: false, url: null, poster: null, watchedAt: null,
     },
-  series: series[0] ??
-    prevNow?.series ?? {
-      show: null, year: null, season: null, number: null, episode: null, url: null, image: null, watchedAt: null,
-    },
 };
 
 const media = {
@@ -453,7 +336,6 @@ const media = {
   music: clampMedia(musicList, 'playedAt', { keepNowPlaying: true }),
   books: clampMedia(booksList, 'readAt'),
   films: clampMedia(filmsList, 'watchedAt'),
-  series,
 };
 
 await writeFile(NOW_PATH, JSON.stringify(now, null, 2) + '\n');
