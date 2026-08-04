@@ -32,11 +32,6 @@ const ms = (iso: string | null): number => {
 const withYear = (title: string | null, year: string | number | null) =>
   title ? (year ? `${title} (${year})` : title) : '—';
 
-const seriesEp =
-  now.series.season && now.series.number
-    ? `S${now.series.season}E${now.series.number}`
-    : null;
-
 const cards = [
   {
     label: 'Reading',
@@ -49,18 +44,6 @@ const cards = [
     image: now.reading.cover ?? undefined,
     present: Boolean(now.reading.title),
     sortAt: ms(now.reading.startedAt),
-  },
-  {
-    label: 'Binging',
-    title: withYear(now.series.show, now.series.year),
-    subtitle: [seriesEp, now.series.episode].filter(Boolean).join(' · ') || undefined,
-    href: now.series.url ?? undefined,
-    meta: formatRelative(now.series.watchedAt)
-      ? `watched ${formatRelative(now.series.watchedAt)}`
-      : undefined,
-    image: now.series.image ?? undefined,
-    present: Boolean(now.series.show),
-    sortAt: ms(now.series.watchedAt),
   },
   {
     label: 'Seen',
