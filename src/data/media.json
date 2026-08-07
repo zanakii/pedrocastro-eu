@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-08-06T14:34:38.803Z",
+  "updatedAt": "2026-08-07T00:55:20.204Z",
   "music": [
     {
       "track": "Yeah",
       "artist": "Charli xcx",
       "album": "Music, Fashion, Film",
       "url": "https://www.last.fm/music/Charli%20xcx/_/Yeah",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/0c7b97699bdec08629fa2de8d353a06e.png",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0c7b97699bdec08629fa2de8d353a06e.png",
       "playedAt": "2026-08-06T09:55:37.000Z",
       "nowPlaying": false
     },
@@ -15,7 +15,7 @@
       "artist": "Charli xcx",
       "album": "Music, Fashion, Film",
       "url": "https://www.last.fm/music/Charli%20xcx/_/I%E2%80%99m%20Afraid",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/0c7b97699bdec08629fa2de8d353a06e.png",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0c7b97699bdec08629fa2de8d353a06e.png",
       "playedAt": "2026-08-06T09:53:26.000Z",
       "nowPlaying": false
     },
@@ -24,7 +24,7 @@
       "artist": "Charli xcx",
       "album": "Music, Fashion, Film",
       "url": "https://www.last.fm/music/Charli%20xcx/_/2007",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/0c7b97699bdec08629fa2de8d353a06e.png",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0c7b97699bdec08629fa2de8d353a06e.png",
       "playedAt": "2026-08-06T09:51:22.000Z",
       "nowPlaying": false
     },
@@ -33,7 +33,7 @@
       "artist": "Charli xcx",
       "album": "Music, Fashion, Film",
       "url": "https://www.last.fm/music/Charli%20xcx/_/Camera",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/0c7b97699bdec08629fa2de8d353a06e.png",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0c7b97699bdec08629fa2de8d353a06e.png",
       "playedAt": "2026-08-06T09:48:51.000Z",
       "nowPlaying": false
     },
@@ -42,7 +42,7 @@
       "artist": "Charli xcx",
       "album": "Music, Fashion, Film",
       "url": "https://www.last.fm/music/Charli%20xcx/_/Card%20Declined",
-      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/0c7b97699bdec08629fa2de8d353a06e.png",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0c7b97699bdec08629fa2de8d353a06e.png",
       "playedAt": "2026-08-06T09:24:54.000Z",
       "nowPlaying": false
     }
