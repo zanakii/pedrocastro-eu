@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-09T20:51:29.301Z",
+  "updatedAt": "2026-08-10T02:34:25.992Z",
   "music": [
     {
       "track": "Dermot (see yourself in my eyes)",
@@ -75,13 +75,6 @@
       "url": "https://www.goodreads.com/book/show/40637252",
       "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1727453838l/40637252._SY475_.jpg",
       "readAt": "2026-06-11T00:00:00.000Z"
-    },
-    {
-      "title": "Klara and the Sun",
-      "author": "Kazuo Ishiguro",
-      "url": "https://www.goodreads.com/book/show/58256542",
-      "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1646458875l/58256542._SY475_.jpg",
-      "readAt": "2026-05-10T00:00:00.000Z"
     }
   ],
   "films": [
