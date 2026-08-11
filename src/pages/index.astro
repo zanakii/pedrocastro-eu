@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import NowCard from '../components/NowCard.astro';
 import Scrap from '../components/Scrap.astro';
 import { getCollection } from 'astro:content';
-import { getNow, formatRelative, formatStars } from '../lib/now';
+import { getNow, describeListening, formatRelative, formatStars } from '../lib/now';
 import { getSortedScraps } from '../lib/scraps';
 
 const now = getNow();
@@ -31,6 +31,10 @@ const ms = (iso: string | null): number => {
 
 const withYear = (title: string | null, year: string | number | null) =>
   title ? (year ? `${title} (${year})` : title) : '—';
+
+// Album- or track-shaped, decided upstream by the fetcher: a track while it's
+// actually playing, the album once the moment has passed.
+const listening = describeListening(now.listening);
 
 const cards = [
   {
@@ -62,15 +66,12 @@ const cards = [
   },
   {
     label: 'Listening',
-    title: now.listening.track ?? '—',
-    subtitle:
-      [now.listening.artist, now.listening.album].filter(Boolean).join(' · ') || undefined,
+    title: listening?.title ?? '—',
+    subtitle: listening?.subtitle,
     href: now.listening.url ?? undefined,
-    meta: now.listening.nowPlaying
-      ? 'now playing'
-      : formatRelative(now.listening.playedAt) ?? undefined,
+    meta: listening?.meta,
     image: now.listening.image ?? undefined,
-    present: Boolean(now.listening.track),
+    present: Boolean(listening),
     // A now-playing track is happening right now, so it sorts to the top.
     sortAt: now.listening.nowPlaying ? Date.now() : ms(now.listening.playedAt),
   },

@@ -1,15 +1,9 @@
 import mediaData from '../data/media.json';
-import { formatRelative, formatStars } from './now';
+import { describeListening, formatRelative, formatStars } from './now';
+import type { ListeningNow } from './now';
 
-export interface MusicItem {
-  track: string | null;
-  artist: string | null;
-  album: string | null;
-  url: string | null;
-  image: string | null;
-  playedAt: string | null;
-  nowPlaying: boolean;
-}
+/** Music rows are the same album-or-track shape the Now section uses. */
+export type MusicItem = ListeningNow;
 
 export interface BookItem {
   title: string | null;
@@ -75,14 +69,15 @@ export function getMediaTimeline(): TimelineItem[] {
   const items: TimelineItem[] = [];
 
   for (const m of media.music) {
-    if (!m.track) continue;
+    const card = describeListening(m);
+    if (!card) continue;
     items.push({
       kind: 'Music',
-      title: m.track,
-      subtitle: joinDot([m.artist, m.album]),
+      title: card.title,
+      subtitle: card.subtitle,
+      meta: card.meta,
       href: m.url ?? undefined,
       image: m.image ?? undefined,
-      meta: m.nowPlaying ? 'now playing' : formatRelative(m.playedAt) ?? undefined,
       sortAt: m.nowPlaying ? Date.now() : ms(m.playedAt),
     });
   }
