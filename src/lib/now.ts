@@ -1,6 +1,12 @@
 import nowData from '../data/now.json';
 
-export interface ListeningNow {
+/**
+ * A single scrobbled track: shuffle listening, a single, or an album played too
+ * little for the fetcher to group. `kind` is optional so snapshots written
+ * before album grouping existed still read as tracks.
+ */
+export interface ListeningTrack {
+  kind?: 'track';
   track: string | null;
   artist: string | null;
   album: string | null;
@@ -9,6 +15,21 @@ export interface ListeningNow {
   playedAt: string | null;
   nowPlaying: boolean;
 }
+
+/** A run of tracks off one record, collapsed by the fetcher into a single row. */
+export interface ListeningAlbum {
+  kind: 'album';
+  album: string | null;
+  artist: string | null;
+  /** Distinct tracks heard off the album, not total plays. */
+  trackCount: number;
+  url: string | null;
+  image: string | null;
+  playedAt: string | null;
+  nowPlaying: false;
+}
+
+export type ListeningNow = ListeningTrack | ListeningAlbum;
 
 export interface ReadingNow {
   title: string | null;
@@ -60,4 +81,36 @@ export function formatRelative(iso: string | null): string | null {
   if (diff < day) return `${Math.round(diff / hour)}h ago`;
   if (diff < 30 * day) return `${Math.round(diff / day)}d ago`;
   return new Date(iso).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
+}
+
+function joinDot(parts: (string | null | undefined)[]): string | undefined {
+  const s = parts.filter(Boolean).join(' · ');
+  return s.length ? s : undefined;
+}
+
+/**
+ * Card text for a listening row, in the one place both the homepage Now section
+ * and the /before/ timeline read it from — the two must not drift. Album rows
+ * lead with the record and count its tracks; track rows keep the song out front.
+ * Returns null when the row has no name to show, i.e. there's nothing to render.
+ */
+export function describeListening(
+  item: ListeningNow,
+): { title: string; subtitle?: string; meta?: string } | null {
+  const when = item.nowPlaying ? 'now playing' : formatRelative(item.playedAt);
+  if (item.kind === 'album') {
+    if (!item.album) return null;
+    const tracks = `${item.trackCount} track${item.trackCount === 1 ? '' : 's'}`;
+    return {
+      title: item.album,
+      subtitle: item.artist ?? undefined,
+      meta: joinDot([tracks, when]),
+    };
+  }
+  if (!item.track) return null;
+  return {
+    title: item.track,
+    subtitle: joinDot([item.artist, item.album]),
+    meta: when ?? undefined,
+  };
 }

@@ -55,6 +55,15 @@ Required env vars (each source is independent — leave one out to disable it):
 > `currently-reading` shelf; the Media timeline reads the `read` shelf (finished
 > books). Make sure neither is set to private in Goodreads → Settings.
 
+> **Music is grouped by album.** Listening is mostly album-shaped, so raw
+> scrobbles fill the timeline with near-identical rows from one afternoon. The
+> fetcher collapses each album (artist + album name, case-insensitive, across the
+> whole fetched history) into a single row carrying its distinct-track count and
+> its most recent play. Below 3 distinct tracks it reads as shuffle or playlist
+> listening and stays a per-track row, so both shapes coexist in `music[]`,
+> discriminated by `kind: 'album' | 'track'`. `describeListening` in
+> `src/lib/now.ts` is the one place either shape becomes card text.
+
 > **Link fixes baked into the fetcher:** Last.fm URLs are re-encoded (`+` → `%20`,
 > else their site 406s), Goodreads links point at the book (`/book/show/<id>`)
 > rather than the review, and Letterboxd links point at the canonical film page

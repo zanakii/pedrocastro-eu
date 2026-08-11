@@ -5,6 +5,38 @@ Each entry records *what* was decided and *why*, so future changes have context.
 
 ---
 
+## 2026-08-11 — Group music by album, not by track
+
+**Context.** Listening is mostly album-based, so the five music rows in
+`media.json` were routinely five consecutive songs off one record — same artist,
+same cover art, same afternoon. Two months of listening were being represented
+by two artists, and the `/before/` timeline lost most of its time coverage.
+
+**Decided:** collapse album listening into one row per album in the fetcher,
+keyed on artist + album name (trimmed, lower-cased — Last.fm is inconsistent
+about both). The row carries the album's distinct-track count and its most recent
+play. Grouping spans the whole fetched history rather than consecutive runs, so
+an album played in June and again in July is one row dated July.
+
+**Why not group everything:** shuffle and playlist listening would produce a
+wall of "1 track" albums, which is strictly worse than the tracks themselves. So
+a group only collapses at **3+ distinct tracks**; below that the rows stay
+per-track. `music[]` therefore holds both shapes, discriminated by `kind`, and
+`describeListening` (`src/lib/now.ts`) is the single place either becomes card
+text — shared by the homepage *Now* section and the `/before/` timeline so the
+two can't drift.
+
+**Homepage rule:** a *now playing* track stays track-shaped (that's the whole
+point of "now"); once the moment has passed the card shows the album. This falls
+out of the fetcher writing `now.listening` as `music[0]`.
+
+**Costs.** The Last.fm `limit` went 30 → 200 (Last.fm's per-page max), since 30
+scrobbles is only about three records and five album rows need the headroom.
+Per-track granularity is not kept in `media.json` once grouped — recovering it
+means refetching, which Last.fm's history supports. Album pages aren't in the
+`recenttracks` payload, so the URL is built as `/music/<artist>/<album>` and
+falls back to the track URL if either name is missing.
+
 ## 2026-06-19 — Expand the site into a Harper-style personal hub
 
 **Context.** The site is a static Astro build deployed to Cloudflare Pages.

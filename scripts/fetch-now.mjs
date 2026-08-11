@@ -26,6 +26,7 @@ const MEDIA_PATH = resolve(DATA_DIR, 'media.json');
 
 const MEDIA_LIMIT = 5; // items kept per type in the timeline
 const MEDIA_MAX_AGE_MONTHS = 3; // older items are dropped from the timeline
+const ALBUM_MIN_TRACKS = 3; // distinct tracks before an album collapses into one row
 
 // The cutoff date: calendar months back from today, so "3 months ago" tracks
 // the calendar (Mar 28 stays in-window on Jun 26) rather than a fixed 90 days.
@@ -78,12 +79,21 @@ function pickLastfmImage(images) {
   return null;
 }
 
+// Album pages aren't in the recenttracks payload — only the names — so build
+// the canonical /music/<artist>/<album> path. Same `%20` rule as fixLastfmUrl:
+// the web server rejects `+` in a URL path.
+function lastfmAlbumUrl(artist, album) {
+  if (!artist || !album) return null;
+  return `https://www.last.fm/music/${encodeURIComponent(artist)}/${encodeURIComponent(album)}`;
+}
+
 function normalizeTrack(track) {
   const nowPlaying = track['@attr']?.nowplaying === 'true';
   const playedAt = track.date?.uts
     ? new Date(Number(track.date.uts) * 1000).toISOString()
     : null;
   return {
+    kind: 'track',
     track: track.name ?? null,
     artist: track.artist?.['#text'] ?? null,
     album: track.album?.['#text'] || null,
@@ -106,6 +116,65 @@ function dedupeConsecutive(tracks) {
   return out;
 }
 
+// Album identity is the artist+album name pair, case- and whitespace-insensitive
+// (Last.fm is inconsistent about both). Null when either name is missing, which
+// is common for singles and some scrobblers. The two halves are joined on a NUL,
+// written as an escape so this file stays plain text: no real name contains one,
+// so no artist/album pair can collide with a different one.
+function albumKey(t) {
+  if (!t.artist || !t.album) return null;
+  return `${t.artist.trim().toLowerCase()}\u0000${t.album.trim().toLowerCase()}`;
+}
+
+// Listening is mostly album-shaped, so five raw scrobbles tend to be five songs
+// off one record — near-identical rows covering a single afternoon. Collapse
+// each album into one row instead, which buys back timeline coverage.
+//
+// Grouping spans the whole fetched history rather than consecutive runs, so an
+// album played in June and again in July is one row dated July. Below
+// ALBUM_MIN_TRACKS distinct tracks it reads as shuffle or playlist listening,
+// and those stay individual track rows — a wall of "1 track" albums would be
+// worse than the tracks themselves.
+function groupAlbums(tracks) {
+  const groups = new Map();
+  for (const t of tracks) {
+    // A now-playing track hasn't been scrobbled yet and carries no timestamp.
+    // It's the live moment, so it always stays a row of its own.
+    const key = t.nowPlaying ? null : albumKey(t);
+    if (!key) continue;
+    const group = groups.get(key);
+    // Tracks arrive newest-first, so the first one seen holds the latest play,
+    // the album art to show, and the timestamp the row sorts by.
+    if (group) group.tracks.add((t.track ?? '').trim().toLowerCase());
+    else groups.set(key, { latest: t, tracks: new Set([(t.track ?? '').trim().toLowerCase()]) });
+  }
+
+  const out = [];
+  const emitted = new Set();
+  for (const t of tracks) {
+    const key = t.nowPlaying ? null : albumKey(t);
+    const group = key ? groups.get(key) : null;
+    if (!group || group.tracks.size < ALBUM_MIN_TRACKS) {
+      out.push(t);
+      continue;
+    }
+    if (emitted.has(key)) continue; // already stood in for this album, higher up
+    emitted.add(key);
+    const { latest } = group;
+    out.push({
+      kind: 'album',
+      album: latest.album,
+      artist: latest.artist,
+      trackCount: group.tracks.size,
+      url: lastfmAlbumUrl(latest.artist, latest.album) ?? latest.url,
+      image: latest.image,
+      playedAt: latest.playedAt,
+      nowPlaying: false,
+    });
+  }
+  return out;
+}
+
 async function fetchMusicList() {
   const apiKey = process.env.LASTFM_API_KEY;
   const user = process.env.LASTFM_USERNAME;
@@ -118,15 +187,17 @@ async function fetchMusicList() {
   url.searchParams.set('user', user);
   url.searchParams.set('api_key', apiKey);
   url.searchParams.set('format', 'json');
-  url.searchParams.set('limit', '30'); // headroom for dedupe down to MEDIA_LIMIT
+  // Album grouping needs far more headroom than track rows did: 30 scrobbles is
+  // only about three records. 200 is Last.fm's per-page maximum.
+  url.searchParams.set('limit', '200');
   const res = await fetch(url);
   if (!res.ok) throw new Error(`Last.fm ${res.status}`);
   const json = await res.json();
   const tracks = json?.recenttracks?.track;
   if (!Array.isArray(tracks) || tracks.length === 0) return null;
-  // Return the full deduped list; the ~3-month window and per-type cap are
+  // Return the full grouped list; the ~3-month window and per-type cap are
   // enforced centrally in clampMedia so every write obeys them.
-  return dedupeConsecutive(tracks.map(normalizeTrack));
+  return groupAlbums(dedupeConsecutive(tracks.map(normalizeTrack)));
 }
 
 // ---------------------------------------------------------------------------
@@ -318,9 +389,11 @@ const updatedAt = new Date().toISOString();
 
 const now = {
   updatedAt,
+  // The freshest music row, album- or track-shaped: a now-playing track wins
+  // because it's genuinely happening now, otherwise it's the last album played.
   listening: musicList?.[0] ??
     prevNow?.listening ?? {
-      track: null, artist: null, album: null, url: null, image: null, playedAt: null, nowPlaying: false,
+      kind: 'track', track: null, artist: null, album: null, url: null, image: null, playedAt: null, nowPlaying: false,
     },
   reading: reading ?? {
     title: null, author: null, url: null, cover: null, startedAt: null,
