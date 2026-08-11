@@ -1,6 +1,26 @@
 {
-  "updatedAt": "2026-08-11T13:42:34.812Z",
+  "updatedAt": "2026-08-11T17:12:36.938Z",
   "music": [
+    {
+      "kind": "album",
+      "album": "Radical Optimism",
+      "artist": "Dua Lipa",
+      "trackCount": 3,
+      "url": "https://www.last.fm/music/Dua%20Lipa/Radical%20Optimism",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/787b99ed519694d755514a27a5ce3735.jpg",
+      "playedAt": "2026-08-11T13:55:40.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "track",
+      "track": "7x9",
+      "artist": "Ax and the Hatchetmen",
+      "album": "Constant Change",
+      "url": "https://www.last.fm/music/Ax%20and%20the%20Hatchetmen/_/7x9",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/cdd14f15b3af1680f443127dd724628e.jpg",
+      "playedAt": "2026-08-11T13:43:13.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "track",
       "track": "Next Year",
@@ -29,26 +49,6 @@
       "url": "https://www.last.fm/music/The%20Strokes/Reality%20Awaits",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/86e66c508b9644b0cf80e97439ae2ccd.jpg",
       "playedAt": "2026-08-11T13:32:10.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Dermot (see yourself in my eyes)",
-      "artist": "Fred again..",
-      "album": "Actual Life (April 14 - December 17 2020)",
-      "url": "https://www.last.fm/music/Fred%20again../_/Dermot%20(see%20yourself%20in%20my%20eyes)",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2cbf63eb6303d7ffefd55d9abb64b959.jpg",
-      "playedAt": "2026-08-09T14:46:36.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "album",
-      "album": "LUX",
-      "artist": "ROSALÍA",
-      "trackCount": 14,
-      "url": "https://www.last.fm/music/ROSAL%C3%8DA/LUX",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0e6bf07983158660ec4e00cae318ba83.jpg",
-      "playedAt": "2026-08-07T13:20:50.000Z",
       "nowPlaying": false
     }
   ],
