@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-08-11T11:04:29.944Z",
+  "updatedAt": "2026-08-11T13:42:34.812Z",
   "listening": {
-    "kind": "album",
-    "album": "Reality Awaits",
-    "artist": "The Strokes",
-    "trackCount": 5,
-    "url": "https://www.last.fm/music/The%20Strokes/Reality%20Awaits",
-    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/86e66c508b9644b0cf80e97439ae2ccd.jpg",
-    "playedAt": "2026-08-10T10:15:15.000Z",
+    "kind": "track",
+    "track": "Next Year",
+    "artist": "Two Door Cinema Club",
+    "album": "Beacon",
+    "url": "https://www.last.fm/music/Two%20Door%20Cinema%20Club/_/Next%20Year",
+    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/03efe17b5025448fafda0915227d850a.png",
+    "playedAt": "2026-08-11T13:39:01.000Z",
     "nowPlaying": false
   },
   "reading": {

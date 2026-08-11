@@ -1,14 +1,34 @@
 {
-  "updatedAt": "2026-08-11T11:04:29.944Z",
+  "updatedAt": "2026-08-11T13:42:34.812Z",
   "music": [
+    {
+      "kind": "track",
+      "track": "Next Year",
+      "artist": "Two Door Cinema Club",
+      "album": "Beacon",
+      "url": "https://www.last.fm/music/Two%20Door%20Cinema%20Club/_/Next%20Year",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/03efe17b5025448fafda0915227d850a.png",
+      "playedAt": "2026-08-11T13:39:01.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "track",
+      "track": "Worm in the Sun",
+      "artist": "ALEXSUCKS",
+      "album": "Worm in the Sun",
+      "url": "https://www.last.fm/music/ALEXSUCKS/_/Worm%20in%20the%20Sun",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0b7c6ccc3190e1aedec038d1d3e0e6ba.jpg",
+      "playedAt": "2026-08-11T13:36:20.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "album",
       "album": "Reality Awaits",
       "artist": "The Strokes",
-      "trackCount": 5,
+      "trackCount": 9,
       "url": "https://www.last.fm/music/The%20Strokes/Reality%20Awaits",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/86e66c508b9644b0cf80e97439ae2ccd.jpg",
-      "playedAt": "2026-08-10T10:15:15.000Z",
+      "playedAt": "2026-08-11T13:32:10.000Z",
       "nowPlaying": false
     },
     {
@@ -29,26 +49,6 @@
       "url": "https://www.last.fm/music/ROSAL%C3%8DA/LUX",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0e6bf07983158660ec4e00cae318ba83.jpg",
       "playedAt": "2026-08-07T13:20:50.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "album",
-      "album": "Music, Fashion, Film",
-      "artist": "Charli xcx",
-      "trackCount": 7,
-      "url": "https://www.last.fm/music/Charli%20xcx/Music%2C%20Fashion%2C%20Film",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0c7b97699bdec08629fa2de8d353a06e.png",
-      "playedAt": "2026-08-06T09:55:37.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "album",
-      "album": "petal",
-      "artist": "Ariana Grande",
-      "trackCount": 5,
-      "url": "https://www.last.fm/music/Ariana%20Grande/petal",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/060c6a42b7e88986a9647de4d55ae477.png",
-      "playedAt": "2026-08-06T09:18:25.000Z",
       "nowPlaying": false
     }
   ],
