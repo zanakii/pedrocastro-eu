@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-10T21:02:04.905Z",
+  "updatedAt": "2026-08-11T02:27:46.639Z",
   "music": [
     {
       "track": "Going to Babble On",
@@ -48,6 +48,13 @@
     }
   ],
   "books": [
+    {
+      "title": "Wuthering Heights",
+      "author": "Emily Brontë",
+      "url": "https://www.goodreads.com/book/show/15994537",
+      "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1546419424l/15994537._SY475_.jpg",
+      "readAt": "2026-08-10T00:00:00.000Z"
+    },
     {
       "title": "Amêndoas",
       "author": "Sohn Won-Pyung",
