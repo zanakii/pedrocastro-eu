@@ -1,6 +1,46 @@
 {
-  "updatedAt": "2026-08-12T05:46:08.644Z",
+  "updatedAt": "2026-08-12T09:31:45.454Z",
   "music": [
+    {
+      "kind": "album",
+      "album": "Contato",
+      "artist": "pelados",
+      "trackCount": 4,
+      "url": "https://www.last.fm/music/pelados/Contato",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0d804e8cb17ea328bec625d73f241525.jpg",
+      "playedAt": "2026-08-12T09:29:48.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "album",
+      "album": "No Lube So Rude",
+      "artist": "Peaches",
+      "trackCount": 11,
+      "url": "https://www.last.fm/music/Peaches/No%20Lube%20So%20Rude",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/298e2b4113e13edda014f0d296430945.jpg",
+      "playedAt": "2026-08-12T09:13:34.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "track",
+      "track": "Mar-a-Lago",
+      "artist": "Freddie Gibbs",
+      "album": "Alfredo 2",
+      "url": "https://www.last.fm/music/Freddie%20Gibbs/_/Mar-a-Lago",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/ed761cf8d955113bb775ac38613b4c8f.jpg",
+      "playedAt": "2026-08-12T08:44:21.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "track",
+      "track": "1995",
+      "artist": "Freddie Gibbs",
+      "album": "Alfredo 2",
+      "url": "https://www.last.fm/music/Freddie%20Gibbs/_/1995",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/ed761cf8d955113bb775ac38613b4c8f.jpg",
+      "playedAt": "2026-08-12T08:39:28.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "album",
       "album": "Celestial",
@@ -9,46 +49,6 @@
       "url": "https://www.last.fm/music/Papangu/Celestial",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d7655f1a63b9643b62208ec7b6e9ab3c.jpg",
       "playedAt": "2026-08-11T19:15:31.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "album",
-      "album": "Subida Infinita +",
-      "artist": "Capitão Fausto",
-      "trackCount": 10,
-      "url": "https://www.last.fm/music/Capit%C3%A3o%20Fausto/Subida%20Infinita%20%2B",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/99b968f9714240e060875c083598e7d8.jpg",
-      "playedAt": "2026-08-11T18:51:47.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "album",
-      "album": "Radical Optimism",
-      "artist": "Dua Lipa",
-      "trackCount": 3,
-      "url": "https://www.last.fm/music/Dua%20Lipa/Radical%20Optimism",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/787b99ed519694d755514a27a5ce3735.jpg",
-      "playedAt": "2026-08-11T13:55:40.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "7x9",
-      "artist": "Ax and the Hatchetmen",
-      "album": "Constant Change",
-      "url": "https://www.last.fm/music/Ax%20and%20the%20Hatchetmen/_/7x9",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/cdd14f15b3af1680f443127dd724628e.jpg",
-      "playedAt": "2026-08-11T13:43:13.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Next Year",
-      "artist": "Two Door Cinema Club",
-      "album": "Beacon",
-      "url": "https://www.last.fm/music/Two%20Door%20Cinema%20Club/_/Next%20Year",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/03efe17b5025448fafda0915227d850a.png",
-      "playedAt": "2026-08-11T13:39:01.000Z",
       "nowPlaying": false
     }
   ],
