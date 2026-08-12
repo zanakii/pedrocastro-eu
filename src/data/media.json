@@ -1,14 +1,24 @@
 {
-  "updatedAt": "2026-08-12T09:31:45.454Z",
+  "updatedAt": "2026-08-12T13:47:05.257Z",
   "music": [
+    {
+      "kind": "album",
+      "album": "Music, Fashion, Film",
+      "artist": "Charli xcx",
+      "trackCount": 11,
+      "url": "https://www.last.fm/music/Charli%20xcx/Music%2C%20Fashion%2C%20Film",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0c7b97699bdec08629fa2de8d353a06e.png",
+      "playedAt": "2026-08-12T11:11:51.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "album",
       "album": "Contato",
       "artist": "pelados",
-      "trackCount": 4,
+      "trackCount": 14,
       "url": "https://www.last.fm/music/pelados/Contato",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0d804e8cb17ea328bec625d73f241525.jpg",
-      "playedAt": "2026-08-12T09:29:48.000Z",
+      "playedAt": "2026-08-12T10:14:07.000Z",
       "nowPlaying": false
     },
     {
@@ -39,16 +49,6 @@
       "url": "https://www.last.fm/music/Freddie%20Gibbs/_/1995",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/ed761cf8d955113bb775ac38613b4c8f.jpg",
       "playedAt": "2026-08-12T08:39:28.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "album",
-      "album": "Celestial",
-      "artist": "Papangu",
-      "trackCount": 5,
-      "url": "https://www.last.fm/music/Papangu/Celestial",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d7655f1a63b9643b62208ec7b6e9ab3c.jpg",
-      "playedAt": "2026-08-11T19:15:31.000Z",
       "nowPlaying": false
     }
   ],
