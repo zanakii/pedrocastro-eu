@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-08-12T21:03:50.732Z",
+  "updatedAt": "2026-08-13T02:47:13.366Z",
   "listening": {
-    "kind": "album",
-    "album": "Music, Fashion, Film",
-    "artist": "Charli xcx",
-    "trackCount": 11,
-    "url": "https://www.last.fm/music/Charli%20xcx/Music%2C%20Fashion%2C%20Film",
-    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0c7b97699bdec08629fa2de8d353a06e.png",
-    "playedAt": "2026-08-12T11:11:51.000Z",
+    "kind": "track",
+    "track": "Carlo's Song",
+    "artist": "Noah Kahan",
+    "album": "Busyhead",
+    "url": "https://www.last.fm/music/Noah%20Kahan/_/Carlo%27s%20Song",
+    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/95bd1e9dd4bca15fa5b95867e7c2c1f9.jpg",
+    "playedAt": "2026-08-12T23:29:29.000Z",
     "nowPlaying": false
   },
   "reading": {
