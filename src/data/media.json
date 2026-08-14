@@ -1,6 +1,16 @@
 {
-  "updatedAt": "2026-08-13T21:03:27.713Z",
+  "updatedAt": "2026-08-14T02:46:05.401Z",
   "music": [
+    {
+      "kind": "album",
+      "album": "The Art of Loving",
+      "artist": "Olivia Dean",
+      "trackCount": 10,
+      "url": "https://www.last.fm/music/Olivia%20Dean/The%20Art%20of%20Loving",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/e9aedce534c4c0cf22f18483bed6620e.jpg",
+      "playedAt": "2026-08-13T22:06:46.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "track",
       "track": "Carlo's Song",
@@ -39,16 +49,6 @@
       "url": "https://www.last.fm/music/Sasha%20Alex%20Sloan/_/Older",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/204c11daf87b939725018407bfe24b4b.png",
       "playedAt": "2026-08-12T23:20:38.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Voa Voa",
-      "artist": "Chiclete Com Banana",
-      "album": "Chiclete Na Caixa, Banana No Cacho",
-      "url": "https://www.last.fm/music/Chiclete%20Com%20Banana/_/Voa%20Voa",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/ec685aecc1f71f830b96b99e58ddbd42.jpg",
-      "playedAt": "2026-08-12T23:15:39.000Z",
       "nowPlaying": false
     }
   ],
