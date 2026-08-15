@@ -1,6 +1,26 @@
 {
-  "updatedAt": "2026-08-15T04:46:54.207Z",
+  "updatedAt": "2026-08-15T08:45:02.591Z",
   "music": [
+    {
+      "kind": "track",
+      "track": "Romeo II",
+      "artist": "Jungle",
+      "album": "Sunshine",
+      "url": "https://www.last.fm/music/Jungle/_/Romeo%20II",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9ef8b48c4f92d3272bc67894fe72920c.jpg",
+      "playedAt": null,
+      "nowPlaying": true
+    },
+    {
+      "kind": "album",
+      "album": "Sunshine",
+      "artist": "Jungle",
+      "trackCount": 4,
+      "url": "https://www.last.fm/music/Jungle/Sunshine",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9ef8b48c4f92d3272bc67894fe72920c.jpg",
+      "playedAt": "2026-08-15T08:41:47.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "album",
       "album": "The Art of Loving",
@@ -29,26 +49,6 @@
       "url": "https://www.last.fm/music/Mark%20Forster/_/Sowieso",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/88cde5804f44edef6a071524aec8230c.png",
       "playedAt": "2026-08-12T23:26:22.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Finally Free",
-      "artist": "Will Stratton",
-      "album": "The Changing Wilderness",
-      "url": "https://www.last.fm/music/Will%20Stratton/_/Finally%20Free",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/44c8e922821a413708dfda71104ae638.jpg",
-      "playedAt": "2026-08-12T23:23:43.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Older",
-      "artist": "Sasha Alex Sloan",
-      "album": "Loser",
-      "url": "https://www.last.fm/music/Sasha%20Alex%20Sloan/_/Older",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/204c11daf87b939725018407bfe24b4b.png",
-      "playedAt": "2026-08-12T23:20:38.000Z",
       "nowPlaying": false
     }
   ],
