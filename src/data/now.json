@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-08-15T08:45:02.591Z",
+  "updatedAt": "2026-08-15T12:58:44.511Z",
   "listening": {
-    "kind": "track",
-    "track": "Romeo II",
-    "artist": "Jungle",
-    "album": "Sunshine",
-    "url": "https://www.last.fm/music/Jungle/_/Romeo%20II",
-    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9ef8b48c4f92d3272bc67894fe72920c.jpg",
-    "playedAt": null,
-    "nowPlaying": true
+    "kind": "album",
+    "album": "Lost Weekend",
+    "artist": "Phoebe Bridgers",
+    "trackCount": 5,
+    "url": "https://www.last.fm/music/Phoebe%20Bridgers/Lost%20Weekend",
+    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c780563a124c9dbbc0c42f1c396b87ce.png",
+    "playedAt": "2026-08-15T09:34:41.000Z",
+    "nowPlaying": false
   },
   "reading": {
     "title": "The Vanishing Half",
