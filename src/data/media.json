@@ -1,6 +1,16 @@
 {
-  "updatedAt": "2026-08-20T04:52:57.146Z",
+  "updatedAt": "2026-08-20T08:56:32.201Z",
   "music": [
+    {
+      "kind": "album",
+      "album": "NEVER ENOUGH",
+      "artist": "Turnstile",
+      "trackCount": 13,
+      "url": "https://www.last.fm/music/Turnstile/NEVER%20ENOUGH",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/16b2169592c65a0e733c8a741017de30.png",
+      "playedAt": "2026-08-20T07:19:18.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "album",
       "album": "Lost Weekend",
@@ -25,7 +35,7 @@
       "kind": "album",
       "album": "The Art of Loving",
       "artist": "Olivia Dean",
-      "trackCount": 10,
+      "trackCount": 7,
       "url": "https://www.last.fm/music/Olivia%20Dean/The%20Art%20of%20Loving",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/e9aedce534c4c0cf22f18483bed6620e.jpg",
       "playedAt": "2026-08-13T22:06:46.000Z",
@@ -39,16 +49,6 @@
       "url": "https://www.last.fm/music/Noah%20Kahan/_/Carlo%27s%20Song",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/95bd1e9dd4bca15fa5b95867e7c2c1f9.jpg",
       "playedAt": "2026-08-12T23:29:29.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Sowieso",
-      "artist": "Mark Forster",
-      "album": "TAPE (Kogong Version)",
-      "url": "https://www.last.fm/music/Mark%20Forster/_/Sowieso",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/88cde5804f44edef6a071524aec8230c.png",
-      "playedAt": "2026-08-12T23:26:22.000Z",
       "nowPlaying": false
     }
   ],
