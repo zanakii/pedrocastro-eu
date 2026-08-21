@@ -1,6 +1,46 @@
 {
-  "updatedAt": "2026-08-21T13:10:38.216Z",
+  "updatedAt": "2026-08-21T16:51:04.211Z",
   "music": [
+    {
+      "kind": "album",
+      "album": "Sunshine",
+      "artist": "Jungle",
+      "trackCount": 11,
+      "url": "https://www.last.fm/music/Jungle/Sunshine",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c81733fcc0f430f5c20f97a7b697c6c9.jpg",
+      "playedAt": "2026-08-21T16:46:29.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "album",
+      "album": "Coming Home",
+      "artist": "Leon Bridges",
+      "trackCount": 15,
+      "url": "https://www.last.fm/music/Leon%20Bridges/Coming%20Home",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/48f4e73dbe0f9960572256ff0e5ea377.png",
+      "playedAt": "2026-08-21T15:29:52.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "album",
+      "album": "Radical Optimism",
+      "artist": "Dua Lipa",
+      "trackCount": 3,
+      "url": "https://www.last.fm/music/Dua%20Lipa/Radical%20Optimism",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/787b99ed519694d755514a27a5ce3735.jpg",
+      "playedAt": "2026-08-21T14:36:17.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "track",
+      "track": "Girls & Boys",
+      "artist": "Blur",
+      "album": "Parklife",
+      "url": "https://www.last.fm/music/Blur/_/Girls%20&%20Boys",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/19e7df241eead2786c81e5f50c4f3364.png",
+      "playedAt": "2026-08-21T14:31:25.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "album",
       "album": "What Are the Odds",
@@ -9,46 +49,6 @@
       "url": "https://www.last.fm/music/Jorja%20Smith/What%20Are%20the%20Odds",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0c49298a06268c84abf1103cb83facc8.png",
       "playedAt": "2026-08-21T10:46:09.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Pink Pony Club",
-      "artist": "Chappell Roan",
-      "album": "The Rise and Fall of a Midwest Princess",
-      "url": "https://www.last.fm/music/Chappell%20Roan/_/Pink%20Pony%20Club",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b3987ea108b929eead2f59fdd3b4a007.jpg",
-      "playedAt": "2026-08-20T22:54:02.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "So Am I",
-      "artist": "Ava Max",
-      "album": "Heaven & Hell (Digital reissue with 'My Head & My Heart')",
-      "url": "https://www.last.fm/music/Ava%20Max/_/So%20Am%20I",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b6019906114513f9b5d7fd60477dfb76.jpg",
-      "playedAt": "2026-08-20T22:51:33.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Mother",
-      "artist": "IDLES",
-      "album": "Brutalism",
-      "url": "https://www.last.fm/music/IDLES/_/Mother",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/273d002725964ccd685e70b585a2b5d4.jpg",
-      "playedAt": "2026-08-20T22:48:06.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Sweet Child o' Mine",
-      "artist": "Guns N' Roses",
-      "album": "Appetite For Destruction (Super Deluxe) - 192 kHz (Super Deluxe)",
-      "url": "https://www.last.fm/music/Guns%20N%27%20Roses/_/Sweet%20Child%20o%27%20Mine",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/6d76ef3573011775451fbeb156a3caa2.jpg",
-      "playedAt": "2026-08-20T22:42:09.000Z",
       "nowPlaying": false
     }
   ],
