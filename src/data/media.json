@@ -1,6 +1,16 @@
 {
-  "updatedAt": "2026-08-21T08:58:31.608Z",
+  "updatedAt": "2026-08-21T13:10:38.216Z",
   "music": [
+    {
+      "kind": "album",
+      "album": "What Are the Odds",
+      "artist": "Jorja Smith",
+      "trackCount": 12,
+      "url": "https://www.last.fm/music/Jorja%20Smith/What%20Are%20the%20Odds",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0c49298a06268c84abf1103cb83facc8.png",
+      "playedAt": "2026-08-21T10:46:09.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "track",
       "track": "Pink Pony Club",
@@ -39,16 +49,6 @@
       "url": "https://www.last.fm/music/Guns%20N%27%20Roses/_/Sweet%20Child%20o%27%20Mine",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/6d76ef3573011775451fbeb156a3caa2.jpg",
       "playedAt": "2026-08-20T22:42:09.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Watermelon Sugar",
-      "artist": "Harry Styles",
-      "album": "Fine Line",
-      "url": "https://www.last.fm/music/Harry%20Styles/_/Watermelon%20Sugar",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7940fbb1df766b4683951aed490a8b5a.jpg",
-      "playedAt": "2026-08-20T22:39:15.000Z",
       "nowPlaying": false
     }
   ],

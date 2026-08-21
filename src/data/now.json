@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-08-21T08:58:31.608Z",
+  "updatedAt": "2026-08-21T13:10:38.216Z",
   "listening": {
-    "kind": "track",
-    "track": "Pink Pony Club",
-    "artist": "Chappell Roan",
-    "album": "The Rise and Fall of a Midwest Princess",
-    "url": "https://www.last.fm/music/Chappell%20Roan/_/Pink%20Pony%20Club",
-    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b3987ea108b929eead2f59fdd3b4a007.jpg",
-    "playedAt": "2026-08-20T22:54:02.000Z",
+    "kind": "album",
+    "album": "What Are the Odds",
+    "artist": "Jorja Smith",
+    "trackCount": 12,
+    "url": "https://www.last.fm/music/Jorja%20Smith/What%20Are%20the%20Odds",
+    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0c49298a06268c84abf1103cb83facc8.png",
+    "playedAt": "2026-08-21T10:46:09.000Z",
     "nowPlaying": false
   },
   "reading": {
