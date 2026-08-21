@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-08-20T20:46:26.146Z",
+  "updatedAt": "2026-08-21T01:57:36.256Z",
   "listening": {
-    "kind": "album",
-    "album": "NEVER ENOUGH",
-    "artist": "Turnstile",
-    "trackCount": 13,
-    "url": "https://www.last.fm/music/Turnstile/NEVER%20ENOUGH",
-    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/16b2169592c65a0e733c8a741017de30.png",
-    "playedAt": "2026-08-20T07:19:18.000Z",
+    "kind": "track",
+    "track": "Pink Pony Club",
+    "artist": "Chappell Roan",
+    "album": "The Rise and Fall of a Midwest Princess",
+    "url": "https://www.last.fm/music/Chappell%20Roan/_/Pink%20Pony%20Club",
+    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b3987ea108b929eead2f59fdd3b4a007.jpg",
+    "playedAt": "2026-08-20T22:54:02.000Z",
     "nowPlaying": false
   },
   "reading": {

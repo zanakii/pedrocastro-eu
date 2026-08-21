@@ -1,54 +1,54 @@
 {
-  "updatedAt": "2026-08-20T20:46:26.146Z",
+  "updatedAt": "2026-08-21T01:57:36.256Z",
   "music": [
     {
-      "kind": "album",
-      "album": "NEVER ENOUGH",
-      "artist": "Turnstile",
-      "trackCount": 13,
-      "url": "https://www.last.fm/music/Turnstile/NEVER%20ENOUGH",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/16b2169592c65a0e733c8a741017de30.png",
-      "playedAt": "2026-08-20T07:19:18.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "album",
-      "album": "Lost Weekend",
-      "artist": "Phoebe Bridgers",
-      "trackCount": 6,
-      "url": "https://www.last.fm/music/Phoebe%20Bridgers/Lost%20Weekend",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/57d3ef2533840028f18a2ccf6b6d4f6e.jpg",
-      "playedAt": "2026-08-18T10:13:34.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "album",
-      "album": "Sunshine",
-      "artist": "Jungle",
-      "trackCount": 11,
-      "url": "https://www.last.fm/music/Jungle/Sunshine",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c81733fcc0f430f5c20f97a7b697c6c9.jpg",
-      "playedAt": "2026-08-15T09:01:56.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "album",
-      "album": "The Art of Loving",
-      "artist": "Olivia Dean",
-      "trackCount": 7,
-      "url": "https://www.last.fm/music/Olivia%20Dean/The%20Art%20of%20Loving",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/e9aedce534c4c0cf22f18483bed6620e.jpg",
-      "playedAt": "2026-08-13T22:06:46.000Z",
+      "kind": "track",
+      "track": "Pink Pony Club",
+      "artist": "Chappell Roan",
+      "album": "The Rise and Fall of a Midwest Princess",
+      "url": "https://www.last.fm/music/Chappell%20Roan/_/Pink%20Pony%20Club",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b3987ea108b929eead2f59fdd3b4a007.jpg",
+      "playedAt": "2026-08-20T22:54:02.000Z",
       "nowPlaying": false
     },
     {
       "kind": "track",
-      "track": "Carlo's Song",
-      "artist": "Noah Kahan",
-      "album": "Busyhead",
-      "url": "https://www.last.fm/music/Noah%20Kahan/_/Carlo%27s%20Song",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/95bd1e9dd4bca15fa5b95867e7c2c1f9.jpg",
-      "playedAt": "2026-08-12T23:29:29.000Z",
+      "track": "So Am I",
+      "artist": "Ava Max",
+      "album": "Heaven & Hell (Digital reissue with 'My Head & My Heart')",
+      "url": "https://www.last.fm/music/Ava%20Max/_/So%20Am%20I",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b6019906114513f9b5d7fd60477dfb76.jpg",
+      "playedAt": "2026-08-20T22:51:33.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "track",
+      "track": "Mother",
+      "artist": "IDLES",
+      "album": "Brutalism",
+      "url": "https://www.last.fm/music/IDLES/_/Mother",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/273d002725964ccd685e70b585a2b5d4.jpg",
+      "playedAt": "2026-08-20T22:48:06.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "track",
+      "track": "Sweet Child o' Mine",
+      "artist": "Guns N' Roses",
+      "album": "Appetite For Destruction (Super Deluxe) - 192 kHz (Super Deluxe)",
+      "url": "https://www.last.fm/music/Guns%20N%27%20Roses/_/Sweet%20Child%20o%27%20Mine",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/6d76ef3573011775451fbeb156a3caa2.jpg",
+      "playedAt": "2026-08-20T22:42:09.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "track",
+      "track": "Watermelon Sugar",
+      "artist": "Harry Styles",
+      "album": "Fine Line",
+      "url": "https://www.last.fm/music/Harry%20Styles/_/Watermelon%20Sugar",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7940fbb1df766b4683951aed490a8b5a.jpg",
+      "playedAt": "2026-08-20T22:39:15.000Z",
       "nowPlaying": false
     }
   ],
