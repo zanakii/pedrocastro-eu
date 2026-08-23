@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T16:43:30.630Z",
+  "updatedAt": "2026-08-23T20:38:49.881Z",
   "listening": {
     "kind": "track",
     "track": "Us Against the World",
@@ -7,8 +7,8 @@
     "album": "Volcano",
     "url": "https://www.last.fm/music/Jungle/_/Us%20Against%20the%20World",
     "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d9a2ed33d293d14649500d483c74a144.jpg",
-    "playedAt": null,
-    "nowPlaying": true
+    "playedAt": "2026-08-23T16:40:33.000Z",
+    "nowPlaying": false
   },
   "reading": {
     "title": "The Vanishing Half",
