@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-08-23T04:52:03.679Z",
+  "updatedAt": "2026-08-23T08:48:33.104Z",
   "listening": {
     "kind": "track",
-    "track": "Fire",
-    "artist": "Kasabian",
-    "album": "West Ryder Pauper Lunatic Asylum",
-    "url": "https://www.last.fm/music/Kasabian/_/Fire",
-    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/672f4e21e16d443ec41cd4d8c0cc9e31.png",
-    "playedAt": "2026-08-22T08:03:37.000Z",
-    "nowPlaying": false
+    "track": "Calm Down",
+    "artist": "Réma",
+    "album": "Rave & Roses",
+    "url": "https://www.last.fm/music/R%C3%A9ma/_/Calm%20Down",
+    "image": null,
+    "playedAt": null,
+    "nowPlaying": true
   },
   "reading": {
     "title": "The Vanishing Half",

@@ -1,6 +1,46 @@
 {
-  "updatedAt": "2026-08-23T04:52:03.679Z",
+  "updatedAt": "2026-08-23T08:48:33.104Z",
   "music": [
+    {
+      "kind": "track",
+      "track": "Calm Down",
+      "artist": "Réma",
+      "album": "Rave & Roses",
+      "url": "https://www.last.fm/music/R%C3%A9ma/_/Calm%20Down",
+      "image": null,
+      "playedAt": null,
+      "nowPlaying": true
+    },
+    {
+      "kind": "track",
+      "track": "Song 2 (2012 Remaster)",
+      "artist": "Blur",
+      "album": "Alternative 90s",
+      "url": "https://www.last.fm/music/Blur/_/Song%202%20(2012%20Remaster)",
+      "image": null,
+      "playedAt": "2026-08-23T08:44:45.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "track",
+      "track": "Somebody Else",
+      "artist": "The 1975",
+      "album": "I like it when you sleep, for you are so beautiful yet so unaware of it",
+      "url": "https://www.last.fm/music/The%201975/_/Somebody%20Else",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b617b24a67aa1e15217da67817f29b6d.jpg",
+      "playedAt": "2026-08-23T08:38:58.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "track",
+      "track": "Watermelon Sugar",
+      "artist": "Harry Styles",
+      "album": "Fine Line",
+      "url": "https://www.last.fm/music/Harry%20Styles/_/Watermelon%20Sugar",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7940fbb1df766b4683951aed490a8b5a.jpg",
+      "playedAt": "2026-08-23T08:36:03.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "track",
       "track": "Fire",
@@ -9,46 +49,6 @@
       "url": "https://www.last.fm/music/Kasabian/_/Fire",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/672f4e21e16d443ec41cd4d8c0cc9e31.png",
       "playedAt": "2026-08-22T08:03:37.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Pink Pony Club",
-      "artist": "Chappell Roan",
-      "album": "The Rise and Fall of a Midwest Princess",
-      "url": "https://www.last.fm/music/Chappell%20Roan/_/Pink%20Pony%20Club",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b3987ea108b929eead2f59fdd3b4a007.jpg",
-      "playedAt": "2026-08-22T08:01:41.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "i like the way you kiss me",
-      "artist": "Artemas",
-      "album": "i like the way you kiss me",
-      "url": "https://www.last.fm/music/Artemas/_/i%20like%20the%20way%20you%20kiss%20me",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/94ea8b4a5e7e022a67079609d27f92b1.jpg",
-      "playedAt": "2026-08-22T07:56:27.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Apple Juice",
-      "artist": "Gretel",
-      "album": "Slugeye",
-      "url": "https://www.last.fm/music/Gretel/_/Apple%20Juice",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/3a12bc41701fd9e3f23af9896f3e43bf.jpg",
-      "playedAt": "2026-08-22T07:53:24.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Sometimes",
-      "artist": "DubVision",
-      "album": "Sometimes",
-      "url": "https://www.last.fm/music/DubVision/_/Sometimes",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/95965af1e042380df72c54e9dbe9568b.jpg",
-      "playedAt": "2026-08-22T07:50:06.000Z",
       "nowPlaying": false
     }
   ],
