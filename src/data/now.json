@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-08-23T13:01:59.570Z",
+  "updatedAt": "2026-08-23T16:43:30.630Z",
   "listening": {
     "kind": "track",
-    "track": "Free",
-    "artist": "Florence + the Machine",
-    "album": "Dance Fever",
-    "url": "https://www.last.fm/music/Florence%20%252B%20the%20Machine/_/Free",
-    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/153cb088d5989154e6f90d78903f7450.jpg",
-    "playedAt": "2026-08-23T11:08:59.000Z",
-    "nowPlaying": false
+    "track": "Us Against the World",
+    "artist": "Jungle",
+    "album": "Volcano",
+    "url": "https://www.last.fm/music/Jungle/_/Us%20Against%20the%20World",
+    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d9a2ed33d293d14649500d483c74a144.jpg",
+    "playedAt": null,
+    "nowPlaying": true
   },
   "reading": {
     "title": "The Vanishing Half",
