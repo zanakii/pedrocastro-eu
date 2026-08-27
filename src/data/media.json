@@ -1,58 +1,65 @@
 {
-  "updatedAt": "2026-08-26T23:33:22.656Z",
+  "updatedAt": "2026-08-27T09:49:27.138Z",
   "music": [
     {
       "kind": "track",
-      "track": "Off to the Races",
-      "artist": "Lana Del Rey",
-      "album": "Born to Die",
-      "url": "https://www.last.fm/music/Lana%20Del%20Rey/_/Off%20to%20the%20Races",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2b007b4344235bf2657c4cbfa18d1921.png",
-      "playedAt": "2026-08-24T16:35:42.000Z",
+      "track": "When the Time Comes",
+      "artist": "Ultravox",
+      "album": "Lament",
+      "url": "https://www.last.fm/music/Ultravox/_/When%20the%20Time%20Comes",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/768e33757642e33e9684a107fb50ccc3.png",
+      "playedAt": "2026-08-27T07:25:59.000Z",
       "nowPlaying": false
     },
     {
       "kind": "track",
-      "track": "Born to Die",
-      "artist": "Lana Del Rey",
-      "album": "Born to Die",
-      "url": "https://www.last.fm/music/Lana%20Del%20Rey/_/Born%20to%20Die",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2b007b4344235bf2657c4cbfa18d1921.png",
-      "playedAt": "2026-08-24T16:30:55.000Z",
+      "track": "Don't You (Forget About Me) (Remastered 2001)",
+      "artist": "Simple Minds",
+      "album": "ドライブが楽しくなる洋楽ヒッツ！80年代 ROCK",
+      "url": "https://www.last.fm/music/Simple%20Minds/_/Don%27t%20You%20(Forget%20About%20Me)%20(Remastered%202001)",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/36cc66f74a8036b6b5bea14f09ce1922.jpg",
+      "playedAt": "2026-08-27T07:21:37.000Z",
       "nowPlaying": false
     },
     {
       "kind": "track",
-      "track": "Us Against the World",
-      "artist": "Jungle",
-      "album": "Volcano",
-      "url": "https://www.last.fm/music/Jungle/_/Us%20Against%20the%20World",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d9a2ed33d293d14649500d483c74a144.jpg",
-      "playedAt": "2026-08-23T16:40:33.000Z",
+      "track": "Don't You (Forget About Me)",
+      "artist": "ヴァリアス・アーティスト",
+      "album": "ドライブが楽しくなる洋楽ヒッツ！80年代 ROCK",
+      "url": "https://www.last.fm/music/%E3%83%B4%E3%82%A1%E3%83%AA%E3%82%A2%E3%82%B9%E3%83%BB%E3%82%A2%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B9%E3%83%88/_/Don%27t%20You%20(Forget%20About%20Me)",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/115a7d386b15db09669bd38607a3030c.png",
+      "playedAt": "2026-08-27T07:21:36.000Z",
       "nowPlaying": false
     },
     {
       "kind": "track",
-      "track": "Pearls",
-      "artist": "Jessie Ware",
-      "album": "That! Feels Good!",
-      "url": "https://www.last.fm/music/Jessie%20Ware/_/Pearls",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f724f12da9805b8c5828dfc7aa79f070.jpg",
-      "playedAt": "2026-08-23T16:37:36.000Z",
+      "track": "Psycho",
+      "artist": "Muse",
+      "album": "Drones (Streaming Version)",
+      "url": "https://www.last.fm/music/Muse/_/Psycho",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9e637b5f962346a1039b6528bad5545f.jpg",
+      "playedAt": "2026-08-27T07:16:20.000Z",
       "nowPlaying": false
     },
     {
       "kind": "track",
-      "track": "Ruby",
-      "artist": "Kaiser Chiefs",
-      "album": "Yours Truly, Angry Mob",
-      "url": "https://www.last.fm/music/Kaiser%20Chiefs/_/Ruby",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c6af20449f74b678e4acf92217685d58.png",
-      "playedAt": "2026-08-23T16:37:23.000Z",
+      "track": "All Fired Up",
+      "artist": "Interpol",
+      "album": "Our Love to Admire",
+      "url": "https://www.last.fm/music/Interpol/_/All%20Fired%20Up",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0c5e54cd3414f98ed8ee76b46cf6ab2d.jpg",
+      "playedAt": "2026-08-27T07:12:44.000Z",
       "nowPlaying": false
     }
   ],
   "books": [
+    {
+      "title": "The Vanishing Half",
+      "author": "Brit Bennett",
+      "url": "https://www.goodreads.com/book/show/55298625",
+      "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1612881211l/55298625._SY475_.jpg",
+      "readAt": "2026-08-26T00:00:00.000Z"
+    },
     {
       "title": "Wuthering Heights",
       "author": "Emily Brontë",
@@ -80,13 +87,6 @@
       "url": "https://www.goodreads.com/book/show/241412474",
       "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1757427682l/241412474._SY475_.jpg",
       "readAt": "2026-06-13T00:00:00.000Z"
-    },
-    {
-      "title": "A Leste do Paraíso",
-      "author": "John Steinbeck",
-      "url": "https://www.goodreads.com/book/show/40637252",
-      "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1727453838l/40637252._SY475_.jpg",
-      "readAt": "2026-06-11T00:00:00.000Z"
     }
   ],
   "films": [
