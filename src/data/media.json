@@ -1,6 +1,26 @@
 {
-  "updatedAt": "2026-08-28T11:23:57.354Z",
+  "updatedAt": "2026-08-28T22:20:38.714Z",
   "music": [
+    {
+      "kind": "album",
+      "album": "folklore (deluxe version - explicit) (deluxe version)",
+      "artist": "Taylor Swift",
+      "trackCount": 14,
+      "url": "https://www.last.fm/music/Taylor%20Swift/folklore%20(deluxe%20version%20-%20explicit)%20(deluxe%20version)",
+      "image": null,
+      "playedAt": "2026-08-28T21:13:33.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "track",
+      "track": "my tears ricochet",
+      "artist": "Taylor Swift",
+      "album": "folklore (deluxe version - explicit)",
+      "url": "https://www.last.fm/music/Taylor%20Swift/_/my%20tears%20ricochet",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f05cf7c4623cf0d9dba65c5873c8927e.jpg",
+      "playedAt": "2026-08-28T20:36:27.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "track",
       "track": "When the Time Comes",
@@ -29,26 +49,6 @@
       "url": "https://www.last.fm/music/%E3%83%B4%E3%82%A1%E3%83%AA%E3%82%A2%E3%82%B9%E3%83%BB%E3%82%A2%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B9%E3%83%88/_/Don%27t%20You%20(Forget%20About%20Me)",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/115a7d386b15db09669bd38607a3030c.png",
       "playedAt": "2026-08-27T07:21:36.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Psycho",
-      "artist": "Muse",
-      "album": "Drones (Streaming Version)",
-      "url": "https://www.last.fm/music/Muse/_/Psycho",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9e637b5f962346a1039b6528bad5545f.jpg",
-      "playedAt": "2026-08-27T07:16:20.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "All Fired Up",
-      "artist": "Interpol",
-      "album": "Our Love to Admire",
-      "url": "https://www.last.fm/music/Interpol/_/All%20Fired%20Up",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0c5e54cd3414f98ed8ee76b46cf6ab2d.jpg",
-      "playedAt": "2026-08-27T07:12:44.000Z",
       "nowPlaying": false
     }
   ],
