@@ -1,6 +1,16 @@
 {
-  "updatedAt": "2026-08-30T05:24:46.607Z",
+  "updatedAt": "2026-08-30T13:48:06.762Z",
   "music": [
+    {
+      "kind": "album",
+      "album": "NEVER ENOUGH: VERSIONS",
+      "artist": "Turnstile",
+      "trackCount": 36,
+      "url": "https://www.last.fm/music/Turnstile/NEVER%20ENOUGH%3A%20VERSIONS",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f4ab007c22acceab009f9b3d131d69d8.png",
+      "playedAt": "2026-08-30T11:31:11.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "album",
       "album": "folklore (deluxe version - explicit) (deluxe version)",
@@ -39,16 +49,6 @@
       "url": "https://www.last.fm/music/Simple%20Minds/_/Don%27t%20You%20(Forget%20About%20Me)%20(Remastered%202001)",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/36cc66f74a8036b6b5bea14f09ce1922.jpg",
       "playedAt": "2026-08-27T07:21:37.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Don't You (Forget About Me)",
-      "artist": "ヴァリアス・アーティスト",
-      "album": "ドライブが楽しくなる洋楽ヒッツ！80年代 ROCK",
-      "url": "https://www.last.fm/music/%E3%83%B4%E3%82%A1%E3%83%AA%E3%82%A2%E3%82%B9%E3%83%BB%E3%82%A2%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B9%E3%83%88/_/Don%27t%20You%20(Forget%20About%20Me)",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/115a7d386b15db09669bd38607a3030c.png",
-      "playedAt": "2026-08-27T07:21:36.000Z",
       "nowPlaying": false
     }
   ],
