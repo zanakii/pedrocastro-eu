@@ -1,6 +1,16 @@
 {
-  "updatedAt": "2026-08-31T05:35:36.463Z",
+  "updatedAt": "2026-08-31T16:09:43.021Z",
   "music": [
+    {
+      "kind": "album",
+      "album": "I Must Be Dreaming",
+      "artist": "Alabama Shakes",
+      "trackCount": 7,
+      "url": "https://www.last.fm/music/Alabama%20Shakes/I%20Must%20Be%20Dreaming",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/83dfd95441c7b4952845e23ab1bf18f3.png",
+      "playedAt": "2026-08-31T14:44:14.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "album",
       "album": "NEVER ENOUGH: VERSIONS",
@@ -39,16 +49,6 @@
       "url": "https://www.last.fm/music/Ultravox/_/When%20the%20Time%20Comes",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/768e33757642e33e9684a107fb50ccc3.png",
       "playedAt": "2026-08-27T07:25:59.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Don't You (Forget About Me) (Remastered 2001)",
-      "artist": "Simple Minds",
-      "album": "ドライブが楽しくなる洋楽ヒッツ！80年代 ROCK",
-      "url": "https://www.last.fm/music/Simple%20Minds/_/Don%27t%20You%20(Forget%20About%20Me)%20(Remastered%202001)",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/36cc66f74a8036b6b5bea14f09ce1922.jpg",
-      "playedAt": "2026-08-27T07:21:37.000Z",
       "nowPlaying": false
     }
   ],
