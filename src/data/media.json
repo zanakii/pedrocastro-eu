@@ -1,6 +1,36 @@
 {
-  "updatedAt": "2026-09-02T12:46:30.583Z",
+  "updatedAt": "2026-09-02T19:23:10.125Z",
   "music": [
+    {
+      "kind": "track",
+      "track": "Ever The Actor",
+      "artist": "Interpol",
+      "album": "This Mirror Weighs A Ton",
+      "url": "https://www.last.fm/music/Interpol/_/Ever%20The%20Actor",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f199c9331c25ed791b43bf43b7daef0b.jpg",
+      "playedAt": null,
+      "nowPlaying": true
+    },
+    {
+      "kind": "album",
+      "album": "This Mirror Weighs A Ton",
+      "artist": "Interpol",
+      "trackCount": 5,
+      "url": "https://www.last.fm/music/Interpol/This%20Mirror%20Weighs%20A%20Ton",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f199c9331c25ed791b43bf43b7daef0b.jpg",
+      "playedAt": "2026-09-02T19:18:11.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "track",
+      "track": "Mexican Radio",
+      "artist": "Celtic Frost",
+      "album": "Into The Pandemonium",
+      "url": "https://www.last.fm/music/Celtic%20Frost/_/Mexican%20Radio",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b9be91d22c818609561442a5bf62bcec.png",
+      "playedAt": "2026-09-02T16:48:30.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "album",
       "album": "NEVER ENOUGH: VERSIONS",
@@ -8,47 +38,17 @@
       "trackCount": 36,
       "url": "https://www.last.fm/music/Turnstile/NEVER%20ENOUGH%3A%20VERSIONS",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f4ab007c22acceab009f9b3d131d69d8.png",
-      "playedAt": "2026-09-02T06:56:12.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "album",
-      "album": "I Must Be Dreaming",
-      "artist": "Alabama Shakes",
-      "trackCount": 7,
-      "url": "https://www.last.fm/music/Alabama%20Shakes/I%20Must%20Be%20Dreaming",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/83dfd95441c7b4952845e23ab1bf18f3.png",
-      "playedAt": "2026-08-31T14:44:14.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "album",
-      "album": "folklore (deluxe version - explicit) (deluxe version)",
-      "artist": "Taylor Swift",
-      "trackCount": 14,
-      "url": "https://www.last.fm/music/Taylor%20Swift/folklore%20(deluxe%20version%20-%20explicit)%20(deluxe%20version)",
-      "image": null,
-      "playedAt": "2026-08-28T21:13:33.000Z",
+      "playedAt": "2026-09-02T16:42:23.000Z",
       "nowPlaying": false
     },
     {
       "kind": "track",
-      "track": "my tears ricochet",
-      "artist": "Taylor Swift",
-      "album": "folklore (deluxe version - explicit)",
-      "url": "https://www.last.fm/music/Taylor%20Swift/_/my%20tears%20ricochet",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f05cf7c4623cf0d9dba65c5873c8927e.jpg",
-      "playedAt": "2026-08-28T20:36:27.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "When the Time Comes",
-      "artist": "Ultravox",
-      "album": "Lament",
-      "url": "https://www.last.fm/music/Ultravox/_/When%20the%20Time%20Comes",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/768e33757642e33e9684a107fb50ccc3.png",
-      "playedAt": "2026-08-27T07:25:59.000Z",
+      "track": "Empty Words",
+      "artist": "Death",
+      "album": "Symbolic [Remaster]",
+      "url": "https://www.last.fm/music/Death/_/Empty%20Words",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a1da00313d3412b9b3eec705b29750a.jpg",
+      "playedAt": "2026-09-02T16:42:01.000Z",
       "nowPlaying": false
     }
   ],
