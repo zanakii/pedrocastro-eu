@@ -1,24 +1,14 @@
 {
-  "updatedAt": "2026-09-02T19:23:10.125Z",
+  "updatedAt": "2026-09-02T22:39:06.976Z",
   "music": [
-    {
-      "kind": "track",
-      "track": "Ever The Actor",
-      "artist": "Interpol",
-      "album": "This Mirror Weighs A Ton",
-      "url": "https://www.last.fm/music/Interpol/_/Ever%20The%20Actor",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f199c9331c25ed791b43bf43b7daef0b.jpg",
-      "playedAt": null,
-      "nowPlaying": true
-    },
     {
       "kind": "album",
       "album": "This Mirror Weighs A Ton",
       "artist": "Interpol",
-      "trackCount": 5,
+      "trackCount": 6,
       "url": "https://www.last.fm/music/Interpol/This%20Mirror%20Weighs%20A%20Ton",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f199c9331c25ed791b43bf43b7daef0b.jpg",
-      "playedAt": "2026-09-02T19:18:11.000Z",
+      "playedAt": "2026-09-02T19:22:26.000Z",
       "nowPlaying": false
     },
     {
@@ -49,6 +39,16 @@
       "url": "https://www.last.fm/music/Death/_/Empty%20Words",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a1da00313d3412b9b3eec705b29750a.jpg",
       "playedAt": "2026-09-02T16:42:01.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "track",
+      "track": "T.L.C. (TURNSTILE LOVE CONNECTION)",
+      "artist": "Turnstile",
+      "album": "GLOW ON",
+      "url": "https://www.last.fm/music/Turnstile/_/T.L.C.%20(TURNSTILE%20LOVE%20CONNECTION)",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9bbf56b7df22d8044b0102c3ef12183a.jpg",
+      "playedAt": "2026-09-02T16:40:18.000Z",
       "nowPlaying": false
     }
   ],
