@@ -1,6 +1,26 @@
 {
-  "updatedAt": "2026-09-04T04:34:50.287Z",
+  "updatedAt": "2026-09-04T12:43:41.494Z",
   "music": [
+    {
+      "kind": "album",
+      "album": "The Art of Loving",
+      "artist": "Olivia Dean",
+      "trackCount": 7,
+      "url": "https://www.last.fm/music/Olivia%20Dean/The%20Art%20of%20Loving",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/e9aedce534c4c0cf22f18483bed6620e.jpg",
+      "playedAt": "2026-09-04T11:22:57.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "track",
+      "track": "Big Dreams",
+      "artist": "Amyl and the Sniffers",
+      "album": "Truth or Consequence",
+      "url": "https://www.last.fm/music/Amyl%20and%20the%20Sniffers/_/Big%20Dreams",
+      "image": null,
+      "playedAt": "2026-09-04T11:02:10.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "album",
       "album": "This Mirror Weighs A Ton",
@@ -29,26 +49,6 @@
       "url": "https://www.last.fm/music/Turnstile/NEVER%20ENOUGH%3A%20VERSIONS",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f4ab007c22acceab009f9b3d131d69d8.png",
       "playedAt": "2026-09-02T16:42:23.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Empty Words",
-      "artist": "Death",
-      "album": "Symbolic [Remaster]",
-      "url": "https://www.last.fm/music/Death/_/Empty%20Words",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a1da00313d3412b9b3eec705b29750a.jpg",
-      "playedAt": "2026-09-02T16:42:01.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "T.L.C. (TURNSTILE LOVE CONNECTION)",
-      "artist": "Turnstile",
-      "album": "GLOW ON",
-      "url": "https://www.last.fm/music/Turnstile/_/T.L.C.%20(TURNSTILE%20LOVE%20CONNECTION)",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9bbf56b7df22d8044b0102c3ef12183a.jpg",
-      "playedAt": "2026-09-02T16:40:18.000Z",
       "nowPlaying": false
     }
   ],
