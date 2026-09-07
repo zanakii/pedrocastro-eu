@@ -1,6 +1,26 @@
 {
-  "updatedAt": "2026-09-07T04:42:03.876Z",
+  "updatedAt": "2026-09-07T14:15:20.486Z",
   "music": [
+    {
+      "kind": "album",
+      "album": "I Must Be Dreaming",
+      "artist": "Alabama Shakes",
+      "trackCount": 7,
+      "url": "https://www.last.fm/music/Alabama%20Shakes/I%20Must%20Be%20Dreaming",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/83dfd95441c7b4952845e23ab1bf18f3.png",
+      "playedAt": "2026-09-07T13:57:59.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "album",
+      "album": "Act III",
+      "artist": "Kasabian",
+      "trackCount": 6,
+      "url": "https://www.last.fm/music/Kasabian/Act%20III",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b95ab3c5b529d78649d5fdb79e043693.jpg",
+      "playedAt": "2026-09-07T13:04:17.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "track",
       "track": "Calm Down",
@@ -29,26 +49,6 @@
       "url": "https://www.last.fm/music/Tyler,%20The%20Creator/_/Balloon",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/8c0b389bb4cbf522bc5a2b58e15b6620.jpg",
       "playedAt": "2026-09-05T20:19:37.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Times Like These",
-      "artist": "Foo Fighters",
-      "album": "One By One (Expanded Edition)",
-      "url": "https://www.last.fm/music/Foo%20Fighters/_/Times%20Like%20These",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c5da11278ee0a298360c2386f5d2d43d.jpg",
-      "playedAt": "2026-09-05T20:15:11.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Someday",
-      "artist": "The Strokes",
-      "album": "Is This It",
-      "url": "https://www.last.fm/music/The%20Strokes/_/Someday",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c7a4e1700ae85d9910bbe59887a8c771.jpg",
-      "playedAt": "2026-09-05T20:12:07.000Z",
       "nowPlaying": false
     }
   ],

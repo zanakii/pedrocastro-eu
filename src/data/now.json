@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-09-07T04:42:03.876Z",
+  "updatedAt": "2026-09-07T14:15:20.486Z",
   "listening": {
-    "kind": "track",
-    "track": "Calm Down",
-    "artist": "Réma",
-    "album": "Rave & Roses",
-    "url": "https://www.last.fm/music/R%C3%A9ma/_/Calm%20Down",
-    "image": null,
-    "playedAt": "2026-09-05T20:25:30.000Z",
+    "kind": "album",
+    "album": "I Must Be Dreaming",
+    "artist": "Alabama Shakes",
+    "trackCount": 7,
+    "url": "https://www.last.fm/music/Alabama%20Shakes/I%20Must%20Be%20Dreaming",
+    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/83dfd95441c7b4952845e23ab1bf18f3.png",
+    "playedAt": "2026-09-07T13:57:59.000Z",
     "nowPlaying": false
   },
   "reading": {
