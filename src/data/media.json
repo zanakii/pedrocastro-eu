@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-11T12:49:45.450Z",
+  "updatedAt": "2026-09-11T19:09:50.781Z",
   "music": [
     {
       "kind": "album",
@@ -90,6 +90,15 @@
     }
   ],
   "films": [
+    {
+      "title": "The Invite",
+      "year": "2026",
+      "rating": 3,
+      "rewatch": false,
+      "url": "https://letterboxd.com/film/the-invite-2026/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/8/5/4/8/3/1/854831-the-invite-2026-0-600-0-900-crop.jpg?v=ee72905e48",
+      "watchedAt": "2026-09-11T00:00:00.000Z"
+    },
     {
       "title": "The Odyssey",
       "year": "2026",
