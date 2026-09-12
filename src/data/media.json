@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-12T12:10:35.261Z",
+  "updatedAt": "2026-09-12T15:32:04.951Z",
   "music": [
     {
       "kind": "album",
@@ -90,6 +90,15 @@
     }
   ],
   "films": [
+    {
+      "title": "12 Angry Men",
+      "year": "1957",
+      "rating": 4,
+      "rewatch": false,
+      "url": "https://letterboxd.com/film/12-angry-men/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/5/1/7/0/0/51700-12-angry-men-0-600-0-900-crop.jpg?v=b8aaf291a9",
+      "watchedAt": "2026-09-12T00:00:00.000Z"
+    },
     {
       "title": "Pressure",
       "year": "2026",
