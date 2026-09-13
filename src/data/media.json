@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-12T22:17:59.374Z",
+  "updatedAt": "2026-09-13T04:48:33.468Z",
   "music": [
     {
       "kind": "album",
@@ -80,13 +80,6 @@
       "url": "https://www.goodreads.com/book/show/246288258",
       "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1767858948l/246288258._SY475_.jpg",
       "readAt": "2026-06-24T00:00:00.000Z"
-    },
-    {
-      "title": "Contra o Progresso",
-      "author": "Slavoj Žižek",
-      "url": "https://www.goodreads.com/book/show/241412474",
-      "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1757427682l/241412474._SY475_.jpg",
-      "readAt": "2026-06-13T00:00:00.000Z"
     }
   ],
   "films": [
