@@ -5,6 +5,34 @@ Each entry records *what* was decided and *why*, so future changes have context.
 
 ---
 
+## 2026-09-14 — Bring series back via Simkl, refreshed by hand
+
+**Context.** Series were dropped on 4 August 2026, when Trakt deleted the API
+application behind the feed and gated a replacement behind VIP. Simkl was the
+runner-up then, and episodes are now logged there.
+
+**Decided:** Simkl feeds `series` in `now.json` and `media.json` again, but
+**only on manual workflow runs**. Simkl's API rules ask apps not to run
+unconditional background polling without user interaction, so the 4-hourly cron
+skips it (`SIMKL_REFRESH` is set for `workflow_dispatch` alone) and carries the
+last snapshot forward. A manual run checks `/sync/activities` first and pulls the
+library only if TV or anime activity has moved since the stamp saved in
+`media.json` as `seriesActivity`.
+
+**Rejected.** A daily cron — still a timer, just a slower one. Fetching on visit
+— it needs a Worker to keep the token out of the page and a cache so every visit
+isn't a call, which is a backend and a datastore; and a visitor isn't the account
+owner interacting anyway. The Colophon states the manual-only rule, so it has to
+stay true.
+
+**Costs.** Series go stale until a refresh is triggered; relative dates stay right
+because every rebuild recomputes them. Simkl's payload has no episode titles, so
+rows show `S2E5` and nothing more. The token comes from Simkl's PIN flow, lasts
+about five years and can't be refreshed — re-run `scripts/simkl-token.mjs` when it
+lapses, around September 2031. The API is free for non-commercial use; each row
+linking to its Simkl page covers attribution. Posters come from Simkl, so TMDB
+stays gone.
+
 ## 2026-08-11 — Group music by album, not by track
 
 **Context.** Listening is mostly album-based, so the five music rows in

@@ -1,9 +1,12 @@
 import mediaData from '../data/media.json';
-import { describeListening, formatRelative, formatStars } from './now';
-import type { ListeningNow } from './now';
+import { describeListening, describeSeries, formatRelative, formatStars } from './now';
+import type { ListeningNow, SeriesNow } from './now';
 
 /** Music rows are the same album-or-track shape the Now section uses. */
 export type MusicItem = ListeningNow;
+
+/** Series rows likewise share the Now section's shape. */
+export type SeriesItem = SeriesNow;
 
 export interface BookItem {
   title: string | null;
@@ -28,9 +31,13 @@ export interface Media {
   music: MusicItem[];
   books: BookItem[];
   films: FilmItem[];
+  /** Absent from snapshots written before the Simkl feed existed. */
+  series?: SeriesItem[];
+  /** Simkl activity stamp at the last series pull — for the fetcher, not the page. */
+  seriesActivity?: string | null;
 }
 
-export type MediaKind = 'Music' | 'Book' | 'Movie';
+export type MediaKind = 'Music' | 'Book' | 'Movie' | 'Series';
 
 /** Normalised row for the timeline — maps directly onto <NowCard>. */
 export interface TimelineItem {
@@ -107,6 +114,20 @@ export function getMediaTimeline(): TimelineItem[] {
       image: f.poster ?? undefined,
       meta: rel ? `watched ${rel}` : undefined,
       sortAt: ms(f.watchedAt),
+    });
+  }
+
+  for (const s of media.series ?? []) {
+    const card = describeSeries(s);
+    if (!card) continue;
+    items.push({
+      kind: 'Series',
+      title: card.title,
+      subtitle: card.subtitle,
+      meta: card.meta,
+      href: s.url ?? undefined,
+      image: s.image ?? undefined,
+      sortAt: ms(s.watchedAt),
     });
   }
 
