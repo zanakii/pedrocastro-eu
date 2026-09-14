@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-// Fetches recent listening (Last.fm), reading (Goodreads) and watching
-// (Letterboxd) and writes two files:
+// Fetches recent listening (Last.fm), reading (Goodreads), watching
+// (Letterboxd) and series (Simkl) and writes two files:
 //   src/data/now.json   - the single latest item per type (the *Now* section)
 //   src/data/media.json - up to 5 per type within 3 months (the /before/ timeline)
 //
@@ -12,8 +12,14 @@
 //   LASTFM_USERNAME     - your Last.fm handle
 //   GOODREADS_USER_ID   - numeric portion of your goodreads.com/user/show/<id> URL
 //   LETTERBOXD_USERNAME - your letterboxd.com/<username> handle
+//   SIMKL_CLIENT_ID     - Simkl API app client id (https://simkl.com/settings/developer/)
+//   SIMKL_ACCESS_TOKEN  - from `node --env-file=.env scripts/simkl-token.mjs`
 //
 // Any missing key just disables that source.
+//
+// Series are the exception to "every run": Simkl asks apps not to poll on a
+// timer, so it's only called when SIMKL_REFRESH=1, which the workflow sets on
+// manual runs alone. Every other run carries the last series snapshot forward.
 
 import { readFile, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
@@ -352,6 +358,107 @@ async function fetchFilmsList() {
 }
 
 // ---------------------------------------------------------------------------
+// Simkl — watched series (manual refresh only)
+// ---------------------------------------------------------------------------
+
+const SIMKL_API = 'https://api.simkl.com';
+
+// Simkl's API rules want the client id and app name/version on every request,
+// plus a User-Agent that identifies the app.
+async function simklGet(path, params = {}) {
+  const url = new URL(path, SIMKL_API);
+  url.searchParams.set('client_id', process.env.SIMKL_CLIENT_ID);
+  url.searchParams.set('app-name', 'pedrocastro-eu');
+  url.searchParams.set('app-version', '1.0');
+  for (const [key, value] of Object.entries(params)) url.searchParams.set(key, value);
+  const res = await fetch(url, {
+    headers: {
+      authorization: `Bearer ${process.env.SIMKL_ACCESS_TOKEN}`,
+      'user-agent': 'pedrocastro.eu/1.0 (+https://pedrocastro.eu)',
+    },
+  });
+  if (!res.ok) throw new Error(`Simkl ${res.status}`);
+  return res.json();
+}
+
+// The most recently watched episode of a library entry. Per-episode timestamps
+// (episode_watched_at=yes) are the accurate source; `last_watched` ("S02E05", or
+// "E12" with no season) plus `last_watched_at` is the fallback when they're absent.
+function latestEpisode(entry) {
+  let best = null;
+  for (const season of entry.seasons ?? []) {
+    for (const ep of season.episodes ?? []) {
+      const watchedAt = toIso(ep.watched_at);
+      if (watchedAt && (!best || watchedAt > best.watchedAt)) {
+        best = { season: season.number ?? null, number: ep.number ?? null, watchedAt };
+      }
+    }
+  }
+  if (best) return best;
+  const m = entry.last_watched?.match(/^(?:S(\d+))?E(\d+)$/i);
+  return {
+    season: m?.[1] ? Number(m[1]) : null,
+    number: m?.[2] ? Number(m[2]) : null,
+    watchedAt: toIso(entry.last_watched_at),
+  };
+}
+
+function normalizeShow(entry, type) {
+  const show = entry.show;
+  if (!show?.title) return null;
+  const { simkl, slug } = show.ids ?? {};
+  return {
+    show: show.title,
+    year: show.year ?? null,
+    ...latestEpisode(entry),
+    // Linking each row to its Simkl page is also the attribution Simkl asks for.
+    url: simkl ? `https://simkl.com/${type}/${simkl}${slug ? `/${slug}` : ''}` : null,
+    // Simkl serves posters through this resizing proxy; `_c` is 170×250.
+    image: show.poster
+      ? `https://wsrv.nl/?url=https://simkl.in/posters/${show.poster}_c.webp&q=90`
+      : null,
+  };
+}
+
+// Returns { list, activity } when Simkl was asked, or null to carry the previous
+// snapshot forward: on scheduled runs, when credentials are missing, and when
+// nothing has moved since the last manual refresh.
+async function fetchSeriesList(prevActivity) {
+  if (process.env.SIMKL_REFRESH !== '1') return null;
+  if (!process.env.SIMKL_CLIENT_ID || !process.env.SIMKL_ACCESS_TOKEN) {
+    console.warn('[feeds] Simkl env missing; skipping series');
+    return null;
+  }
+  // Simkl's sync rule: read the activity timestamps first, and only pull the
+  // library when something has changed.
+  const activities = await simklGet('/sync/activities');
+  const activity =
+    [activities?.tv_shows?.all, activities?.anime?.all].map(toIso).filter(Boolean).sort().pop() ??
+    null;
+  if (activity && activity === prevActivity) {
+    console.log('[feeds] Simkl unchanged since last refresh; keeping series');
+    return null;
+  }
+  // Only entries touched inside the timeline window can reach it. One request
+  // after the other: Simkl's sync guide discourages parallel calls.
+  const params = {
+    extended: 'full',
+    episode_watched_at: 'yes',
+    date_from: new Date(windowStart()).toISOString(),
+  };
+  const shows = await simklGet('/sync/all-items/shows', params);
+  const anime = await simklGet('/sync/all-items/anime', params);
+  const list = [
+    ...(shows?.shows ?? []).map((e) => normalizeShow(e, 'tv')),
+    ...(anime?.anime ?? []).map((e) => normalizeShow(e, 'anime')),
+  ]
+    .filter((s) => s?.watchedAt)
+    .sort((a, b) => b.watchedAt.localeCompare(a.watchedAt));
+  // As with books and films, an empty list keeps the previous data.
+  return { list: list.length ? list : null, activity };
+}
+
+// ---------------------------------------------------------------------------
 // Orchestration
 // ---------------------------------------------------------------------------
 
@@ -384,6 +491,8 @@ const musicList = await safe('music', fetchMusicList, prevMedia?.music ?? null);
 const reading = await safe('reading', fetchReading, prevNow?.reading ?? null);
 const booksList = await safe('books', fetchBooksList, prevMedia?.books ?? null);
 const filmsList = await safe('films', fetchFilmsList, prevMedia?.films ?? null);
+const seriesFetch = await safe('series', () => fetchSeriesList(prevMedia?.seriesActivity), null);
+const seriesList = seriesFetch?.list ?? prevMedia?.series ?? null;
 
 const updatedAt = new Date().toISOString();
 
@@ -402,6 +511,10 @@ const now = {
     prevNow?.watching ?? {
       title: null, year: null, rating: null, rewatch: false, url: null, poster: null, watchedAt: null,
     },
+  series: seriesList?.[0] ??
+    prevNow?.series ?? {
+      show: null, year: null, season: null, number: null, watchedAt: null, url: null, image: null,
+    },
 };
 
 const media = {
@@ -409,6 +522,10 @@ const media = {
   music: clampMedia(musicList, 'playedAt', { keepNowPlaying: true }),
   books: clampMedia(booksList, 'readAt'),
   films: clampMedia(filmsList, 'watchedAt'),
+  series: clampMedia(seriesList, 'watchedAt'),
+  // The Simkl activity stamp the series list was pulled at, so the next manual
+  // refresh can skip the library pull when nothing has changed.
+  seriesActivity: seriesFetch?.activity ?? prevMedia?.seriesActivity ?? null,
 };
 
 await writeFile(NOW_PATH, JSON.stringify(now, null, 2) + '\n');

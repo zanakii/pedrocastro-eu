@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import NowCard from '../components/NowCard.astro';
 import Scrap from '../components/Scrap.astro';
 import { getCollection } from 'astro:content';
-import { getNow, describeListening, formatRelative, formatStars } from '../lib/now';
+import { getNow, describeListening, describeSeries, formatRelative, formatStars } from '../lib/now';
 import { getSortedScraps } from '../lib/scraps';
 
 const now = getNow();
@@ -35,6 +35,7 @@ const withYear = (title: string | null, year: string | number | null) =>
 // Album- or track-shaped, decided upstream by the fetcher: a track while it's
 // actually playing, the album once the moment has passed.
 const listening = describeListening(now.listening);
+const series = describeSeries(now.series);
 
 const cards = [
   {
@@ -63,6 +64,16 @@ const cards = [
     image: now.watching.poster ?? undefined,
     present: Boolean(now.watching.title),
     sortAt: ms(now.watching.watchedAt),
+  },
+  {
+    label: 'Binging',
+    title: series?.title ?? '—',
+    subtitle: series?.subtitle,
+    href: now.series.url ?? undefined,
+    meta: series?.meta,
+    image: now.series.image ?? undefined,
+    present: Boolean(series),
+    sortAt: ms(now.series.watchedAt),
   },
   {
     label: 'Listening',

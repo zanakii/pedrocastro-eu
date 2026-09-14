@@ -49,15 +49,35 @@ export interface WatchingNow {
   watchedAt: string | null;
 }
 
+/** The latest episode watched of a show, from Simkl. Its payload has no episode titles. */
+export interface SeriesNow {
+  show: string | null;
+  year: number | null;
+  /** Null when Simkl reports no season number. */
+  season: number | null;
+  number: number | null;
+  watchedAt: string | null;
+  url: string | null;
+  image: string | null;
+}
+
 export interface Now {
   updatedAt: string | null;
   listening: ListeningNow;
   reading: ReadingNow;
   watching: WatchingNow;
+  series: SeriesNow;
 }
 
 export function getNow(): Now {
-  return nowData as Now;
+  const data = nowData as Omit<Now, 'series'> & { series?: SeriesNow };
+  // `series` is absent from snapshots written before the Simkl feed existed.
+  return {
+    ...data,
+    series: data.series ?? {
+      show: null, year: null, season: null, number: null, watchedAt: null, url: null, image: null,
+    },
+  };
 }
 
 // Letterboxd ratings are 0.5–5.0 in half-star steps. Render as filled/half
@@ -112,5 +132,28 @@ export function describeListening(
     title: item.track,
     subtitle: joinDot([item.artist, item.album]),
     meta: when ?? undefined,
+  };
+}
+
+/**
+ * Card text for a series row — same contract as describeListening, and shared
+ * by the homepage and /before/ for the same reason. Returns null when there's no
+ * show to name.
+ */
+export function describeSeries(
+  item: SeriesNow,
+): { title: string; subtitle?: string; meta?: string } | null {
+  if (!item.show) return null;
+  const episode =
+    item.number == null
+      ? null
+      : item.season == null
+        ? `E${item.number}`
+        : `S${item.season}E${item.number}`;
+  const when = formatRelative(item.watchedAt);
+  return {
+    title: item.year ? `${item.show} (${item.year})` : item.show,
+    subtitle: episode ?? undefined,
+    meta: when ? `watched ${when}` : undefined,
   };
 }
