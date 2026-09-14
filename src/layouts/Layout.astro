@@ -51,11 +51,17 @@ const nav = [
     <script is:inline>
       // Resolve theme before paint to avoid a flash of the wrong palette.
       (() => {
-        const stored = localStorage.getItem('theme');
-        const theme = stored === 'light' || stored === 'dark'
-          ? stored
-          : matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-        document.documentElement.dataset.theme = theme;
+        const apply = () => {
+          const stored = localStorage.getItem('theme');
+          const theme = stored === 'light' || stored === 'dark'
+            ? stored
+            : matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          document.documentElement.dataset.theme = theme;
+        };
+        apply();
+        // ClientRouter replaces <html>'s attributes with the incoming page's,
+        // which carry no data-theme, and this script doesn't re-run on a swap.
+        document.addEventListener('astro:after-swap', apply);
       })();
     </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
