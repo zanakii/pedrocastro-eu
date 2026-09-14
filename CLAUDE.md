@@ -25,11 +25,12 @@ installer. `npm run build` is the verification command.
 - `src/lib/` — `now.ts` (types + card text), `media.ts` (timeline), `posts.ts`,
   `scraps.ts`.
 - `.github/workflows/deploy.yml` — builds and deploys; a cron at `17 */4 * * *`
-  also refreshes the data files, commits any change, and redeploys.
+  (and any manual run) also refreshes the data files, commits any change, and
+  redeploys.
 
 ## The generated data files
 
-`scripts/fetch-now.mjs` pulls Last.fm, Goodreads, and Letterboxd into
+`scripts/fetch-now.mjs` pulls Last.fm, Goodreads, Letterboxd, and Simkl into
 `now.json` (latest item per type) and `media.json` (up to 5 per type, 3-month
 window). Rules that matter:
 
@@ -48,6 +49,12 @@ window). Rules that matter:
 - The local `.env` has no `LETTERBOXD_USERNAME`, so local runs skip films and
   fall back to whatever is committed. CI has the secret. Don't "fix" a frozen
   film entry locally — check the env first.
+- **Simkl (series) is manual-only, on purpose.** Its API rules ask apps not to
+  poll on a timer, so it runs only when `SIMKL_REFRESH=1`, which the workflow
+  sets for `workflow_dispatch` alone. Don't move it onto the cron, a slower
+  timer, or a fetch-on-visit — each breaks the rule, and the Colophon says we
+  don't. Series card text lives in `describeSeries()`, beside
+  `describeListening()`.
 
 ## Hard constraints
 

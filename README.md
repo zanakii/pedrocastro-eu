@@ -23,17 +23,21 @@ npm run preview  # serve the built site
 
 ## Now + Media data (listening / reading / watching)
 
-`scripts/fetch-now.mjs` pulls recent listening (Last.fm), reading (Goodreads)
-and watching films (Letterboxd) and writes two files:
+`scripts/fetch-now.mjs` pulls recent listening (Last.fm), reading (Goodreads),
+watching films (Letterboxd) and watching series (Simkl) and writes two files:
 
 - `src/data/now.json` — the single latest item per type (the *Now* section).
 - `src/data/media.json` — up to 5 per type within the last 3 months (the
   `/before/` timeline, merged into one reverse-chronological stream by
   `src/lib/media.ts`).
 
-It runs every 4 hours inside the
+It runs every 4 hours, and on every manual run, inside the
 [Build and deploy workflow](.github/workflows/deploy.yml) — the workflow commits
-any change to either file and then redeploys.
+any change to either file and then redeploys. **Series are manual-only:** Simkl
+asks apps not to poll on a timer, so the fetcher calls it only when
+`SIMKL_REFRESH=1`, which the workflow sets for manual runs (*Actions → Build and
+deploy → Run workflow*, or `gh workflow run deploy.yml`). Scheduled runs carry
+the last series snapshot forward.
 
 To run it locally, drop credentials in a `.env` (gitignored) and:
 
@@ -49,6 +53,9 @@ Required env vars (each source is independent — leave one out to disable it):
 | `LASTFM_USERNAME`       | Last.fm    | your handle |
 | `GOODREADS_USER_ID`     | Goodreads  | numeric ID from your profile URL (`goodreads.com/user/show/<id>-name`) |
 | `LETTERBOXD_USERNAME`   | Letterboxd | your handle |
+| `SIMKL_CLIENT_ID`       | Simkl      | create an app at <https://simkl.com/settings/developer/> |
+| `SIMKL_ACCESS_TOKEN`    | Simkl      | `node --env-file=.env scripts/simkl-token.mjs` (PIN flow; lasts ~5 years, no refresh) |
+| `SIMKL_REFRESH`         | Simkl      | set to `1` to actually call Simkl — the workflow does this on manual runs only |
 
 > Reading data uses the public per-shelf RSS feeds (Goodreads killed their
 > official API in 2020 but the feeds still work). *Now* reads the
@@ -126,6 +133,8 @@ Required GitHub repo secrets (*Settings → Secrets and variables → Actions*):
 | `LASTFM_USERNAME`       | ″                                          |
 | `GOODREADS_USER_ID`     | ″                                          |
 | `LETTERBOXD_USERNAME`   | ″                                          |
+| `SIMKL_CLIENT_ID`       | ″ (series; read on manual runs only)       |
+| `SIMKL_ACCESS_TOKEN`    | ″                                          |
 
 DNS for `pedrocastro.eu` runs on Cloudflare (zone managed there).
 Attach the custom domain in the Pages project once via *Custom domains*.
@@ -158,7 +167,8 @@ public/
   admin/                     # Sveltia CMS (index.html + config.yml)
   uploads/                   # CMS-uploaded images
 scripts/
-  fetch-now.mjs              # Last.fm + Goodreads + Letterboxd → now + media
+  fetch-now.mjs              # Last.fm + Goodreads + Letterboxd + Simkl → now + media
+  simkl-token.mjs            # one-off Simkl PIN login → SIMKL_ACCESS_TOKEN
 .github/workflows/
   deploy.yml                 # push + cron + manual; builds and deploys
 ```
@@ -179,7 +189,7 @@ Build order and rationale live in [docs/decisions.md](docs/decisions.md).
 1. ~~**Posts + RSS** — Astro content collections + `@astrojs/rss`.~~ ✅
 2. ~~**Media log** — music / books / films / series timeline from the cron feeds.~~ ✅
 3. ~~**Photos** — a browse-only *Flashes* gallery, edited via Sveltia CMS.~~ ✅
-4. ~~**Now** — homepage Now section with Binging/Seen cards, ordered chronologically.~~ ✅
+4. ~~**Now** — homepage Now section with Binging/Watching cards, ordered chronologically.~~ ✅
 5. ~~**Dark-mode toggle** + `prefers-reduced-motion` support — light/dark palettes with
    a header toggle, system-preference default, no-flash resolution, persisted choice.~~ ✅
 6. ~~**View Transitions** — Astro's native `<ClientRouter />` for cross-page morphing;
