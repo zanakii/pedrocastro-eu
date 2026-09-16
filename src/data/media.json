@@ -1,6 +1,16 @@
 {
-  "updatedAt": "2026-09-16T04:49:36.892Z",
+  "updatedAt": "2026-09-16T13:30:21.547Z",
   "music": [
+    {
+      "kind": "album",
+      "album": "Anatomy Of A Brief Romance",
+      "artist": "Bloc Party",
+      "trackCount": 6,
+      "url": "https://www.last.fm/music/Bloc%20Party/Anatomy%20Of%20A%20Brief%20Romance",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d5531e20a63bb56f8fc027df7aa82d13.jpg",
+      "playedAt": "2026-09-16T10:30:08.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "album",
       "album": "YAK: A Collection Of Truck Songs",
@@ -25,7 +35,7 @@
       "kind": "album",
       "album": "NEVER ENOUGH: VERSIONS",
       "artist": "Turnstile",
-      "trackCount": 16,
+      "trackCount": 13,
       "url": "https://www.last.fm/music/Turnstile/NEVER%20ENOUGH%3A%20VERSIONS",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f4ab007c22acceab009f9b3d131d69d8.png",
       "playedAt": "2026-09-12T10:22:37.000Z",
@@ -39,16 +49,6 @@
       "url": "https://www.last.fm/music/Fontaines%20D.C./Skinty%20Fia%20Go%20Deo",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/8c8bdb5115d0a1cfdd5c878445c7aa29.jpg",
       "playedAt": "2026-09-10T14:44:31.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "album",
-      "album": "Romance",
-      "artist": "Fontaines D.C.",
-      "trackCount": 13,
-      "url": "https://www.last.fm/music/Fontaines%20D.C./Romance",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/4f4ae1fdc6b81d93c41c0054d596ccf0.png",
-      "playedAt": "2026-09-09T14:51:56.000Z",
       "nowPlaying": false
     }
   ],
