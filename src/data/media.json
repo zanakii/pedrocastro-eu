@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-20T18:47:52.453Z",
+  "updatedAt": "2026-09-20T22:26:30.917Z",
   "music": [
     {
       "kind": "album",
@@ -53,6 +53,13 @@
     }
   ],
   "books": [
+    {
+      "title": "Beartown - A cidade dos grandes sonhos",
+      "author": "Fredrik Backman",
+      "url": "https://www.goodreads.com/book/show/58143817",
+      "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1621884818l/58143817._SY475_.jpg",
+      "readAt": "2026-09-20T00:00:00.000Z"
+    },
     {
       "title": "The Vanishing Half",
       "author": "Brit Bennett",
