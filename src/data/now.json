@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-09-23T04:45:32.667Z",
+  "updatedAt": "2026-09-23T13:38:58.847Z",
   "listening": {
-    "kind": "album",
-    "album": "Deadbeat",
-    "artist": "Tame Impala",
-    "trackCount": 9,
-    "url": "https://www.last.fm/music/Tame%20Impala/Deadbeat",
-    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/29cd52e0f2ba0d5dcf2b2684cc71ef58.jpg",
-    "playedAt": "2026-09-21T16:06:16.000Z",
+    "kind": "track",
+    "track": "Times Like These",
+    "artist": "Foo Fighters",
+    "album": "One By One (Expanded Edition)",
+    "url": "https://www.last.fm/music/Foo%20Fighters/_/Times%20Like%20These",
+    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c5da11278ee0a298360c2386f5d2d43d.jpg",
+    "playedAt": "2026-09-23T06:23:37.000Z",
     "nowPlaying": false
   },
   "reading": {
