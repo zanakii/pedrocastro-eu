@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-23T22:57:29.470Z",
+  "updatedAt": "2026-09-24T04:51:35.954Z",
   "music": [
     {
       "kind": "track",
@@ -80,13 +80,6 @@
       "url": "https://www.goodreads.com/book/show/211948994",
       "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1713738383l/211948994._SX318_.jpg",
       "readAt": "2026-07-06T00:00:00.000Z"
-    },
-    {
-      "title": "Lost Lambs",
-      "author": "Madeline Cash",
-      "url": "https://www.goodreads.com/book/show/246288258",
-      "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1767858948l/246288258._SY475_.jpg",
-      "readAt": "2026-06-24T00:00:00.000Z"
     }
   ],
   "films": [
