@@ -1,6 +1,16 @@
 {
-  "updatedAt": "2026-09-27T05:18:54.190Z",
+  "updatedAt": "2026-09-27T13:59:02.721Z",
   "music": [
+    {
+      "kind": "track",
+      "track": "Blister Sunrise",
+      "artist": "M83",
+      "album": "I Wrote You a Letter",
+      "url": "https://www.last.fm/music/M83/_/Blister%20Sunrise",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d9aac642738bc9ecb764ea55d5bc8d37.jpg",
+      "playedAt": "2026-09-27T10:25:09.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "track",
       "track": "Times Like These",
@@ -39,16 +49,6 @@
       "url": "https://www.last.fm/music/Taylor%20Swift/_/...Ready%20for%20It%3F",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/dddb96a470fecc69d281f45c81a44d2a.jpg",
       "playedAt": "2026-09-23T06:12:20.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Alive",
-      "artist": "Empire of the Sun",
-      "album": "Ice on the Dune",
-      "url": "https://www.last.fm/music/Empire%20of%20the%20Sun/_/Alive",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/13871c3190e64b3893cb457dc11ec132.png",
-      "playedAt": "2026-09-23T06:08:55.000Z",
       "nowPlaying": false
     }
   ],
