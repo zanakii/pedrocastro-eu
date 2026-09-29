@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-09-29T10:41:26.751Z",
+  "updatedAt": "2026-09-29T18:05:17.945Z",
   "listening": {
-    "kind": "track",
-    "track": "Blister Sunrise",
-    "artist": "M83",
-    "album": "I Wrote You a Letter",
-    "url": "https://www.last.fm/music/M83/_/Blister%20Sunrise",
-    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d9aac642738bc9ecb764ea55d5bc8d37.jpg",
-    "playedAt": "2026-09-27T10:25:09.000Z",
+    "kind": "album",
+    "album": "The Life of a Showgirl: The Encore",
+    "artist": "Taylor Swift",
+    "trackCount": 11,
+    "url": "https://www.last.fm/music/Taylor%20Swift/The%20Life%20of%20a%20Showgirl%3A%20The%20Encore",
+    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/1764373d83c952b5082cf47efa3b0a75.jpg",
+    "playedAt": "2026-09-29T13:58:02.000Z",
     "nowPlaying": false
   },
   "reading": {

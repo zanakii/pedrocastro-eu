@@ -1,6 +1,16 @@
 {
-  "updatedAt": "2026-09-29T10:41:26.751Z",
+  "updatedAt": "2026-09-29T18:05:17.945Z",
   "music": [
+    {
+      "kind": "album",
+      "album": "The Life of a Showgirl: The Encore",
+      "artist": "Taylor Swift",
+      "trackCount": 11,
+      "url": "https://www.last.fm/music/Taylor%20Swift/The%20Life%20of%20a%20Showgirl%3A%20The%20Encore",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/1764373d83c952b5082cf47efa3b0a75.jpg",
+      "playedAt": "2026-09-29T13:58:02.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "track",
       "track": "Blister Sunrise",
@@ -39,16 +49,6 @@
       "url": "https://www.last.fm/music/Lorde/_/Perfect%20Places",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/fdef4c7536c03d0a5a6689e4b1fa9b42.jpg",
       "playedAt": "2026-09-23T06:15:48.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "...Ready for It?",
-      "artist": "Taylor Swift",
-      "album": "reputation",
-      "url": "https://www.last.fm/music/Taylor%20Swift/_/...Ready%20for%20It%3F",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/dddb96a470fecc69d281f45c81a44d2a.jpg",
-      "playedAt": "2026-09-23T06:12:20.000Z",
       "nowPlaying": false
     }
   ],
