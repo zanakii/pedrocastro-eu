@@ -54,7 +54,7 @@ Required env vars (each source is independent — leave one out to disable it):
 | `GOODREADS_USER_ID`     | Goodreads  | numeric ID from your profile URL (`goodreads.com/user/show/<id>-name`) |
 | `LETTERBOXD_USERNAME`   | Letterboxd | your handle |
 | `SIMKL_CLIENT_ID`       | Simkl      | create an app at <https://simkl.com/settings/developer/> |
-| `SIMKL_ACCESS_TOKEN`    | Simkl      | `node --env-file=.env scripts/simkl-token.mjs` (PIN flow; lasts ~5 years, no refresh) |
+| `SIMKL_REFRESH_TOKEN`   | Simkl      | `node --env-file=.env scripts/simkl-token.mjs` (device flow; expires 180 days after its last use) |
 | `SIMKL_REFRESH`         | Simkl      | set to `1` to actually call Simkl — the workflow does this on manual runs only |
 
 > Reading data uses the public per-shelf RSS feeds (Goodreads killed their
@@ -134,7 +134,7 @@ Required GitHub repo secrets (*Settings → Secrets and variables → Actions*):
 | `GOODREADS_USER_ID`     | ″                                          |
 | `LETTERBOXD_USERNAME`   | ″                                          |
 | `SIMKL_CLIENT_ID`       | ″ (series; read on manual runs only)       |
-| `SIMKL_ACCESS_TOKEN`    | ″                                          |
+| `SIMKL_REFRESH_TOKEN`   | ″                                          |
 
 DNS for `pedrocastro.eu` runs on Cloudflare (zone managed there).
 Attach the custom domain in the Pages project once via *Custom domains*.
@@ -168,7 +168,7 @@ public/
   uploads/                   # CMS-uploaded images
 scripts/
   fetch-now.mjs              # Last.fm + Goodreads + Letterboxd + Simkl → now + media
-  simkl-token.mjs            # one-off Simkl PIN login → SIMKL_ACCESS_TOKEN
+  simkl-token.mjs            # one-off Simkl device login → SIMKL_REFRESH_TOKEN
 .github/workflows/
   deploy.yml                 # push + cron + manual; builds and deploys
 ```

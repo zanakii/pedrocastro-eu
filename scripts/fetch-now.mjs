@@ -13,7 +13,7 @@
 //   GOODREADS_USER_ID   - numeric portion of your goodreads.com/user/show/<id> URL
 //   LETTERBOXD_USERNAME - your letterboxd.com/<username> handle
 //   SIMKL_CLIENT_ID     - Simkl API app client id (https://simkl.com/settings/developer/)
-//   SIMKL_ACCESS_TOKEN  - from `node --env-file=.env scripts/simkl-token.mjs`
+//   SIMKL_REFRESH_TOKEN - from `node --env-file=.env scripts/simkl-token.mjs`
 //
 // Any missing key just disables that source.
 //
@@ -362,6 +362,34 @@ async function fetchFilmsList() {
 // ---------------------------------------------------------------------------
 
 const SIMKL_API = 'https://api.simkl.com';
+const SIMKL_UA = 'pedrocastro.eu/1.0 (+https://pedrocastro.eu)';
+
+// Simkl AUTH V2 access tokens last 7 days, so every run trades the stored
+// refresh token for a fresh one. The refresh token itself doesn't rotate — the
+// same string comes back each time — so there's nothing to write back; it only
+// has to be used within 180 days of its last use or it lapses (re-link with
+// scripts/simkl-token.mjs). A device client has no secret to send.
+let accessToken = null;
+async function simklAccessToken() {
+  if (accessToken) return accessToken;
+  const res = await fetch(`${SIMKL_API}/oauth2/token`, {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/x-www-form-urlencoded',
+      'user-agent': SIMKL_UA,
+    },
+    body: new URLSearchParams({
+      grant_type: 'refresh_token',
+      refresh_token: process.env.SIMKL_REFRESH_TOKEN,
+      client_id: process.env.SIMKL_CLIENT_ID,
+    }),
+  });
+  if (!res.ok) throw new Error(`Simkl token ${res.status}`);
+  const json = await res.json();
+  if (!json.access_token) throw new Error('Simkl token response carried no access_token');
+  accessToken = json.access_token;
+  return accessToken;
+}
 
 // Simkl's API rules want the client id and app name/version on every request,
 // plus a User-Agent that identifies the app.
@@ -373,8 +401,8 @@ async function simklGet(path, params = {}) {
   for (const [key, value] of Object.entries(params)) url.searchParams.set(key, value);
   const res = await fetch(url, {
     headers: {
-      authorization: `Bearer ${process.env.SIMKL_ACCESS_TOKEN}`,
-      'user-agent': 'pedrocastro.eu/1.0 (+https://pedrocastro.eu)',
+      authorization: `Bearer ${await simklAccessToken()}`,
+      'user-agent': SIMKL_UA,
     },
   });
   if (!res.ok) throw new Error(`Simkl ${res.status}`);
@@ -425,7 +453,7 @@ function normalizeShow(entry, type) {
 // nothing has moved since the last manual refresh.
 async function fetchSeriesList(prevActivity) {
   if (process.env.SIMKL_REFRESH !== '1') return null;
-  if (!process.env.SIMKL_CLIENT_ID || !process.env.SIMKL_ACCESS_TOKEN) {
+  if (!process.env.SIMKL_CLIENT_ID || !process.env.SIMKL_REFRESH_TOKEN) {
     console.warn('[feeds] Simkl env missing; skipping series');
     return null;
   }

@@ -1,11 +1,13 @@
 #!/usr/bin/env node
-// One-off: links Simkl to this site by exchanging a PIN for the access token
-// that scripts/fetch-now.mjs reads as SIMKL_ACCESS_TOKEN.
+// One-off: links Simkl to this site and prints the refresh token that
+// scripts/fetch-now.mjs reads as SIMKL_REFRESH_TOKEN.
 //
 //   node --env-file=.env scripts/simkl-token.mjs   (needs SIMKL_CLIENT_ID)
 //
-// Simkl's PIN tokens last about five years and can't be refreshed, so this only
-// needs running again when the series feed starts failing with a 401.
+// This is Simkl's AUTH V2 device flow: it prints a code, you approve it on
+// simkl.com, and it prints the refresh token. That token doesn't rotate, but it
+// expires 180 days after its last use — so a manual site refresh twice a year
+// keeps it alive, and if it ever lapses, run this again.
 
 const clientId = process.env.SIMKL_CLIENT_ID;
 if (!clientId) {
@@ -13,37 +15,58 @@ if (!clientId) {
   process.exit(1);
 }
 
-const query = new URLSearchParams({
-  client_id: clientId,
-  'app-name': 'pedrocastro-eu',
-  'app-version': '1.0',
-});
-const headers = { 'user-agent': 'pedrocastro.eu/1.0 (+https://pedrocastro.eu)' };
+const UA = 'pedrocastro.eu/1.0 (+https://pedrocastro.eu)';
 
-async function get(path) {
-  const res = await fetch(`https://api.simkl.com${path}?${query}`, { headers });
-  if (!res.ok) throw new Error(`Simkl ${res.status}`);
-  return res.json();
+async function post(path, params) {
+  const res = await fetch(`https://api.simkl.com${path}`, {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/x-www-form-urlencoded',
+      'user-agent': UA,
+    },
+    body: new URLSearchParams(params),
+  });
+  return { status: res.status, json: await res.json().catch(() => ({})) };
 }
 
-const pin = await get('/oauth/pin');
-if (!pin.user_code) {
-  console.error('Simkl did not return a code:', pin);
+// media:read only — the site reads the library and never writes to it.
+const device = await post('/oauth2/device', { client_id: clientId, scope: 'media:read' });
+if (!device.json.device_code) {
+  console.error(`Simkl refused the device request (${device.status}):`, device.json);
   process.exit(1);
 }
-console.log(`Enter ${pin.user_code} at ${pin.verification_url ?? pin.verification_uri}`);
 
-const deadline = Date.now() + (pin.expires_in ?? 900) * 1000;
+console.log(`Enter ${device.json.user_code} at ${device.json.verification_uri}`);
+if (device.json.verification_uri_complete) {
+  console.log(`or open ${device.json.verification_uri_complete} to skip typing it.`);
+}
+console.log('Waiting for approval...');
+
+let interval = (device.json.interval ?? 5) * 1000;
+const deadline = Date.now() + (device.json.expires_in ?? 900) * 1000;
 while (Date.now() < deadline) {
-  await new Promise((r) => setTimeout(r, (pin.interval ?? 5) * 1000));
-  const check = await get(`/oauth/pin/${pin.user_code}`);
-  if (check.result === 'OK' && check.access_token) {
-    console.log('\nLinked. Add this as the SIMKL_ACCESS_TOKEN repository secret:\n');
-    console.log(check.access_token);
+  await new Promise((r) => setTimeout(r, interval));
+  const { status, json } = await post('/oauth2/token', {
+    grant_type: 'urn:ietf:params:oauth:grant-type:device_code',
+    device_code: device.json.device_code,
+    client_id: clientId,
+  });
+  if (json.refresh_token) {
+    console.log('\nLinked. Add this as the SIMKL_REFRESH_TOKEN repository secret:\n');
+    console.log(json.refresh_token);
+    console.log(`\n(scope: ${json.scope ?? 'unknown'})`);
     process.exit(0);
   }
-  // Polling a code that no longer exists returns a fresh PIN instead.
-  if (check.device_code) break;
+  // Still waiting is the only error worth polling through; slow_down also asks
+  // for a longer gap between attempts.
+  if (json.error === 'slow_down') {
+    interval += 5000;
+    continue;
+  }
+  if (json.error === 'authorization_pending') continue;
+  console.error(`Simkl stopped the login (${status}):`, json.error ?? json);
+  process.exit(1);
 }
-console.error('The code expired before it was entered. Run this again.');
+
+console.error('The code expired before it was approved. Run this again.');
 process.exit(1);
