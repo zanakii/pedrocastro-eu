@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T05:37:56.173Z",
+  "updatedAt": "2026-10-02T10:09:45.415Z",
   "listening": {
     "kind": "track",
     "track": "Blank Space (Taylor's Version)",
@@ -25,5 +25,14 @@
     "url": "https://letterboxd.com/film/12-angry-men/",
     "poster": "https://a.ltrbxd.com/resized/film-poster/5/1/7/0/0/51700-12-angry-men-0-600-0-900-crop.jpg?v=b8aaf291a9",
     "watchedAt": "2026-09-12T00:00:00.000Z"
+  },
+  "series": {
+    "show": "The Wire",
+    "year": 2002,
+    "season": 1,
+    "number": 8,
+    "watchedAt": "2026-09-29T19:48:17.000Z",
+    "url": "https://simkl.com/tv/8902/the-wire",
+    "image": "https://wsrv.nl/?url=https://simkl.in/posters/41/419191d030211db_c.webp&q=90"
   }
 }

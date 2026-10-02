@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T05:37:56.173Z",
+  "updatedAt": "2026-10-02T10:09:45.415Z",
   "music": [
     {
       "kind": "track",
@@ -119,5 +119,53 @@
       "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/5/5/3/9/4/1255394-the-odyssey-2026-0-600-0-900-crop.jpg?v=1eed046d0c",
       "watchedAt": "2026-07-25T00:00:00.000Z"
     }
-  ]
+  ],
+  "series": [
+    {
+      "show": "The Wire",
+      "year": 2002,
+      "season": 1,
+      "number": 8,
+      "watchedAt": "2026-09-29T19:48:17.000Z",
+      "url": "https://simkl.com/tv/8902/the-wire",
+      "image": "https://wsrv.nl/?url=https://simkl.in/posters/41/419191d030211db_c.webp&q=90"
+    },
+    {
+      "show": "Ted Lasso",
+      "year": 2020,
+      "season": 4,
+      "number": 8,
+      "watchedAt": "2026-09-29T18:46:16.000Z",
+      "url": "https://simkl.com/tv/1359610/ted-lasso",
+      "image": "https://wsrv.nl/?url=https://simkl.in/posters/11/116270662d150894ff_c.webp&q=90"
+    },
+    {
+      "show": "Fleabag",
+      "year": 2016,
+      "season": 2,
+      "number": 6,
+      "watchedAt": "2026-09-28T15:42:39.000Z",
+      "url": "https://simkl.com/tv/602144/fleabag",
+      "image": "https://wsrv.nl/?url=https://simkl.in/posters/10/10969196dc547a2723_c.webp&q=90"
+    },
+    {
+      "show": "It's Always Sunny in Philadelphia",
+      "year": 2005,
+      "season": 1,
+      "number": 2,
+      "watchedAt": "2026-09-12T20:52:18.000Z",
+      "url": "https://simkl.com/tv/5338/its-always-sunny-in-philadelphia",
+      "image": "https://wsrv.nl/?url=https://simkl.in/posters/18/18556cd1ece989e_c.webp&q=90"
+    },
+    {
+      "show": "Turn of the Tide",
+      "year": 2023,
+      "season": 1,
+      "number": 7,
+      "watchedAt": "2026-09-07T17:24:24.000Z",
+      "url": "https://simkl.com/tv/1932039/turn-of-the-tide",
+      "image": "https://wsrv.nl/?url=https://simkl.in/posters/13/139363373e41f41f3c_c.webp&q=90"
+    }
+  ],
+  "seriesActivity": "2026-09-30T05:00:02.000Z"
 }
