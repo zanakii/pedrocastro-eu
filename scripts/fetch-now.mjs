@@ -393,7 +393,9 @@ async function simklAccessToken() {
 
 // Simkl's API rules want the client id and app name/version on every request,
 // plus a User-Agent that identifies the app.
-async function simklGet(path, params = {}) {
+// `auth: false` is for the public catalogue (episode lists), which needs no user
+// token — so a lapsed login can't cost us episode titles we already have.
+async function simklGet(path, params = {}, { auth = true } = {}) {
   const url = new URL(path, SIMKL_API);
   url.searchParams.set('client_id', process.env.SIMKL_CLIENT_ID);
   url.searchParams.set('app-name', 'pedrocastro-eu');
@@ -401,7 +403,7 @@ async function simklGet(path, params = {}) {
   for (const [key, value] of Object.entries(params)) url.searchParams.set(key, value);
   const res = await fetch(url, {
     headers: {
-      authorization: `Bearer ${await simklAccessToken()}`,
+      ...(auth ? { authorization: `Bearer ${await simklAccessToken()}` } : {}),
       'user-agent': SIMKL_UA,
     },
   });
@@ -439,6 +441,10 @@ function normalizeShow(entry, type) {
     show: show.title,
     year: show.year ?? null,
     ...latestEpisode(entry),
+    // Filled in afterwards from the catalogue; the id is what that lookup and
+    // its cache are keyed on.
+    episode: null,
+    simkl: simkl ?? null,
     // Linking each row to its Simkl page is also the attribution Simkl asks for.
     url: simkl ? `https://simkl.com/${type}/${simkl}${slug ? `/${slug}` : ''}` : null,
     // Simkl serves posters through this resizing proxy; `_c` is 170×250.
@@ -486,6 +492,51 @@ async function fetchSeriesList(prevActivity) {
   return { list: list.length ? list : null, activity };
 }
 
+// Episode titles aren't in the library payload, so they come from the show's
+// catalogue entry — public data, no user token. Called with the already-clamped
+// list so only rows that reach the timeline cost a request.
+//
+// Titles are reused from the previous snapshot while a row's episode is
+// unchanged, so a refresh that adds one episode makes one request, not five. A
+// failed lookup leaves the row as "S1E8" rather than blanking anything.
+async function withEpisodeTitles(series, prevSeries) {
+  // A previous row carries its answer, including `null` for "the catalogue has
+  // no title for this episode" — so a known-untitled row isn't asked about
+  // again. A row whose lookup *failed* has no `episode` key at all (undefined
+  // is dropped on write), which is what makes that case retry later.
+  const cache = new Map();
+  for (const p of prevSeries ?? []) {
+    if (p.simkl && p.episode !== undefined) cache.set(`${p.simkl}|${p.season}|${p.number}`, p.episode);
+  }
+  // Same rule as the library itself: Simkl is only called on a manual refresh.
+  // On every other run an unresolved row keeps its numbers and waits.
+  const mayFetch = process.env.SIMKL_REFRESH === '1';
+  for (const s of series) {
+    if (s.episode || !s.simkl || s.number == null) continue;
+    const key = `${s.simkl}|${s.season}|${s.number}`;
+    if (cache.has(key)) {
+      s.episode = cache.get(key);
+      continue;
+    }
+    if (!mayFetch) {
+      s.episode = undefined;
+      continue;
+    }
+    try {
+      const episodes = await simklGet(`/tv/episodes/${s.simkl}`, {}, { auth: false });
+      // Specials carry no season/episode numbers, so they match nothing here.
+      const match = (Array.isArray(episodes) ? episodes : []).find(
+        (e) => e.episode === s.number && (s.season == null || e.season === s.season),
+      );
+      s.episode = match?.title ?? null;
+    } catch (err) {
+      console.error('[feeds] Simkl episode title failed:', err.message);
+      s.episode = undefined;
+    }
+  }
+  return series;
+}
+
 // ---------------------------------------------------------------------------
 // Orchestration
 // ---------------------------------------------------------------------------
@@ -522,6 +573,14 @@ const filmsList = await safe('films', fetchFilmsList, prevMedia?.films ?? null);
 const seriesFetch = await safe('series', () => fetchSeriesList(prevMedia?.seriesActivity), null);
 const seriesList = seriesFetch?.list ?? prevMedia?.series ?? null;
 
+// Clamp first, then resolve titles, so a lookup only happens for rows that
+// actually reach the timeline.
+const series = await safe(
+  'episode titles',
+  () => withEpisodeTitles(clampMedia(seriesList, 'watchedAt'), prevMedia?.series),
+  clampMedia(seriesList, 'watchedAt'),
+);
+
 const updatedAt = new Date().toISOString();
 
 const now = {
@@ -539,9 +598,10 @@ const now = {
     prevNow?.watching ?? {
       title: null, year: null, rating: null, rewatch: false, url: null, poster: null, watchedAt: null,
     },
-  series: seriesList?.[0] ??
+  series: series[0] ??
     prevNow?.series ?? {
-      show: null, year: null, season: null, number: null, watchedAt: null, url: null, image: null,
+      show: null, year: null, season: null, number: null, episode: null, simkl: null,
+      watchedAt: null, url: null, image: null,
     },
 };
 
@@ -550,7 +610,7 @@ const media = {
   music: clampMedia(musicList, 'playedAt', { keepNowPlaying: true }),
   books: clampMedia(booksList, 'readAt'),
   films: clampMedia(filmsList, 'watchedAt'),
-  series: clampMedia(seriesList, 'watchedAt'),
+  series,
   // The Simkl activity stamp the series list was pulled at, so the next manual
   // refresh can skip the library pull when nothing has changed.
   seriesActivity: seriesFetch?.activity ?? prevMedia?.seriesActivity ?? null,

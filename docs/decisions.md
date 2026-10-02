@@ -5,6 +5,28 @@ Each entry records *what* was decided and *why*, so future changes have context.
 
 ---
 
+## 2026-10-02 — Resolve episode titles from Simkl's catalogue
+
+**Context.** Series rows read `S1E8`, which says nothing about what was watched.
+Simkl's library payload (`/sync/all-items`) carries no episode titles, so the
+numbers were all there was.
+
+**Decided:** resolve titles from `GET /tv/episodes/{id}`, which returns a show's
+full episode list. It's public catalogue data — `client_id` alone, no user token —
+so a lapsed login can't strip titles from rows that already have them. Rows now
+read `Old Cases · S1E8`, title first.
+
+**Keeping it cheap.** Titles are resolved *after* `clampMedia`, so only the rows
+that reach the timeline cost anything — at most 5 shows. Each title is cached in
+`media.json` against the show's Simkl id plus season and episode number, and
+reused while that row's episode is unchanged, so a refresh that adds one episode
+makes one extra call rather than five. This mirrors the TMDB poster cache the
+Trakt feed used before it was dropped. A failed lookup leaves the row as `S1E8`.
+
+**Costs.** Specials come back without season or episode numbers, so they match
+nothing and stay untitled. The `episode` and `simkl` fields are new in
+`media.json`, absent from older snapshots, and read defensively.
+
 ## 2026-09-14 — Bring series back via Simkl, refreshed by hand
 
 **Context.** Series were dropped on 4 August 2026, when Trakt deleted the API
@@ -36,8 +58,9 @@ to write its own secrets — which would have meant storing a GitHub PAT, the sa
 rotating-credential problem that ruled out Spotify in favour of Last.fm.
 
 **Costs.** Series go stale until a refresh is triggered; relative dates stay right
-because every rebuild recomputes them. Simkl's payload has no episode titles, so
-rows show `S2E5` and nothing more. The refresh token expires 180 days after its
+because every rebuild recomputes them. Simkl's library payload carries no episode
+titles, so rows shipped as `S2E5` and nothing more (resolved on 2 October 2026 —
+see the entry above). The refresh token expires 180 days after its
 last use, so the manual trigger has to be pressed at least twice a year or the
 feed needs re-linking via `scripts/simkl-token.mjs` — a real cost of manual-only,
 and the reason the token is a sliding window rather than a fixed date. The API is

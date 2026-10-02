@@ -49,13 +49,20 @@ export interface WatchingNow {
   watchedAt: string | null;
 }
 
-/** The latest episode watched of a show, from Simkl. Its payload has no episode titles. */
+/** The latest episode watched of a show, from Simkl. */
 export interface SeriesNow {
   show: string | null;
   year: number | null;
   /** Null when Simkl reports no season number. */
   season: number | null;
   number: number | null;
+  /**
+   * Episode title, resolved separately from Simkl's catalogue. `null` means the
+   * catalogue has no title for it; absent means it hasn't been looked up yet.
+   */
+  episode?: string | null;
+  /** Simkl show id — the key episode titles are looked up and cached by. */
+  simkl: number | null;
   watchedAt: string | null;
   url: string | null;
   image: string | null;
@@ -75,7 +82,8 @@ export function getNow(): Now {
   return {
     ...data,
     series: data.series ?? {
-      show: null, year: null, season: null, number: null, watchedAt: null, url: null, image: null,
+      show: null, year: null, season: null, number: null, episode: null, simkl: null,
+      watchedAt: null, url: null, image: null,
     },
   };
 }
@@ -144,7 +152,7 @@ export function describeSeries(
   item: SeriesNow,
 ): { title: string; subtitle?: string; meta?: string } | null {
   if (!item.show) return null;
-  const episode =
+  const code =
     item.number == null
       ? null
       : item.season == null
@@ -153,7 +161,9 @@ export function describeSeries(
   const when = formatRelative(item.watchedAt);
   return {
     title: item.year ? `${item.show} (${item.year})` : item.show,
-    subtitle: episode ?? undefined,
+    // Title first, then the code — the name is the part worth reading. Rows
+    // whose title couldn't be resolved fall back to the code alone.
+    subtitle: joinDot([item.episode, code]),
     meta: when ? `watched ${when}` : undefined,
   };
 }
