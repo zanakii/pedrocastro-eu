@@ -25,13 +25,24 @@ isn't a call, which is a backend and a datastore; and a visitor isn't the accoun
 owner interacting anyway. The Colophon states the manual-only rule, so it has to
 stay true.
 
+**Auth: V2, not the simpler V1.** Simkl's V1 PIN flow hands out a five-year token
+and would have been one line of work, but it retires around April 2027 and the
+client type is fixed at registration — a V1 app can't be upgraded, only replaced.
+So the app is registered as a V2 device client (`media:read`; the site never
+writes). V2 access tokens last 7 days, so each run trades the stored refresh token
+for a fresh one. Crucially the refresh token is **non-rotating**: the same string
+comes back every time, so there is nothing to persist and no need for the workflow
+to write its own secrets — which would have meant storing a GitHub PAT, the same
+rotating-credential problem that ruled out Spotify in favour of Last.fm.
+
 **Costs.** Series go stale until a refresh is triggered; relative dates stay right
 because every rebuild recomputes them. Simkl's payload has no episode titles, so
-rows show `S2E5` and nothing more. The token comes from Simkl's PIN flow, lasts
-about five years and can't be refreshed — re-run `scripts/simkl-token.mjs` when it
-lapses, around September 2031. The API is free for non-commercial use; each row
-linking to its Simkl page covers attribution. Posters come from Simkl, so TMDB
-stays gone.
+rows show `S2E5` and nothing more. The refresh token expires 180 days after its
+last use, so the manual trigger has to be pressed at least twice a year or the
+feed needs re-linking via `scripts/simkl-token.mjs` — a real cost of manual-only,
+and the reason the token is a sliding window rather than a fixed date. The API is
+free for non-commercial use; each row linking to its Simkl page covers
+attribution. Posters come from Simkl, so TMDB stays gone.
 
 ## 2026-08-11 — Group music by album, not by track
 

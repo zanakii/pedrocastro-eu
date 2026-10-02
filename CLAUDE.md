@@ -55,6 +55,11 @@ window). Rules that matter:
   timer, or a fetch-on-visit — each breaks the rule, and the Colophon says we
   don't. Series card text lives in `describeSeries()`, beside
   `describeListening()`.
+- **Simkl auth is AUTH V2.** The stored secret is a *refresh* token; each run
+  trades it for a 7-day access token. It doesn't rotate, so nothing is written
+  back — but it dies 180 days after its last use, so a manual refresh at least
+  twice a year keeps it alive. Re-link with `scripts/simkl-token.mjs`. Don't
+  reach for the V1 PIN flow: it's retired around April 2027.
 
 ## Hard constraints
 

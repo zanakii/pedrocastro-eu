@@ -36,7 +36,7 @@ jobs:
           GOODREADS_USER_ID: ${{ secrets.GOODREADS_USER_ID }}
           LETTERBOXD_USERNAME: ${{ secrets.LETTERBOXD_USERNAME }}
           SIMKL_CLIENT_ID: ${{ secrets.SIMKL_CLIENT_ID }}
-          SIMKL_ACCESS_TOKEN: ${{ secrets.SIMKL_ACCESS_TOKEN }}
+          SIMKL_REFRESH_TOKEN: ${{ secrets.SIMKL_REFRESH_TOKEN }}
           # Series refresh on manual runs only: Simkl asks apps not to poll on a
           # timer, so scheduled runs carry the last series snapshot forward.
           SIMKL_REFRESH: ${{ github.event_name == 'workflow_dispatch' && '1' || '' }}
