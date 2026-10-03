@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-10-03T19:14:00.320Z",
+  "updatedAt": "2026-10-03T23:04:54.727Z",
   "listening": {
-    "kind": "track",
-    "track": "Yeah!",
-    "artist": "Usher",
-    "album": "Confessions (Expanded Edition)",
-    "url": "https://www.last.fm/music/Usher/_/Yeah!",
-    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/420c27aff4da33b13fa12d32d88be78c.jpg",
-    "playedAt": null,
-    "nowPlaying": true
+    "kind": "album",
+    "album": "GUTS",
+    "artist": "Olivia Rodrigo",
+    "trackCount": 6,
+    "url": "https://www.last.fm/music/Olivia%20Rodrigo/GUTS",
+    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/e39eb31f874f4a5c4afa836845141437.jpg",
+    "playedAt": "2026-10-03T21:31:59.000Z",
+    "nowPlaying": false
   },
   "reading": {
     "title": "Piranesi",
