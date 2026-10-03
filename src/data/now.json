@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-10-03T13:23:29.453Z",
+  "updatedAt": "2026-10-03T19:14:00.320Z",
   "listening": {
     "kind": "track",
-    "track": "Down To Be Wrong",
-    "artist": "HAIM",
-    "album": "I quit",
-    "url": "https://www.last.fm/music/HAIM/_/Down%20To%20Be%20Wrong",
-    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/82e871361430cb053493053b8b2d8532.png",
-    "playedAt": "2026-10-03T10:27:43.000Z",
-    "nowPlaying": false
+    "track": "Yeah!",
+    "artist": "Usher",
+    "album": "Confessions (Expanded Edition)",
+    "url": "https://www.last.fm/music/Usher/_/Yeah!",
+    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/420c27aff4da33b13fa12d32d88be78c.jpg",
+    "playedAt": null,
+    "nowPlaying": true
   },
   "reading": {
     "title": "Piranesi",
