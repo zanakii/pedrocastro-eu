@@ -1,6 +1,26 @@
 {
-  "updatedAt": "2026-10-04T05:53:39.751Z",
+  "updatedAt": "2026-10-04T14:05:00.886Z",
   "music": [
+    {
+      "kind": "track",
+      "track": "1 step forward, 3 steps back",
+      "artist": "Olivia Rodrigo",
+      "album": "SOUR",
+      "url": "https://www.last.fm/music/Olivia%20Rodrigo/_/1%20step%20forward,%203%20steps%20back",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9da8add22ca31771a440d2a6f7615f6d.jpg",
+      "playedAt": "2026-10-04T12:39:20.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "track",
+      "track": "drivers license",
+      "artist": "Olivia Rodrigo",
+      "album": "SOUR",
+      "url": "https://www.last.fm/music/Olivia%20Rodrigo/_/drivers%20license",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9da8add22ca31771a440d2a6f7615f6d.jpg",
+      "playedAt": "2026-10-04T12:35:17.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "album",
       "album": "GUTS",
@@ -29,26 +49,6 @@
       "url": "https://www.last.fm/music/ROSAL%C3%8DA/_/DESPECH%C3%81",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/537b14b38629f6fc3b4752c569f21e84.jpg",
       "playedAt": "2026-10-03T21:21:47.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Scared to Be Lonely",
-      "artist": "Martin Garrix",
-      "album": "Scared to Be Lonely",
-      "url": "https://www.last.fm/music/Martin%20Garrix/_/Scared%20to%20Be%20Lonely",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/8c080de828facbde88ea56cf77f1c9a5.png",
-      "playedAt": "2026-10-03T21:20:26.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Shakira: Bzrp Music Sessions, Vol. 53/66",
-      "artist": "Bizarrap",
-      "album": "Shakira: Bzrp Music Sessions, Vol. 53/66",
-      "url": "https://www.last.fm/music/Bizarrap/_/Shakira:%20Bzrp%20Music%20Sessions,%20Vol.%2053%2F66",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/68887696a1783b6404bcf3ae4aa64cf6.jpg",
-      "playedAt": "2026-10-03T21:17:10.000Z",
       "nowPlaying": false
     }
   ],
