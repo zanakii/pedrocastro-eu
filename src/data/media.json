@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T23:10:46.360Z",
+  "updatedAt": "2026-10-05T05:40:55.659Z",
   "music": [
     {
       "kind": "track",
@@ -53,6 +53,13 @@
     }
   ],
   "books": [
+    {
+      "title": "Piranesi",
+      "author": "Susanna Clarke",
+      "url": "https://www.goodreads.com/book/show/50202953",
+      "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1773750050l/50202953._SY475_.jpg",
+      "readAt": "2026-10-04T00:00:00.000Z"
+    },
     {
       "title": "Beartown - A cidade dos grandes sonhos",
       "author": "Fredrik Backman",
