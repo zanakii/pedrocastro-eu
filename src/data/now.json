@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T15:18:42.940Z",
+  "updatedAt": "2026-10-09T16:10:23.126Z",
   "listening": {
     "kind": "album",
     "album": "GUTS",
@@ -30,8 +30,10 @@
     "show": "The Wire",
     "year": 2002,
     "season": 1,
-    "number": 8,
-    "watchedAt": "2026-09-29T19:48:17.000Z",
+    "number": 9,
+    "watchedAt": "2026-10-08T12:00:33.000Z",
+    "episode": "Game Day",
+    "simkl": 8902,
     "url": "https://simkl.com/tv/8902/the-wire",
     "image": "https://wsrv.nl/?url=https://simkl.in/posters/41/419191d030211db_c.webp&q=90"
   }

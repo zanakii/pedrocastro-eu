@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T15:18:42.940Z",
+  "updatedAt": "2026-10-09T16:10:23.126Z",
   "music": [
     {
       "kind": "album",
@@ -125,8 +125,10 @@
       "show": "The Wire",
       "year": 2002,
       "season": 1,
-      "number": 8,
-      "watchedAt": "2026-09-29T19:48:17.000Z",
+      "number": 9,
+      "watchedAt": "2026-10-08T12:00:33.000Z",
+      "episode": "Game Day",
+      "simkl": 8902,
       "url": "https://simkl.com/tv/8902/the-wire",
       "image": "https://wsrv.nl/?url=https://simkl.in/posters/41/419191d030211db_c.webp&q=90"
     },
@@ -134,8 +136,10 @@
       "show": "Ted Lasso",
       "year": 2020,
       "season": 4,
-      "number": 8,
-      "watchedAt": "2026-09-29T18:46:16.000Z",
+      "number": 9,
+      "watchedAt": "2026-10-06T20:11:04.000Z",
+      "episode": "Mae Rides the Bus",
+      "simkl": 1359610,
       "url": "https://simkl.com/tv/1359610/ted-lasso",
       "image": "https://wsrv.nl/?url=https://simkl.in/posters/11/116270662d150894ff_c.webp&q=90"
     },
@@ -145,6 +149,8 @@
       "season": 2,
       "number": 6,
       "watchedAt": "2026-09-28T15:42:39.000Z",
+      "episode": "Episode 6",
+      "simkl": 602144,
       "url": "https://simkl.com/tv/602144/fleabag",
       "image": "https://wsrv.nl/?url=https://simkl.in/posters/10/10969196dc547a2723_c.webp&q=90"
     },
@@ -154,6 +160,8 @@
       "season": 1,
       "number": 2,
       "watchedAt": "2026-09-12T20:52:18.000Z",
+      "episode": "Charlie Wants an Abortion",
+      "simkl": 5338,
       "url": "https://simkl.com/tv/5338/its-always-sunny-in-philadelphia",
       "image": "https://wsrv.nl/?url=https://simkl.in/posters/18/18556cd1ece989e_c.webp&q=90"
     },
@@ -163,9 +171,11 @@
       "season": 1,
       "number": 7,
       "watchedAt": "2026-09-07T17:24:24.000Z",
+      "episode": "This Is Not America",
+      "simkl": 1932039,
       "url": "https://simkl.com/tv/1932039/turn-of-the-tide",
       "image": "https://wsrv.nl/?url=https://simkl.in/posters/13/139363373e41f41f3c_c.webp&q=90"
     }
   ],
-  "seriesActivity": "2026-09-30T05:00:02.000Z"
+  "seriesActivity": "2026-10-08T12:00:33.000Z"
 }
