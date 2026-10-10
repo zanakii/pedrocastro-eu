@@ -1,6 +1,16 @@
 {
-  "updatedAt": "2026-10-10T14:28:24.535Z",
+  "updatedAt": "2026-10-10T20:04:24.616Z",
   "music": [
+    {
+      "kind": "album",
+      "album": "NEVER ENOUGH: VERSIONS",
+      "artist": "Turnstile",
+      "trackCount": 11,
+      "url": "https://www.last.fm/music/Turnstile/NEVER%20ENOUGH%3A%20VERSIONS",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/5e21725eda92a799979bfc143cfb9a76.jpg",
+      "playedAt": "2026-10-10T19:24:00.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "album",
       "album": "GUTS",
@@ -39,16 +49,6 @@
       "url": "https://www.last.fm/music/Antonio%20Varia%C3%A7oes/Anjo%20da%20Guarda",
       "image": null,
       "playedAt": "2026-10-05T16:17:39.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Brilhantes Diamantes",
-      "artist": "Serial",
-      "album": "Brilhantes Diamantes",
-      "url": "https://www.last.fm/music/Serial/_/Brilhantes%20Diamantes",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/5f5c069d836b1e02ac3e22d9118bfdcd.jpg",
-      "playedAt": "2026-10-05T16:13:20.000Z",
       "nowPlaying": false
     }
   ],
