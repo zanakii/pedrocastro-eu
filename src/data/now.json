@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-10-11T05:47:05.672Z",
+  "updatedAt": "2026-10-11T14:55:08.612Z",
   "listening": {
-    "kind": "album",
-    "album": "NEVER ENOUGH: VERSIONS",
-    "artist": "Turnstile",
-    "trackCount": 11,
-    "url": "https://www.last.fm/music/Turnstile/NEVER%20ENOUGH%3A%20VERSIONS",
-    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/5e21725eda92a799979bfc143cfb9a76.jpg",
-    "playedAt": "2026-10-10T19:24:00.000Z",
+    "kind": "track",
+    "track": "The Look",
+    "artist": "Metronomy",
+    "album": "The English Riviera",
+    "url": "https://www.last.fm/music/Metronomy/_/The%20Look",
+    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0002cf7516faf4bef587f0653ed72cce.png",
+    "playedAt": "2026-10-11T10:15:10.000Z",
     "nowPlaying": false
   },
   "reading": {
