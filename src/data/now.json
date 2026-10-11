@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-10-11T14:55:08.612Z",
+  "updatedAt": "2026-10-11T20:17:11.365Z",
   "listening": {
     "kind": "track",
-    "track": "The Look",
-    "artist": "Metronomy",
-    "album": "The English Riviera",
-    "url": "https://www.last.fm/music/Metronomy/_/The%20Look",
-    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0002cf7516faf4bef587f0653ed72cce.png",
-    "playedAt": "2026-10-11T10:15:10.000Z",
-    "nowPlaying": false
+    "track": "Sexo, Violencia y Llantas",
+    "artist": "ROSALÍA",
+    "album": "LUX",
+    "url": "https://www.last.fm/music/ROSAL%C3%8DA/_/Sexo,%20Violencia%20y%20Llantas",
+    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0e6bf07983158660ec4e00cae318ba83.jpg",
+    "playedAt": null,
+    "nowPlaying": true
   },
   "reading": {
     "title": "A Estrada",

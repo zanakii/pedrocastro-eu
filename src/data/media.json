@@ -1,6 +1,36 @@
 {
-  "updatedAt": "2026-10-11T14:55:08.612Z",
+  "updatedAt": "2026-10-11T20:17:11.365Z",
   "music": [
+    {
+      "kind": "track",
+      "track": "Sexo, Violencia y Llantas",
+      "artist": "ROSALÍA",
+      "album": "LUX",
+      "url": "https://www.last.fm/music/ROSAL%C3%8DA/_/Sexo,%20Violencia%20y%20Llantas",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0e6bf07983158660ec4e00cae318ba83.jpg",
+      "playedAt": null,
+      "nowPlaying": true
+    },
+    {
+      "kind": "album",
+      "album": "Skinty Fia",
+      "artist": "Fontaines D.C.",
+      "trackCount": 3,
+      "url": "https://www.last.fm/music/Fontaines%20D.C./Skinty%20Fia",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7384e60ccd4592662d959e2ec5335864.jpg",
+      "playedAt": "2026-10-11T16:52:02.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "album",
+      "album": "Romance",
+      "artist": "Fontaines D.C.",
+      "trackCount": 11,
+      "url": "https://www.last.fm/music/Fontaines%20D.C./Romance",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/4f4ae1fdc6b81d93c41c0054d596ccf0.png",
+      "playedAt": "2026-10-11T16:41:14.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "track",
       "track": "The Look",
@@ -19,36 +49,6 @@
       "url": "https://www.last.fm/music/Fred%20again../_/Danielle%20(Smile%20On%20My%20Face)",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/95458e99e834eee83bf469b5fc283289.jpg",
       "playedAt": "2026-10-11T10:12:16.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Training Season",
-      "artist": "Dua Lipa",
-      "album": "Training Season",
-      "url": "https://www.last.fm/music/Dua%20Lipa/_/Training%20Season",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9d522e7559ad7c4b55613737b7079ed7.png",
-      "playedAt": "2026-10-11T10:11:08.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "...Ready for It?",
-      "artist": "Taylor Swift",
-      "album": "reputation",
-      "url": "https://www.last.fm/music/Taylor%20Swift/_/...Ready%20for%20It%3F",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/dddb96a470fecc69d281f45c81a44d2a.jpg",
-      "playedAt": "2026-10-11T10:07:40.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Sometimes",
-      "artist": "DubVision",
-      "album": "Sometimes",
-      "url": "https://www.last.fm/music/DubVision/_/Sometimes",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/95965af1e042380df72c54e9dbe9568b.jpg",
-      "playedAt": "2026-10-11T10:04:22.000Z",
       "nowPlaying": false
     }
   ],
