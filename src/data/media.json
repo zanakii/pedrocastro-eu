@@ -1,15 +1,35 @@
 {
-  "updatedAt": "2026-10-11T20:17:11.365Z",
+  "updatedAt": "2026-10-11T23:44:10.027Z",
   "music": [
     {
+      "kind": "album",
+      "album": "evermore (deluxe version)",
+      "artist": "Taylor Swift",
+      "trackCount": 4,
+      "url": "https://www.last.fm/music/Taylor%20Swift/evermore%20(deluxe%20version)",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2b1ed6bdaba7aa57d94c1bdfb805e972.jpg",
+      "playedAt": "2026-10-11T21:27:39.000Z",
+      "nowPlaying": false
+    },
+    {
       "kind": "track",
-      "track": "Sexo, Violencia y Llantas",
-      "artist": "ROSALÍA",
+      "track": "‘tis the damn season",
+      "artist": "Taylor Swift",
+      "album": "evermore",
+      "url": "https://www.last.fm/music/Taylor%20Swift/_/%E2%80%98tis%20the%20damn%20season",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f2f83759a50360ff954861c223a5e777.jpg",
+      "playedAt": "2026-10-11T21:26:27.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "album",
       "album": "LUX",
-      "url": "https://www.last.fm/music/ROSAL%C3%8DA/_/Sexo,%20Violencia%20y%20Llantas",
+      "artist": "ROSALÍA",
+      "trackCount": 16,
+      "url": "https://www.last.fm/music/ROSAL%C3%8DA/LUX",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0e6bf07983158660ec4e00cae318ba83.jpg",
-      "playedAt": null,
-      "nowPlaying": true
+      "playedAt": "2026-10-11T21:01:10.000Z",
+      "nowPlaying": false
     },
     {
       "kind": "album",
@@ -29,26 +49,6 @@
       "url": "https://www.last.fm/music/Fontaines%20D.C./Romance",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/4f4ae1fdc6b81d93c41c0054d596ccf0.png",
       "playedAt": "2026-10-11T16:41:14.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "The Look",
-      "artist": "Metronomy",
-      "album": "The English Riviera",
-      "url": "https://www.last.fm/music/Metronomy/_/The%20Look",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0002cf7516faf4bef587f0653ed72cce.png",
-      "playedAt": "2026-10-11T10:15:10.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Danielle (Smile On My Face)",
-      "artist": "Fred again..",
-      "album": "Actual Life 3 (January 1 - September 9 2022)",
-      "url": "https://www.last.fm/music/Fred%20again../_/Danielle%20(Smile%20On%20My%20Face)",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/95458e99e834eee83bf469b5fc283289.jpg",
-      "playedAt": "2026-10-11T10:12:16.000Z",
       "nowPlaying": false
     }
   ],
