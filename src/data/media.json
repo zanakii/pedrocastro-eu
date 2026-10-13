@@ -1,6 +1,16 @@
 {
-  "updatedAt": "2026-10-13T11:48:48.422Z",
+  "updatedAt": "2026-10-13T19:17:45.244Z",
   "music": [
+    {
+      "kind": "album",
+      "album": "Everything Has Changed",
+      "artist": "Danielle Ponder",
+      "trackCount": 12,
+      "url": "https://www.last.fm/music/Danielle%20Ponder/Everything%20Has%20Changed",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/832fcc86f2b53397a69010d8e6054839.png",
+      "playedAt": "2026-10-13T14:21:09.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "album",
       "album": "Skinty Fia",
@@ -39,16 +49,6 @@
       "url": "https://www.last.fm/music/ROSAL%C3%8DA/LUX",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0e6bf07983158660ec4e00cae318ba83.jpg",
       "playedAt": "2026-10-11T21:01:10.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "album",
-      "album": "Romance",
-      "artist": "Fontaines D.C.",
-      "trackCount": 11,
-      "url": "https://www.last.fm/music/Fontaines%20D.C./Romance",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/4f4ae1fdc6b81d93c41c0054d596ccf0.png",
-      "playedAt": "2026-10-11T16:41:14.000Z",
       "nowPlaying": false
     }
   ],
