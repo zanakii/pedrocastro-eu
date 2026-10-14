@@ -1,6 +1,26 @@
 {
-  "updatedAt": "2026-10-14T20:12:06.632Z",
+  "updatedAt": "2026-10-14T23:14:34.919Z",
   "music": [
+    {
+      "kind": "track",
+      "track": "Dear John (Taylor's Version)",
+      "artist": "Taylor Swift",
+      "album": "Speak Now (Taylor's Version)",
+      "url": "https://www.last.fm/music/Taylor%20Swift/_/Dear%20John%20(Taylor%27s%20Version)",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/caa5a586b599869e10542593928b5fdf.jpg",
+      "playedAt": "2026-10-14T21:11:16.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "album",
+      "album": "LUX",
+      "artist": "ROSALÍA",
+      "trackCount": 16,
+      "url": "https://www.last.fm/music/ROSAL%C3%8DA/LUX",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0e6bf07983158660ec4e00cae318ba83.jpg",
+      "playedAt": "2026-10-14T20:20:18.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "track",
       "track": "Entrai",
@@ -29,26 +49,6 @@
       "url": "https://www.last.fm/music/The%20Tallest%20Man%20on%20Earth/Just%20Beyond%20Endless%20Mountain",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/a0027e39491af377380376190f41a6c3.png",
       "playedAt": "2026-10-14T17:31:34.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "album",
-      "album": "Everything Has Changed",
-      "artist": "Danielle Ponder",
-      "trackCount": 12,
-      "url": "https://www.last.fm/music/Danielle%20Ponder/Everything%20Has%20Changed",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/832fcc86f2b53397a69010d8e6054839.png",
-      "playedAt": "2026-10-13T14:21:09.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "album",
-      "album": "Skinty Fia",
-      "artist": "Fontaines D.C.",
-      "trackCount": 3,
-      "url": "https://www.last.fm/music/Fontaines%20D.C./Skinty%20Fia",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7384e60ccd4592662d959e2ec5335864.jpg",
-      "playedAt": "2026-10-12T06:47:43.000Z",
       "nowPlaying": false
     }
   ],
