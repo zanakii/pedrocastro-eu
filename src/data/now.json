@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T13:11:21.973Z",
+  "updatedAt": "2026-10-25T18:02:21.575Z",
   "listening": {
     "kind": "album",
     "album": "Dopamine Chamber",
@@ -27,14 +27,14 @@
     "watchedAt": "2026-09-12T00:00:00.000Z"
   },
   "series": {
-    "show": "Ted Lasso",
-    "year": 2020,
-    "season": 4,
-    "number": 10,
-    "watchedAt": "2026-10-14T11:39:10.000Z",
-    "episode": "Being Alive",
-    "simkl": 1359610,
-    "url": "https://simkl.com/tv/1359610/ted-lasso",
-    "image": "https://wsrv.nl/?url=https://simkl.in/posters/11/116270662d150894ff_c.webp&q=90"
+    "show": "The Wire",
+    "year": 2002,
+    "season": 2,
+    "number": 1,
+    "watchedAt": "2026-10-18T19:48:57.000Z",
+    "episode": "Ebb Tide",
+    "simkl": 8902,
+    "url": "https://simkl.com/tv/8902/the-wire",
+    "image": "https://wsrv.nl/?url=https://simkl.in/posters/41/419191d030211db_c.webp&q=90"
   }
 }

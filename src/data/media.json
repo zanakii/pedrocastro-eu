@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T13:11:21.973Z",
+  "updatedAt": "2026-10-25T18:02:21.575Z",
   "music": [
     {
       "kind": "album",
@@ -113,6 +113,17 @@
   ],
   "series": [
     {
+      "show": "The Wire",
+      "year": 2002,
+      "season": 2,
+      "number": 1,
+      "watchedAt": "2026-10-18T19:48:57.000Z",
+      "episode": "Ebb Tide",
+      "simkl": 8902,
+      "url": "https://simkl.com/tv/8902/the-wire",
+      "image": "https://wsrv.nl/?url=https://simkl.in/posters/41/419191d030211db_c.webp&q=90"
+    },
+    {
       "show": "Ted Lasso",
       "year": 2020,
       "season": 4,
@@ -122,17 +133,6 @@
       "simkl": 1359610,
       "url": "https://simkl.com/tv/1359610/ted-lasso",
       "image": "https://wsrv.nl/?url=https://simkl.in/posters/11/116270662d150894ff_c.webp&q=90"
-    },
-    {
-      "show": "The Wire",
-      "year": 2002,
-      "season": 1,
-      "number": 12,
-      "watchedAt": "2026-10-13T11:51:11.000Z",
-      "episode": "Cleaning Up",
-      "simkl": 8902,
-      "url": "https://simkl.com/tv/8902/the-wire",
-      "image": "https://wsrv.nl/?url=https://simkl.in/posters/41/419191d030211db_c.webp&q=90"
     },
     {
       "show": "Fleabag",
@@ -168,5 +168,5 @@
       "image": "https://wsrv.nl/?url=https://simkl.in/posters/13/139363373e41f41f3c_c.webp&q=90"
     }
   ],
-  "seriesActivity": "2026-10-14T11:39:10.000Z"
+  "seriesActivity": "2026-10-18T19:48:57.000Z"
 }
