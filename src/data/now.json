@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-27T05:05:35.100Z",
+  "updatedAt": "2026-10-27T14:31:36.426Z",
   "listening": {
     "kind": "album",
     "album": "Dopamine Chamber",
@@ -18,13 +18,13 @@
     "startedAt": "2026-10-06T19:30:54.000Z"
   },
   "watching": {
-    "title": "12 Angry Men",
-    "year": "1957",
-    "rating": 4,
+    "title": "Obsession",
+    "year": "2025",
+    "rating": 3,
     "rewatch": false,
-    "url": "https://letterboxd.com/film/12-angry-men/",
-    "poster": "https://a.ltrbxd.com/resized/film-poster/5/1/7/0/0/51700-12-angry-men-0-600-0-900-crop.jpg?v=b8aaf291a9",
-    "watchedAt": "2026-09-12T00:00:00.000Z"
+    "url": "https://letterboxd.com/film/obsession-2025/",
+    "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/3/4/4/7/2/1234472-obsession-2025-2-0-600-0-900-crop.jpg?v=cff6fc00b6",
+    "watchedAt": "2026-10-27T00:00:00.000Z"
   },
   "series": {
     "show": "The Wire",
