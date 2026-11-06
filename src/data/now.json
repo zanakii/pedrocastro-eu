@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-11-06T06:46:30.960Z",
+  "updatedAt": "2026-11-06T15:55:27.788Z",
   "listening": {
-    "kind": "track",
-    "track": "Good as Hell",
-    "artist": "Lizzo",
-    "album": "Cuz I Love You  (Super Deluxe)",
-    "url": "https://www.last.fm/music/Lizzo/_/Good%20as%20Hell",
-    "image": null,
-    "playedAt": "2026-11-05T23:03:17.000Z",
+    "kind": "album",
+    "album": "Romance",
+    "artist": "Fontaines D.C.",
+    "trackCount": 8,
+    "url": "https://www.last.fm/music/Fontaines%20D.C./Romance",
+    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/4f4ae1fdc6b81d93c41c0054d596ccf0.png",
+    "playedAt": "2026-11-06T10:31:31.000Z",
     "nowPlaying": false
   },
   "reading": {
