@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T14:54:10.057Z",
+  "updatedAt": "2026-11-07T16:03:28.209Z",
   "listening": {
     "kind": "album",
     "album": "Romance",
@@ -27,14 +27,14 @@
     "watchedAt": "2026-10-27T00:00:00.000Z"
   },
   "series": {
-    "show": "The Wire",
-    "year": 2002,
-    "season": 2,
-    "number": 1,
-    "watchedAt": "2026-10-18T19:48:57.000Z",
-    "episode": "Ebb Tide",
-    "simkl": 8902,
-    "url": "https://simkl.com/tv/8902/the-wire",
-    "image": "https://wsrv.nl/?url=https://simkl.in/posters/41/419191d030211db_c.webp&q=90"
+    "show": "Curb Your Enthusiasm",
+    "year": 2000,
+    "season": 1,
+    "number": 5,
+    "watchedAt": "2026-11-07T14:01:19.000Z",
+    "episode": "Interior Decorator",
+    "simkl": 5798,
+    "url": "https://simkl.com/tv/5798/curb-your-enthusiasm",
+    "image": "https://wsrv.nl/?url=https://simkl.in/posters/11/118716808b9e86f71d_c.webp&q=90"
   }
 }
