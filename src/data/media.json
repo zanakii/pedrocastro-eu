@@ -1,6 +1,16 @@
 {
-  "updatedAt": "2026-11-08T15:12:41.771Z",
+  "updatedAt": "2026-11-08T20:29:16.033Z",
   "music": [
+    {
+      "kind": "track",
+      "track": "Makeba",
+      "artist": "Jain",
+      "album": "Zanaka",
+      "url": "https://www.last.fm/music/Jain/_/Makeba",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9d0fb21c06830c51e27ac36a340343c6.jpg",
+      "playedAt": "2026-11-08T15:33:44.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "album",
       "album": "Romance",
@@ -39,16 +49,6 @@
       "url": "https://www.last.fm/music/Turnstile/_/NEVER%20ENOUGH",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/16b2169592c65a0e733c8a741017de30.png",
       "playedAt": "2026-11-06T10:18:12.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Hard to Explain",
-      "artist": "The Strokes",
-      "album": "Is This It",
-      "url": "https://www.last.fm/music/The%20Strokes/_/Hard%20to%20Explain",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c7a4e1700ae85d9910bbe59887a8c771.jpg",
-      "playedAt": "2026-11-06T10:14:28.000Z",
       "nowPlaying": false
     }
   ],
