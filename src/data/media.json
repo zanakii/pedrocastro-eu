@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T06:29:17.204Z",
+  "updatedAt": "2026-11-09T18:48:34.818Z",
   "music": [
     {
       "kind": "track",
@@ -83,6 +83,15 @@
     }
   ],
   "films": [
+    {
+      "title": "The Drama",
+      "year": "2026",
+      "rating": 2.5,
+      "rewatch": false,
+      "url": "https://letterboxd.com/film/the-drama/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/0/5/4/9/4/1205494-the-drama-0-600-0-900-crop.jpg?v=2320acafd5",
+      "watchedAt": "2026-11-09T00:00:00.000Z"
+    },
     {
       "title": "Obsession",
       "year": "2025",
