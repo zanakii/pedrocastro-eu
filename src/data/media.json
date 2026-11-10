@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T18:48:34.818Z",
+  "updatedAt": "2026-11-10T02:44:22.897Z",
   "music": [
     {
       "kind": "track",
@@ -73,13 +73,6 @@
       "url": "https://www.goodreads.com/book/show/55298625",
       "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1612881211l/55298625._SY475_.jpg",
       "readAt": "2026-08-26T00:00:00.000Z"
-    },
-    {
-      "title": "Wuthering Heights",
-      "author": "Emily Brontë",
-      "url": "https://www.goodreads.com/book/show/15994537",
-      "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1546419424l/15994537._SY475_.jpg",
-      "readAt": "2026-08-10T00:00:00.000Z"
     }
   ],
   "films": [
