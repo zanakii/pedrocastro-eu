@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T11:28:19.966Z",
+  "updatedAt": "2026-11-14T12:44:55.602Z",
   "listening": {
     "kind": "track",
     "track": "Shut Up and Dance",
@@ -11,11 +11,11 @@
     "nowPlaying": false
   },
   "reading": {
-    "title": "A Estrada",
-    "author": "Cormac McCarthy",
-    "url": "https://www.goodreads.com/book/show/6004237",
-    "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1229439360l/6004237.jpg",
-    "startedAt": "2026-10-06T19:30:54.000Z"
+    "title": "Yellowface",
+    "author": "R.F. Kuang",
+    "url": "https://www.goodreads.com/book/show/203382742",
+    "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1701924647l/203382742.jpg",
+    "startedAt": "2026-11-14T12:44:54.394Z"
   },
   "watching": {
     "title": "The Drama",
@@ -30,9 +30,9 @@
     "show": "Curb Your Enthusiasm",
     "year": 2000,
     "season": 1,
-    "number": 5,
-    "watchedAt": "2026-11-07T14:01:19.000Z",
-    "episode": "Interior Decorator",
+    "number": 6,
+    "watchedAt": "2026-11-07T21:05:14.000Z",
+    "episode": "The Wire",
     "simkl": 5798,
     "url": "https://simkl.com/tv/5798/curb-your-enthusiasm",
     "image": "https://wsrv.nl/?url=https://simkl.in/posters/11/118716808b9e86f71d_c.webp&q=90"

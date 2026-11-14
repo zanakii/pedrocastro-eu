@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T11:28:19.966Z",
+  "updatedAt": "2026-11-14T12:44:55.602Z",
   "music": [
     {
       "kind": "track",
@@ -54,6 +54,13 @@
   ],
   "books": [
     {
+      "title": "A Estrada",
+      "author": "Cormac McCarthy",
+      "url": "https://www.goodreads.com/book/show/6004237",
+      "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1229439360l/6004237.jpg",
+      "readAt": "2026-11-14T12:44:54.724Z"
+    },
+    {
       "title": "Piranesi",
       "author": "Susanna Clarke",
       "url": "https://www.goodreads.com/book/show/50202953",
@@ -74,6 +81,18 @@
       "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1612881211l/55298625._SY475_.jpg",
       "readAt": "2026-08-26T00:00:00.000Z"
     }
+  ],
+  "booksSeen": [
+    "https://www.goodreads.com/book/show/6004237",
+    "https://www.goodreads.com/book/show/50202953",
+    "https://www.goodreads.com/book/show/58143817",
+    "https://www.goodreads.com/book/show/55298625",
+    "https://www.goodreads.com/book/show/15994537",
+    "https://www.goodreads.com/book/show/211948994",
+    "https://www.goodreads.com/book/show/246288258",
+    "https://www.goodreads.com/book/show/241412474",
+    "https://www.goodreads.com/book/show/40637252",
+    "https://www.goodreads.com/book/show/58256542"
   ],
   "films": [
     {
@@ -127,9 +146,9 @@
       "show": "Curb Your Enthusiasm",
       "year": 2000,
       "season": 1,
-      "number": 5,
-      "watchedAt": "2026-11-07T14:01:19.000Z",
-      "episode": "Interior Decorator",
+      "number": 6,
+      "watchedAt": "2026-11-07T21:05:14.000Z",
+      "episode": "The Wire",
       "simkl": 5798,
       "url": "https://simkl.com/tv/5798/curb-your-enthusiasm",
       "image": "https://wsrv.nl/?url=https://simkl.in/posters/11/118716808b9e86f71d_c.webp&q=90"
@@ -138,9 +157,9 @@
       "show": "The Wire",
       "year": 2002,
       "season": 2,
-      "number": 7,
-      "watchedAt": "2026-11-06T21:45:10.000Z",
-      "episode": "Backwash",
+      "number": 8,
+      "watchedAt": "2026-11-07T20:08:44.000Z",
+      "episode": "Duck and Cover",
       "simkl": 8902,
       "url": "https://simkl.com/tv/8902/the-wire",
       "image": "https://wsrv.nl/?url=https://simkl.in/posters/41/419191d030211db_c.webp&q=90"
@@ -179,5 +198,5 @@
       "image": "https://wsrv.nl/?url=https://simkl.in/posters/11/116270662d150894ff_c.webp&q=90"
     }
   ],
-  "seriesActivity": "2026-11-07T14:01:19.000Z"
+  "seriesActivity": "2026-11-07T21:05:14.000Z"
 }
