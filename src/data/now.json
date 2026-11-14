@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-11-14T12:44:55.602Z",
+  "updatedAt": "2026-11-14T18:01:23.923Z",
   "listening": {
-    "kind": "track",
-    "track": "Shut Up and Dance",
-    "artist": "Walk the Moon",
-    "album": "TALKING IS HARD (Expanded Edition)",
-    "url": "https://www.last.fm/music/Walk%20the%20Moon/_/Shut%20Up%20and%20Dance",
-    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7497e00122c19da7bd3627f81a6cb710.jpg",
-    "playedAt": "2026-11-08T23:20:03.000Z",
+    "kind": "album",
+    "album": "Superbloom",
+    "artist": "Jessie Ware",
+    "trackCount": 3,
+    "url": "https://www.last.fm/music/Jessie%20Ware/Superbloom",
+    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/8ccb5ed69ae70c56f34db09e36590a7f.png",
+    "playedAt": "2026-11-14T17:58:22.000Z",
     "nowPlaying": false
   },
   "reading": {

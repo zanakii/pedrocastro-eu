@@ -1,6 +1,36 @@
 {
-  "updatedAt": "2026-11-14T12:44:55.602Z",
+  "updatedAt": "2026-11-14T18:01:23.923Z",
   "music": [
+    {
+      "kind": "album",
+      "album": "Superbloom",
+      "artist": "Jessie Ware",
+      "trackCount": 3,
+      "url": "https://www.last.fm/music/Jessie%20Ware/Superbloom",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/8ccb5ed69ae70c56f34db09e36590a7f.png",
+      "playedAt": "2026-11-14T17:58:22.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "album",
+      "album": "Devagar Que A Vida É Curta",
+      "artist": "Ana Lua Caiano",
+      "trackCount": 15,
+      "url": "https://www.last.fm/music/Ana%20Lua%20Caiano/Devagar%20Que%20A%20Vida%20%C3%89%20Curta",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f93fc301407a1cdaedd78c792a13fb70.jpg",
+      "playedAt": "2026-11-14T17:53:00.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "album",
+      "album": "LAGUM EM TODO LUGAR",
+      "artist": "Lagum",
+      "trackCount": 16,
+      "url": "https://www.last.fm/music/Lagum/LAGUM%20EM%20TODO%20LUGAR",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/5605a48526327bd41578dbc7c7eafed4.jpg",
+      "playedAt": "2026-11-14T17:21:18.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "track",
       "track": "Shut Up and Dance",
@@ -19,36 +49,6 @@
       "url": "https://www.last.fm/music/DubVision/_/Sometimes",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/95965af1e042380df72c54e9dbe9568b.jpg",
       "playedAt": "2026-11-08T23:19:18.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "album",
-      "album": "The Rise and Fall of a Midwest Princess",
-      "artist": "Chappell Roan",
-      "trackCount": 3,
-      "url": "https://www.last.fm/music/Chappell%20Roan/The%20Rise%20and%20Fall%20of%20a%20Midwest%20Princess",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b3987ea108b929eead2f59fdd3b4a007.jpg",
-      "playedAt": "2026-11-08T23:10:49.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "My Number",
-      "artist": "Foals",
-      "album": "Holy Fire",
-      "url": "https://www.last.fm/music/Foals/_/My%20Number",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c34e1968d7e8082fa0f42a9960976e4f.jpg",
-      "playedAt": "2026-11-08T23:10:47.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Supercut",
-      "artist": "Lorde",
-      "album": "Melodrama",
-      "url": "https://www.last.fm/music/Lorde/_/Supercut",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/fdef4c7536c03d0a5a6689e4b1fa9b42.jpg",
-      "playedAt": "2026-11-08T23:10:45.000Z",
       "nowPlaying": false
     }
   ],
