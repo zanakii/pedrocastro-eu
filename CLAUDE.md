@@ -39,6 +39,12 @@ window). Rules that matter:
   data that disagrees with what the next cron run will write.
 - **Rebase before regenerating**, never after — otherwise you regenerate, hit a
   conflict, and throw the work away.
+- **Goodreads is the shelf widget, not RSS** (the feeds died October 2026). One
+  widget per shelf, ids in `GOODREADS_READING_WIDGET_ID` / `GOODREADS_READ_WIDGET_ID`
+  — `shelf=` in the URL is ignored. The widget has no dates: stored `readAt` /
+  `startedAt` values are the record, and `media.json`'s `booksSeen` is what tells
+  a newly finished book from history. Don't drop or reset it, or the next run
+  re-baselines and misses whatever was finished in between.
 - Music rows are album-grouped at 3+ distinct tracks, otherwise per-track;
   `music[]` holds both shapes, discriminated by `kind`. `describeListening()` in
   `src/lib/now.ts` is the single place either shape becomes card text — the

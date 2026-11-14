@@ -11,6 +11,10 @@
 //   LASTFM_API_KEY      - https://www.last.fm/api/account/create
 //   LASTFM_USERNAME     - your Last.fm handle
 //   GOODREADS_USER_ID   - numeric portion of your goodreads.com/user/show/<id> URL
+//   GOODREADS_READING_WIDGET_ID - widget_id of a Goodreads shelf widget set to
+//                         currently-reading (goodreads.com/review/custom_widget)
+//   GOODREADS_READ_WIDGET_ID    - same, set to the read shelf, sorted by date
+//                         read, newest first, ~10 books
 //   LETTERBOXD_USERNAME - your letterboxd.com/<username> handle
 //   SIMKL_CLIENT_ID     - Simkl API app client id (https://simkl.com/settings/developer/)
 //   SIMKL_REFRESH_TOKEN - from `node --env-file=.env scripts/simkl-token.mjs`
@@ -236,71 +240,119 @@ function toIso(rfc822) {
 // ---------------------------------------------------------------------------
 // Goodreads — currently reading (Now) + read shelf (Media)
 // ---------------------------------------------------------------------------
+//
+// Goodreads retired its public shelf RSS feeds around 28 October 2026. What's
+// left without signing in is the shelf widget: a JavaScript snippet holding
+// rendered HTML. Two quirks shape everything below:
+//   - the shelf is part of a widget's *saved settings* on goodreads.com, keyed
+//     by widget_id; a `shelf=` in the URL is ignored. So each shelf needs its
+//     own widget, created by hand, and its id in the env.
+//   - it carries no dates at all. A book is dated by when this job first sees
+//     it: started when it reaches currently-reading, finished when it reaches
+//     read. That's up to one cron interval late, and honest about it.
 
-function goodreadsBook(item) {
-  const title = rssField(item, 'title');
+const GOODREADS_UA = 'pedrocastro.eu/1.0 (+https://pedrocastro.eu)';
+// More new books than this in a single run isn't reading, it's a re-pointed or
+// misconfigured widget — re-baseline instead of stamping them all "today".
+const MAX_NEW_BOOKS_PER_RUN = 3;
+const BOOKS_SEEN_LIMIT = 50;
+
+function decodeEntities(s) {
+  return s
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
+    .replace(/&quot;/g, '"')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&')
+    .trim();
+}
+
+// The widget is `var widget_code = '<html, JS-escaped>';` plus loader code.
+// Pull the string out and undo the JS escaping to get plain HTML.
+function widgetHtml(js) {
+  const m = js.match(/var widget_code = '((?:[^'\\]|\\.)*)'/);
+  if (!m) throw new Error('Goodreads widget: no widget_code in response');
+  return m[1].replace(/\\(.)/g, (_, c) => (c === 'n' ? '\n' : c === 't' ? '\t' : c));
+}
+
+function parseWidgetBook(block) {
+  const titleDiv = block.match(/class="gr_custom_title_\w*">\s*<a [^>]*href="([^"]*)"[^>]*>([^<]*)</);
+  const coverA = block.match(/class="gr_custom_book_container_\w*">\s*<a title="([^"]*)"/);
+  const title = decodeEntities(coverA?.[1] || titleDiv?.[2] || '');
   if (!title) return null;
-  // The RSS <link> points at the *review* page; link to the book itself instead,
-  // built from book_id. Fall back to the review link if book_id is ever absent.
-  const bookId = rssField(item, 'book_id');
+  const author = block.match(/class="gr_custom_author_\w*">[\s\S]*?<a [^>]*>([^<]*)</)?.[1];
+  const img = block.match(/<img [^>]*src="(https:\/\/i\.gr-assets\.com\/[^"]+)"/)?.[1] ?? null;
+  // The links point at the review; the cover path carries the book id, so link
+  // to the book itself, falling back to the review page if it's ever missing.
+  const bookId = img?.match(/\/books\/\d+[a-z]\/(\d+)\./)?.[1];
   const url = bookId
     ? `https://www.goodreads.com/book/show/${bookId}`
-    : rssField(item, 'link')?.split('?')[0] ?? null;
-  const cover =
-    rssField(item, 'book_large_image_url') ??
-    rssField(item, 'book_medium_image_url') ??
-    rssField(item, 'book_small_image_url');
-  return { title, author: rssField(item, 'author_name') || null, url, cover: cover || null };
+    : titleDiv?.[1].split('?')[0] ?? null;
+  // Widget covers are 75px thumbnails; dropping the size suffix serves the
+  // original. Placeholder covers ("nophoto") aren't worth showing.
+  const cover = img && !img.includes('nophoto') ? img.replace(/\._S[XY]\d+_(?=\.)/, '') : null;
+  return { title, author: author ? decodeEntities(author) : null, url, cover };
 }
 
-async function fetchGoodreadsShelf(shelf) {
+async function fetchGoodreadsWidget(widgetEnv) {
   const userId = process.env.GOODREADS_USER_ID;
-  if (!userId) {
-    console.warn('[feeds] Goodreads env missing; skipping', shelf);
+  const widgetId = process.env[widgetEnv];
+  if (!userId || !widgetId) {
+    console.warn(`[feeds] Goodreads env missing (GOODREADS_USER_ID / ${widgetEnv}); skipping`);
     return null;
   }
-  const url = `https://www.goodreads.com/review/list_rss/${userId}?shelf=${shelf}`;
-  const res = await fetch(url, {
-    // Goodreads sometimes 403s requests without a UA string.
-    headers: { 'user-agent': 'pedrocastro.eu/1.0 (+https://pedrocastro.eu)' },
-  });
+  const url = `https://www.goodreads.com/review/custom_widget/${userId}?widget_id=${widgetId}`;
+  const res = await fetch(url, { headers: { 'user-agent': GOODREADS_UA } });
   if (!res.ok) throw new Error(`Goodreads ${res.status}`);
-  return res.text();
+  const html = widgetHtml(await res.text());
+  return html
+    .split(/class="gr_custom_each_container_\w*"/)
+    .slice(1)
+    .map(parseWidgetBook)
+    .filter(Boolean);
 }
 
-// Now: the one book currently being read.
-async function fetchReading() {
-  const xml = await fetchGoodreadsShelf('currently-reading');
-  if (xml == null) return null;
-  const item = eachItem(xml)[0];
-  if (!item) return null;
-  const book = goodreadsBook(item);
-  if (!book) return null;
+// Now: the one book currently being read. Same book as last run keeps its
+// date; a new one is dated now.
+async function fetchReading(prev) {
+  const books = await fetchGoodreadsWidget('GOODREADS_READING_WIDGET_ID');
+  const book = books?.[0];
+  if (!book) return null; // failed or empty: keep the previous card
   const startedAt =
-    toIso(rssField(item, 'user_date_started')) ??
-    toIso(rssField(item, 'user_date_added')) ??
-    toIso(rssField(item, 'pubDate'));
+    prev?.url && prev.url === book.url && prev.startedAt ? prev.startedAt : new Date().toISOString();
   return { ...book, startedAt };
 }
 
-// Media: the most recently finished books, dated by completion.
-async function fetchBooksList() {
-  const xml = await fetchGoodreadsShelf('read');
-  if (xml == null) return null;
-  const books = eachItem(xml)
-    .map((item) => {
-      const book = goodreadsBook(item);
-      if (!book) return null;
-      const readAt =
-        toIso(rssField(item, 'user_read_at')) ??
-        toIso(rssField(item, 'user_date_added'));
-      return { ...book, readAt };
-    })
-    .filter(Boolean)
-    .sort((a, b) => (b.readAt ?? '').localeCompare(a.readAt ?? ''));
-  // Return null only when the shelf itself came back empty (a failed fetch
-  // keeps the previous data); window + cap are enforced centrally.
-  return books.length ? books : null;
+// Media: finished books. The widget has no dates, so the stored list is the
+// record: books already there keep their dates, and a book is added only when
+// it newly appears on the read shelf. `seen` remembers what was on the shelf,
+// so a first run (or a re-baseline) doesn't stamp years of history as "today".
+async function fetchBooksList(prevBooks, prevSeen, prevReading) {
+  const shelf = await fetchGoodreadsWidget('GOODREADS_READ_WIDGET_ID');
+  if (!shelf?.length) return null; // failed or empty: keep everything as it was
+
+  const stored = Array.isArray(prevBooks) ? prevBooks : [];
+  const known = new Set([...(prevSeen ?? []), ...stored.map((b) => b.url)]);
+  const nowIso = new Date().toISOString();
+  let fresh;
+  if (!prevSeen) {
+    // First run: only the book that just left the Now card counts as new.
+    fresh = shelf.filter((b) => prevReading?.url && b.url === prevReading.url && !known.has(b.url));
+    console.log(`[feeds] books: baselined ${shelf.length} read books`);
+  } else {
+    fresh = shelf.filter((b) => !known.has(b.url));
+    if (fresh.length > MAX_NEW_BOOKS_PER_RUN) {
+      console.warn(`[feeds] books: ${fresh.length} new at once; re-baselining instead of dating them today`);
+      fresh = [];
+    }
+  }
+
+  const list = [...fresh.map((b) => ({ ...b, readAt: nowIso })), ...stored].sort((a, b) =>
+    (b.readAt ?? '').localeCompare(a.readAt ?? ''),
+  );
+  const seen = [...new Set([...shelf.map((b) => b.url), ...(prevSeen ?? [])])].slice(0, BOOKS_SEEN_LIMIT);
+  return { list, seen };
 }
 
 // ---------------------------------------------------------------------------
@@ -567,8 +619,13 @@ const prevNow = await readJson(NOW_PATH);
 const prevMedia = await readJson(MEDIA_PATH);
 
 const musicList = await safe('music', fetchMusicList, prevMedia?.music ?? null);
-const reading = await safe('reading', fetchReading, prevNow?.reading ?? null);
-const booksList = await safe('books', fetchBooksList, prevMedia?.books ?? null);
+const reading = await safe('reading', () => fetchReading(prevNow?.reading), prevNow?.reading ?? null);
+const booksFetch = await safe(
+  'books',
+  () => fetchBooksList(prevMedia?.books, prevMedia?.booksSeen, prevNow?.reading),
+  null,
+);
+const booksList = booksFetch?.list ?? prevMedia?.books ?? null;
 const filmsList = await safe('films', fetchFilmsList, prevMedia?.films ?? null);
 const seriesFetch = await safe('series', () => fetchSeriesList(prevMedia?.seriesActivity), null);
 const seriesList = seriesFetch?.list ?? prevMedia?.series ?? null;
@@ -609,6 +666,9 @@ const media = {
   updatedAt,
   music: clampMedia(musicList, 'playedAt', { keepNowPlaying: true }),
   books: clampMedia(booksList, 'readAt'),
+  // What was on the Goodreads read shelf last run. The widget has no dates, so
+  // this is how a newly finished book is told apart from old history.
+  booksSeen: booksFetch?.seen ?? prevMedia?.booksSeen ?? null,
   films: clampMedia(filmsList, 'watchedAt'),
   series,
   // The Simkl activity stamp the series list was pulled at, so the next manual

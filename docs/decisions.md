@@ -5,6 +5,30 @@ Each entry records *what* was decided and *why*, so future changes have context.
 
 ---
 
+## 2026-11-14 — Read Goodreads through its shelf widget
+
+**Context.** Goodreads retired its public shelf RSS feeds around 28 October 2026:
+`/review/list_rss/` 404s for every user, and the shelf pages now need a sign-in.
+Fail-soft kept the last book on the Now card for over two weeks.
+
+**Decided:** read the shelf widget (`/review/custom_widget/<user>?widget_id=…`),
+which still needs no sign-in. The shelf belongs to the widget's saved settings on
+goodreads.com — a `shelf=` in the URL is ignored — so there's one widget per shelf,
+each id in its own secret (`GOODREADS_READING_WIDGET_ID`, `GOODREADS_READ_WIDGET_ID`).
+
+**Dates.** The widget has none. A book is dated by when the cron first sees it:
+started when it reaches currently-reading (kept for as long as it's the same
+book), finished when it reaches read. So `/before/` keeps its stored books and
+their real dates, and `media.json` gains `booksSeen` — what was on the read shelf
+last run — so history isn't mistaken for new reading. The first run only
+baselines, except the book that just left the Now card, which counts as
+finished. More than three new books in one run is treated as a re-pointed widget
+and re-baselined rather than dated "today".
+
+**Costs.** Dates are up to one cron interval late, and the Colophon says so.
+Re-reading a book already in `booksSeen` won't surface it again. Rejected: a
+library export (manual, and back to hand-run steps) and dropping books outright.
+
 ## 2026-10-02 — Resolve episode titles from Simkl's catalogue
 
 **Context.** Series rows read `S1E8`, which says nothing about what was watched.
