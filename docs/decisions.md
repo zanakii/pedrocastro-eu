@@ -12,9 +12,13 @@ Each entry records *what* was decided and *why*, so future changes have context.
 Fail-soft kept the last book on the Now card for over two weeks.
 
 **Decided:** read the shelf widget (`/review/custom_widget/<user>?widget_id=…`),
-which still needs no sign-in. The shelf belongs to the widget's saved settings on
-goodreads.com — a `shelf=` in the URL is ignored — so there's one widget per shelf,
-each id in its own secret (`GOODREADS_READING_WIDGET_ID`, `GOODREADS_READ_WIDGET_ID`).
+which still needs no sign-in. Probing showed `widget_id` is any number, and the
+*first* request for a user and id fixes its shelf, size and sort; later params
+are ignored. Nothing needs creating on goodreads.com — the fetcher picks one id
+per shelf (`GOODREADS_WIDGETS`), still sends the full settings every time in case
+Goodreads ever forgets them, and refuses a response naming the wrong shelf. The
+read shelf sorts by date read; currently-reading by date started, since books
+in progress have no read date.
 
 **Dates.** The widget has none. A book is dated by when the cron first sees it:
 started when it reaches currently-reading (kept for as long as it's the same
@@ -26,7 +30,9 @@ finished. More than three new books in one run is treated as a re-pointed widget
 and re-baselined rather than dated "today".
 
 **Costs.** Dates are up to one cron interval late, and the Colophon says so.
-Re-reading a book already in `booksSeen` won't surface it again. Rejected: a
+Re-reading a book already in `booksSeen` won't surface it again. The id behaviour
+is undocumented and could change; if it does, the shelf check fails soft and the
+log says which widget served what. Rejected: a
 library export (manual, and back to hand-run steps) and dropping books outright.
 
 ## 2026-10-02 — Resolve episode titles from Simkl's catalogue

@@ -11,10 +11,6 @@
 //   LASTFM_API_KEY      - https://www.last.fm/api/account/create
 //   LASTFM_USERNAME     - your Last.fm handle
 //   GOODREADS_USER_ID   - numeric portion of your goodreads.com/user/show/<id> URL
-//   GOODREADS_READING_WIDGET_ID - widget_id of a Goodreads shelf widget set to
-//                         currently-reading (goodreads.com/review/custom_widget)
-//   GOODREADS_READ_WIDGET_ID    - same, set to the read shelf, sorted by date
-//                         read, newest first, ~10 books
 //   LETTERBOXD_USERNAME - your letterboxd.com/<username> handle
 //   SIMKL_CLIENT_ID     - Simkl API app client id (https://simkl.com/settings/developer/)
 //   SIMKL_REFRESH_TOKEN - from `node --env-file=.env scripts/simkl-token.mjs`
@@ -244,14 +240,22 @@ function toIso(rfc822) {
 // Goodreads retired its public shelf RSS feeds around 28 October 2026. What's
 // left without signing in is the shelf widget: a JavaScript snippet holding
 // rendered HTML. Two quirks shape everything below:
-//   - the shelf is part of a widget's *saved settings* on goodreads.com, keyed
-//     by widget_id; a `shelf=` in the URL is ignored. So each shelf needs its
-//     own widget, created by hand, and its id in the env.
+//   - settings stick to the widget_id. Any number works as an id, but the
+//     *first* request for a (user, widget_id) fixes its shelf, size and sort;
+//     later query params are ignored. So each shelf gets its own id, picked
+//     once, and every request still sends the full settings in case Goodreads
+//     ever forgets them. The response names its shelf, which is checked, so a
+//     mis-set id fails soft instead of putting the wrong shelf on the site.
+//     Changing any setting means picking a new id.
 //   - it carries no dates at all. A book is dated by when this job first sees
 //     it: started when it reaches currently-reading, finished when it reaches
 //     read. That's up to one cron interval late, and honest about it.
 
 const GOODREADS_UA = 'pedrocastro.eu/1.0 (+https://pedrocastro.eu)';
+const GOODREADS_WIDGETS = {
+  'currently-reading': { id: 167472970, num: 3, sort: 'date_started' },
+  read: { id: 446372959, num: 10, sort: 'date_read' },
+};
 // More new books than this in a single run isn't reading, it's a re-pointed or
 // misconfigured widget — re-baseline instead of stamping them all "today".
 const MAX_NEW_BOOKS_PER_RUN = 3;
@@ -295,17 +299,22 @@ function parseWidgetBook(block) {
   return { title, author: author ? decodeEntities(author) : null, url, cover };
 }
 
-async function fetchGoodreadsWidget(widgetEnv) {
+async function fetchGoodreadsWidget(shelf) {
   const userId = process.env.GOODREADS_USER_ID;
-  const widgetId = process.env[widgetEnv];
-  if (!userId || !widgetId) {
-    console.warn(`[feeds] Goodreads env missing (GOODREADS_USER_ID / ${widgetEnv}); skipping`);
+  if (!userId) {
+    console.warn('[feeds] Goodreads env missing; skipping', shelf);
     return null;
   }
-  const url = `https://www.goodreads.com/review/custom_widget/${userId}?widget_id=${widgetId}`;
+  const { id, num, sort } = GOODREADS_WIDGETS[shelf];
+  const params = new URLSearchParams({
+    shelf, num_books: String(num), sort, order: 'd', widget_id: String(id),
+  });
+  const url = `https://www.goodreads.com/review/custom_widget/${userId}?${params}`;
   const res = await fetch(url, { headers: { 'user-agent': GOODREADS_UA } });
   if (!res.ok) throw new Error(`Goodreads ${res.status}`);
   const html = widgetHtml(await res.text());
+  const got = html.match(/[?&]shelf=([\w-]+)/)?.[1];
+  if (got !== shelf) throw new Error(`Goodreads widget ${id} serves shelf "${got}", not "${shelf}"`);
   return html
     .split(/class="gr_custom_each_container_\w*"/)
     .slice(1)
@@ -316,7 +325,7 @@ async function fetchGoodreadsWidget(widgetEnv) {
 // Now: the one book currently being read. Same book as last run keeps its
 // date; a new one is dated now.
 async function fetchReading(prev) {
-  const books = await fetchGoodreadsWidget('GOODREADS_READING_WIDGET_ID');
+  const books = await fetchGoodreadsWidget('currently-reading');
   const book = books?.[0];
   if (!book) return null; // failed or empty: keep the previous card
   const startedAt =
@@ -329,7 +338,7 @@ async function fetchReading(prev) {
 // it newly appears on the read shelf. `seen` remembers what was on the shelf,
 // so a first run (or a re-baseline) doesn't stamp years of history as "today".
 async function fetchBooksList(prevBooks, prevSeen, prevReading) {
-  const shelf = await fetchGoodreadsWidget('GOODREADS_READ_WIDGET_ID');
+  const shelf = await fetchGoodreadsWidget('read');
   if (!shelf?.length) return null; // failed or empty: keep everything as it was
 
   const stored = Array.isArray(prevBooks) ? prevBooks : [];
