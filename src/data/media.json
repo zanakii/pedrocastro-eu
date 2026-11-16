@@ -1,14 +1,24 @@
 {
-  "updatedAt": "2026-11-16T06:29:57.788Z",
+  "updatedAt": "2026-11-16T18:32:32.742Z",
   "music": [
+    {
+      "kind": "album",
+      "album": "Cold 2 The Touch",
+      "artist": "Angel Du$t",
+      "trackCount": 3,
+      "url": "https://www.last.fm/music/Angel%20Du%24t/Cold%202%20The%20Touch",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c2a176e712f8f763844a2dc7591d7e26.png",
+      "playedAt": "2026-11-16T12:13:33.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "album",
       "album": "Dopamine Chamber",
       "artist": "Fontaines D.C.",
-      "trackCount": 4,
+      "trackCount": 11,
       "url": "https://www.last.fm/music/Fontaines%20D.C./Dopamine%20Chamber",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/e432ae942d490229a895685390586044.jpg",
-      "playedAt": "2026-11-15T22:13:06.000Z",
+      "playedAt": "2026-11-16T12:08:48.000Z",
       "nowPlaying": false
     },
     {
@@ -39,16 +49,6 @@
       "url": "https://www.last.fm/music/Olivia%20Rodrigo/you%20seem%20pretty%20sad%20for%20a%20girl%20so%20in%20love",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/06ccc3cc0cfe1e4ca42a26ac00d97a7b.jpg",
       "playedAt": "2026-11-15T21:52:00.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "serena joy",
-      "artist": "Olivia Rodrigo",
-      "album": "Serena Joy",
-      "url": "https://www.last.fm/music/Olivia%20Rodrigo/_/serena%20joy",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/647062f53aa438e61ddcec4b8f1142fd.jpg",
-      "playedAt": "2026-11-15T21:50:13.000Z",
       "nowPlaying": false
     }
   ],
