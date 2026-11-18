@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T17:15:28.415Z",
+  "updatedAt": "2026-11-18T22:05:06.780Z",
   "music": [
     {
       "kind": "album",
@@ -143,6 +143,17 @@
   ],
   "series": [
     {
+      "show": "The Wire",
+      "year": 2002,
+      "season": 2,
+      "number": 10,
+      "watchedAt": "2026-11-17T13:05:55.000Z",
+      "episode": "Storm Warnings",
+      "simkl": 8902,
+      "url": "https://simkl.com/tv/8902/the-wire",
+      "image": "https://wsrv.nl/?url=https://simkl.in/posters/41/419191d030211db_c.webp&q=90"
+    },
+    {
       "show": "Curb Your Enthusiasm",
       "year": 2000,
       "season": 1,
@@ -152,17 +163,6 @@
       "simkl": 5798,
       "url": "https://simkl.com/tv/5798/curb-your-enthusiasm",
       "image": "https://wsrv.nl/?url=https://simkl.in/posters/11/118716808b9e86f71d_c.webp&q=90"
-    },
-    {
-      "show": "The Wire",
-      "year": 2002,
-      "season": 2,
-      "number": 8,
-      "watchedAt": "2026-11-07T20:08:44.000Z",
-      "episode": "Duck and Cover",
-      "simkl": 8902,
-      "url": "https://simkl.com/tv/8902/the-wire",
-      "image": "https://wsrv.nl/?url=https://simkl.in/posters/41/419191d030211db_c.webp&q=90"
     },
     {
       "show": "Carrie",
@@ -198,5 +198,5 @@
       "image": "https://wsrv.nl/?url=https://simkl.in/posters/11/116270662d150894ff_c.webp&q=90"
     }
   ],
-  "seriesActivity": "2026-11-07T21:05:14.000Z"
+  "seriesActivity": "2026-11-17T13:05:55.000Z"
 }
