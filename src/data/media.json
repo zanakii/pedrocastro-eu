@@ -1,6 +1,26 @@
 {
-  "updatedAt": "2026-11-18T07:28:56.205Z",
+  "updatedAt": "2026-11-18T17:15:28.415Z",
   "music": [
+    {
+      "kind": "album",
+      "album": "Sunshine",
+      "artist": "Jungle",
+      "trackCount": 7,
+      "url": "https://www.last.fm/music/Jungle/Sunshine",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c81733fcc0f430f5c20f97a7b697c6c9.jpg",
+      "playedAt": "2026-11-18T10:25:28.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "track",
+      "track": "Swerve",
+      "artist": "Trentemøller",
+      "album": "Trentemøller",
+      "url": "https://www.last.fm/music/Trentem%C3%B8ller/_/Swerve",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f77c6ffbd9d5bcce8f7b77bc7b8534c4.png",
+      "playedAt": "2026-11-18T09:25:05.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "album",
       "album": "Cold 2 The Touch",
@@ -29,26 +49,6 @@
       "url": "https://www.last.fm/music/Fontaines%20D.C./Romance",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/4f4ae1fdc6b81d93c41c0054d596ccf0.png",
       "playedAt": "2026-11-15T22:06:50.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "I Love You",
-      "artist": "Fontaines D.C.",
-      "album": "Skinty Fia",
-      "url": "https://www.last.fm/music/Fontaines%20D.C./_/I%20Love%20You",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7384e60ccd4592662d959e2ec5335864.jpg",
-      "playedAt": "2026-11-15T22:02:16.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "album",
-      "album": "you seem pretty sad for a girl so in love",
-      "artist": "Olivia Rodrigo",
-      "trackCount": 3,
-      "url": "https://www.last.fm/music/Olivia%20Rodrigo/you%20seem%20pretty%20sad%20for%20a%20girl%20so%20in%20love",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/06ccc3cc0cfe1e4ca42a26ac00d97a7b.jpg",
-      "playedAt": "2026-11-15T21:52:00.000Z",
       "nowPlaying": false
     }
   ],
