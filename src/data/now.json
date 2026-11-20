@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-11-19T23:02:58.050Z",
+  "updatedAt": "2026-11-20T07:15:39.813Z",
   "listening": {
-    "kind": "track",
-    "track": "Starburster",
-    "artist": "Fontaines D.C.",
+    "kind": "album",
     "album": "Romance",
-    "url": "https://www.last.fm/music/Fontaines%20D.C./_/Starburster",
+    "artist": "Fontaines D.C.",
+    "trackCount": 4,
+    "url": "https://www.last.fm/music/Fontaines%20D.C./Romance",
     "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/4f4ae1fdc6b81d93c41c0054d596ccf0.png",
-    "playedAt": null,
-    "nowPlaying": true
+    "playedAt": "2026-11-19T23:00:04.000Z",
+    "nowPlaying": false
   },
   "reading": {
     "title": "Yellowface",
