@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-11-20T16:57:54.389Z",
+  "updatedAt": "2026-11-21T01:31:04.518Z",
   "listening": {
-    "kind": "album",
-    "album": "Romance",
-    "artist": "Fontaines D.C.",
-    "trackCount": 4,
-    "url": "https://www.last.fm/music/Fontaines%20D.C./Romance",
-    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/4f4ae1fdc6b81d93c41c0054d596ccf0.png",
-    "playedAt": "2026-11-19T23:00:04.000Z",
+    "kind": "track",
+    "track": "Physical",
+    "artist": "Dua Lipa",
+    "album": "Future Nostalgia",
+    "url": "https://www.last.fm/music/Dua%20Lipa/_/Physical",
+    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7017c94ef74a476838e751b0cee1f014.png",
+    "playedAt": "2026-11-20T21:52:10.000Z",
     "nowPlaying": false
   },
   "reading": {
