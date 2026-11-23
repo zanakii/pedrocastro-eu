@@ -1,6 +1,16 @@
 {
-  "updatedAt": "2026-11-23T07:39:06.136Z",
+  "updatedAt": "2026-11-23T20:13:33.119Z",
   "music": [
+    {
+      "kind": "album",
+      "album": "9 months & 50 hours",
+      "artist": "Fred again..",
+      "trackCount": 5,
+      "url": "https://www.last.fm/music/Fred%20again../9%20months%20%26%2050%20hours",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/3b262a0e40590861f3116afeec67f6d6.jpg",
+      "playedAt": "2026-11-23T15:58:41.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "track",
       "track": "Places to Be",
@@ -39,16 +49,6 @@
       "url": "https://www.last.fm/music/Arctic%20Monkeys/_/From%20the%20Ritz%20to%20the%20Rubble",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/5e1480805bdf29da606e0de2ac07b205.jpg",
       "playedAt": "2026-11-22T10:47:27.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "album",
-      "album": "RIOT!",
-      "artist": "Paramore",
-      "trackCount": 3,
-      "url": "https://www.last.fm/music/Paramore/RIOT!",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b7a4b3000d0c431fbce299986ac51c48.png",
-      "playedAt": "2026-11-22T10:43:55.000Z",
       "nowPlaying": false
     }
   ],

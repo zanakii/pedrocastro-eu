@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-11-23T07:39:06.136Z",
+  "updatedAt": "2026-11-23T20:13:33.119Z",
   "listening": {
-    "kind": "track",
-    "track": "Places to Be",
+    "kind": "album",
+    "album": "9 months & 50 hours",
     "artist": "Fred again..",
-    "album": "ten days",
-    "url": "https://www.last.fm/music/Fred%20again../_/Places%20to%20Be",
-    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/cb0f3b13cd053e93d27f5a62a5a20425.jpg",
-    "playedAt": "2026-11-22T10:57:34.000Z",
+    "trackCount": 5,
+    "url": "https://www.last.fm/music/Fred%20again../9%20months%20%26%2050%20hours",
+    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/3b262a0e40590861f3116afeec67f6d6.jpg",
+    "playedAt": "2026-11-23T15:58:41.000Z",
     "nowPlaying": false
   },
   "reading": {
