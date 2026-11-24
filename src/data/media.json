@@ -1,6 +1,46 @@
 {
-  "updatedAt": "2026-11-24T04:48:13.988Z",
+  "updatedAt": "2026-11-24T19:30:09.787Z",
   "music": [
+    {
+      "kind": "album",
+      "album": "Lost Weekend",
+      "artist": "Phoebe Bridgers",
+      "trackCount": 16,
+      "url": "https://www.last.fm/music/Phoebe%20Bridgers/Lost%20Weekend",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0f6bb194fffc2f36fc5b56ff1a160825.jpg",
+      "playedAt": "2026-11-24T17:19:19.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "track",
+      "track": "Femininomenon",
+      "artist": "Chappell Roan",
+      "album": "The Rise and Fall of a Midwest Princess",
+      "url": "https://www.last.fm/music/Chappell%20Roan/_/Femininomenon",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b3987ea108b929eead2f59fdd3b4a007.jpg",
+      "playedAt": "2026-11-24T14:19:15.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "track",
+      "track": "Sprawl II (Mountains Beyond Mountains)",
+      "artist": "Arcade Fire",
+      "album": "The Suburbs (Deluxe)",
+      "url": "https://www.last.fm/music/Arcade%20Fire/_/Sprawl%20II%20(Mountains%20Beyond%20Mountains)",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/75f2439a1fe9cfd221bc6e2af5018ddc.jpg",
+      "playedAt": "2026-11-24T14:13:50.000Z",
+      "nowPlaying": false
+    },
+    {
+      "kind": "track",
+      "track": "Model Village",
+      "artist": "IDLES",
+      "album": "Ultra Mono",
+      "url": "https://www.last.fm/music/IDLES/_/Model%20Village",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/82a8c4ee0328e82216879bf690026d88.jpg",
+      "playedAt": "2026-11-24T14:09:54.000Z",
+      "nowPlaying": false
+    },
     {
       "kind": "album",
       "album": "9 months & 50 hours",
@@ -9,46 +49,6 @@
       "url": "https://www.last.fm/music/Fred%20again../9%20months%20%26%2050%20hours",
       "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/3b262a0e40590861f3116afeec67f6d6.jpg",
       "playedAt": "2026-11-23T15:58:41.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Places to Be",
-      "artist": "Fred again..",
-      "album": "ten days",
-      "url": "https://www.last.fm/music/Fred%20again../_/Places%20to%20Be",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/cb0f3b13cd053e93d27f5a62a5a20425.jpg",
-      "playedAt": "2026-11-22T10:57:34.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Physical",
-      "artist": "Dua Lipa",
-      "album": "Future Nostalgia",
-      "url": "https://www.last.fm/music/Dua%20Lipa/_/Physical",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7017c94ef74a476838e751b0cee1f014.png",
-      "playedAt": "2026-11-22T10:54:20.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "Reptilia",
-      "artist": "The Strokes",
-      "album": "Room on Fire",
-      "url": "https://www.last.fm/music/The%20Strokes/_/Reptilia",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/a9c961c8da0d4427b7d7a4018738f5df.png",
-      "playedAt": "2026-11-22T10:50:40.000Z",
-      "nowPlaying": false
-    },
-    {
-      "kind": "track",
-      "track": "From the Ritz to the Rubble",
-      "artist": "Arctic Monkeys",
-      "album": "Whatever People Say I Am, That's What I'm Not",
-      "url": "https://www.last.fm/music/Arctic%20Monkeys/_/From%20the%20Ritz%20to%20the%20Rubble",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/5e1480805bdf29da606e0de2ac07b205.jpg",
-      "playedAt": "2026-11-22T10:47:27.000Z",
       "nowPlaying": false
     }
   ],
