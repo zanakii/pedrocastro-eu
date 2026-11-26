@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T14:22:12.172Z",
+  "updatedAt": "2026-11-26T00:20:38.325Z",
   "music": [
     {
       "kind": "album",
@@ -73,13 +73,6 @@
       "url": "https://www.goodreads.com/book/show/58143817",
       "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1621884818l/58143817._SY475_.jpg",
       "readAt": "2026-09-20T00:00:00.000Z"
-    },
-    {
-      "title": "The Vanishing Half",
-      "author": "Brit Bennett",
-      "url": "https://www.goodreads.com/book/show/55298625",
-      "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1612881211l/55298625._SY475_.jpg",
-      "readAt": "2026-08-26T00:00:00.000Z"
     }
   ],
   "booksSeen": [
