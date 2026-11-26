@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T00:20:38.325Z",
+  "updatedAt": "2026-11-26T13:54:14.164Z",
   "music": [
     {
       "kind": "album",
@@ -54,6 +54,13 @@
   ],
   "books": [
     {
+      "title": "Yellowface",
+      "author": "R.F. Kuang",
+      "url": "https://www.goodreads.com/book/show/203382742",
+      "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1701924647l/203382742.jpg",
+      "readAt": "2026-11-26T13:54:14.014Z"
+    },
+    {
       "title": "A Estrada",
       "author": "Cormac McCarthy",
       "url": "https://www.goodreads.com/book/show/6004237",
@@ -76,6 +83,7 @@
     }
   ],
   "booksSeen": [
+    "https://www.goodreads.com/book/show/203382742",
     "https://www.goodreads.com/book/show/6004237",
     "https://www.goodreads.com/book/show/50202953",
     "https://www.goodreads.com/book/show/58143817",
