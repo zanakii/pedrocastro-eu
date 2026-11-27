@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T00:34:44.138Z",
+  "updatedAt": "2026-11-27T13:52:09.793Z",
   "music": [
     {
       "kind": "album",
@@ -97,6 +97,24 @@
   ],
   "films": [
     {
+      "title": "The Mandalorian and Grogu",
+      "year": "2026",
+      "rating": 3,
+      "rewatch": false,
+      "url": "https://letterboxd.com/film/the-mandalorian-and-grogu/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/1/1/1/1/0/7/3/1111073-star-wars-the-mandalorian-and-grogu-0-600-0-900-crop.jpg?v=5da24e2cba",
+      "watchedAt": "2026-11-27T00:00:00.000Z"
+    },
+    {
+      "title": "Backrooms",
+      "year": "2026",
+      "rating": 2.5,
+      "rewatch": false,
+      "url": "https://letterboxd.com/film/backrooms-2026/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/9/7/6/4/1/9/976419-backrooms-2026-0-600-0-900-crop.jpg?v=f7a99e3fc8",
+      "watchedAt": "2026-11-27T00:00:00.000Z"
+    },
+    {
       "title": "September 5",
       "year": "2024",
       "rating": 2.5,
@@ -108,7 +126,7 @@
     {
       "title": "The Drama",
       "year": "2026",
-      "rating": 2.5,
+      "rating": 3,
       "rewatch": false,
       "url": "https://letterboxd.com/film/the-drama/",
       "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/0/5/4/9/4/1205494-the-drama-0-600-0-900-crop.jpg?v=2320acafd5",
@@ -122,24 +140,6 @@
       "url": "https://letterboxd.com/film/obsession-2025/",
       "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/3/4/4/7/2/1234472-obsession-2025-2-0-600-0-900-crop.jpg?v=cff6fc00b6",
       "watchedAt": "2026-10-27T00:00:00.000Z"
-    },
-    {
-      "title": "12 Angry Men",
-      "year": "1957",
-      "rating": 4,
-      "rewatch": false,
-      "url": "https://letterboxd.com/film/12-angry-men/",
-      "poster": "https://a.ltrbxd.com/resized/film-poster/5/1/7/0/0/51700-12-angry-men-0-600-0-900-crop.jpg?v=b8aaf291a9",
-      "watchedAt": "2026-09-12T00:00:00.000Z"
-    },
-    {
-      "title": "Pressure",
-      "year": "2026",
-      "rating": 3,
-      "rewatch": false,
-      "url": "https://letterboxd.com/film/pressure-2026/",
-      "poster": "https://a.ltrbxd.com/resized/film-poster/1/1/9/8/9/7/2/1198972-pressure-2026-0-600-0-900-crop.jpg?v=38a01c694d",
-      "watchedAt": "2026-09-11T00:00:00.000Z"
     }
   ],
   "series": [
