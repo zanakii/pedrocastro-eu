@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T13:52:09.793Z",
+  "updatedAt": "2026-11-28T00:02:08.615Z",
   "music": [
     {
       "kind": "album",
@@ -97,6 +97,15 @@
   ],
   "films": [
     {
+      "title": "Toy Story 5",
+      "year": "2026",
+      "rating": 3.5,
+      "rewatch": false,
+      "url": "https://letterboxd.com/film/toy-story-5/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/9/7/7/1/8/6/977186-toy-story-5-0-600-0-900-crop.jpg?v=d0ac6a7d01",
+      "watchedAt": "2026-11-27T00:00:00.000Z"
+    },
+    {
       "title": "The Mandalorian and Grogu",
       "year": "2026",
       "rating": 3,
@@ -131,15 +140,6 @@
       "url": "https://letterboxd.com/film/the-drama/",
       "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/0/5/4/9/4/1205494-the-drama-0-600-0-900-crop.jpg?v=2320acafd5",
       "watchedAt": "2026-11-09T00:00:00.000Z"
-    },
-    {
-      "title": "Obsession",
-      "year": "2025",
-      "rating": 3.5,
-      "rewatch": false,
-      "url": "https://letterboxd.com/film/obsession-2025/",
-      "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/3/4/4/7/2/1234472-obsession-2025-2-0-600-0-900-crop.jpg?v=cff6fc00b6",
-      "watchedAt": "2026-10-27T00:00:00.000Z"
     }
   ],
   "series": [

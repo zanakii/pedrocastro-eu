@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T13:52:09.793Z",
+  "updatedAt": "2026-11-28T00:02:08.615Z",
   "listening": {
     "kind": "album",
     "album": "Lost Weekend",
@@ -18,12 +18,12 @@
     "startedAt": "2026-11-27T13:52:08.956Z"
   },
   "watching": {
-    "title": "The Mandalorian and Grogu",
+    "title": "Toy Story 5",
     "year": "2026",
-    "rating": 3,
+    "rating": 3.5,
     "rewatch": false,
-    "url": "https://letterboxd.com/film/the-mandalorian-and-grogu/",
-    "poster": "https://a.ltrbxd.com/resized/film-poster/1/1/1/1/0/7/3/1111073-star-wars-the-mandalorian-and-grogu-0-600-0-900-crop.jpg?v=5da24e2cba",
+    "url": "https://letterboxd.com/film/toy-story-5/",
+    "poster": "https://a.ltrbxd.com/resized/film-poster/9/7/7/1/8/6/977186-toy-story-5-0-600-0-900-crop.jpg?v=d0ac6a7d01",
     "watchedAt": "2026-11-27T00:00:00.000Z"
   },
   "series": {
